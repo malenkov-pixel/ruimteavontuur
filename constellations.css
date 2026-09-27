@@ -1,0 +1,537 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background:
+        radial-gradient(circle at 20% 20%, rgba(80, 100, 180, 0.25), transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(120, 60, 180, 0.2), transparent 30%),
+        radial-gradient(circle at 50% 100%, rgba(30, 120, 180, 0.15), transparent 35%),
+        #050713;
+
+    color: white;
+}
+
+.constellation-header {
+    text-align: center;
+    padding: 50px 20px 25px;
+}
+
+.constellation-header h1 {
+    margin: 0;
+    font-size: 42px;
+    text-shadow:
+        0 0 10px rgba(160, 190, 255, 0.8),
+        0 0 25px rgba(100, 140, 255, 0.5);
+}
+
+.constellation-header p {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+.constellation-space {
+    width: 100%;
+    min-height: 65vh;
+    padding: 20px;
+}
+
+.empty-space {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 25px;
+    background:
+        radial-gradient(circle at center, rgba(40, 60, 130, 0.25), transparent 65%);
+    overflow: hidden;
+}
+
+.empty-space h2 {
+    position: relative;
+    z-index: 2;
+    font-size: 30px;
+}
+
+.empty-space p {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    font-size: 18px;
+    opacity: 0.75;
+}
+
+.stars {
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle, white 1px, transparent 1px),
+        radial-gradient(circle, white 1px, transparent 1px),
+        radial-gradient(circle, white 2px, transparent 2px);
+    background-size:
+        90px 90px,
+        150px 150px,
+        230px 230px;
+    background-position:
+        10px 20px,
+        60px 80px,
+        120px 30px;
+    opacity: 0.6;
+}
+
+.back-button {
+    display: block;
+    width: fit-content;
+    margin: 20px auto 45px;
+    padding: 14px 24px;
+    color: white;
+    text-decoration: none;
+    background: rgba(70, 90, 180, 0.35);
+    border: 1px solid rgba(160, 180, 255, 0.4);
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    transform: translateY(-3px);
+    background: rgba(90, 110, 210, 0.55);
+    box-shadow: 0 0 20px rgba(100, 140, 255, 0.4);
+}
+.constellation-list {
+    position: relative;
+    z-index: 2;
+
+    width: min(1200px, 92%);
+    margin: 30px auto 60px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.constellation-card {
+    padding: 25px;
+
+    text-align: center;
+
+    background: rgba(20, 25, 70, 0.75);
+    border: 1px solid rgba(160, 170, 255, 0.35);
+    border-radius: 20px;
+
+    box-shadow:
+        0 0 15px rgba(100, 120, 255, 0.18);
+
+    backdrop-filter: blur(6px);
+
+    transition: 0.3s ease;
+}
+
+.constellation-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(190, 180, 255, 0.7);
+
+    box-shadow:
+        0 0 20px rgba(130, 140, 255, 0.45),
+        0 0 40px rgba(100, 110, 255, 0.2);
+}
+
+.constellation-icon {
+    font-size: 55px;
+    margin-bottom: 10px;
+
+    filter:
+        drop-shadow(0 0 8px rgba(180, 190, 255, 0.8));
+}
+
+.constellation-card h2 {
+    margin: 8px 0;
+    font-size: 24px;
+}
+
+.constellation-card p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+    .constellation-list {
+        grid-template-columns: 1fr;
+    }
+}
+.constellation-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+.constellation-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.constellation-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(120, 180, 255, 0.5);
+}
+
+.constellation-card img {
+    transition: transform 0.3s ease;
+}
+
+.constellation-card:hover img {
+    transform: scale(1.05);
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    position: relative;
+    width: min(700px, 90%);
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #10152b;
+    border: 1px solid rgba(140, 190, 255, 0.4);
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(80, 150, 255, 0.4);
+}
+
+.modal-content img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.modal-content h2 {
+    margin: 10px 0;
+}
+
+.modal-content p {
+    line-height: 1.6;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+}
+.modal-content {
+    animation: modalZoomIn 0.3s ease;
+}
+
+@keyframes modalZoomIn {
+    from {
+        transform: scale(0.85);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.constellation-card h2 {
+    color: #d9eaff;
+    text-shadow: 0 0 10px rgba(120, 180, 255, 0.5);
+}
+
+.constellation-card p {
+    color: #b8c9e6;
+}
+.constellation-card {
+    cursor: pointer;
+}
+.constellation-card {
+    animation: cardAppear 0.7s ease both;
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.constellation-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.constellation-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.constellation-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.constellation-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.constellation-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.constellation-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.constellation-card:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.constellation-card:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+.constellation-card:nth-child(9) {
+    animation-delay: 0.9s;
+}
+
+.constellation-card:nth-child(10) {
+    animation-delay: 1s;
+}
+.constellation-card img {
+    box-shadow: 0 0 15px rgba(100, 170, 255, 0.25);
+}
+.space-background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(80, 100, 180, 0.25), transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(120, 60, 180, 0.2), transparent 30%),
+        radial-gradient(circle at 50% 100%, rgba(30, 120, 180, 0.15), transparent 35%),
+        #050713;
+}
+
+.stars {
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle, white 1px, transparent 1px),
+        radial-gradient(circle, rgba(180, 210, 255, 0.8) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.6) 2px, transparent 2px);
+    background-size: 80px 80px, 130px 130px, 210px 210px;
+    background-position: 10px 20px, 40px 70px, 90px 30px;
+    animation: starsMove 20s linear infinite;
+}
+
+@keyframes starsMove {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(80px);
+    }
+}
+
+.meteor {
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, white);
+    border-radius: 50%;
+    transform: rotate(-35deg);
+    opacity: 0;
+    box-shadow: 0 0 8px white;
+    animation: meteorFly 5s linear infinite;
+}
+
+.meteor-1 {
+    top: 15%;
+    left: 80%;
+    animation-delay: 1s;
+}
+
+.meteor-2 {
+    top: 40%;
+    left: 60%;
+    animation-delay: 3s;
+}
+
+.meteor-3 {
+    top: 5%;
+    left: 40%;
+    animation-delay: 4.5s;
+}
+
+@keyframes meteorFly {
+    0% {
+        transform: translate(0, 0) rotate(-35deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    30% {
+        transform: translate(-300px, 220px) rotate(-35deg);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+.language-menu {
+    width: auto;
+}
+
+.language-button,
+.language-dropdown button {
+    width: auto;
+    min-width: 0;
+    padding: 8px 14px;
+    font-size: 14px;
+}
+
+.language-button img,
+.language-dropdown button img {
+    width: 20px;
+    height: 14px;
+    object-fit: cover;
+}
+.language-menu {
+    width: auto;
+}
+
+.language-button,
+.language-dropdown button {
+    width: auto;
+    min-width: 0;
+    padding: 8px 14px;
+    font-size: 14px;
+}
+
+.language-button img,
+.language-dropdown button img {
+    width: 20px;
+    height: 14px;
+    object-fit: cover;
+}
+
+.language-dropdown {
+    display: none;
+}
+
+.language-dropdown.open {
+    display: flex;
+    flex-direction: column;
+}
+.language-button,
+.language-dropdown button {
+    width: fit-content;
+    min-width: 120px;
+    max-width: 160px;
+    padding: 8px 12px;
+    background: rgba(15, 22, 45, 0.95);
+    color: #ffffff;
+    border: 1px solid rgba(140, 190, 255, 0.4);
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.language-dropdown {
+    width: fit-content;
+}
+
+.language-dropdown button {
+    width: 100%;
+    min-width: 120px;
+    max-width: 160px;
+    border-radius: 6px;
+}
+.language-menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 2000;
+}
+.constellation-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(120, 180, 255, 0.25);
+    box-shadow:
+        0 0 15px rgba(80, 150, 255, 0.12),
+        inset 0 0 20px rgba(80, 120, 255, 0.04);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.constellation-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(140, 200, 255, 0.7);
+    box-shadow:
+        0 0 25px rgba(80, 160, 255, 0.35),
+        0 0 50px rgba(80, 120, 255, 0.12);
+}
+.constellation-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.18;
+
+    background-image:
+        radial-gradient(circle, white 1px, transparent 1px),
+        radial-gradient(circle, rgba(180, 210, 255, 0.8) 1px, transparent 1px);
+
+    background-size: 45px 45px, 75px 75px;
+    animation: cardStars 12s linear infinite;
+}
+
+@keyframes cardStars {
+    from {
+        background-position: 0 0, 20px 30px;
+    }
+
+    to {
+        background-position: 90px 90px, -55px 100px;
+    }
+}
