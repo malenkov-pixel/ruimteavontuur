@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мечты Чарли Морнингстар</title>
+
+    <link rel="stylesheet" href="constellations.css">
+    <script src="script.js"></script>
+</head>
+<div id="constellation-modal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <img id="modal-image" src="" alt="">
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
+    </div>
+</div>
+
+<script>
+let currentConstellation = null;
+
+function openModal(title, image, description) {
+    currentConstellation = title;
+    const data = constellationTranslations[currentLanguage];
+
+    const translatedTitle =
+        data?.names?.[title] || title;
+
+    const translatedDescription =
+        data?.descriptions?.[title] || description;
+
+    document.getElementById("modal-title").textContent = translatedTitle;
+    document.getElementById("modal-image").src = image;
+    document.getElementById("modal-image").alt = translatedTitle;
+    document.getElementById("modal-description").textContent = translatedDescription;
+
+    document.getElementById("constellation-modal").style.display = "flex";
+}
+
+function closeModal() {
+    document.getElementById("constellation-modal").style.display = "none";
+}
+
+document.getElementById("constellation-modal").addEventListener("click", function(event) {
+    if (event.target === this) {
+        closeModal();
+    }
+});
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        closeModal();
+    }
+});
+</script>
+<body>
+
+    <div class="space-background">
+    <div class="stars"></div>
+    <div class="meteor meteor-1"></div>
+    <div class="meteor meteor-2"></div>
+    <div class="meteor meteor-3"></div>
+</div>
+
+    <header class="constellation-header">
+        <div class="language-menu">
+    <button
+        class="language-button"
+        id="languageButton"
+        onclick="toggleLanguageMenu()"
+    >
+        <img src="images/russia.png" alt="Русский">
+        Русский
+    </button>
+
+    <div class="language-dropdown" id="languageDropdown">
+        <button onclick="changeLanguage('ru')">
+            <img src="images/russia.png" alt="Русский">
+            Русский
+        </button>
+
+        <button onclick="changeLanguage('kk')">
+            <img src="images/kazakhstan.png" alt="Қазақша">
+            Қазақша
+        </button>
+
+        <button onclick="changeLanguage('cs')">
+            <img src="images/czechia.png" alt="Čeština">
+            Čeština
+        </button>
+        <button onclick="changeLanguage('en')">
+            <img src="images/usa.png" alt="English">
+            English
+        </button>
+        <button onclick="changeLanguage('de')">
+            <img src="images/germany.png" alt="Deutsch">
+            Deutsch
+        </button>
+        <button onclick="changeLanguage('fr')">
+    <img src="images/france.png" alt="Français">
+    Français
+</button>
+    </div>
+</div>
+        <h1 id="constellationTitle">✨ Мечты Чарли Морнингстар</h1>
+        <p id="constellationSubtitle">Добро пожаловать в мир созвездий</p>
+    </header>
+
+    <main class="constellation-space">
+
+       <div class="constellation-list">
+
+        <div class="constellation-card" data-constellation="Большая Медведица"
+     onclick="openModal(
+        'Большая Медведица',
+        './images/big_dipper.jpg',
+        'Одно из самых узнаваемых созвездий северного неба. Ярчайшая звезда — Алиот.'
+     )">
+        <img src="./images/big_dipper.jpg" alt="Большая Медведица">
+        <h2>Большая Медведица</h2>
+        <p>Одно из самых узнаваемых созвездий северного неба.</p>
+    </div>
+<div class="constellation-card" data-constellation="Малая Медведица"
+     onclick="openModal(
+        'Малая Медведица',
+        './images/ursa_minor.jpg',
+        'Северное созвездие, в котором находится Полярная звезда.'
+     )">
+        <img src="images/ursa_minor.jpg" alt="Малая Медведица">
+        <h2>Малая Медведица</h2>
+        <p>Известное северное созвездие, в котором находится Полярная звезда.</p>
+    </div>
+
+    <div class="constellation-card" data-constellation="Орион"
+     onclick="openModal(
+        'Орион',
+        './images/orion.jpg',
+        'Одно из самых узнаваемых созвездий зимнего неба.'
+     )">
+        <img src="images/orion.jpg" alt="Орион">
+        <h2>Орион</h2>
+        <p>Яркое и легко узнаваемое созвездие зимнего неба.</p>
+    </div>
+
+    <div class="constellation-card" data-constellation="Кассиопея"
+     onclick="openModal(
+        'Кассиопея',
+        './images/cassiopeia.jpg',
+        'Северное созвездие, известное характерной формой буквы W.'
+     )">
+        <img src="images/cassiopeia.jpg" alt="Кассиопея">
+        <h2>Кассиопея</h2>
+        <p>Созвездие северного неба, узнаваемое по характерной форме буквы W.</p>
+    </div>
+
+    <div class="constellation-card" data-constellation="Лебедь"
+     onclick="openModal(
+        'Лебедь',
+        './images/cygnus.jpg',
+        'Созвездие северного неба, расположенное вдоль Млечного Пути.'
+     )">
+        <img src="images/cygnus.jpg" alt="Лебедь">
+        <h2>Лебедь</h2>
+        <p>Созвездие летнего неба, расположенное вдоль Млечного Пути.</p>
+    </div>
+
+    <div class="constellation-card" data-constellation="Лира"
+     onclick="openModal(
+        'Лира',
+        './images/lyra.jpg',
+        'Небольшое созвездие, известное яркой звездой Вега.'
+     )">
+        <img src="images/lyra.jpg" alt="Лира">
+        <h2>Лира</h2>
+        <p>Небольшое созвездие, известное яркой звездой Вега.</p>
+    </div>
+
+    <div class="constellation-card" data-constellation="Андромеда"
+     onclick="openModal(
+        'Андромеда',
+        './images/andromeda.jpg',
+        'Северное созвездие, названное в честь героини древнегреческих мифов.'
+     )">
+        <img src="images/andromeda.jpg" alt="Андромеда">
+        <h2>Андромеда</h2>
+        <p>Северное созвездие, названное в честь героини древнегреческих мифов.</p>
+    </div>
+
+    <div class="constellation-card" data-constellation="Телец"
+     onclick="openModal(
+        'Телец',
+        './images/taurus.jpg',
+        'Зодиакальное созвездие, известное звездным скоплением Плеяды.'
+     )">
+        <img src="images/taurus.jpg" alt="Телец">
+        <h2>Телец</h2>
+        <p>Созвездие зодиакального пояса, известное звездным скоплением Плеяды.</p>
+    </div>
+
+    <div class="constellation-card" data-constellation="Скорпион"
+     onclick="openModal(
+        'Скорпион',
+        './images/scorpius.jpg',
+        'Яркое созвездие южного неба с характерной изогнутой формой.'
+     )">
+        <img src="images/scorpius.jpg" alt="Скорпион">
+        <h2>Скорпион</h2>
+        <p>Яркое созвездие южной части неба с характерной изогнутой формой.</p>
+    </div>
+
+    <div class="constellation-card" data-constellation="Персей"
+     onclick="openModal(
+        'Персей',
+        './images/perseus.jpg',
+        'Созвездие северного неба, названное в честь героя древнегреческих мифов.'
+     )">
+        <img src="images/perseus.jpg" alt="Персей">
+        <h2>Персей</h2>
+        <p>Созвездие северного неба, названное в честь героя древнегреческих мифов.</p>
+</div>
+</div>
+
+    </main>
+
+    <a href="index.html" class="back-button" id="constellationBack">
+        ← Вернуться в космическое приключение
+    </a>
+<script src="constellations.js"></script>
+</body>
+</html>
