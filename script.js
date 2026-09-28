@@ -2574,6 +2574,8 @@ function changeLanguage(language) {
 
     currentLanguage = language;
 
+    console.log("Текущий язык:", currentLanguage);
+    
     localStorage.setItem(
         "siteLanguage",
         language
@@ -2780,11 +2782,15 @@ function changeLanguage(language) {
     updateMoonSectionLanguage();
 
 
-    /* =========================================
-       СОЗВЕЗДИЯ
-       ========================================= */
+/* =========================================
+   СОЗВЕЗДИЯ
+   ========================================= */
 
+if (
+    !document.querySelector(".constellation-card")
+) {
     updateConstellationLanguage();
+}
 
 
     /* =========================================
