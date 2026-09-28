@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -29,34 +28,37 @@
 
             <div class="language-dropdown" id="languageDropdown">
 
-                 <button onclick="changeLanguage('ru')">
-        <img src="images/russia.png" alt="Русский">
-        Русский
-    </button>
+                <button onclick="changeLanguage('ru')">
+                    <img src="images/russia.png" alt="Русский">
+                    Русский
+                </button>
 
-    <button onclick="changeLanguage('kk')">
-        <img src="images/kazakhstan.png" alt="Қазақша">
-        Қазақша
-    </button>
+                <button onclick="changeLanguage('kk')">
+                    <img src="images/kazakhstan.png" alt="Қазақша">
+                    Қазақша
+                </button>
 
-    <button onclick="changeLanguage('cs')">
-        <img src="images/czechia.png" alt="Čeština">
-        Čeština
-    </button>
+                <button onclick="changeLanguage('cs')">
+                    <img src="images/czechia.png" alt="Čeština">
+                    Čeština
+                </button>
 
-    <button onclick="changeLanguage('en')">
-        <img src="images/usa.png" alt="English">
-        English
-    </button>
-    <button onclick="changeLanguage('de')">
-        <img src="images/germany.png" alt="Deutsch">
-        Deutsch
-    </button>
-    <button onclick="changeLanguage('fr')">
-    <img src="images/france.png" alt="Français">
-    Français
-</button>
-</div>
+                <button onclick="changeLanguage('en')">
+                    <img src="images/usa.png" alt="English">
+                    English
+                </button>
+
+                <button onclick="changeLanguage('de')">
+                    <img src="images/germany.png" alt="Deutsch">
+                    Deutsch
+                </button>
+
+                <button onclick="changeLanguage('fr')">
+                    <img src="images/france.png" alt="Français">
+                    Français
+                </button>
+
+            </div>
 
         </div>
 
@@ -86,15 +88,14 @@
             <button onclick="scrollToPlanets()" id="startButton">
                 Начать путешествие 🚀
             </button>
-            
+
             <button onclick="scrollToMoons()" id="moonsButton">
                 🌙 Исследовать спутники
             </button>
-            <a href="constellations.html" id="constellationsButton" class="constellations-button">
+
+            <a href="constellations.html" id="constellationButton">
                 ✨ Мечты Чарли Морнингстар
             </a>
-
-
 
         </section>
 
@@ -106,7 +107,6 @@
             </h2>
 
             <div class="planet-list">
-
 
                 <!-- ☿ Меркурий -->
                 <div class="planet-card" onclick="showPlanet('Меркурий')">
@@ -291,93 +291,94 @@
 
         </section>
 
-   
+
         <section class="moons" id="moons">
 
-    <h2 class="moons-section-title">
-        🌙 Спутники планет
-    </h2>
+            <h2 class="moons-section-title">
+                🌙 Спутники планет
+            </h2>
 
-    <p class="moons-section-text">
-    Исследуй спутники Солнечной системы и узнай больше о космических мирах.
-</p>
+            <p class="moons-section-text">
+                Исследуй спутники Солнечной системы и узнай больше о космических мирах.
+            </p>
 
-<div class="moon-list">
+            <div class="moon-list">
 
-    <div class="moon-card" data-moon="Луна" onclick="showMoon('Луна')">
-    <img src="images/moon.jpg" alt="Луна" class="moon-image">
-    <div class="moon-icon">🌕</div>
-    <h3>Луна</h3>
-    <p>Естественный спутник Земли.</p>
-</div>
+                <div class="moon-card" data-moon="Луна" onclick="showMoon('Луна')">
+                    <img src="images/moon.jpg" alt="Луна" class="moon-image">
+                    <div class="moon-icon">🌕</div>
+                    <h3>Луна</h3>
+                    <p>Естественный спутник Земли.</p>
+                </div>
 
-<div class="moon-card" data-moon="Фобос" onclick="showMoon('Фобос')">
-    <img src="images/phobos.jpg" alt="Фобос" class="moon-image">
-    <div class="moon-icon">🔴</div>
-    <h3>Фобос</h3>
-    <p>Ближайший спутник Марса.</p>
-</div>
+                <div class="moon-card" data-moon="Фобос" onclick="showMoon('Фобос')">
+                    <img src="images/phobos.jpg" alt="Фобос" class="moon-image">
+                    <div class="moon-icon">🔴</div>
+                    <h3>Фобос</h3>
+                    <p>Ближайший спутник Марса.</p>
+                </div>
 
-<div class="moon-card" data-moon="Деймос" onclick="showMoon('Деймос')">
-    <img src="images/deimos.jpg" alt="Деймос" class="moon-image">
-    <div class="moon-icon">🔴</div>
-    <h3>Деймос</h3>
-    <p>Маленький спутник Марса.</p>
-</div>
+                <div class="moon-card" data-moon="Деймос" onclick="showMoon('Деймос')">
+                    <img src="images/deimos.jpg" alt="Деймос" class="moon-image">
+                    <div class="moon-icon">🔴</div>
+                    <h3>Деймос</h3>
+                    <p>Маленький спутник Марса.</p>
+                </div>
 
-<div class="moon-card" data-moon="Ио" onclick="showMoon('Ио')">
-    <img src="images/io.jpg" alt="Ио" class="moon-image">
-    <div class="moon-icon">🟠</div>
-    <h3>Ио</h3>
-    <p>Вулканически активный спутник Юпитера.</p>
-</div>
+                <div class="moon-card" data-moon="Ио" onclick="showMoon('Ио')">
+                    <img src="images/io.jpg" alt="Ио" class="moon-image">
+                    <div class="moon-icon">🟠</div>
+                    <h3>Ио</h3>
+                    <p>Вулканически активный спутник Юпитера.</p>
+                </div>
 
-<div class="moon-card" data-moon="Европа" onclick="showMoon('Европа')">
-    <img src="images/europa.jpg" alt="Европа" class="moon-image">
-    <div class="moon-icon">🧊</div>
-    <h3>Европа</h3>
-    <p>Ледяной спутник Юпитера.</p>
-</div>
+                <div class="moon-card" data-moon="Европа" onclick="showMoon('Европа')">
+                    <img src="images/europa.jpg" alt="Европа" class="moon-image">
+                    <div class="moon-icon">🧊</div>
+                    <h3>Европа</h3>
+                    <p>Ледяной спутник Юпитера.</p>
+                </div>
 
-<div class="moon-card" data-moon="Ганимед" onclick="showMoon('Ганимед')">
-    <img src="images/ganymede.jpg" alt="Ганимед" class="moon-image">
-    <div class="moon-icon">🌑</div>
-    <h3>Ганимед</h3>
-    <p>Крупнейший спутник Солнечной системы.</p>
-</div>
+                <div class="moon-card" data-moon="Ганимед" onclick="showMoon('Ганимед')">
+                    <img src="images/ganymede.jpg" alt="Ганимед" class="moon-image">
+                    <div class="moon-icon">🌑</div>
+                    <h3>Ганимед</h3>
+                    <p>Крупнейший спутник Солнечной системы.</p>
+                </div>
 
-<div class="moon-card" data-moon="Каллисто" onclick="showMoon('Каллисто')">
-    <img src="images/callisto.jpg" alt="Каллисто" class="moon-image">
-    <div class="moon-icon">🌑</div>
-    <h3>Каллисто</h3>
-    <p>Один из крупнейших спутников Юпитера.</p>
-</div>
+                <div class="moon-card" data-moon="Каллисто" onclick="showMoon('Каллисто')">
+                    <img src="images/callisto.jpg" alt="Каллисто" class="moon-image">
+                    <div class="moon-icon">🌑</div>
+                    <h3>Каллисто</h3>
+                    <p>Один из крупнейших спутников Юпитера.</p>
+                </div>
 
-<div class="moon-card" data-moon="Титан" onclick="showMoon('Титан')">
-    <img src="images/titan.jpg" alt="Титан" class="moon-image">
-    <div class="moon-icon">🪐</div>
-    <h3>Титан</h3>
-    <p>Крупнейший спутник Сатурна.</p>
-</div>
+                <div class="moon-card" data-moon="Титан" onclick="showMoon('Титан')">
+                    <img src="images/titan.jpg" alt="Титан" class="moon-image">
+                    <div class="moon-icon">🪐</div>
+                    <h3>Титан</h3>
+                    <p>Крупнейший спутник Сатурна.</p>
+                </div>
 
-<div class="moon-card" data-moon="Энцелад" onclick="showMoon('Энцелад')">
-    <img src="images/enceladus.jpg" alt="Энцелад" class="moon-image">
-    <div class="moon-icon">❄️</div>
-    <h3>Энцелад</h3>
-    <p>Ледяной спутник Сатурна.</p>
-</div>
+                <div class="moon-card" data-moon="Энцелад" onclick="showMoon('Энцелад')">
+                    <img src="images/enceladus.jpg" alt="Энцелад" class="moon-image">
+                    <div class="moon-icon">❄️</div>
+                    <h3>Энцелад</h3>
+                    <p>Ледяной спутник Сатурна.</p>
+                </div>
 
-<div class="moon-card" data-moon="Тритон" onclick="showMoon('Тритон')">
-    <img src="images/triton.jpg" alt="Тритон" class="moon-image">
-    <div class="moon-icon">🔵</div>
-    <h3>Тритон</h3>
-    <p>Крупнейший спутник Нептуна.</p>
-</div>
-</div>
+                <div class="moon-card" data-moon="Тритон" onclick="showMoon('Тритон')">
+                    <img src="images/triton.jpg" alt="Тритон" class="moon-image">
+                    <div class="moon-icon">🔵</div>
+                    <h3>Тритон</h3>
+                    <p>Крупнейший спутник Нептуна.</p>
+                </div>
 
-</section>
+            </div>
 
-</main>
+        </section>
+
+    </main>
 
 
     <!-- 🪐 Окно информации о планете -->
@@ -399,7 +400,6 @@
 
             <p id="planetDescription"></p>
 
-
             <div class="planet-info">
 
                 <p>
@@ -411,7 +411,6 @@
                     <span id="planetTemperature"></span>
                 </p>
 
-
                 <p>
                     📏
                     <strong id="labelDiameter">
@@ -420,7 +419,6 @@
 
                     <span id="planetDiameter"></span>
                 </p>
-
 
                 <p>
                     ⚖️
@@ -431,7 +429,6 @@
                     <span id="planetMass"></span>
                 </p>
 
-
                 <p>
                     ☀️
                     <strong id="labelDistance">
@@ -440,7 +437,6 @@
 
                     <span id="planetDistance"></span>
                 </p>
-
 
                 <p>
                     🕐
@@ -451,7 +447,6 @@
                     <span id="planetDay"></span>
                 </p>
 
-
                 <p>
                     📅
                     <strong id="labelYear">
@@ -460,7 +455,6 @@
 
                     <span id="planetYear"></span>
                 </p>
-
 
                 <p>
                     🌙
@@ -471,7 +465,6 @@
                     <span id="planetMoons"></span>
                 </p>
 
-
                 <p>
                     💍
                     <strong id="labelRings">
@@ -480,7 +473,6 @@
 
                     <span id="planetRings"></span>
                 </p>
-
 
                 <p>
                     🌫️
@@ -492,7 +484,6 @@
                 </p>
 
             </div>
-
 
             <div class="planet-fact">
 
@@ -508,61 +499,62 @@
 
     </div>
 
-<!-- 🌙 Окно спутника -->
-<div id="moonModal" class="moon-modal">
 
-    <div class="moon-modal-content">
+    <!-- 🌙 Окно спутника -->
+    <div id="moonModal" class="moon-modal">
 
-        <button
-            class="close-button"
-            onclick="closeMoon()"
-            aria-label="Закрыть"
-        >
-            ×
-        </button>
+        <div class="moon-modal-content">
 
-        <div id="moonIcon" class="moon-modal-icon">
-            🌕
-        </div>
+            <button
+                class="close-button"
+                onclick="closeMoon()"
+                aria-label="Закрыть"
+            >
+                ×
+            </button>
 
-        <h2 id="moonName"></h2>
+            <div id="moonIcon" class="moon-modal-icon">
+                🌕
+            </div>
 
-        <p id="moonDescription"></p>
+            <h2 id="moonName"></h2>
 
-        <div class="moon-info">
+            <p id="moonDescription"></p>
 
-            <p>
-                🪐
-                <strong id="moonPlanetLabel">Планета:</strong>
-                <span id="moonPlanet"></span>
-            </p>
+            <div class="moon-info">
 
-            <p>
-                📏
-                <strong id="moonDiameterLabel">Диаметр:</strong>
-                <span id="moonDiameter"></span>
-            </p>
+                <p>
+                    🪐
+                    <strong id="moonPlanetLabel">Планета:</strong>
+                    <span id="moonPlanet"></span>
+                </p>
 
-            <p>
-                🌡️
-                <strong id="moonTemperatureLabel">Температура:</strong>
-                <span id="moonTemperature"></span>
-            </p>
+                <p>
+                    📏
+                    <strong id="moonDiameterLabel">Диаметр:</strong>
+                    <span id="moonDiameter"></span>
+                </p>
 
-            <p>
-                🔭
-                <strong id="moonFactLabel">Интересный факт:</strong>
-                <span id="moonFact"></span>
-            </p>
+                <p>
+                    🌡️
+                    <strong id="moonTemperatureLabel">Температура:</strong>
+                    <span id="moonTemperature"></span>
+                </p>
+
+                <p>
+                    🔭
+                    <strong id="moonFactLabel">Интересный факт:</strong>
+                    <span id="moonFact"></span>
+                </p>
+
+            </div>
 
         </div>
 
     </div>
 
-</div>
 
     <footer id="footerText">
-        
         🌌 Космическое приключение © 2026
     </footer>
 
@@ -570,6 +562,8 @@
     <script src="script.js"></script>
 
 </body>
-<!-- Обновление сайта 2026 -->
-</html>
 
+<!-- Обновление сайта 2026 -->
+
+</html>
+```

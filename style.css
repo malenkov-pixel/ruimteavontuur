@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -13,10 +12,25 @@ body {
     min-height: 100vh;
     font-family: Arial, sans-serif;
     color: white;
+
     background:
-        radial-gradient(circle at 20% 20%, rgba(70, 80, 180, 0.25), transparent 30%),
-        radial-gradient(circle at 80% 70%, rgba(120, 40, 180, 0.2), transparent 30%),
-        linear-gradient(135deg, #030313, #08082a 45%, #02020d);
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(70, 80, 180, 0.25),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(120, 40, 180, 0.2),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #030313,
+            #08082a 45%,
+            #02020d
+        );
+
     overflow-x: hidden;
 }
 
@@ -55,6 +69,7 @@ header {
 header h1 {
     font-size: clamp(32px, 6vw, 64px);
     margin-bottom: 15px;
+
     text-shadow:
         0 0 10px #8da2ff,
         0 0 25px #586dff,
@@ -91,6 +106,7 @@ main {
 .intro p {
     max-width: 700px;
     margin: auto;
+
     color: #c7c9e8;
     font-size: 18px;
     line-height: 1.7;
@@ -99,20 +115,34 @@ main {
 .intro button {
     margin-top: 30px;
     padding: 15px 30px;
+
     border: none;
     border-radius: 30px;
+
     color: white;
-    background: linear-gradient(135deg, #5968ff, #974cff);
+
+    background: linear-gradient(
+        135deg,
+        #5968ff,
+        #974cff
+    );
+
     font-size: 17px;
     font-weight: bold;
+
     cursor: pointer;
-    box-shadow: 0 0 20px rgba(105, 90, 255, 0.5);
+
+    box-shadow:
+        0 0 20px rgba(105, 90, 255, 0.5);
+
     transition: 0.3s;
 }
 
 .intro button:hover {
     transform: translateY(-4px) scale(1.04);
-    box-shadow: 0 0 35px rgba(130, 110, 255, 0.8);
+
+    box-shadow:
+        0 0 35px rgba(130, 110, 255, 0.8);
 }
 
 /* 🪐 Планеты */
@@ -125,26 +155,40 @@ main {
 .planet-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+
     gap: 25px;
     margin-top: 35px;
 }
 
 .planet-card {
     position: relative;
+
     padding: 30px 20px;
     min-height: 270px;
+
     border: 1px solid rgba(150, 160, 255, 0.2);
     border-radius: 25px;
+
     background: rgba(20, 22, 55, 0.72);
+
     backdrop-filter: blur(10px);
+
     box-shadow:
         0 10px 30px rgba(0, 0, 0, 0.35),
         inset 0 0 20px rgba(100, 110, 255, 0.04);
+
     cursor: pointer;
+
     opacity: 0;
     transform: translateY(30px);
-    animation: planetAppear 0.8s ease forwards;
-    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+
+    animation:
+        planetAppear 0.8s ease forwards;
+
+    transition:
+        transform 0.3s,
+        border-color 0.3s,
+        box-shadow 0.3s;
 }
 
 .planet-card:nth-child(1) {
@@ -192,7 +236,10 @@ main {
 
 .planet-card:hover {
     transform: translateY(-10px) scale(1.03);
-    border-color: rgba(160, 170, 255, 0.65);
+
+    border-color:
+        rgba(160, 170, 255, 0.65);
+
     box-shadow:
         0 20px 45px rgba(0, 0, 0, 0.5),
         0 0 30px rgba(100, 110, 255, 0.25);
@@ -202,17 +249,27 @@ main {
 
 .planet-image {
     display: block;
+
     width: 130px;
     height: 130px;
+
     margin: 0 auto 20px;
+
     border-radius: 50%;
+
     object-fit: cover;
+
     box-shadow:
         0 0 10px rgba(255, 255, 255, 0.35),
         0 0 25px rgba(100, 150, 255, 0.45),
         0 0 45px rgba(80, 100, 255, 0.25);
-    animation: planetGlow 3s ease-in-out infinite alternate;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+    animation:
+        planetGlow 3s ease-in-out infinite alternate;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
 }
 
 @keyframes planetGlow {
@@ -233,6 +290,7 @@ main {
 
 .planet-card:hover .planet-image {
     transform: scale(1.1);
+
     box-shadow:
         0 0 10px rgba(255, 255, 255, 0.9),
         0 0 25px rgba(130, 180, 255, 0.9),
@@ -256,15 +314,25 @@ main {
 .planet-modal {
     position: fixed;
     inset: 0;
+
     display: flex;
+
     align-items: center;
     justify-content: center;
+
     padding: 20px;
+
     background: rgba(0, 0, 15, 0.75);
+
     backdrop-filter: blur(8px);
+
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
+
+    transition:
+        opacity 0.3s,
+        visibility 0.3s;
+
     z-index: 1000;
 }
 
@@ -275,22 +343,32 @@ main {
 
 .modal-content {
     position: relative;
+
     width: min(600px, 100%);
     max-height: 90vh;
+
     overflow-y: auto;
+
     padding: 40px;
+
     border: 1px solid rgba(160, 170, 255, 0.35);
     border-radius: 30px;
-    background: linear-gradient(
-        145deg,
-        rgba(30, 32, 75, 0.97),
-        rgba(10, 12, 35, 0.97)
-    );
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(30, 32, 75, 0.97),
+            rgba(10, 12, 35, 0.97)
+        );
+
     box-shadow:
         0 30px 80px rgba(0, 0, 0, 0.7),
         0 0 50px rgba(90, 100, 255, 0.2);
+
     transform: scale(0.8);
-    transition: transform 0.3s;
+
+    transition:
+        transform 0.3s;
 }
 
 .planet-modal.active .modal-content {
@@ -299,20 +377,28 @@ main {
 
 .modal-content > .planet-icon {
     display: flex;
+
     align-items: center;
     justify-content: center;
+
     width: 90px;
     height: 90px;
+
     margin: 0 auto 20px;
+
     border-radius: 50%;
+
     font-size: 48px;
-    background: radial-gradient(
-        circle at 35% 30%,
-        #ffffff,
-        #8895ff 35%,
-        #3e3f91 70%,
-        #171832
-    );
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #ffffff,
+            #8895ff 35%,
+            #3e3f91 70%,
+            #171832
+        );
+
     box-shadow:
         0 0 20px rgba(130, 145, 255, 0.5),
         0 0 40px rgba(100, 110, 255, 0.25);
@@ -320,14 +406,19 @@ main {
 
 .modal-content h2 {
     text-align: center;
+
     font-size: 32px;
+
     margin-bottom: 15px;
 }
 
 .modal-content > p {
     color: #d0d2ed;
+
     line-height: 1.7;
+
     text-align: center;
+
     margin-bottom: 25px;
 }
 
@@ -335,21 +426,30 @@ main {
 
 .close-button {
     position: absolute;
+
     top: 15px;
     right: 20px;
+
     width: 40px;
     height: 40px;
+
     border: none;
     border-radius: 50%;
+
     background: rgba(255, 255, 255, 0.08);
+
     color: white;
+
     font-size: 30px;
+
     cursor: pointer;
+
     transition: 0.2s;
 }
 
 .close-button:hover {
     background: rgba(255, 80, 100, 0.3);
+
     transform: rotate(90deg);
 }
 
@@ -357,11 +457,17 @@ main {
 
 .planet-info {
     display: grid;
+
     gap: 12px;
+
     padding: 20px;
+
     border-radius: 18px;
+
     background: rgba(255, 255, 255, 0.04);
+
     max-height: 330px;
+
     overflow-y: auto;
 }
 
@@ -377,23 +483,30 @@ main {
 
 .planet-fact {
     margin-top: 20px;
+
     padding: 20px;
+
     border-radius: 18px;
-    background: linear-gradient(
-        135deg,
-        rgba(80, 90, 200, 0.15),
-        rgba(140, 70, 220, 0.1)
-    );
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(80, 90, 200, 0.15),
+            rgba(140, 70, 220, 0.1)
+        );
+
     border: 1px solid rgba(150, 160, 255, 0.15);
 }
 
 .planet-fact h3 {
     margin-bottom: 10px;
+
     font-size: 20px;
 }
 
 .planet-fact p {
     color: #cfd2ef;
+
     line-height: 1.6;
 }
 
@@ -401,34 +514,48 @@ main {
 
 .comet {
     position: fixed;
+
     width: 18px;
     height: 18px;
+
     border-radius: 50%;
+
     background: white;
+
     box-shadow:
         0 0 8px white,
         0 0 18px #b8d4ff,
         0 0 35px #668cff,
         0 0 60px #526fff;
+
     pointer-events: none;
+
     z-index: 9999;
 }
 
 .comet-tail {
     position: fixed;
+
     width: 190px;
     height: 7px;
+
     border-radius: 100%;
-    background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0.95),
-        rgba(130, 175, 255, 0.55),
-        rgba(80, 120, 255, 0.18),
-        transparent
-    );
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.95),
+            rgba(130, 175, 255, 0.55),
+            rgba(80, 120, 255, 0.18),
+            transparent
+        );
+
     filter: blur(1px);
+
     transform-origin: left center;
+
     pointer-events: none;
+
     z-index: 9998;
 }
 
@@ -436,11 +563,17 @@ main {
 
 footer {
     position: relative;
+
     z-index: 2;
+
     padding: 30px 20px;
+
     text-align: center;
+
     color: #8589b5;
-    border-top: 1px solid rgba(150, 160, 255, 0.1);
+
+    border-top:
+        1px solid rgba(150, 160, 255, 0.1);
 }
 
 /* 📱 Планшет */
@@ -471,12 +604,15 @@ footer {
         max-height: 280px;
     }
 }
+
 /* 🌐 Космическое меню языков */
 
 .language-menu {
     position: fixed;
+
     top: 20px;
     left: 20px;
+
     z-index: 10000;
 }
 
@@ -484,12 +620,15 @@ footer {
 
 .language-button {
     display: flex;
+
     align-items: center;
+
     gap: 8px;
 
     padding: 11px 17px;
 
     border: 1px solid rgba(130, 150, 255, 0.45);
+
     border-radius: 16px;
 
     background:
@@ -502,6 +641,7 @@ footer {
     color: #ffffff;
 
     font-family: Arial, sans-serif;
+
     font-size: 15px;
     font-weight: bold;
 
@@ -523,7 +663,8 @@ footer {
 .language-button:hover {
     transform: translateY(-2px);
 
-    border-color: rgba(160, 180, 255, 0.85);
+    border-color:
+        rgba(160, 180, 255, 0.85);
 
     box-shadow:
         0 8px 25px rgba(0, 0, 0, 0.5),
@@ -548,6 +689,7 @@ footer {
     padding: 7px;
 
     border: 1px solid rgba(130, 150, 255, 0.35);
+
     border-radius: 17px;
 
     background:
@@ -567,7 +709,9 @@ footer {
     opacity: 0;
     visibility: hidden;
 
-    transform: translateY(-10px) scale(0.96);
+    transform:
+        translateY(-10px)
+        scale(0.96);
 
     transition:
         opacity 0.2s ease,
@@ -581,13 +725,16 @@ footer {
     opacity: 1;
     visibility: visible;
 
-    transform: translateY(0) scale(1);
+    transform:
+        translateY(0)
+        scale(1);
 }
 
 /* 🌍 Пункты языков */
 
 .language-dropdown button {
     display: flex;
+
     align-items: center;
 
     width: 100%;
@@ -597,6 +744,7 @@ footer {
     margin: 2px 0;
 
     border: 1px solid transparent;
+
     border-radius: 11px;
 
     background: transparent;
@@ -604,6 +752,7 @@ footer {
     color: #e9ecff;
 
     font-family: Arial, sans-serif;
+
     font-size: 14px;
     font-weight: bold;
 
@@ -628,7 +777,8 @@ footer {
             rgba(120, 80, 220, 0.2)
         );
 
-    border-color: rgba(130, 150, 255, 0.3);
+    border-color:
+        rgba(130, 150, 255, 0.3);
 
     color: white;
 
@@ -641,7 +791,9 @@ footer {
 /* Нажатие */
 
 .language-dropdown button:active {
-    transform: translateX(4px) scale(0.98);
+    transform:
+        translateX(4px)
+        scale(0.98);
 }
 
 /* 📱 Для маленького экрана */
@@ -668,10 +820,15 @@ footer {
 .language-dropdown button img {
     width: 24px;
     height: 16px;
+
     object-fit: cover;
+
     border-radius: 3px;
+
     flex-shrink: 0;
-    box-shadow: 0 0 6px rgba(120, 150, 255, 0.25);
+
+    box-shadow:
+        0 0 6px rgba(120, 150, 255, 0.25);
 }
 
 .language-button {
@@ -686,88 +843,150 @@ footer {
 
 .moons {
     position: relative;
+
     z-index: 2;
+
     text-align: center;
+
     padding: 80px 20px;
+
     margin-top: 20px;
-    border-top: 1px solid rgba(150, 160, 255, 0.1);
+
+    border-top:
+        1px solid rgba(150, 160, 255, 0.1);
 }
 
 .moons h2 {
     font-size: 36px;
+
     margin-bottom: 20px;
-    text-shadow: 0 0 15px rgba(150, 170, 255, 0.8);
+
+    text-shadow:
+        0 0 15px rgba(150, 170, 255, 0.8);
 }
 
 .moons p {
     max-width: 700px;
+
     margin: auto;
+
     color: #c7c9e8;
+
     font-size: 18px;
+
     line-height: 1.7;
 }
 
 #moonsButton {
     margin-top: 15px;
+
     padding: 15px 30px;
+
     border: none;
+
     border-radius: 30px;
+
     color: white;
-    background: linear-gradient(135deg, #5968ff, #974cff);
+
+    background:
+        linear-gradient(
+            135deg,
+            #5968ff,
+            #974cff
+        );
+
     font-size: 17px;
+
     font-weight: bold;
+
     cursor: pointer;
-    box-shadow: 0 0 20px rgba(105, 90, 255, 0.5);
+
+    box-shadow:
+        0 0 20px rgba(105, 90, 255, 0.5);
+
     transition: 0.3s;
 }
 
 #moonsButton:hover {
-    transform: translateY(-4px) scale(1.04);
-    box-shadow: 0 0 35px rgba(130, 110, 255, 0.8);
+    transform:
+        translateY(-4px)
+        scale(1.04);
+
+    box-shadow:
+        0 0 35px rgba(130, 110, 255, 0.8);
 }
+
+/* 🌙 Дополнительные стили раздела */
+
 .moons {
     position: relative;
+
     z-index: 2;
+
     text-align: center;
+
     padding: 80px 20px;
+
     margin-top: 20px;
-    border-top: 1px solid rgba(150, 160, 255, 0.1);
+
+    border-top:
+        1px solid rgba(150, 160, 255, 0.1);
 }
 
 .moons h2 {
     font-size: 36px;
+
     margin-bottom: 20px;
-    text-shadow: 0 0 15px rgba(150, 170, 255, 0.8);
+
+    text-shadow:
+        0 0 15px rgba(150, 170, 255, 0.8);
 }
 
 .moons p {
     max-width: 700px;
+
     margin: auto;
+
     color: #c7c9e8;
+
     font-size: 18px;
+
     line-height: 1.7;
 }
+
 /* 🌙 Карточки спутников */
 
 .moon-list {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 25px;
+
     margin-top: 40px;
 }
 
 .moon-card {
     position: relative;
+
     padding: 30px 20px;
+
     min-height: 220px;
+
     border: 1px solid rgba(150, 160, 255, 0.2);
+
     border-radius: 25px;
+
     background: rgba(20, 22, 55, 0.72);
+
     backdrop-filter: blur(10px);
+
     box-shadow:
         0 10px 30px rgba(0, 0, 0, 0.35),
         inset 0 0 20px rgba(100, 110, 255, 0.04);
+
     cursor: pointer;
+
     transition:
         transform 0.3s ease,
         border-color 0.3s ease,
@@ -775,8 +994,13 @@ footer {
 }
 
 .moon-card:hover {
-    transform: translateY(-10px) scale(1.03);
-    border-color: rgba(160, 170, 255, 0.65);
+    transform:
+        translateY(-10px)
+        scale(1.03);
+
+    border-color:
+        rgba(160, 170, 255, 0.65);
+
     box-shadow:
         0 20px 45px rgba(0, 0, 0, 0.5),
         0 0 30px rgba(100, 110, 255, 0.3);
@@ -784,27 +1008,39 @@ footer {
 
 .moon-icon {
     display: flex;
+
     align-items: center;
     justify-content: center;
+
     width: 90px;
     height: 90px;
+
     margin: 0 auto 20px;
+
     border-radius: 50%;
+
     font-size: 48px;
-    background: radial-gradient(
-        circle at 35% 30%,
-        rgba(255, 255, 255, 0.9),
-        rgba(130, 140, 255, 0.35),
-        rgba(30, 30, 80, 0.8)
-    );
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            rgba(255, 255, 255, 0.9),
+            rgba(130, 140, 255, 0.35),
+            rgba(30, 30, 80, 0.8)
+        );
+
     box-shadow:
         0 0 15px rgba(255, 255, 255, 0.25),
         0 0 35px rgba(100, 130, 255, 0.35);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .moon-card:hover .moon-icon {
     transform: scale(1.12);
+
     box-shadow:
         0 0 20px rgba(255, 255, 255, 0.5),
         0 0 45px rgba(110, 140, 255, 0.65),
@@ -813,11 +1049,13 @@ footer {
 
 .moon-card h3 {
     font-size: 24px;
+
     margin-bottom: 10px;
 }
 
 .moon-card p {
     color: #bfc4e8;
+
     line-height: 1.5;
 }
 
@@ -836,46 +1074,72 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
 /* 🌙 Окно информации о спутнике */
 
 .moon-modal {
     position: fixed;
+
     inset: 0;
+
     display: flex;
+
     align-items: center;
     justify-content: center;
+
     padding: 20px;
+
     background: rgba(0, 0, 15, 0.75);
+
     backdrop-filter: blur(8px);
+
     opacity: 0;
+
     visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
+
+    transition:
+        opacity 0.3s,
+        visibility 0.3s;
+
     z-index: 1001;
 }
 
 .moon-modal.active {
     opacity: 1;
+
     visibility: visible;
 }
 
 .moon-modal-content {
     position: relative;
+
     width: min(600px, 100%);
+
     max-height: 90vh;
+
     overflow-y: auto;
+
     padding: 40px;
+
     border: 1px solid rgba(160, 170, 255, 0.35);
+
     border-radius: 30px;
-    background: linear-gradient(
-        145deg,
-        rgba(30, 32, 75, 0.97),
-        rgba(10, 12, 35, 0.97)
-    );
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(30, 32, 75, 0.97),
+            rgba(10, 12, 35, 0.97)
+        );
+
     box-shadow:
         0 30px 80px rgba(0, 0, 0, 0.7),
         0 0 50px rgba(90, 100, 255, 0.2);
+
     transform: scale(0.8);
-    transition: transform 0.3s;
+
+    transition:
+        transform 0.3s;
 }
 
 .moon-modal.active .moon-modal-content {
@@ -884,20 +1148,28 @@ footer {
 
 .moon-modal-icon {
     display: flex;
+
     align-items: center;
     justify-content: center;
+
     width: 90px;
     height: 90px;
+
     margin: 0 auto 20px;
+
     border-radius: 50%;
+
     font-size: 48px;
-    background: radial-gradient(
-        circle at 35% 30%,
-        #ffffff,
-        #8895ff 35%,
-        #3e3f91 70%,
-        #171832
-    );
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #ffffff,
+            #8895ff 35%,
+            #3e3f91 70%,
+            #171832
+        );
+
     box-shadow:
         0 0 20px rgba(130, 145, 255, 0.5),
         0 0 40px rgba(100, 110, 255, 0.25);
@@ -905,27 +1177,37 @@ footer {
 
 .moon-modal-content h2 {
     text-align: center;
+
     font-size: 32px;
+
     margin-bottom: 15px;
 }
 
 .moon-modal-content > p {
     color: #d0d2ed;
+
     line-height: 1.7;
+
     text-align: center;
+
     margin-bottom: 25px;
 }
 
 .moon-info {
     display: grid;
+
     gap: 12px;
+
     padding: 20px;
+
     border-radius: 18px;
+
     background: rgba(255, 255, 255, 0.04);
 }
 
 .moon-info p {
     color: #d6d8ef;
+
     line-height: 1.5;
 }
 
@@ -942,21 +1224,29 @@ footer {
         padding: 30px 20px;
     }
 }
+
 /* 🌙 Картинки спутников */
 
 .moon-image {
     width: 100%;
+
     height: 180px;
+
     object-fit: cover;
+
     border-radius: 14px;
+
     display: block;
+
     margin-bottom: 15px;
 
     box-shadow:
         0 0 15px rgba(120, 180, 255, 0.35),
         0 0 30px rgba(120, 180, 255, 0.15);
 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .moon-card:hover .moon-image {
@@ -965,4 +1255,21 @@ footer {
     box-shadow:
         0 0 20px rgba(120, 180, 255, 0.55),
         0 0 40px rgba(120, 180, 255, 0.25);
+}
+#constellationButton {
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    background: rgba(180, 90, 255, 0.8);
+    box-shadow: 0 0 15px rgba(190, 100, 255, 0.5);
+    transition: 0.3s ease;
+}
+
+#constellationButton:hover {
+    background: rgba(200, 110, 255, 0.9);
+    box-shadow: 0 0 22px rgba(210, 120, 255, 0.75);
+    transform: scale(1.04);
 }
