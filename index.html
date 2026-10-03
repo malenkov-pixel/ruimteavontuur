@@ -12,92 +12,228 @@
 
 <body>
 
-    <header>
+<header>
 
-        <!-- 🌐 Меню языков -->
-        <div class="language-menu">
+    <!-- 🌐 Меню языков -->
+    <div class="language-menu">
 
-            <button
-                class="language-button"
-                id="languageButton"
-                onclick="toggleLanguageMenu()"
-            >
+        <button
+            class="language-button"
+            id="languageButton"
+            onclick="toggleLanguageMenu()"
+        >
+            <img src="images/russia.png" alt="Русский">
+            Русский
+        </button>
+
+        <div class="language-dropdown" id="languageDropdown">
+
+            <button onclick="changeLanguage('ru')">
                 <img src="images/russia.png" alt="Русский">
                 Русский
             </button>
 
-            <div class="language-dropdown" id="languageDropdown">
+            <button onclick="changeLanguage('kk')">
+                <img src="images/kazakhstan.png" alt="Қазақша">
+                Қазақша
+            </button>
 
-                <button onclick="changeLanguage('ru')">
-                    <img src="images/russia.png" alt="Русский">
-                    Русский
-                </button>
+            <button onclick="changeLanguage('cs')">
+                <img src="images/czechia.png" alt="Čeština">
+                Čeština
+            </button>
 
-                <button onclick="changeLanguage('kk')">
-                    <img src="images/kazakhstan.png" alt="Қазақша">
-                    Қазақша
-                </button>
+            <button onclick="changeLanguage('en')">
+                <img src="images/usa.png" alt="English">
+                English
+            </button>
 
-                <button onclick="changeLanguage('cs')">
-                    <img src="images/czechia.png" alt="Čeština">
-                    Čeština
-                </button>
+            <button onclick="changeLanguage('de')">
+                <img src="images/germany.png" alt="Deutsch">
+                Deutsch
+            </button>
 
-                <button onclick="changeLanguage('en')">
-                    <img src="images/usa.png" alt="English">
-                    English
-                </button>
+            <button onclick="changeLanguage('fr')">
+                <img src="images/france.png" alt="Français">
+                Français
+            </button>
 
-                <button onclick="changeLanguage('de')">
-                    <img src="images/germany.png" alt="Deutsch">
-                    Deutsch
-                </button>
+            <button onclick="changeLanguage('es')">
+                <img src="images/spain.jpg" alt="Español">
+                Español
+            </button>
 
-                <button onclick="changeLanguage('fr')">
-                    <img src="images/france.png" alt="Français">
-                    Français
-                </button>
-
-            </div>
+            <button onclick="changeLanguage('it')">
+                <img src="images/italy.jpg" alt="Italiano">
+                Italiano
+            </button>
 
         </div>
 
-        <h1 id="siteTitle">
-            🌌 Космическое приключение имени Папайруса
-        </h1>
+    </div>
 
-        <p id="siteSubtitle">
-            Исследуй Солнечную систему 🚀
-        </p>
+    <h1 id="siteTitle">
+        🌌 Космическое приключение имени Папайруса
+    </h1>
 
-    </header>
+    <p id="siteSubtitle">
+        Исследуй Солнечную систему 🚀
+    </p>
 
-    <main>
+ 
 
-        <section class="intro">
 
-            <h2 id="welcomeTitle">
-                Добро пожаловать в космос!
-            </h2>
+<!-- 💀 Кнопка обновлений -->
+<button
+    class="sans-update-button"
+    onclick="openUpdatesModal()"
+    aria-label="Открыть новые дополнения"
+    id="sansUpdateButton"
+>
+    <img
+        src="images/sans.jpg"
+        alt="Sans"
+    >
+</button>
 
-            <p id="welcomeText">
-                Отправляйся в путешествие по Солнечной системе,
-                изучай планеты и узнавай интересные факты о них.
+</header>
+
+<!-- 📝 Окно новых дополнений -->
+<div
+    id="updatesModal"
+    class="updates-modal"
+>
+    <div class="updates-content">
+
+        <h2 id="updatesTitle">
+            📝 Новые дополнения
+        </h2>
+
+        <div class="updates-list">
+
+            <p id="sansUpdate1">
+                💀 хей. это снова я, санс.
             </p>
 
-            <button onclick="scrollToPlanets()" id="startButton">
-                Начать путешествие 🚀
-            </button>
+            <p id="sansUpdate2">
+                обычно я ленюсь стоять здесь и объявлять новости...
+            </p>
 
-            <button onclick="scrollToMoons()" id="moonsButton">
-                🌙 Исследовать спутники
-            </button>
+            <p id="sansUpdate3">
+                но, похоже, на этом сайте накопилось слишком много нового,
+                чтобы просто сделать вид, что я ничего не заметил.
+            </p>
 
-            <a href="constellations.html" id="constellationButton">
-                ✨ Мечты Чарли Морнингстар
-            </a>
+            <p id="sansUpdate4">
+                🌌 во-первых, у нас появились новые созвездия
+                в «Мечтах Чарли Морнингстар».
+            </p>
 
-        </section>
+            <p id="sansUpdate5">
+                🪐 во-вторых, добавились новые спутники и карликовые планеты.
+                церера, эрида, хаумеа и макемаке теперь тоже не скучают.
+            </p>
+
+            <p id="sansUpdate6">
+                📚 ещё появилась «Энциклопедия Кейна».
+                да, именно того самого Кейна. и нет, это не «Каин».
+                я проверил.
+            </p>
+
+            <p id="sansUpdate7">
+                🇪🇸🇮🇹 а ещё сайт теперь умеет говорить
+                по-испански и по-итальянски.
+                я бы пошутил про своё знание языков...
+                но я слишком ленив для этого.
+            </p>
+
+            <p id="sansUpdate8">
+                💀 короче, дополнений стало больше.
+            </p>
+
+            <p id="sansUpdate9">
+                так что осматривайся. вдруг найдёшь что-нибудь интересное.
+            </p>
+
+            <p id="sansUpdate10">
+                а теперь можешь нажать на меня, чтобы закрыть это окно.
+            </p>
+
+        </div>
+
+        <button
+            class="updates-close-button"
+            onclick="closeUpdatesModal()"
+            aria-label="Закрыть окно"
+        >
+            <img
+                src="images/sans_handslol.jpg"
+                alt="Sans"
+            >
+        </button>
+
+    </div>
+</div>
+
+<main>
+
+    <section class="intro">
+
+        <h2 id="welcomeTitle">
+            Добро пожаловать в космос!
+        </h2>
+
+        <p id="welcomeText">
+            Отправляйся в путешествие по Солнечной системе,
+            изучай планеты и узнавай интересные факты о них.
+        </p>
+
+        <button
+            onclick="scrollToPlanets()"
+            id="startButton"
+        >
+            Начать путешествие 🚀
+        </button>
+
+        <button
+            onclick="scrollToMoons()"
+            id="moonsButton"
+        >
+            🌙 Исследовать спутники
+        </button>
+
+        <a
+            href="space-objects.html"
+            class="space-objects-button"
+            id="spaceObjectsButton"
+        >
+            🌌 Космические объекты
+        </a>
+
+        <a
+            href="kain-encyclopedia.html"
+            class="kain-button"
+            id="kainButton"
+        >
+            🎪 Энциклопедия Кейна
+        </a>
+
+        <a
+            href="constellations.html"
+            id="constellationButton"
+        >
+            ✨ Мечты Чарли Морнингстар
+        </a>
+
+        <a
+            href="dwarf-planets.html"
+            class="dwarf-planets-button"
+            id="dwarfPlanetsButton"
+        >
+            🪐 Карликовые планеты
+        </a>
+
+    </section>
 
 
         <section class="planets" id="planets">
@@ -289,20 +425,21 @@
 
             </div>
 
-        </section>
 
+</section>
 
-        <section class="moons" id="moons">
+<section class="moons" id="moons">
+        
 
-            <h2 class="moons-section-title">
-                🌙 Спутники планет
-            </h2>
+    <h2 class="moons-section-title" id="moonsTitle">
+    🌙 Спутники планет
+</h2>
 
-            <p class="moons-section-text">
-                Исследуй спутники Солнечной системы и узнай больше о космических мирах.
-            </p>
+<p class="moons-section-text" id="moonsDescription">
+    Исследуй спутники Солнечной системы и узнай больше о космических мирах.
+</p>
 
-            <div class="moon-list">
+    <div class="moon-list">
 
                 <div class="moon-card" data-moon="Луна" onclick="showMoon('Луна')">
                     <img src="images/moon.jpg" alt="Луна" class="moon-image">
@@ -566,4 +703,3 @@
 <!-- Обновление сайта 2026 -->
 
 </html>
-```

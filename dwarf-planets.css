@@ -1,0 +1,861 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(80, 100, 255, 0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(140, 70, 255, 0.15),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #02030d,
+            #070b25,
+            #030516
+        );
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   ЗВЁЗДНЫЙ ФОН
+========================= */
+
+.space-background {
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: -2;
+
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.9) 1px,
+            transparent 1.5px
+        ),
+        radial-gradient(
+            circle,
+            rgba(160, 190, 255, 0.7) 1px,
+            transparent 1.5px
+        );
+
+    background-size:
+        95px 95px,
+        145px 145px;
+
+    background-position:
+        10px 20px,
+        50px 80px;
+
+    animation: starsMove 35s linear infinite;
+}
+
+@keyframes starsMove {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-95px);
+    }
+
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.dwarf-header {
+
+    position: relative;
+
+    text-align: center;
+
+    padding:
+        35px
+        25px
+        45px;
+
+    border-bottom:
+        1px solid
+        rgba(130, 170, 255, 0.2);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(5, 8, 30, 0.92),
+            rgba(5, 8, 30, 0.55)
+        );
+
+    box-shadow:
+        0 10px 50px
+        rgba(0, 0, 0, 0.35);
+}
+
+
+.dwarf-header h1 {
+
+    margin:
+        25px
+        0
+        10px;
+
+    font-size:
+        clamp(32px, 6vw, 58px);
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #a8c7ff,
+            #d5b8ff,
+            #ffffff
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+
+    text-shadow:
+        0 0 25px
+        rgba(110, 160, 255, 0.25);
+}
+
+
+.dwarf-header p {
+
+    margin: 0;
+
+    font-size: 18px;
+
+    color:
+        rgba(220, 230, 255, 0.78);
+}
+
+
+/* =========================
+   BACK LINK
+========================= */
+
+.back-link {
+
+    display: inline-block;
+
+    color:
+        #bcd4ff;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    padding:
+        9px
+        16px;
+
+    border:
+        1px solid
+        rgba(130, 170, 255, 0.3);
+
+    border-radius: 30px;
+
+    background:
+        rgba(50, 70, 130, 0.15);
+
+    transition:
+        0.25s ease;
+}
+
+.back-link:hover {
+
+    transform:
+        translateY(-2px);
+
+    color: white;
+
+    background:
+        rgba(80, 110, 200, 0.25);
+
+    box-shadow:
+        0 0 18px
+        rgba(100, 160, 255, 0.25);
+}
+
+
+/* =========================
+   LANGUAGE MENU
+========================= */
+
+.language-menu {
+
+    position: absolute;
+
+    top: 25px;
+    right: 25px;
+
+    z-index: 100;
+}
+
+
+.language-menu > button {
+
+    border:
+        1px solid
+        rgba(150, 190, 255, 0.4);
+
+    border-radius: 30px;
+
+    padding:
+        10px
+        16px;
+
+    color: white;
+
+    background:
+        rgba(10, 15, 45, 0.8);
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition:
+        0.25s ease;
+}
+
+
+.language-menu > button:hover {
+
+    background:
+        rgba(60, 90, 170, 0.55);
+
+    box-shadow:
+        0 0 18px
+        rgba(100, 160, 255, 0.3);
+}
+
+
+.language-dropdown {
+
+    position: absolute;
+
+    top: 48px;
+    right: 0;
+
+    width: 180px;
+
+    padding: 8px;
+
+    border:
+        1px solid
+        rgba(130, 170, 255, 0.35);
+
+    border-radius: 16px;
+
+    background:
+        rgba(5, 8, 30, 0.97);
+
+    box-shadow:
+        0 15px 45px
+        rgba(0, 0, 0, 0.5);
+
+    backdrop-filter:
+        blur(12px);
+
+    display: none;
+}
+
+.language-dropdown.open {
+    display: block;
+}
+
+
+.language-dropdown button {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding:
+        9px
+        10px;
+
+    border: 0;
+
+    border-radius: 10px;
+
+    color: white;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition:
+        0.2s ease;
+}
+
+
+.language-dropdown button:hover {
+
+    background:
+        rgba(90, 130, 220, 0.25);
+}
+
+
+.language-dropdown button img {
+    width: 22px !important;
+    height: 15px !important;
+    min-width: 22px !important;
+    max-width: 22px !important;
+    min-height: 15px !important;
+    max-height: 15px !important;
+
+    object-fit: cover;
+    display: inline-block;
+
+    border-radius: 3px;
+
+    flex-shrink: 0;
+}
+.language-dropdown button {
+    display: flex !important;
+    align-items: center;
+    gap: 9px;
+}
+
+.language-dropdown {
+    width: 180px;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+.dwarf-section {
+
+    width:
+        min(1200px, 92%);
+
+    margin:
+        0 auto;
+
+    padding:
+        65px 0
+        80px;
+}
+
+
+.dwarf-section h2 {
+
+    text-align: center;
+
+    font-size: 34px;
+
+    margin:
+        0 0 12px;
+
+    text-shadow:
+        0 0 18px
+        rgba(130, 180, 255, 0.35);
+}
+
+
+.section-description {
+
+    text-align: center;
+
+    color:
+        rgba(220, 230, 255, 0.72);
+
+    font-size: 17px;
+
+    margin:
+        0 0 45px;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.dwarf-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px, 1fr)
+        );
+
+    gap: 28px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.dwarf-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(120, 170, 255, 0.28);
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(20, 28, 65, 0.9),
+            rgba(6, 10, 30, 0.95)
+        );
+
+    box-shadow:
+        0 10px 35px
+        rgba(0, 0, 0, 0.35);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.dwarf-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(150, 200, 255, 0.65);
+
+    box-shadow:
+        0 0 25px
+        rgba(90, 150, 255, 0.25),
+        0 20px 45px
+        rgba(0, 0, 0, 0.4);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.planet-image {
+
+    width: 100%;
+
+    height: 220px;
+
+    overflow: hidden;
+
+    background:
+        #03040d;
+}
+
+
+.planet-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.45s ease;
+}
+
+
+.dwarf-card:hover
+.planet-image img {
+
+    transform:
+        scale(1.08);
+}
+
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.card-content {
+
+    padding:
+        20px;
+}
+
+
+.planet-symbol {
+
+    display: block;
+
+    font-size: 32px;
+
+    margin-bottom:
+        6px;
+
+    filter:
+        drop-shadow(
+            0 0 8px
+            rgba(160, 200, 255, 0.45)
+        );
+}
+
+
+.card-content h3 {
+
+    margin:
+        0 0 10px;
+
+    font-size: 25px;
+}
+
+
+.card-content p {
+
+    min-height: 55px;
+
+    margin:
+        0 0 18px;
+
+    line-height: 1.5;
+
+    color:
+        rgba(220, 230, 255, 0.72);
+}
+
+
+/* =========================
+   EXPLORE BUTTON
+========================= */
+
+.explore-button {
+
+    width: 100%;
+
+    padding:
+        11px
+        16px;
+
+    border:
+        1px solid
+        rgba(140, 190, 255, 0.35);
+
+    border-radius: 30px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(60, 100, 220, 0.7),
+            rgba(120, 70, 210, 0.7)
+        );
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition:
+        0.25s ease;
+}
+
+
+.explore-button:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 0 20px
+        rgba(100, 160, 255, 0.4);
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.dwarf-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    background:
+        rgba(0, 0, 20, 0.82);
+
+    backdrop-filter:
+        blur(8px);
+
+    z-index: 9999;
+}
+
+
+.dwarf-modal.open {
+
+    display: flex;
+}
+
+
+.dwarf-modal-content {
+
+    position: relative;
+
+    width:
+        min(700px, 94vw);
+
+    max-height:
+        90vh;
+
+    overflow-y: auto;
+
+    border:
+        1px solid
+        rgba(140, 190, 255, 0.5);
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18, 25, 60, 0.98),
+            rgba(5, 8, 25, 0.98)
+        );
+
+    box-shadow:
+        0 0 40px
+        rgba(80, 150, 255, 0.25),
+        0 30px 80px
+        rgba(0, 0, 0, 0.6);
+
+    animation:
+        modalAppear
+        0.3s ease;
+}
+
+
+@keyframes modalAppear {
+
+    from {
+        opacity: 0;
+        transform:
+            scale(0.9)
+            translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            scale(1)
+            translateY(0);
+    }
+
+}
+
+
+.dwarf-modal-content > img {
+
+    width: 100%;
+
+    height: 350px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius:
+        25px
+        25px
+        0
+        0;
+}
+
+
+.modal-info {
+
+    padding:
+        28px;
+}
+
+
+.modal-symbol {
+
+    font-size: 38px;
+}
+
+
+.modal-info h2 {
+
+    margin:
+        5px 0 15px;
+
+    font-size: 35px;
+}
+
+
+.modal-info p {
+
+    margin: 0;
+
+    line-height: 1.7;
+
+    font-size: 17px;
+
+    color:
+        rgba(225, 232, 255, 0.82);
+}
+
+
+/* =========================
+   CLOSE
+========================= */
+
+.modal-close {
+
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    width: 42px;
+    height: 42px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.35);
+
+    border-radius: 50%;
+
+    color: white;
+
+    background:
+        rgba(0, 0, 0, 0.55);
+
+    cursor: pointer;
+
+    font-size: 28px;
+
+    line-height: 1;
+
+    z-index: 10;
+
+    transition:
+        0.25s ease;
+}
+
+
+.modal-close:hover {
+
+    transform:
+        rotate(90deg);
+
+    background:
+        rgba(130, 40, 70, 0.7);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    text-align: center;
+
+    padding:
+        25px;
+
+    border-top:
+        1px solid
+        rgba(130, 170, 255, 0.15);
+
+    color:
+        rgba(210, 225, 255, 0.55);
+
+    background:
+        rgba(3, 5, 20, 0.7);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .language-menu {
+
+        top: 15px;
+        right: 15px;
+    }
+
+    .dwarf-header {
+
+        padding-top: 80px;
+    }
+
+    .dwarf-section {
+
+        width: 94%;
+    }
+
+    .dwarf-modal-content > img {
+
+        height: 240px;
+    }
+
+    .modal-info {
+
+        padding: 22px;
+    }
+
+}

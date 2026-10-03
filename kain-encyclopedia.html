@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Энциклопедия Кейна</title>
+<link rel="stylesheet" href="kain-encyclopedia.css">
+</head>
+<body>
+<div class="kain-stars"></div>
+<header class="kain-header">
+  <a href="index.html" class="back-link" id="backLink">← Космическое приключение</a>
+  <h1 id="kainTitle">📚 Энциклопедия Кейна</h1>
+  <p id="kainSubtitle">История рождения и развития планет Солнечной системы.</p>
+  <div class="kain-languages">
+
+    <button onclick="setKainLanguage('ru')">
+        <img src="images/russia.png" alt="Русский">
+        Русский
+    </button>
+
+    <button onclick="setKainLanguage('kk')">
+        <img src="images/kazakhstan.png" alt="Қазақша">
+        Қазақша
+    </button>
+
+    <button onclick="setKainLanguage('cs')">
+        <img src="images/czechia.png" alt="Čeština">
+        Čeština
+    </button>
+
+    <button onclick="setKainLanguage('en')">
+        <img src="images/usa.png" alt="English">
+        English
+    </button>
+
+    <button onclick="setKainLanguage('de')">
+        <img src="images/germany.png" alt="Deutsch">
+        Deutsch
+    </button>
+
+    <button onclick="setKainLanguage('fr')">
+        <img src="images/france.png" alt="Français">
+        Français
+    </button>
+
+    <button onclick="setKainLanguage('es')">
+        <img src="images/spain.jpg" alt="Español">
+        Español
+    </button>
+
+    <button onclick="setKainLanguage('it')">
+        <img src="images/italy.jpg" alt="Italiano">
+        Italiano
+    </button>
+</div>
+
+</header>
+<main class="encyclopedia-grid">
+  <article class="history-card"><span>☀️</span><h2 id="formationTitle">Рождение Солнечной системы</h2><p id="formationText">Около 4,6 млрд лет назад огромное облако газа и пыли начало сжиматься под действием гравитации. В центре сформировалось молодое Солнце, а вокруг него возник вращающийся протопланетный диск.</p></article>
+  <article class="history-card"><span>🪨</span><h2 id="innerTitle">Формирование каменных планет</h2><p id="innerText">Во внутренней части диска температура была выше. Здесь сталкивались и объединялись твёрдые частицы, постепенно образуя Меркурий, Венеру, Землю и Марс.</p></article>
+  <article class="history-card"><span>🌪️</span><h2 id="giantTitle">Рождение гигантов</h2><p id="giantText">Дальше от Солнца было холоднее, поэтому крупные зародыши могли накопить много льда и газа. Так сформировались Юпитер, Сатурн, Уран и Нептун.</p></article>
+  <article class="history-card"><span>🌍</span><h2 id="earthTitle">Как появилась Земля</h2><p id="earthText">Земля росла из столкновений планетезималей. После формирования она постепенно остыла, сформировались кора, океаны и атмосфера, а позднее возникла жизнь.</p></article>
+  <article class="history-card"><span>🌙</span><h2 id="moonTitle">Рождение Луны</h2><p id="moonText">Согласно наиболее принятой модели, молодая Земля столкнулась с крупным небесным телом. Из выброшенного материала вокруг Земли сформировалась Луна.</p></article>
+  <article class="history-card"><span>🧊</span><h2 id="outerTitle">Миры за Нептуном</h2><p id="outerText">За орбитой Нептуна сохранилось множество ледяных тел. Среди них находятся Плутон и другие карликовые планеты пояса Койпера и рассеянного диска.</p></article>
+</main>
+<section class="planets-history">
+
+    <h2 id="planetsHistoryTitle">
+        🪐 История планет
+    </h2>
+
+    <p id="planetsHistorySubtitle">
+        Как формировались миры Солнечной системы.
+    </p>
+
+    <div class="encyclopedia-grid">
+
+        <!-- ☿️ Меркурий -->
+        <article class="history-card">
+            <span>☿️</span>
+
+            <h2 id="planetMercuryTitle">
+                Меркурий
+            </h2>
+
+            <p id="planetMercuryText">
+                Меркурий сформировался во внутренней части молодой Солнечной системы.
+                Высокая температура не позволила ему сохранить большое количество
+                лёгких веществ, поэтому он стал небольшим каменистым миром с крупным
+                металлическим ядром.
+            </p>
+        </article>
+
+
+        <!-- ♀️ Венера -->
+        <article class="history-card">
+            <span>♀️</span>
+
+            <h2 id="planetVenusTitle">
+                Венера
+            </h2>
+
+            <p id="planetVenusText">
+                Венера возникла из материала протопланетного диска рядом с Землёй.
+                Она постепенно росла благодаря столкновениям планетезималей и других
+                небольших тел, а позднее приобрела плотную атмосферу.
+            </p>
+        </article>
+
+
+        <!-- 🌍 Земля -->
+        <article class="history-card">
+            <span>🌍</span>
+
+            <h2 id="planetEarthTitle">
+                Земля
+            </h2>
+
+            <p id="planetEarthText">
+                Земля сформировалась около 4,5 млрд лет назад из множества столкновений
+                молодых тел. Со временем планета разделилась на ядро, мантию и кору,
+                а затем на её поверхности появились океаны и атмосфера.
+            </p>
+        </article>
+
+
+        <!-- ♂️ Марс -->
+        <article class="history-card">
+            <span>♂️</span>
+
+            <h2 id="planetMarsTitle">
+                Марс
+            </h2>
+
+            <p id="planetMarsText">
+                Марс сформировался в более холодной внешней части области каменных
+                планет. Он оказался значительно меньше Земли и поэтому быстрее потерял
+                внутреннее тепло. В далёком прошлом на Марсе существовала жидкая вода
+                на поверхности.
+            </p>
+        </article>
+
+
+        <!-- ♃ Юпитер -->
+        <article class="history-card">
+            <span>♃</span>
+
+            <h2 id="planetJupiterTitle">
+                Юпитер
+            </h2>
+
+            <p id="planetJupiterText">
+                Юпитер начал формироваться далеко от Солнца, где было достаточно
+                холодно для накопления льда. Его массивное ядро стало притягивать
+                большое количество газа, благодаря чему возник крупнейший планетарный
+                гигант Солнечной системы.
+            </p>
+        </article>
+
+
+        <!-- ♄ Сатурн -->
+        <article class="history-card">
+            <span>♄</span>
+
+            <h2 id="planetSaturnTitle">
+                Сатурн
+            </h2>
+
+            <p id="planetSaturnText">
+                Сатурн сформировался в холодной внешней части протопланетного диска.
+                Он накопил большое количество водорода и гелия. Позднее вокруг планеты
+                сформировалась сложная система колец из льда и каменных частиц.
+            </p>
+        </article>
+
+
+        <!-- ♅ Уран -->
+        <article class="history-card">
+            <span>♅</span>
+
+            <h2 id="planetUranusTitle">
+                Уран
+            </h2>
+
+            <p id="planetUranusText">
+                Уран сформировался далеко от Солнца из смеси каменных материалов,
+                льдов и газов. Его относят к ледяным гигантам. Вероятно, крупные
+                столкновения в ранней истории повлияли на необычный наклон его оси.
+            </p>
+        </article>
+
+
+        <!-- ♆ Нептун -->
+        <article class="history-card">
+            <span>♆</span>
+
+            <h2 id="planetNeptuneTitle">
+                Нептун
+            </h2>
+
+            <p id="planetNeptuneText">
+                Нептун сформировался в холодной внешней области Солнечной системы.
+                Он состоит из плотного внутреннего вещества, богатого водой и другими
+                летучими соединениями, окружённого газовой атмосферой.
+            </p>
+        </article>
+
+
+        <!-- ♇ Плутон -->
+        <article class="history-card">
+            <span>♇</span>
+
+            <h2 id="planetPlutoTitle">
+                Плутон
+            </h2>
+
+            <p id="planetPlutoText">
+                Плутон сформировался в далёкой области за орбитой Нептуна.
+                Он является одним из крупных известных тел пояса Койпера и относится
+                к карликовым планетам. Его поверхность содержит различные виды льда.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+<footer id="kainFooter">🌌 Энциклопедия Кейна © 2026</footer>
+<script src="kain-encyclopedia.js"></script>
+</body>
+</html>

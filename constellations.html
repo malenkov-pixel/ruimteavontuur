@@ -9,8 +9,9 @@
 
     <link rel="stylesheet" href="constellations.css">
 
-    <script src="script.js"></script>
+
 </head>
+<script src="constellations.js"></script>
 
 <body>
 
@@ -264,7 +265,32 @@ document.addEventListener(
                 Français
 
             </button>
+<button
+    onclick="changeLanguage('es')"
+>
 
+    <img
+        src="images/spain.jpg"
+        alt="Español"
+    >
+
+    Español
+
+</button>
+
+
+<button
+    onclick="changeLanguage('it')"
+>
+
+    <img
+        src="images/italy.jpg"
+        alt="Italiano"
+    >
+
+    Italiano
+
+</button>
 
         </div>
 
@@ -679,7 +705,334 @@ document.addEventListener(
             </p>
 
         </div>
+<!-- Большой Пёс -->
 
+<div
+    class="constellation-card"
+    data-constellation="Большой Пёс"
+    onclick="openModal(
+        'Большой Пёс',
+        './images/canis_major.jpg'
+    )"
+>
+
+    <img
+        src="./images/canis_major.jpg"
+        alt="Большой Пёс"
+    >
+
+    <h2
+        data-original-name="Большой Пёс"
+    >
+        Большой Пёс
+    </h2>
+
+    <p
+        class="constellation-description"
+        data-original-name="Большой Пёс"
+    >
+        Созвездие южного неба, в котором находится яркая звезда Сириус.
+    </p>
+
+</div>
+
+
+<!-- Стрелец -->
+
+<div
+    class="constellation-card"
+    data-constellation="Стрелец"
+    onclick="openModal(
+        'Стрелец',
+        './images/sagittarius.jpg'
+    )"
+>
+
+    <img
+        src="./images/sagittarius.jpg"
+        alt="Стрелец"
+    >
+
+    <h2
+        data-original-name="Стрелец"
+    >
+        Стрелец
+    </h2>
+
+    <p
+        class="constellation-description"
+        data-original-name="Стрелец"
+    >
+        Зодиакальное созвездие, расположенное в направлении центра Млечного Пути.
+    </p>
+
+</div>
+
+
+<!-- Близнецы -->
+
+<div
+    class="constellation-card"
+    data-constellation="Близнецы"
+    onclick="openModal(
+        'Близнецы',
+        './images/gemini.jpg'
+    )"
+>
+
+    <img
+        src="./images/gemini.jpg"
+        alt="Близнецы"
+    >
+
+    <h2
+        data-original-name="Близнецы"
+    >
+        Близнецы
+    </h2>
+
+    <p
+        class="constellation-description"
+        data-original-name="Близнецы"
+    >
+        Зодиакальное созвездие, известное яркими звёздами Кастор и Поллукс.
+    </p>
+
+</div>
+
+
+<!-- Лев -->
+
+<div
+    class="constellation-card"
+    data-constellation="Лев"
+    onclick="openModal(
+        'Лев',
+        './images/leo.jpg'
+    )"
+>
+
+    <img
+        src="./images/leo.jpg"
+        alt="Лев"
+    >
+
+    <h2
+        data-original-name="Лев"
+    >
+        Лев
+    </h2>
+
+    <p
+        class="constellation-description"
+        data-original-name="Лев"
+    >
+        Зодиакальное созвездие, напоминающее фигуру льва.
+    </p>
+
+</div>
+
+
+<!-- Цефей -->
+
+<div
+    class="constellation-card"
+    data-constellation="Цефей"
+    onclick="openModal(
+        'Цефей',
+        './images/cepheus.jpg'
+    )"
+>
+
+    <img
+        src="./images/cepheus.jpg"
+        alt="Цефей"
+    >
+
+    <h2
+        data-original-name="Цефей"
+    >
+        Цефей
+    </h2>
+
+    <p
+        class="constellation-description"
+        data-original-name="Цефей"
+    >
+        Созвездие северного неба, названное в честь царя из древнегреческой мифологии.
+    </p>
+
+</div>
+
+
+<!-- Пегас -->
+
+<div
+    class="constellation-card"
+    data-constellation="Пегас"
+    onclick="openModal(
+        'Пегас',
+        './images/pegasus.jpg'
+    )"
+>
+
+    <img
+        src="./images/pegasus.jpg"
+        alt="Пегас"
+    >
+
+    <h2
+        data-original-name="Пегас"
+    >
+        Пегас
+    </h2>
+
+    <p
+        class="constellation-description"
+        data-original-name="Пегас"
+    >
+        Большое созвездие северного неба, названное в честь крылатого коня Пегаса.
+    </p>
+
+</div>
+<!-- Водолей -->
+
+<div
+    class="constellation-card"
+    data-constellation="Водолей"
+    onclick="openModal(
+        'Водолей',
+        './images/aquarius.jpg'
+    )"
+>
+    <img
+        src="./images/aquarius.jpg"
+        alt="Водолей"
+    >
+
+    <h2 data-original-name="Водолей">
+        Водолей
+    </h2>
+
+    <p
+        class="constellation-description"
+        data-original-name="Водолей"
+    >
+        Зодиакальное созвездие, расположенное в области неба между Козерогом и Рыбами.
+    </p>
+</div>
+
+
+<!-- Дева -->
+
+<div
+    class="constellation-card"
+    data-constellation="Дева"
+    onclick="openModal(
+        'Дева',
+        './images/virgo.jpg'
+    )"
+>
+    <img
+        src="./images/virgo.jpg"
+        alt="Дева"
+    >
+
+    <h2 data-original-name="Дева">
+        Дева
+    </h2>
+
+    <p
+        class="constellation-description"
+        data-original-name="Дева"
+    >
+        Большое зодиакальное созвездие, рядом с которым находится яркая звезда Спика.
+    </p>
+</div>
+
+
+<!-- Козерог -->
+
+<div
+    class="constellation-card"
+    data-constellation="Козерог"
+    onclick="openModal(
+        'Козерог',
+        './images/capricorn.jpg'
+    )"
+>
+    <img
+        src="./images/capricorn.jpg"
+        alt="Козерог"
+    >
+
+    <h2 data-original-name="Козерог">
+        Козерог
+    </h2>
+
+    <p
+        class="constellation-description"
+        data-original-name="Козерог"
+    >
+        Зодиакальное созвездие южного неба, изображаемое в виде мифического морского козла.
+    </p>
+</div>
+
+
+<!-- Южный Крест -->
+
+<div
+    class="constellation-card"
+    data-constellation="Южный Крест"
+    onclick="openModal(
+        'Южный Крест',
+        './images/crux.jpg'
+    )"
+>
+    <img
+        src="./images/crux.jpg"
+        alt="Южный Крест"
+    >
+
+    <h2 data-original-name="Южный Крест">
+        Южный Крест
+    </h2>
+
+    <p
+        class="constellation-description"
+        data-original-name="Южный Крест"
+    >
+        Небольшое, но хорошо узнаваемое созвездие южного неба в форме креста.
+    </p>
+</div>
+
+
+<!-- Кентавр -->
+
+<div
+    class="constellation-card"
+    data-constellation="Кентавр"
+    onclick="openModal(
+        'Кентавр',
+        './images/centaurus.jpg'
+    )"
+>
+    <img
+        src="./images/centaurus.jpg"
+        alt="Кентавр"
+    >
+
+    <h2 data-original-name="Кентавр">
+        Кентавр
+    </h2>
+
+    <p
+        class="constellation-description"
+        data-original-name="Кентавр"
+    >
+        Большое южное созвездие, в котором находится ближайшая к Солнцу звёздная система Альфа Центавра.
+    </p>
+</div>
 
     </div>
 

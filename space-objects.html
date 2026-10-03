@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Космические объекты</title>
+
+    <link rel="stylesheet" href="space-objects.css">
+</head>
+
+<body>
+
+    <div class="stars"></div>
+
+    <header class="space-header">
+
+        <a href="index.html" class="back-button">
+            ← Вернуться в космическое приключение
+        </a>
+
+        <div class="language-menu">
+
+            <button
+                class="language-button"
+                id="languageButton"
+                onclick="toggleLanguageMenu()"
+            >
+                <img
+                    src="images/russia.png"
+                    alt="Русский"
+                >
+                Русский
+            </button>
+
+            <div
+                class="language-dropdown"
+                id="languageDropdown"
+            >
+
+                <button onclick="changeLanguage('ru')">
+                    <img src="images/russia.png" alt="Русский">
+                    Русский
+                </button>
+
+                <button onclick="changeLanguage('kk')">
+                    <img src="images/kazakhstan.png" alt="Қазақша">
+                    Қазақша
+                </button>
+
+                <button onclick="changeLanguage('cs')">
+                    <img src="images/czechia.png" alt="Čeština">
+                    Čeština
+                </button>
+
+                <button onclick="changeLanguage('en')">
+                    <img src="images/usa.png" alt="English">
+                    English
+                </button>
+
+                <button onclick="changeLanguage('de')">
+                    <img src="images/germany.png" alt="Deutsch">
+                    Deutsch
+                </button>
+
+                <button onclick="changeLanguage('fr')">
+                    <img src="images/france.png" alt="Français">
+                    Français
+                </button>
+
+                <button onclick="changeLanguage('es')">
+                    <img src="images/spain.jpg" alt="Español">
+                    Español
+                </button>
+
+                <button onclick="changeLanguage('it')">
+                    <img src="images/italy.jpg" alt="Italiano">
+                    Italiano
+                </button>
+
+            </div>
+        </div>
+
+        <div class="header-content">
+
+            <div class="space-icon">🌌</div>
+
+            <h1 id="page-title">
+                Космические объекты
+            </h1>
+
+            <p id="page-subtitle">
+                Исследуй удивительные объекты Вселенной
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="intro">
+
+            <h2 id="intro-title">
+                🔭 Что скрывается в космосе?
+            </h2>
+
+            <p id="intro-text">
+                Вселенная наполнена удивительными объектами —
+                от огромных звёзд и туманностей до астероидов,
+                комет и чёрных дыр.
+            </p>
+
+        </section>
+
+
+        <section class="objects-section">
+
+            <div class="objects-grid">
+
+
+                <!-- Комета -->
+
+                <article
+                    class="object-card"
+                    onclick="openObject('comet')"
+                >
+
+                    <div class="object-icon">
+                        ☄️
+                    </div>
+
+                    <h3 data-object-title="comet">
+                        Комета
+                    </h3>
+
+                    <p data-object-description="comet">
+                        Ледяное тело, которое движется вокруг звезды.
+                    </p>
+
+                </article>
+
+
+                <!-- Астероид -->
+
+                <article
+                    class="object-card"
+                    onclick="openObject('asteroid')"
+                >
+
+                    <div class="object-icon">
+                        🪨
+                    </div>
+
+                    <h3 data-object-title="asteroid">
+                        Астероид
+                    </h3>
+
+                    <p data-object-description="asteroid">
+                        Каменное или металлическое тело, обращающееся вокруг Солнца.
+                    </p>
+
+                </article>
+
+
+                <!-- Метеор -->
+
+                <article
+                    class="object-card"
+                    onclick="openObject('meteor')"
+                >
+
+                    <div class="object-icon">
+                        🌠
+                    </div>
+
+                    <h3 data-object-title="meteor">
+                        Метеор
+                    </h3>
+
+                    <p data-object-description="meteor">
+                        Яркая вспышка, возникающая при входе космического тела в атмосферу.
+                    </p>
+
+                </article>
+
+
+                <!-- Туманность -->
+
+                <article
+                    class="object-card"
+                    onclick="openObject('nebula')"
+                >
+
+                    <div class="object-icon">
+                        🌌
+                    </div>
+
+                    <h3 data-object-title="nebula">
+                        Туманность
+                    </h3>
+
+                    <p data-object-description="nebula">
+                        Огромное облако газа и пыли в космосе.
+                    </p>
+
+                </article>
+
+
+                <!-- Звезда -->
+
+                <article
+                    class="object-card"
+                    onclick="openObject('star')"
+                >
+
+                    <div class="object-icon">
+                        ⭐
+                    </div>
+
+                    <h3 data-object-title="star">
+                        Звезда
+                    </h3>
+
+                    <p data-object-description="star">
+                        Огромный шар горячей плазмы, излучающий свет и энергию.
+                    </p>
+
+                </article>
+
+
+                <!-- Чёрная дыра -->
+
+                <article
+                    class="object-card"
+                    onclick="openObject('blackHole')"
+                >
+
+                    <div class="object-icon">
+                        🕳️
+                    </div>
+
+                    <h3 data-object-title="blackHole">
+                        Чёрная дыра
+                    </h3>
+
+                    <p data-object-description="blackHole">
+                        Область пространства с настолько сильной гравитацией,
+                        что даже свет не может её покинуть.
+                    </p>
+
+                </article>
+
+
+                <!-- Галактика -->
+
+                <article
+                    class="object-card"
+                    onclick="openObject('galaxy')"
+                >
+
+                    <div class="object-icon">
+                        🌌
+                    </div>
+
+                    <h3 data-object-title="galaxy">
+                        Галактика
+                    </h3>
+
+                    <p data-object-description="galaxy">
+                        Огромная система из звёзд, газа, пыли и тёмной материи.
+                    </p>
+
+                </article>
+
+
+                <!-- Пульсар -->
+
+                <article
+                    class="object-card"
+                    onclick="openObject('pulsar')"
+                >
+
+                    <div class="object-icon">
+                        💫
+                    </div>
+
+                    <h3 data-object-title="pulsar">
+                        Пульсар
+                    </h3>
+
+                    <p data-object-description="pulsar">
+                        Быстро вращающаяся нейтронная звезда,
+                        испускающая регулярные импульсы излучения.
+                    </p>
+
+                </article>
+
+
+                <!-- Нейтронная звезда -->
+
+                <article
+                    class="object-card"
+                    onclick="openObject('neutronStar')"
+                >
+
+                    <div class="object-icon">
+                        🔵
+                    </div>
+
+                    <h3 data-object-title="neutronStar">
+                        Нейтронная звезда
+                    </h3>
+
+                    <p data-object-description="neutronStar">
+                        Очень плотный остаток массивной звезды.
+                    </p>
+
+                </article>
+
+
+                <!-- Красный гигант -->
+
+                <article
+                    class="object-card"
+                    onclick="openObject('redGiant')"
+                >
+
+                    <div class="object-icon">
+                        🔴
+                    </div>
+
+                    <h3 data-object-title="redGiant">
+                        Красный гигант
+                    </h3>
+
+                    <p data-object-description="redGiant">
+                        Стадия жизни звезды, когда она сильно расширяется.
+                    </p>
+
+                </article>
+
+
+                <!-- Белый карлик -->
+
+                <article
+                    class="object-card"
+                    onclick="openObject('whiteDwarf')"
+                >
+
+                    <div class="object-icon">
+                        ⚪
+                    </div>
+
+                    <h3 data-object-title="whiteDwarf">
+                        Белый карлик
+                    </h3>
+
+                    <p data-object-description="whiteDwarf">
+                        Горячий плотный остаток звезды,
+                        которая завершила свой жизненный цикл.
+                    </p>
+
+                </article>
+
+
+                <!-- Сверхновая -->
+
+                <article
+                    class="object-card"
+                    onclick="openObject('supernova')"
+                >
+
+                    <div class="object-icon">
+                        💥
+                    </div>
+
+                    <h3 data-object-title="supernova">
+                        Сверхновая
+                    </h3>
+
+                    <p data-object-description="supernova">
+                        Мощное космическое событие,
+                        связанное с разрушением некоторых звёзд.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Модальное окно -->
+
+    <div
+        class="object-modal"
+        id="objectModal"
+        onclick="closeObject(event)"
+    >
+
+        <div
+            class="modal-content"
+            onclick="event.stopPropagation()"
+        >
+
+            <button
+                class="close-button"
+                onclick="closeObject()"
+            >
+                ×
+            </button>
+
+            <div
+                class="modal-icon"
+                id="modalIcon"
+            >
+                🌌
+            </div>
+
+            <h2 id="modalTitle">
+                Космический объект
+            </h2>
+
+            <p id="modalDescription">
+                Описание объекта.
+            </p>
+
+            <div class="fact-box">
+
+                <strong id="factTitle">
+                    🔭 Интересный факт
+                </strong>
+
+                <p id="modalFact">
+                    Факт о космическом объекте.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <p id="footer-text">
+            🌌 Космическое приключение имени Папайруса © 2026
+        </p>
+
+    </footer>
+
+
+    <script src="space-objects.js"></script>
+
+</body>
+
+</html>

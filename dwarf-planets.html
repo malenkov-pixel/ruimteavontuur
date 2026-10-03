@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Карликовые планеты</title>
+
+    <link
+        rel="stylesheet"
+        href="dwarf-planets.css"
+    >
+</head>
+
+<body>
+
+    <div class="space-background"></div>
+
+    <header class="dwarf-header">
+
+        <a
+            href="index.html"
+            class="back-link"
+            id="backLink"
+        >
+            ← Космическое приключение
+        </a>
+
+        <h1 id="pageTitle">
+            🪐 Карликовые планеты
+        </h1>
+
+        <p id="pageSubtitle">
+            Маленькие миры Солнечной системы.
+        </p>
+
+        <div class="language-menu">
+
+            <button onclick="toggleLanguageMenu()">
+                🌐 <span id="currentLanguageName">Русский</span>
+                ▾
+            </button>
+
+            <div
+                id="languageDropdown"
+                class="language-dropdown"
+            >
+
+                <button onclick="changeLanguage('ru')">
+                    <img
+                        src="images/russia.png"
+                        alt="Русский"
+                    >
+                    Русский
+                </button>
+
+                <button onclick="changeLanguage('kk')">
+                    <img
+                        src="images/kazakhstan.png"
+                        alt="Қазақша"
+                    >
+                    Қазақша
+                </button>
+
+                <button onclick="changeLanguage('cs')">
+                    <img
+                        src="images/czechia.png"
+                        alt="Čeština"
+                    >
+                    Čeština
+                </button>
+
+                <button onclick="changeLanguage('en')">
+                    <img
+                        src="images/usa.png"
+                        alt="English"
+                    >
+                    English
+                </button>
+
+                <button onclick="changeLanguage('de')">
+                    <img
+                        src="images/germany.png"
+                        alt="Deutsch"
+                    >
+                    Deutsch
+                </button>
+
+                <button onclick="changeLanguage('fr')">
+                    <img
+                        src="images/france.png"
+                        alt="Français"
+                    >
+                    Français
+                </button>
+
+                <button onclick="changeLanguage('es')">
+                    <img
+                        src="images/spain.jpg"
+                        alt="Español"
+                    >
+                    Español
+                </button>
+
+                <button onclick="changeLanguage('it')">
+                    <img
+                        src="images/italy.jpg"
+                        alt="Italiano"
+                    >
+                    Italiano
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="dwarf-section">
+
+            <h2 id="sectionTitle">
+                🌌 Известные карликовые планеты
+            </h2>
+
+            <p
+                class="section-description"
+                id="sectionDescription"
+            >
+                Исследуй необычные миры Солнечной системы.
+            </p>
+
+
+            <div class="dwarf-grid">
+
+
+                <!-- ПЛУТОН -->
+
+                <article
+                    class="dwarf-card"
+                    onclick="openDwarfModal('Плутон')"
+                >
+
+                    <div class="planet-image">
+
+                        <img
+                            src="images/pluto.jpg"
+                            alt="Плутон"
+                        >
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <span class="planet-symbol">
+                            ♇
+                        </span>
+
+                        <h3
+                            data-planet="Плутон"
+                            id="card-title-pluto"
+                        >
+                            Плутон
+                        </h3>
+
+                        <p
+                            data-planet="Плутон"
+                            id="card-text-pluto"
+                        >
+                            Известный карликовый мир на окраине Солнечной системы.
+                        </p>
+
+                        <button
+                            class="explore-button"
+                            onclick="event.stopPropagation(); openDwarfModal('Плутон')"
+                            id="explore-pluto"
+                        >
+                            🔭 Исследовать
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ЦЕРЕРА -->
+
+                <article
+                    class="dwarf-card"
+                    onclick="openDwarfModal('Церера')"
+                >
+
+                    <div class="planet-image">
+
+                        <img
+                            src="images/ceres.jpg"
+                            alt="Церера"
+                        >
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <span class="planet-symbol">
+                            ⚳
+                        </span>
+
+                        <h3
+                            data-planet="Церера"
+                            id="card-title-ceres"
+                        >
+                            Церера
+                        </h3>
+
+                        <p
+                            data-planet="Церера"
+                            id="card-text-ceres"
+                        >
+                            Крупнейший объект главного пояса астероидов.
+                        </p>
+
+                        <button
+                            class="explore-button"
+                            onclick="event.stopPropagation(); openDwarfModal('Церера')"
+                            id="explore-ceres"
+                        >
+                            🔭 Исследовать
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ХАУМЕА -->
+
+                <article
+                    class="dwarf-card"
+                    onclick="openDwarfModal('Хаумеа')"
+                >
+
+                    <div class="planet-image">
+
+                        <img
+                            src="images/haumea.jpg"
+                            alt="Хаумеа"
+                        >
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <span class="planet-symbol">
+                            🪐
+                        </span>
+
+                        <h3
+                            data-planet="Хаумеа"
+                            id="card-title-haumea"
+                        >
+                            Хаумеа
+                        </h3>
+
+                        <p
+                            data-planet="Хаумеа"
+                            id="card-text-haumea"
+                        >
+                            Быстро вращающийся ледяной мир пояса Койпера.
+                        </p>
+
+                        <button
+                            class="explore-button"
+                            onclick="event.stopPropagation(); openDwarfModal('Хаумеа')"
+                            id="explore-haumea"
+                        >
+                            🔭 Исследовать
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- МАКЕМАКЕ -->
+
+                <article
+                    class="dwarf-card"
+                    onclick="openDwarfModal('Макемаке')"
+                >
+
+                    <div class="planet-image">
+
+                        <img
+                            src="images/makemake.jpg"
+                            alt="Макемаке"
+                        >
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <span class="planet-symbol">
+                            🪐
+                        </span>
+
+                        <h3
+                            data-planet="Макемаке"
+                            id="card-title-makemake"
+                        >
+                            Макемаке
+                        </h3>
+
+                        <p
+                            data-planet="Макемаке"
+                            id="card-text-makemake"
+                        >
+                            Холодный ледяной мир за орбитой Нептуна.
+                        </p>
+
+                        <button
+                            class="explore-button"
+                            onclick="event.stopPropagation(); openDwarfModal('Макемаке')"
+                            id="explore-makemake"
+                        >
+                            🔭 Исследовать
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ЭРИДА -->
+
+                <article
+                    class="dwarf-card"
+                    onclick="openDwarfModal('Эрида')"
+                >
+
+                    <div class="planet-image">
+
+                        <img
+                            src="images/eris.jpg"
+                            alt="Эрида"
+                        >
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <span class="planet-symbol">
+                            🪐
+                        </span>
+
+                        <h3
+                            data-planet="Эрида"
+                            id="card-title-eris"
+                        >
+                            Эрида
+                        </h3>
+
+                        <p
+                            data-planet="Эрида"
+                            id="card-text-eris"
+                        >
+                            Очень далёкий карликовый мир рассеянного диска.
+                        </p>
+
+                        <button
+                            class="explore-button"
+                            onclick="event.stopPropagation(); openDwarfModal('Эрида')"
+                            id="explore-eris"
+                        >
+                            🔭 Исследовать
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- МОДАЛЬНОЕ ОКНО -->
+
+    <div
+        id="dwarfModal"
+        class="dwarf-modal"
+    >
+
+        <div class="dwarf-modal-content">
+
+            <button
+                class="modal-close"
+                onclick="closeDwarfModal()"
+                aria-label="Закрыть"
+            >
+                ×
+            </button>
+
+            <img
+                id="modalImage"
+                src=""
+                alt=""
+            >
+
+            <div class="modal-info">
+
+                <span
+                    id="modalSymbol"
+                    class="modal-symbol"
+                >
+                    🪐
+                </span>
+
+                <h2 id="modalTitle">
+                    Плутон
+                </h2>
+
+                <p id="modalDescription">
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <p id="footerText">
+            🌌 Космическое приключение имени Папайруса © 2026
+        </p>
+
+    </footer>
+
+
+    <script src="dwarf-planets.js"></script>
+
+</body>
+
+</html>

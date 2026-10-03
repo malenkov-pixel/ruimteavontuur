@@ -1273,3 +1273,356 @@ footer {
     box-shadow: 0 0 22px rgba(210, 120, 255, 0.75);
     transform: scale(1.04);
 }
+/* =========================================
+   💀 КНОПКА SANS — НОВЫЕ ДОПОЛНЕНИЯ
+   ========================================= */
+
+.sans-update-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    width: 70px;
+    height: 70px;
+
+    padding: 0;
+    margin: 0;
+
+    display: block;
+
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    box-shadow:
+        0 0 12px rgba(255, 255, 255, 0.25),
+        0 0 25px rgba(120, 180, 255, 0.2);
+
+    cursor: pointer;
+    overflow: hidden;
+
+    z-index: 10001;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.sans-update-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.sans-update-button:hover {
+    transform: scale(1.12);
+
+    box-shadow:
+        0 0 15px rgba(255, 255, 255, 0.5),
+        0 0 35px rgba(120, 180, 255, 0.45);
+}
+
+.sans-update-button:active {
+    transform: scale(0.96);
+}
+
+
+/* =========================================
+   📝 ОКНО НОВЫХ ДОПОЛНЕНИЙ
+   ========================================= */
+
+.updates-modal {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 20, 0.78);
+    backdrop-filter: blur(7px);
+
+    z-index: 2147483647 !important;
+
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+/* Само окно */
+
+.updates-content {
+    position: relative !important;
+    z-index: 2147483647 !important;
+
+    width: min(600px, 90vw);
+    max-height: 80vh;
+    padding: 30px;
+
+    overflow-y: auto;
+
+    border: 2px solid rgba(120, 190, 255, 0.55);
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(15, 20, 55, 0.97),
+            rgba(5, 8, 25, 0.97)
+        );
+
+    box-shadow:
+        0 0 25px rgba(90, 170, 255, 0.35),
+        0 0 70px rgba(80, 100, 255, 0.15);
+
+    animation: updatesWindowAppear 0.3s ease;
+    box-sizing: border-box;
+}
+
+
+/* Заголовок */
+
+.updates-content h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    font-size: 28px;
+
+    text-shadow:
+        0 0 8px rgba(150, 210, 255, 0.8),
+        0 0 20px rgba(100, 160, 255, 0.45);
+}
+
+
+/* Список дополнений */
+
+.updates-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.updates-list p {
+    margin: 0;
+
+    padding: 13px 16px;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    color: #e9f4ff;
+
+    font-size: 16px;
+    line-height: 1.5;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.updates-list p:hover {
+    background: rgba(100, 170, 255, 0.12);
+    transform: translateX(4px);
+}
+
+
+/* =========================================
+   🙌 КНОПКА ЗАКРЫТИЯ
+   ========================================= */
+
+.updates-close-button {
+    display: block;
+
+    width: 90px;
+    height: 90px;
+
+    margin: 25px auto 0;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
+}
+
+.updates-close-button img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.updates-close-button:hover {
+    transform: scale(1.12) rotate(3deg);
+
+    filter:
+        drop-shadow(0 0 10px rgba(120, 200, 255, 0.7));
+}
+
+.updates-close-button:active {
+    transform: scale(0.95);
+}
+
+
+/* =========================================
+   ✨ АНИМАЦИЯ ОКНА
+   ========================================= */
+
+@keyframes updatesWindowAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.85) translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+
+/* =========================================
+   📱 ТЕЛЕФОНЫ
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .sans-update-button {
+        width: 60px;
+        height: 60px;
+    }
+
+    .updates-content {
+        padding: 22px;
+    }
+
+    .updates-content h2 {
+        font-size: 23px;
+    }
+
+    .updates-list p {
+        font-size: 14px;
+    }
+
+    .updates-close-button {
+        width: 75px;
+        height: 75px;
+    }
+}
+.space-objects-button {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #4b6cff,
+        #8b5cf6
+    );
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    box-shadow:
+        0 0 20px rgba(100, 130, 255, 0.35);
+
+    transition:
+        transform 0.25s,
+        box-shadow 0.25s;
+}
+
+.space-objects-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 30px rgba(120, 160, 255, 0.55);
+}
+.kain-button {
+    display: inline-block;
+    padding: 14px 28px;
+    margin: 10px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #8b0000, #d4143d, #ff304f);
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    box-shadow:
+        0 0 15px rgba(255, 30, 70, 0.45),
+        0 0 30px rgba(180, 0, 40, 0.25);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.kain-button:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 0 20px rgba(255, 40, 80, 0.7),
+        0 0 40px rgba(200, 0, 50, 0.45);
+}
+.dwarf-planets-button {
+    display: inline-block;
+    padding: 14px 28px;
+    margin: 10px;
+
+    border-radius: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #4b3f72,
+        #7259a8,
+        #9b7bd8
+    );
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    box-shadow:
+        0 0 15px rgba(150, 120, 255, 0.45),
+        0 0 30px rgba(100, 80, 200, 0.25);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.dwarf-planets-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 20px rgba(170, 140, 255, 0.7),
+        0 0 40px rgba(120, 90, 220, 0.45);
+}
+
+.dwarf-planets-button:active {
+    transform: scale(0.96);
+}
