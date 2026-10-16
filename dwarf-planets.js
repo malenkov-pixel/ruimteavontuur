@@ -72,7 +72,7 @@ const dwarfTranslations = {
                 description:
                     "Хаумеа находится в поясе Койпера за орбитой Нептуна. Она необычно быстро вращается, из-за чего имеет вытянутую форму. У Хаумеа есть два известных спутника и собственная система колец.",
                 image:
-                    "images/haumea.jpg",
+                    "images/Haumea.jpg",
                 symbol: "🪐"
             },
 
@@ -162,7 +162,7 @@ const dwarfTranslations = {
                 description:
                     "Хаумеа Нептун орбитасының ар жағындағы Койпер белдеуінде орналасқан. Ол өте жылдам айналатындықтан, пішіні созылыңқы. Хаумеаның екі белгілі серігі және сақина жүйесі бар.",
                 image:
-                    "images/haumea.jpg",
+    "images/Haumea.jpg",
                 symbol: "🪐"
             },
 
@@ -252,7 +252,7 @@ const dwarfTranslations = {
                 description:
                     "Haumea se nachází v Kuiperově pásu za Neptunem. Rotuje neobvykle rychle, a proto má protáhlý tvar. Má dva známé měsíce a vlastní prstencový systém.",
                 image:
-                    "images/haumea.jpg",
+    "images/Haumea.jpg",
                 symbol: "🪐"
             },
 
@@ -342,7 +342,7 @@ const dwarfTranslations = {
                 description:
                     "Haumea is located in the Kuiper Belt beyond Neptune. It rotates unusually fast, giving it an elongated shape. Haumea has two known moons and a ring system.",
                 image:
-                    "images/haumea.jpg",
+    "images/Haumea.jpg",
                 symbol: "🪐"
             },
 
@@ -432,7 +432,7 @@ const dwarfTranslations = {
                 description:
                     "Haumea befindet sich im Kuipergürtel jenseits der Neptunbahn. Sie rotiert ungewöhnlich schnell und besitzt deshalb eine längliche Form. Haumea hat zwei bekannte Monde und ein Ringsystem.",
                 image:
-                    "images/haumea.jpg",
+    "images/Haumea.jpg",
                 symbol: "🪐"
             },
 
@@ -522,7 +522,7 @@ const dwarfTranslations = {
                 description:
                     "Hauméa se trouve dans la ceinture de Kuiper au-delà de Neptune. Elle tourne très rapidement et possède donc une forme allongée. Hauméa possède deux lunes connues et un système d'anneaux.",
                 image:
-                    "images/haumea.jpg",
+    "images/Haumea.jpg",
                 symbol: "🪐"
             },
 
@@ -612,7 +612,7 @@ const dwarfTranslations = {
                 description:
                     "Haumea se encuentra en el cinturón de Kuiper, más allá de Neptuno. Gira de forma muy rápida, por lo que tiene una forma alargada. Tiene dos lunas conocidas y un sistema de anillos.",
                 image:
-                    "images/haumea.jpg",
+    "images/Haumea.jpg",
                 symbol: "🪐"
             },
 
@@ -701,8 +701,8 @@ const dwarfTranslations = {
                     "Un mondo ghiacciato a rotazione rapida della fascia di Kuiper.",
                 description:
                     "Haumea si trova nella fascia di Kuiper oltre Nettuno. Ruota molto velocemente e per questo ha una forma allungata. Ha due lune conosciute e un sistema di anelli.",
-                image:
-                    "images/haumea.jpg",
+               image:
+                    "https://malenkov-pixel.github.io/ruimteavontuur/images/Haumea.jpg",
                 symbol: "🪐"
             },
 
@@ -905,6 +905,7 @@ function updatePage() {
 ========================================= */
 
 function openDwarfModal(originalName) {
+    console.log("НОВАЯ ВЕРСИЯ OPEN DWARF");
 
     currentDwarfPlanet =
         originalName;
@@ -937,12 +938,15 @@ function openDwarfModal(originalName) {
 
     if (image) {
 
-        image.src =
-            data.image;
+    image.src =
+        "https://malenkov-pixel.github.io/ruimteavontuur/images/Haumea.jpg";
+        console.log("КАРТИНКА:", image.src);
+console.log("ШИРИНА:", image.width);
+console.log("ВЫСОТА:", image.height);
 
-        image.alt =
-            data.name;
-    }
+    image.alt =
+        data.name;
+}
 
 
     if (title) {
