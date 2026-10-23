@@ -859,3 +859,107 @@ footer {
     }
 
 }
+
+/* 🥔 Повреждения орехостены */
+.garden-cell.wallnut-damaged {
+    background-color: #b8a46a;
+    filter: sepia(0.35);
+}
+
+.garden-cell.wallnut-damaged::after {
+    content: "╲";
+    position: absolute;
+    z-index: 2;
+    color: #573b2b;
+    font-size: 30px;
+    font-weight: 900;
+    pointer-events: none;
+    transform: rotate(-20deg);
+}
+
+.garden-cell.wallnut-cracked {
+    background-color: #94754e;
+    filter: sepia(0.7) brightness(0.85);
+}
+
+.garden-cell.wallnut-cracked::after {
+    content: "╳";
+    position: absolute;
+    z-index: 2;
+    color: #3e2921;
+    font-size: 32px;
+    font-weight: 900;
+    text-shadow: 1px 1px #e3c68b;
+    pointer-events: none;
+    animation: wallnut-crack 0.4s ease-in-out;
+}
+
+.garden-cell.plant-bitten {
+    animation: plant-bite 0.25s ease-in-out;
+}
+
+@keyframes wallnut-crack {
+    from { transform: scale(0.5) rotate(-25deg); }
+    to { transform: scale(1) rotate(0); }
+}
+
+@keyframes plant-bite {
+    0%, 100% { transform: translateX(0); }
+    35% { transform: translateX(-3px); }
+    70% { transform: translateX(3px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .garden-cell.wallnut-cracked::after,
+    .garden-cell.plant-bitten {
+        animation: none;
+    }
+}
+
+/* 🌱 Восстановление зелёной лужайки */
+.garden-board {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(9, minmax(0, 1fr));
+    gap: 3px;
+    padding: 7px;
+    overflow: hidden;
+    background: #234b28;
+    border: 4px solid #b2d96b;
+    border-radius: 13px;
+}
+
+.garden-cell {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1;
+    min-width: 0;
+    padding: 0;
+    background: #75bd4c;
+    border: 2px solid #4e913b;
+    border-radius: 5px;
+    font-size: clamp(15px, 3vw, 32px);
+    cursor: pointer;
+    filter: none;
+}
+
+.garden-cell:nth-child(even) {
+    background: #65ad43;
+}
+
+.garden-cell:hover {
+    background: #a6df63;
+}
+
+/* Повреждения меняют оттенок, но не скрывают газон */
+.garden-cell.wallnut-damaged {
+    background-color: #b8a46a;
+    filter: sepia(0.25);
+}
+
+.garden-cell.wallnut-cracked {
+    background-color: #94754e;
+    filter: sepia(0.5);
+}

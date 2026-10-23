@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Космическая лаборатория Безумного Дэйва</title>
+
+    <link rel="stylesheet" href="dave-lab.css">
+</head>
+<body>
+
+    <header class="lab-header">
+        <div class="dave-icon">🌻</div>
+
+        <p class="lab-label">НЕСАНКЦИОНИРОВАННЫЙ ЭКСПЕРИМЕНТ № 42</p>
+
+        <h1>Космическая лаборатория Безумного Дэйва</h1>
+
+        <p class="subtitle">
+            Наука! Космос! Растения! И, возможно, немного мозгов!
+        </p>
+
+        <div class="dave-message">
+            <span>🧔</span>
+            <p>
+                БРРРРРРРР! Добро пожаловать в мою лабораторию!
+                Я собираюсь исследовать ВСЮ ВСЕЛЕННУЮ!
+                Где моя кастрюля?!
+            </p>
+        </div>
+    </header>
+
+    <main>
+    
+<!-- 🎮 Мини-игра: защита лаборатории -->
+<section class="game-section" id="garden-game">
+    <h2>🌱 Защити лабораторию Дэйва!</h2>
+    <p class="game-description">
+        Выбирай растения и готовься к нашествию зомби!
+    </p>
+
+    <div class="game-status">
+        <div class="sun-counter">
+            ☀️ Солнце: <span id="sun-count">150</span>
+        </div>
+        <div class="wave-counter">
+            🧟 Волна: <span id="wave-count">1</span>
+        </div>
+    </div>
+
+    <div class="plant-selector">
+        <button class="plant-choice" onclick="selectPlant('peashooter')">
+            🟢 Горохострел
+            <span>100 ☀️</span>
+        </button>
+
+        <button class="plant-choice" onclick="selectPlant('sunflower')">
+            🌻 Подсолнух
+            <span>50 ☀️</span>
+        </button>
+
+        <button class="plant-choice" onclick="selectPlant('wallnut')">
+            🥔 Орехостена
+            <span>75 ☀️</span>
+        </button>
+    </div>
+
+    <p id="game-message" aria-live="polite">
+        Выбери растение, затем нажми на клетку газона!
+    </p>
+
+    <div class="garden-board" id="garden-board"
+         aria-label="Игровой газон"></div>
+
+    <div class="game-controls">
+        <button id="start-wave" onclick="startWave()">
+            🧟 Начать волну
+        </button>
+        <button onclick="resetGame()">
+            🔄 Новая игра
+        </button>
+    </div>
+</section>
+
+        <section class="intro">
+            <h2>🔬 Космический каталог</h2>
+            <p>
+                Пять загадок Вселенной. Пять великих исследований.
+                И ни одного гарантийного талона на оборудование!
+            </p>
+        </section>
+
+        <section class="space-grid">
+
+            <article class="space-card">
+                <img class="space-image" src="images/proxima-centauri.jpg" alt="Проксима Центавра">
+                <h3>Проксима Центавра</h3>
+                <p class="category">Красный карлик</p>
+                <p>
+                    Ближайшая к Солнцу звезда.
+                    Дэйв хочет выяснить, можно ли вырастить подсолнух
+                    на планете возле неё.
+                </p>
+                <button onclick="showExperiment('proxima')">
+                    Изучить объект
+                </button>
+            </article>
+
+            <article class="space-card">
+                <img class="space-image" src="images/exoplanet.jpg" alt="Экзопланеты">
+                <h3>Экзопланеты</h3>
+                <p class="category">Миры других звёзд</p>
+                <p>
+                    Планеты за пределами Солнечной системы.
+                    Есть ли там растения? А зомби?!
+                </p>
+                <button onclick="showExperiment('exoplanets')">
+                    Изучить объект
+                </button>
+            </article>
+
+            <article class="space-card">
+                <img class="space-image" src="images/orion-nebula.jpg" alt="Туманность Ориона">
+                <h3>Туманность Ориона</h3>
+                <p class="category">Звёздные ясли</p>
+                <p>
+                    Огромное облако газа и пыли, где рождаются звёзды.
+                    Дэйв уже ищет лейку.
+                </p>
+                <button onclick="showExperiment('orion')">
+                    Изучить объект
+                </button>
+            </article>
+
+            <article class="space-card">
+                <img class="space-image" src="images/black-hole.jpg" alt="Чёрная дыра">
+                <h3>Чёрные дыры</h3>
+                <p class="category">Экстремальная гравитация</p>
+                <p>
+                    Области пространства, из которых ничто,
+                    даже свет, не может выбраться за пределы горизонта событий.
+                </p>
+                <button onclick="showExperiment('blackhole')">
+                    Изучить объект
+                </button>
+            </article>
+
+            <article class="space-card">
+                <img class="space-image" src="images/galactic_andromeda.jpg" alt="Галактика Андромеды">
+                <h3>Галактика Андромеды</h3>
+                <p class="category">Соседняя большая галактика</p>
+                <p>
+                    Гигантская галактика за пределами Млечного Пути.
+                    Дэйв собирается отправить туда межгалактический горшок.
+                </p>
+                <button onclick="showExperiment('andromeda')">
+                    Изучить объект
+                </button>
+            </article>
+
+        </section>
+
+        <section class="experiment-panel" id="experiment-panel" hidden>
+            <button class="close-button" onclick="closeExperiment()">✖</button>
+            <h2 id="experiment-title"></h2>
+            <p id="experiment-description"></p>
+            <div class="dave-note" id="dave-note"></div>
+        </section>
+        
+<div id="campaign-victory" class="campaign-victory-screen" hidden>
+    <div class="victory-fireworks" aria-hidden="true">🎆 ✨ 🎇</div>
+
+    <div class="victory-content">
+        <div class="victory-trophy">🏆</div>
+
+        <h2>ПОБЕДА!</h2>
+
+        <p class="victory-subtitle">
+            ВСЕ 20 ВОЛН ПРОЙДЕНЫ!
+        </p>
+
+        <div class="victory-plants">🌻 🟢 🥔 🌱</div>
+
+        <p class="victory-message">
+            ЛАБОРАТОРИЯ СПАСЕНА!
+        </p>
+
+        <p class="victory-dave">
+            «Бвахаха! Невероятно! Ты защитил мою космическую лабораторию!
+            Дэйв гордится тобой!»
+        </p>
+
+        <button type="button" onclick="resetGame()">
+            🔄 Начать новую кампанию
+        </button>
+    </div>
+</div>
+    </main>
+
+<!-- 🧟 Космическое нашествие -->
+<div class="zombie-zone" aria-label="Космические зомби">
+    <div class="zombie-caption">⚠️ ВНИМАНИЕ: ЗОМБИ В ЛАБОРАТОРИИ!</div>
+
+    <div class="zombie-walk zombie-one" aria-label="Зомби">
+        <span>🧟</span>
+        <span class="zombie-speech">Мо-о-озги-и-и...</span>
+    </div>
+
+    <div class="zombie-walk zombie-two" aria-label="Зомби в скафандре">
+        <span>🧟‍♂️</span>
+        <span class="zombie-speech">Где тако?!</span>
+    </div>
+
+    <div class="zombie-walk zombie-three" aria-label="Космический зомби">
+        <span>👽</span>
+        <span class="zombie-speech">Брррр...</span>
+    </div>
+</div>
+
+
+    <footer>
+        <p>🌻 Лаборатория Безумного Дэйва · Космос ещё не готов к Дэйву.</p>
+        <a href="index.html">← Вернуться в космическое приключение</a>
+    </footer>
+
+  <script src="dave-lab.js"></script>
+<script src="dave-lab-localization.js"></script>
+<script src="page-language-menu.js"></script>
+</body>
+</html>
+

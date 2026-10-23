@@ -17,13 +17,9 @@ const languages = {
         welcomeTitle: "Добро пожаловать в космос!",
         welcomeText:
             "Отправляйся в путешествие по Солнечной системе, исследуй планеты и открывай интересные факты о них.",
-        startButton: "Начать приключение 🚀",
+        startButton: "Начать путешествие 🚀",
         moonsButton: "🌙 Исследовать спутники",
-        spaceObjectsButton: "🌌 Космические объекты",
-        kainButton: "🎪 Энциклопедия Кейна",
-        dwarfPlanetsButton: "🪐 Карликовые планеты",
         constellationButton: "✨ Мечты Чарли Морнингстар",
-        updatesTitle: "📝 Новые дополнения",
         planetsTitle: "🪐 Планеты",
         temperature: "Температура:",
         diameter: "Диаметр:",
@@ -45,13 +41,9 @@ const languages = {
         welcomeTitle: "Ғарышқа қош келдің!",
         welcomeText:
             "Күн жүйесіне саяхат жасап, ғаламшарларды зертте және олар туралы қызықты деректерді біл.",
-        startButton: "Шытырман оқиғаны бастау 🚀",
+        startButton: "Саяхатты бастау 🚀",
         moonsButton: "🌙 Серіктерді зерттеу",
-        spaceObjectsButton: "🌌 Ғарыш нысандары",
-        kainButton: "🎪 Кейн энциклопедиясы",
-        dwarfPlanetsButton: "🪐 Ергежейлі планеталар",
         constellationButton: "✨ Чарли Морнингстардың армандары",
-        updatesTitle: "📝 Жаңа толықтырулар",
         planetsTitle: "🪐 Ғаламшарлар",
         temperature: "Температурасы:",
         diameter: "Диаметрі:",
@@ -73,13 +65,9 @@ const languages = {
         welcomeTitle: "Vítej ve vesmíru!",
         welcomeText:
             "Vydej se na cestu Sluneční soustavou, prozkoumej planety a objev zajímavá fakta.",
-        startButton: "Začít dobrodružství 🚀",
+        startButton: "Začít cestu 🚀",
         moonsButton: "🌙 Prozkoumat měsíce",
-        spaceObjectsButton: "🌌 Vesmírné objekty",
-        kainButton: "🎪 Kainova encyklopedie",
-        dwarfPlanetsButton: "🪐 Trpasličí planety",
         constellationButton: "✨ Sny Charlieho Morningstara",
-        updatesTitle: "📝 Nové doplňky",
         planetsTitle: "🪐 Planety",
         temperature: "Teplota:",
         diameter: "Průměr:",
@@ -101,13 +89,9 @@ const languages = {
         welcomeTitle: "Welcome to space!",
         welcomeText:
             "Set off on a journey through the Solar System, explore the planets and discover interesting facts about them.",
-        startButton: "Start the adventure 🚀",
+        startButton: "Start the journey 🚀",
         moonsButton: "🌙 Explore moons",
-        spaceObjectsButton: "🌌 Space Objects",
-        kainButton: "🎪 Caine's Encyclopedia",
-        dwarfPlanetsButton: "🪐 Dwarf Planets",
         constellationButton: "✨ Charlie Morningstar's Dreams",
-        updatesTitle: "📝 New Additions",
         planetsTitle: "🪐 Planets",
         temperature: "Temperature:",
         diameter: "Diameter:",
@@ -129,13 +113,9 @@ const languages = {
         welcomeTitle: "Willkommen im Weltraum!",
         welcomeText:
             "Begib dich auf eine Reise durch das Sonnensystem, erkunde die Planeten und entdecke interessante Fakten.",
-        startButton: "Abenteuer beginnen 🚀",
+        startButton: "Reise beginnen 🚀",
         moonsButton: "🌙 Monde erkunden",
-        spaceObjectsButton: "🌌 Himmelsobjekte",
-        kainButton: "🎪 Caines Enzyklopädie",
-        dwarfPlanetsButton: "🪐 Zwergplaneten",
         constellationButton: "✨ Charlie Morningstars Träume",
-        updatesTitle: "📝 Neue Ergänzungen",
         planetsTitle: "🪐 Planeten",
         temperature: "Temperatur:",
         diameter: "Durchmesser:",
@@ -157,13 +137,9 @@ const languages = {
         welcomeTitle: "Bienvenue dans l'espace !",
         welcomeText:
             "Pars à la découverte du Système solaire, explore les planètes et découvre des faits intéressants.",
-        startButton: "Commencer l'aventure 🚀",
+        startButton: "Commencer le voyage 🚀",
         moonsButton: "🌙 Explorer les lunes",
-        spaceObjectsButton: "🌌 Objets spatiaux",
-        kainButton: "🎪 Encyclopédie de Caine",
-        dwarfPlanetsButton: "🪐 Planètes naines",
         constellationButton: "✨ Les rêves de Charlie Morningstar",
-        updatesTitle: "📝 Nouveautés",
         planetsTitle: "🪐 Planètes",
         temperature: "Température :",
         diameter: "Diamètre :",
@@ -183,175 +159,63 @@ const languages = {
         siteTitle: "🌌 Aventura espacial de Papyrus",
         siteSubtitle: "Explora el Sistema Solar 🚀",
         welcomeTitle: "¡Bienvenido al espacio!",
-        welcomeText:
-            "Emprende un viaje por el Sistema Solar, explora los planetas y descubre datos interesantes sobre ellos.",
-        startButton: "Comenzar la aventura 🚀",
+        welcomeText: "Emprende un viaje por el Sistema Solar, explora los planetas y descubre datos interesantes sobre ellos.",
+        startButton: "Iniciar el viaje 🚀",
         moonsButton: "🌙 Explorar las lunas",
-        spaceObjectsButton: "🌌 Objetos espaciales",
-        kainButton: "🎪 Enciclopedia de Caine",
-        dwarfPlanetsButton: "🪐 Planetas enanos",
         constellationButton: "✨ Los sueños de Charlie Morningstar",
-        updatesTitle: "📝 Nuevas incorporaciones",
         planetsTitle: "🪐 Planetas",
-        temperature: "Temperatura:",
-        diameter: "Diámetro:",
-        mass: "Masa:",
-        distance: "Distancia del Sol:",
-        day: "Duración del día:",
-        year: "Duración del año:",
-        moons: "Lunas:",
-        rings: "Anillos:",
-        atmosphere: "Atmósfera:",
-        fact: "🔭 Dato interesante",
-        footer: "🌌 Aventura espacial de Papyrus © 2026",
-        close: "Cerrar"
+        temperature: "Temperatura:", diameter: "Diámetro:", mass: "Masa:",
+        distance: "Distancia al Sol:", day: "Duración del día:", year: "Duración del año:",
+        moons: "Lunas:", rings: "Anillos:", atmosphere: "Atmósfera:",
+        fact: "🔭 Dato interesante", footer: "🌌 Aventura espacial de Papyrus © 2026", close: "Cerrar"
     },
 
     it: {
         siteTitle: "🌌 Avventura spaziale di Papyrus",
         siteSubtitle: "Esplora il Sistema Solare 🚀",
         welcomeTitle: "Benvenuto nello spazio!",
-        welcomeText:
-            "Parti per un viaggio attraverso il Sistema Solare, esplora i pianeti e scopri fatti interessanti su di essi.",
-        startButton: "Inizia l'avventura 🚀",
+        welcomeText: "Parti per un viaggio nel Sistema Solare, esplora i pianeti e scopri fatti interessanti su di essi.",
+        startButton: "Inizia il viaggio 🚀",
         moonsButton: "🌙 Esplora le lune",
-        spaceObjectsButton: "🌌 Oggetti spaziali",
-        kainButton: "🎪 Enciclopedia di Caine",
-        dwarfPlanetsButton: "🪐 Pianeti nani",
         constellationButton: "✨ I sogni di Charlie Morningstar",
-        updatesTitle: "📝 Nuove aggiunte",
         planetsTitle: "🪐 Pianeti",
-        temperature: "Temperatura:",
-        diameter: "Diametro:",
-        mass: "Massa:",
-        distance: "Distanza dal Sole:",
-        day: "Durata del giorno:",
-        year: "Durata dell'anno:",
-        moons: "Lune:",
-        rings: "Anelli:",
-        atmosphere: "Atmosfera:",
-        fact: "🔭 Curiosità",
-        footer: "🌌 Avventura spaziale di Papyrus © 2026",
-        close: "Chiudi"
-    }
+        temperature: "Temperatura:", diameter: "Diametro:", mass: "Massa:",
+        distance: "Distanza dal Sole:", day: "Durata del giorno:", year: "Durata dell'anno:",
+        moons: "Lune:", rings: "Anelli:", atmosphere: "Atmosfera:",
+        fact: "🔭 Curiosità", footer: "🌌 Avventura spaziale di Papyrus © 2026", close: "Chiudi"
+    },
 
+    pl: {
+        siteTitle: "🌌 Kosmiczna przygoda Papyrusa",
+        siteSubtitle: "Odkrywaj Układ Słoneczny 🚀",
+        welcomeTitle: "Witaj w kosmosie!",
+        welcomeText: "Wyrusz w podróż po Układzie Słonecznym, odkrywaj planety i poznawaj ciekawe fakty.",
+        startButton: "Rozpocznij podróż 🚀",
+        moonsButton: "🌙 Odkrywaj księżyce",
+        constellationButton: "✨ Marzenia Charlie Morningstar",
+        planetsTitle: "🪐 Planety",
+        temperature: "Temperatura:", diameter: "Średnica:", mass: "Masa:",
+        distance: "Odległość od Słońca:", day: "Długość doby:", year: "Długość roku:",
+        moons: "Księżyce:", rings: "Pierścienie:", atmosphere: "Atmosfera:",
+        fact: "🔭 Ciekawostka", footer: "🌌 Kosmiczna przygoda Papyrusa © 2026", close: "Zamknij"
+    },
+
+    nl: {
+        siteTitle: "🌌 Papyrus' ruimteavontuur",
+        siteSubtitle: "Verken het zonnestelsel 🚀",
+        welcomeTitle: "Welkom in de ruimte!",
+        welcomeText: "Ga op reis door het zonnestelsel, verken de planeten en ontdek interessante feiten.",
+        startButton: "Begin de reis 🚀",
+        moonsButton: "🌙 Verken de manen",
+        constellationButton: "✨ Charlie Morningstars dromen",
+        planetsTitle: "🪐 Planeten",
+        temperature: "Temperatuur:", diameter: "Diameter:", mass: "Massa:",
+        distance: "Afstand tot de zon:", day: "Lengte van de dag:", year: "Lengte van het jaar:",
+        moons: "Manen:", rings: "Ringen:", atmosphere: "Atmosfeer:",
+        fact: "🔭 Interessant weetje", footer: "🌌 Papyrus' ruimteavontuur © 2026", close: "Sluiten"
+    },
 };
 
-const sansUpdateTranslations = {
-
-    ru: [
-        "💀 хей. это снова я, санс.",
-        "да, кстати, я тоже появился в одном из обновлений. теперь я здесь, чтобы объявлять вам о всяких новинках на этом сайте.",
-        "обычно я ленюсь стоять здесь и объявлять новости...",
-        "но, похоже, на этом сайте накопилось слишком много нового, чтобы просто сделать вид, что я ничего не заметил.",
-        "🌌 во-первых, у нас появились новые созвездия в «Мечтах Чарли Морнингстар».",
-        "🪐 во-вторых, добавились новые спутники и карликовые планеты. церера, эрида, хаумеа и макемаке теперь тоже не скучают.",
-        "📚 ещё появилась «Энциклопедия Кейна». да, именно того самого Кейна. и нет, это не «Каин». я проверил.",
-        "🇪🇸🇮🇹 а ещё сайт теперь умеет говорить по-испански и по-итальянски. я бы пошутил про своё знание языков... но я слишком ленив для этого.",
-        "💀 короче, дополнений стало больше.",
-        "так что осматривайся. вдруг найдёшь что-нибудь интересное.",
-        "а теперь можешь нажать на меня, чтобы закрыть это окно."
-    ],
-
-    kk: [
-        "💀 сәлем. бұл тағы да мен, Санс.",
-        "иә, айтпақшы, мен де жаңартулардың бірінде пайда болдым. енді осы сайттағы түрлі жаңалықтарды сіздерге хабарлап отыру үшін осындамын.",
-        "әдетте мен осында тұрып, жаңалық жариялауға ерінемін...",
-        "бірақ бұл сайтта жаңа нәрселер тым көбейіп кеткен сияқты, сондықтан ештеңе байқамағандай бола алмаймын.",
-        "🌌 біріншіден, «Чарли Морнингстардың армандары» бөліміне жаңа шоқжұлдыздар қосылды.",
-        "🪐 екіншіден, жаңа серіктер мен ергежейлі планеталар қосылды. Церера, Эрида, Хаумеа және Макемаке енді жалғыз емес.",
-        "📚 тағы «Кейн энциклопедиясы» пайда болды. иә, дәл сол Кейн. және жоқ, бұл «Каин» емес. тексеріп қойдым.",
-        "🇪🇸🇮🇹 енді сайт испан және итальян тілдерінде де сөйлей алады. тілдерді білетінім туралы әзіл айтар едім... бірақ мен оған тым жалқаумын.",
-        "💀 қысқасы, толықтырулар көбейді.",
-        "сондықтан айналаға қарап шық. мүмкін қызықты бір нәрсе тауып қаларсың.",
-        "ал енді осы терезені жабу үшін мені баса аласың."
-    ],
-
-    cs: [
-        "💀 hej. jsem to zase já, Sans.",
-        "obvykle jsem příliš líný na to, abych tu stál a oznamoval novinky...",
-        "jo, mimochodem, taky jsem se objevil v jedné z aktualizací. teď jsem tady, abych vám oznamoval všechny možné novinky na tomto webu.",
-        "ale na tomto webu se toho nového nahromadilo tolik, že už nemůžu předstírat, že jsem si ničeho nevšiml.",
-        "🌌 za prvé máme nová souhvězdí v části „Sny Charlieho Morningstara“.",
-        "🪐 za druhé přibyly nové měsíce a trpasličí planety. Ceres, Eris, Haumea a Makemake už se také nenudí.",
-        "📚 také přibyla „Encyklopedie Cainea“. ano, přesně toho Cainea. a ne, není to „Cain“. zkontroloval jsem to.",
-        "🇪🇸🇮🇹 web teď také umí mluvit španělsky a italsky. udělal bych vtip o své znalosti jazyků... ale jsem na to příliš líný.",
-        "💀 zkrátka, přibylo toho víc.",
-        "tak se porozhlédni. třeba najdeš něco zajímavého.",
-        "a teď na mě můžeš kliknout a zavřít toto okno."
-    ],
-
-    en: [
-        "💀 hey. it's me again, Sans.",
-        "oh, by the way, I also showed up in one of the updates. now I'm here to tell you about all the new stuff on this site.",
-        "usually i'm too lazy to stand here and announce the news...",
-        "but apparently there's so much new stuff on this site that i can't just pretend i didn't notice.",
-        "🌌 first of all, we got new constellations in «Charlie Morningstar's Dreams».",
-        "🪐 secondly, new moons and dwarf planets have been added. Ceres, Eris, Haumea and Makemake aren't bored anymore either.",
-        "📚 there's also a new «Caine's Encyclopedia». yep, that Caine. and no, it's not «Cain». i checked.",
-        "🇪🇸🇮🇹 the site can also speak Spanish and Italian now. i'd make a joke about my language skills... but i'm too lazy for that.",
-        "💀 anyway, there are more additions now.",
-        "so take a look around. you might find something interesting.",
-        "and now you can click me to close this window."
-    ],
-
-    de: [
-        "💀 hey. ich bin's wieder, Sans.",
-        "ach ja, übrigens bin ich auch in einem der Updates aufgetaucht. jetzt bin ich hier, um euch über all die Neuigkeiten auf dieser Website zu informieren.",
-        "normalerweise bin ich zu faul, hier herumzustehen und Neuigkeiten anzukündigen...",
-        "aber anscheinend gibt es auf dieser Seite so viel Neues, dass ich nicht einfach so tun kann, als hätte ich nichts bemerkt.",
-        "🌌 zuerst gibt es neue Sternbilder in „Charlies Träume“.",
-        "🪐 außerdem wurden neue Monde und Zwergplaneten hinzugefügt. Ceres, Eris, Haumea und Makemake langweilen sich jetzt auch nicht mehr.",
-        "📚 außerdem gibt es jetzt „Caines Enzyklopädie“. ja, genau dieser Caine. und nein, nicht „Kain“. ich habe nachgesehen.",
-        "🇪🇸🇮🇹 die Seite kann jetzt auch Spanisch und Italienisch. ich würde einen Witz über meine Sprachkenntnisse machen... aber dafür bin ich zu faul.",
-        "💀 kurz gesagt, es gibt jetzt mehr Ergänzungen.",
-        "also sieh dich um. vielleicht findest du etwas Interessantes.",
-        "und jetzt kannst du auf mich klicken, um dieses Fenster zu schließen."
-    ],
-
-    fr: [
-        "💀 salut. c'est encore moi, Sans.",
-        "au fait, je suis moi aussi apparu dans l'une des mises à jour. maintenant, je suis là pour vous annoncer toutes les nouveautés de ce site.",
-        "d'habitude, je suis trop paresseux pour rester ici et annoncer les nouveautés...",
-        "mais apparemment, il y a tellement de nouvelles choses sur ce site que je ne peux pas faire semblant de ne rien avoir remarqué.",
-        "🌌 tout d'abord, de nouvelles constellations sont arrivées dans «Les rêves de Charlie Morningstar».",
-        "🪐 ensuite, de nouvelles lunes et planètes naines ont été ajoutées. Cérès, Éris, Hauméa et Makémaké ne s'ennuient plus non plus.",
-        "📚 il y a aussi maintenant «l'Encyclopédie de Caine». oui, ce Caine-là. et non, ce n'est pas «Caïn». j'ai vérifié.",
-        "🇪🇸🇮🇹 le site peut maintenant parler espagnol et italien. je ferais bien une blague sur mes talents linguistiques... mais je suis trop paresseux pour ça.",
-        "💀 bref, il y a maintenant encore plus de nouveautés.",
-        "alors regarde autour de toi. tu trouveras peut-être quelque chose d'intéressant.",
-        "et maintenant, tu peux cliquer sur moi pour fermer cette fenêtre."
-    ],
-
-    es: [
-        "💀 hey. soy yo otra vez, Sans.",
-        "ah, por cierto, yo también aparecí en una de las actualizaciones. ahora estoy aquí para contaros todas las novedades de este sitio.",
-        "normalmente soy demasiado perezoso para quedarme aquí anunciando las novedades...",
-        "pero parece que hay tantas cosas nuevas en este sitio que ya no puedo fingir que no me he dado cuenta.",
-        "🌌 primero, tenemos nuevas constelaciones en «Los sueños de Charlie Morningstar».",
-        "🪐 segundo, se han añadido nuevas lunas y planetas enanos. Ceres, Eris, Haumea y Makemake ya tampoco se aburren.",
-        "📚 también apareció la «Enciclopedia de Caine». sí, ese mismo Caine. y no, no es «Caín». lo comprobé.",
-        "🇪🇸🇮🇹 además, el sitio ahora puede hablar español e italiano. haría un chiste sobre mis conocimientos de idiomas... pero soy demasiado perezoso para eso.",
-        "💀 en fin, ahora hay más novedades.",
-        "así que echa un vistazo. quizá encuentres algo interesante.",
-        "y ahora puedes hacer clic en mí para cerrar esta ventana."
-    ],
-
-    it: [
-        "💀 ehi. sono di nuovo io, Sans.",
-        "ah, a proposito, anch'io sono comparso in uno degli aggiornamenti. ora sono qui per annunciarvi tutte le novità di questo sito.",
-        "di solito sono troppo pigro per stare qui ad annunciare le novità...",
-        "ma a quanto pare su questo sito ci sono così tante cose nuove che non posso semplicemente fingere di non aver notato nulla.",
-        "🌌 prima di tutto, abbiamo nuove costellazioni ne «I sogni di Charlie Morningstar».",
-        "🪐 in secondo luogo, sono state aggiunte nuove lune e pianeti nani. Cerere, Eris, Haumea e Makemake ora non si annoiano più.",
-        "📚 è comparsa anche l'«Enciclopedia di Caine». sì, proprio quel Caine. e no, non è «Caino». ho controllato.",
-        "🇪🇸🇮🇹 inoltre, il sito ora sa parlare spagnolo e italiano. farei una battuta sulle mie conoscenze linguistiche... ma sono troppo pigro per farlo.",
-        "💀 insomma, ora ci sono più novità.",
-        "quindi dai un'occhiata in giro. potresti trovare qualcosa di interessante.",
-        "e ora puoi cliccare su di me per chiudere questa finestra."
-    ]
-
-};
 
 /* =========================================================
    🪐 ПЛАНЕТЫ
@@ -1153,6 +1017,75 @@ const planets = {
 };
 
 
+/* 🇪🇸🇮🇹 Traducciones adicionales de planetas */
+const planetESIT = {
+    "Меркурий": {
+        es: {name:"Mercurio",description:"El planeta más cercano al Sol.",rings:"No",atmosphere:"Exosfera muy tenue",fact:"Mercurio es el planeta más pequeño del Sistema Solar."},
+        it: {name:"Mercurio",description:"Il pianeta più vicino al Sole.",rings:"No",atmosphere:"Esosfera molto tenue",fact:"Mercurio è il pianeta più piccolo del Sistema Solare."}
+    },
+    "Венера": {
+        es: {name:"Venus",description:"El planeta más caliente.",rings:"No",atmosphere:"Dióxido de carbono",fact:"Venus es más caliente que Mercurio."},
+        it: {name:"Venere",description:"Il pianeta più caldo.",rings:"No",atmosphere:"Anidride carbonica",fact:"Venere è più calda di Mercurio."}
+    },
+    "Земля": {
+        es: {name:"Tierra",description:"Nuestro hogar.",rings:"No",atmosphere:"Nitrógeno y oxígeno",fact:"La Tierra es el único mundo conocido que alberga vida."},
+        it: {name:"Terra",description:"La nostra casa.",rings:"No",atmosphere:"Azoto e ossigeno",fact:"La Terra è l'unico mondo conosciuto che ospita la vita."}
+    },
+    "Марс": {
+        es: {name:"Marte",description:"El planeta rojo.",rings:"No",atmosphere:"Dióxido de carbono",fact:"En Marte se encuentra Olympus Mons, el mayor volcán del Sistema Solar."},
+        it: {name:"Marte",description:"Il pianeta rosso.",rings:"No",atmosphere:"Anidride carbonica",fact:"Su Marte si trova Olympus Mons, il vulcano più grande del Sistema Solare."}
+    },
+    "Юпитер": {
+        es: {name:"Júpiter",description:"El planeta más grande del Sistema Solar.",rings:"Sí",atmosphere:"Hidrógeno y helio",fact:"La Gran Mancha Roja es una enorme tormenta que existe desde hace siglos."},
+        it: {name:"Giove",description:"Il pianeta più grande del Sistema Solare.",rings:"Sì",atmosphere:"Idrogeno ed elio",fact:"La Grande Macchia Rossa è una gigantesca tempesta che dura da secoli."}
+    },
+    "Сатурн": {
+        es: {name:"Saturno",description:"Un planeta con magníficos anillos.",rings:"Sí",atmosphere:"Hidrógeno y helio",fact:"Los anillos de Saturno están formados principalmente por hielo y roca."},
+        it: {name:"Saturno",description:"Un pianeta con magnifici anelli.",rings:"Sì",atmosphere:"Idrogeno ed elio",fact:"Gli anelli di Saturno sono composti soprattutto da ghiaccio e roccia."}
+    },
+    "Уран": {
+        es: {name:"Urano",description:"Un gigante helado.",rings:"Sí",atmosphere:"Hidrógeno, helio y metano",fact:"Urano gira casi de lado."},
+        it: {name:"Urano",description:"Un gigante ghiacciato.",rings:"Sì",atmosphere:"Idrogeno, elio e metano",fact:"Urano ruota quasi sdraiato su un fianco."}
+    },
+    "Нептун": {
+        es: {name:"Neptuno",description:"El planeta más lejano.",rings:"Sí",atmosphere:"Hidrógeno, helio y metano",fact:"Neptuno tiene algunos de los vientos más rápidos del Sistema Solar."},
+        it: {name:"Nettuno",description:"Il pianeta più lontano.",rings:"Sì",atmosphere:"Idrogeno, elio e metano",fact:"Nettuno ha alcuni dei venti più veloci del Sistema Solare."}
+    },
+    "Плутон": {
+        es: {name:"Plutón",description:"Un planeta enano del cinturón de Kuiper.",rings:"No",atmosphere:"Nitrógeno, metano y monóxido de carbono",fact:"Plutón fue clasificado como planeta enano en 2006."},
+        it: {name:"Plutone",description:"Un pianeta nano della fascia di Kuiper.",rings:"No",atmosphere:"Azoto, metano e monossido di carbonio",fact:"Plutone è stato classificato come pianeta nano nel 2006."}
+    }
+};
+
+function localizePlanetNumbers(data, lang) {
+    const d = {...data};
+    if (lang === "es") {
+        d.temperature = d.temperature.replaceAll("около", "aprox.").replaceAll("от", "de").replaceAll("до", "a");
+        d.diameter = d.diameter.replaceAll("км", "km");
+        d.mass = d.mass.replaceAll("кг", "kg");
+        d.distance = d.distance.replace("млрд", "mil millones").replace("млн", "millones").replaceAll("км", "km");
+        d.day = d.day.replace("земных суток", "días terrestres").replace("земных", "terrestres").replace("суток", "días").replace("часа", "horas").replace("ч", "h").replace("мин", "min").replace("часов", "horas");
+        d.year = d.year.replace("земных лет", "años terrestres").replace("земных суток", "días terrestres").replace("Жер", "terrestres").replace("лет", "años");
+    }
+    if (lang === "it") {
+        d.temperature = d.temperature.replaceAll("около", "circa").replaceAll("от", "da").replaceAll("до", "a");
+        d.diameter = d.diameter.replaceAll("км", "km");
+        d.mass = d.mass.replaceAll("кг", "kg");
+        d.distance = d.distance.replace("млрд", "miliardi").replace("млн", "milioni").replaceAll("км", "km");
+        d.day = d.day.replace("земных суток", "giorni terrestri").replace("земных", "terrestri").replace("суток", "giorni").replace("часа", "ore").replace("ч", "h").replace("мин", "min").replace("часов", "ore");
+        d.year = d.year.replace("земных лет", "anni terrestri").replace("земных суток", "giorni terrestri").replace("лет", "anni");
+    }
+    return d;
+}
+
+Object.entries(planetESIT).forEach(([name, langs]) => {
+    const basePlanet = planets[name];
+    if (!basePlanet) return;
+    Object.entries(langs).forEach(([lang, text]) => {
+        basePlanet[lang] = {...localizePlanetNumbers(basePlanet.ru || {}, lang), ...text};
+    });
+});
+
 /* =========================================================
    🌙 СПУТНИКИ
    ========================================================= */
@@ -1616,381 +1549,9 @@ const moons = {
             temperature: "environ −235 °C",
             description: "Triton est le plus grand satellite de Neptune.",
             fact: "Triton orbite autour de Neptune dans le sens opposé à la rotation de la planète."
-        },
-        es: {
-            planet: "Neptuno",
-            diameter: "2 707 km",
-            temperature: "alrededor de −235 °C",
-            description: "Triton es la luna más grande de Neptuno.",
-            fact: "Triton orbita alrededor de Neptuno en la dirección opuesta a la rotación del planeta."
-        },
-        it: {
-            planet: "Nettuno",
-            diameter: "2 707 km",
-            temperature: "circa −235 °C",
-            description: "Tritone è la luna più grande di Nettuno.",
-            fact: "Tritone orbita attorno a Nettuno nella direzione opposta alla rotazione del pianeta."
         }
     }
 };
-/* =========================================================
-   🪐 ОТКРЫТИЕ ПЛАНЕТ
-   ========================================================= */
-
-function showPlanet(name) {
-
-    if (!planets[name]) {
-        console.error("Планета не найдена:", name);
-        return;
-    }
-
-    const planet = planets[name];
-
-    const data =
-        planet[currentLanguage] ||
-        planet.ru;
-
-    if (!data) {
-        console.error("Нет данных для планеты:", name);
-        return;
-    }
-
-    const modal = document.getElementById("planetModal");
-
-    if (!modal) {
-        console.error("Не найдено окно planetModal");
-        return;
-    }
-
-    const setText = (id, value) => {
-        const element = document.getElementById(id);
-
-        if (element) {
-            element.textContent = value ?? "";
-        }
-    };
-
-    setText("planetIcon", planet.icon);
-    setText("planetName", data.name);
-    setText("planetDescription", data.description);
-    setText("planetTemperature", data.temperature);
-    setText("planetDiameter", data.diameter);
-    setText("planetMass", data.mass);
-    setText("planetDistance", data.distance);
-    setText("planetDay", data.day);
-    setText("planetYear", data.year);
-    setText("planetMoons", data.moons);
-    setText("planetRings", data.rings);
-    setText("planetAtmosphere", data.atmosphere);
-    setText("planetFact", data.fact);
-
-    modal.classList.add("open");
-    modal.style.display = "flex";
-
-    modal.dataset.planet = name;
-}
-
-
-/* =========================================================
-   🌙 ОТКРЫТИЕ СПУТНИКОВ
-   ========================================================= */
-
-function showMoon(name) {
-
-    if (!moons[name]) {
-        console.error("Спутник не найден:", name);
-        return;
-    }
-
-    const moon = moons[name];
-
-    const data =
-        moon[currentLanguage] ||
-        moon.ru;
-
-    if (!data) {
-        console.error("Нет данных для спутника:", name);
-        return;
-    }
-
-    const modal =
-        document.getElementById("moonModal") ||
-        document.getElementById("moon-modal");
-
-    if (!modal) {
-        console.error("Не найдено окно moonModal");
-        return;
-    }
-
-    const setText = (id, value) => {
-        const element = document.getElementById(id);
-
-        if (element) {
-            element.textContent = value ?? "";
-        }
-    };
-
-    setText("moonIcon", moon.icon);
-    setText("moonName", name);
-    setText("moonPlanet", data.planet);
-    setText("moonDiameter", data.diameter);
-    setText("moonTemperature", data.temperature);
-    setText("moonDescription", data.description);
-    setText("moonFact", data.fact);
-
-    modal.classList.add("open");
-    modal.style.display = "flex";
-
-    modal.dataset.moon = name;
-}
-
-
-/* =========================================================
-   ❌ ЗАКРЫТИЕ ОКОН
-   ========================================================= */
-
-function closePlanetModal() {
-
-    const modal =
-        document.getElementById("planetModal");
-
-    if (modal) {
-        modal.classList.remove("open");
-        modal.style.display = "none";
-    }
-}
-
-
-function closeMoonModal() {
-
-    const modal =
-        document.getElementById("moonModal") ||
-        document.getElementById("moon-modal");
-
-    if (modal) {
-        modal.classList.remove("open");
-        modal.style.display = "none";
-    }
-}
-
-
-/* =========================================================
-   🌍 ПЕРЕВОД КАРТОЧЕК ПЛАНЕТ
-   ========================================================= */
-
-/* =========================================================
-   🌙 ПЕРЕВОД КАРТОЧЕК СПУТНИКОВ
-   ========================================================= */
-
-
-function updateMoonCards() {
-
-    const moonNames = {
-
-        ru: {
-            "Луна": "Луна",
-            "Фобос": "Фобос",
-            "Деймос": "Деймос",
-            "Ио": "Ио",
-            "Европа": "Европа",
-            "Ганимед": "Ганимед",
-            "Каллисто": "Каллисто",
-            "Титан": "Титан",
-            "Энцелад": "Энцелад",
-            "Тритон": "Тритон"
-        },
-
-        kk: {
-            "Луна": "Ай",
-            "Фобос": "Фобос",
-            "Деймос": "Деймос",
-            "Ио": "Ио",
-            "Европа": "Еуропа",
-            "Ганимед": "Ганимед",
-            "Каллисто": "Каллисто",
-            "Титан": "Титан",
-            "Энцелад": "Энцелад",
-            "Тритон": "Тритон"
-        },
-
-        cs: {
-            "Луна": "Měsíc",
-            "Фобос": "Phobos",
-            "Деймос": "Deimos",
-            "Ио": "Io",
-            "Европа": "Europa",
-            "Ганимед": "Ganymed",
-            "Каллисто": "Kallisto",
-            "Титан": "Titan",
-            "Энцелад": "Enceladus",
-            "Тритон": "Triton"
-        },
-
-        en: {
-            "Луна": "Moon",
-            "Фобос": "Phobos",
-            "Деймос": "Deimos",
-            "Ио": "Io",
-            "Европа": "Europa",
-            "Ганимед": "Ganymede",
-            "Каллисто": "Callisto",
-            "Титан": "Titan",
-            "Энцелад": "Enceladus",
-            "Тритон": "Triton"
-        },
-
-        de: {
-            "Луна": "Mond",
-            "Фобос": "Phobos",
-            "Деймос": "Deimos",
-            "Ио": "Io",
-            "Европа": "Europa",
-            "Ганимед": "Ganymed",
-            "Каллисто": "Kallisto",
-            "Титан": "Titan",
-            "Энцелад": "Enceladus",
-            "Тритон": "Triton"
-        },
-
-        fr: {
-            "Луна": "Lune",
-            "Фобос": "Phobos",
-            "Деймос": "Déimos",
-            "Ио": "Io",
-            "Европа": "Europe",
-            "Ганимед": "Ganymède",
-            "Каллисто": "Callisto",
-            "Титан": "Titan",
-            "Энцелад": "Encelade",
-            "Тритон": "Triton"
-        },
-
-        es: {
-            "Луна": "Luna",
-            "Фобос": "Fobos",
-            "Деймос": "Deimos",
-            "Ио": "Ío",
-            "Европа": "Europa",
-            "Ганимед": "Ganímedes",
-            "Каллисто": "Calisto",
-            "Титан": "Titán",
-            "Энцелад": "Encélado",
-            "Тритон": "Tritón"
-        },
-
-        it: {
-            "Луна": "Luna",
-            "Фобос": "Fobos",
-            "Деймос": "Deimos",
-            "Ио": "Io",
-            "Европа": "Europa",
-            "Ганимед": "Ganimede",
-            "Каллисто": "Callisto",
-            "Титан": "Titano",
-            "Энцелад": "Encelado",
-            "Тритон": "Tritone"
-        }
-    };
-
-    document.querySelectorAll(".moon-card").forEach(card => {
-
-        const name = card.dataset.moon;
-
-        if (!name || !moons[name]) {
-            return;
-        }
-
-        const title = card.querySelector("h3");
-        const description = card.querySelector("p");
-
-        if (!title || !description) {
-            return;
-        }
-
-        const data =
-            moons[name][currentLanguage] ||
-            moons[name].ru;
-
-        title.textContent =
-            moonNames[currentLanguage]?.[name] ||
-            moonNames.ru[name] ||
-            name;
-
-        description.textContent =
-            data?.description || "";
-    });
-}
-
-
-
-/* =========================================================
-   🌙 ПЕРЕВОД КАРТОЧЕК СПУТНИКОВ
-   ========================================================= */
-
-
-
-
-
-
-
-
-/* =========================================================
-   🖱️ КЛИК ПО КАРТОЧКАМ
-   ========================================================= */
-
-document.addEventListener("click", function(event) {
-
-    const planetCard =
-        event.target.closest(".planet-card");
-
-    if (planetCard) {
-
-        let name =
-            planetCard.dataset.planet;
-
-        if (name && planets[name]) {
-            showPlanet(name);
-            return;
-        }
-    }
-
-    const moonCard =
-        event.target.closest(".moon-card");
-
-    if (moonCard) {
-
-        let name =
-            moonCard.dataset.moon;
-
-        if (name && moons[name]) {
-            showMoon(name);
-            return;
-        }
-    }
-});
-
-
-/* =========================================================
-   🌐 ОБНОВЛЕНИЕ КАРТОЧЕК ПРИ СМЕНЕ ЯЗЫКА
-   ========================================================= */
-
-function refreshCardsLanguage() {
-
-    updatePlanetCards();
-    updateMoonCards();
-}
-
-
-/* =========================================================
-   🚀 ПЕРВОНАЧАЛЬНАЯ НАСТРОЙКА
-   ========================================================= */
-
-document.addEventListener("DOMContentLoaded", function() {
-
-    updatePlanetCards();
-    updateMoonCards();
-
-});
 
 
 /* =========================================================
@@ -2437,670 +1998,317 @@ const moonDetailsTranslations = {
         }
     }
 };
+
+/* 🌙 Новые спутники */
+const newMoonData = {
+    "Харон": { icon:"🧊", ru:{planet:"Плутон",diameter:"1 212 км",temperature:"около −220°C",description:"Крупнейший спутник Плутона.",fact:"Харон настолько велик по сравнению с Плутоном, что их иногда рассматривают как двойную систему."}, es:{planet:"Plutón",diameter:"1 212 km",temperature:"aprox. −220 °C",description:"La mayor luna de Plutón.",fact:"Caronte es tan grande respecto a Plutón que ambos forman un sistema especialmente singular."}, it:{planet:"Plutone",diameter:"1 212 km",temperature:"circa −220 °C",description:"La luna più grande di Plutone.",fact:"Caronte è così grande rispetto a Plutone che il sistema è particolarmente insolito."} },
+    "Титания": { icon:"🔵", ru:{planet:"Уран",diameter:"1 578 км",temperature:"около −203°C",description:"Крупнейший спутник Урана.",fact:"Титания — крупнейшая луна Урана."}, es:{planet:"Urano",diameter:"1 578 km",temperature:"aprox. −203 °C",description:"La mayor luna de Urano.",fact:"Titania es la luna más grande de Urano."}, it:{planet:"Urano",diameter:"1 578 km",temperature:"circa −203 °C",description:"La luna più grande di Urano.",fact:"Titania è la luna più grande di Urano."} },
+    "Оберон": { icon:"🌑", ru:{planet:"Уран",diameter:"1 523 км",temperature:"около −200°C",description:"Крупный внешний спутник Урана.",fact:"Оберон — самый внешний из крупных спутников Урана."}, es:{planet:"Urano",diameter:"1 523 km",temperature:"aprox. −200 °C",description:"Una gran luna exterior de Urano.",fact:"Oberón es la más exterior de las grandes lunas de Urano."}, it:{planet:"Urano",diameter:"1 523 km",temperature:"circa −200 °C",description:"Una grande luna esterna di Urano.",fact:"Oberon è la più esterna delle grandi lune di Urano."} },
+    "Ариэль": { icon:"❄️", ru:{planet:"Уран",diameter:"1 158 км",temperature:"около −213°C",description:"Яркий ледяной спутник Урана.",fact:"Ариэль имеет одну из самых светлых поверхностей среди крупных спутников Урана."}, es:{planet:"Urano",diameter:"1 158 km",temperature:"aprox. −213 °C",description:"Una brillante luna helada de Urano.",fact:"Ariel tiene una de las superficies más claras entre las grandes lunas de Urano."}, it:{planet:"Urano",diameter:"1 158 km",temperature:"circa −213 °C",description:"Una brillante luna ghiacciata di Urano.",fact:"Ariel ha una delle superfici più chiare tra le grandi lune di Urano."} },
+    "Рея": { icon:"⚪", ru:{planet:"Сатурн",diameter:"1 528 км",temperature:"около −174°C",description:"Второй по размеру спутник Сатурна.",fact:"Рея состоит в основном из водяного льда и каменного материала."}, es:{planet:"Saturno",diameter:"1 528 km",temperature:"aprox. −174 °C",description:"La segunda luna más grande de Saturno.",fact:"Rea está compuesta principalmente de hielo de agua y material rocoso."}, it:{planet:"Saturno",diameter:"1 528 km",temperature:"circa −174 °C",description:"La seconda luna più grande di Saturno.",fact:"Rea è composta soprattutto da ghiaccio d'acqua e materiale roccioso."} },
+    "Япет": { icon:"🌗", ru:{planet:"Сатурн",diameter:"1 469 км",temperature:"около −143°C",description:"Необычный спутник Сатурна с резким контрастом поверхности.",fact:"Япет известен сильным различием яркости двух полушарий."}, es:{planet:"Saturno",diameter:"1 469 km",temperature:"aprox. −143 °C",description:"Una luna de Saturno con un marcado contraste superficial.",fact:"Jápeto es famoso por la gran diferencia de brillo entre sus hemisferios."}, it:{planet:"Saturno",diameter:"1 469 km",temperature:"circa −143 °C",description:"Una luna di Saturno con un forte contrasto superficiale.",fact:"Giapeto è famoso per la grande differenza di luminosità tra i suoi emisferi."} }
+};
+Object.assign(moons, newMoonData);
+
+const newMoonOtherLanguages = {
+    "Харон": {
+        kk:{planet:"Плутон",description:"Плутонның ең үлкен серігі.",fact:"Харон Плутонмен салыстырғанда өте үлкен, сондықтан бұл жүйе ерекше қос жүйе ретінде қарастырылады."},
+        cs:{planet:"Pluto",description:"Největší měsíc Pluta.",fact:"Charon je vzhledem k Plutu velmi velký a tvoří s ním neobvyklý systém."},
+        en:{planet:"Pluto",description:"The largest moon of Pluto.",fact:"Charon is unusually large compared with Pluto."},
+        de:{planet:"Pluto",description:"Der größte Mond von Pluto.",fact:"Charon ist im Verhältnis zu Pluto ungewöhnlich groß."},
+        fr:{planet:"Pluton",description:"La plus grande lune de Pluton.",fact:"Charon est exceptionnellement grand par rapport à Pluton."}
+    },
+    "Титания": {kk:{planet:"Уран",description:"Уранның ең үлкен серігі.",fact:"Титания — Уранның ең үлкен серігі."},cs:{planet:"Uran",description:"Největší měsíc Uranu.",fact:"Titania je největší měsíc Uranu."},en:{planet:"Uranus",description:"The largest moon of Uranus.",fact:"Titania is Uranus's largest moon."},de:{planet:"Uranus",description:"Der größte Mond des Uranus.",fact:"Titania ist der größte Mond des Uranus."},fr:{planet:"Uranus",description:"La plus grande lune d'Uranus.",fact:"Titania est la plus grande lune d'Uranus."}},
+    "Оберон": {kk:{planet:"Уран",description:"Уранның ірі сыртқы серігі.",fact:"Оберон — Уранның ірі серіктерінің ең сыртқыларының бірі."},cs:{planet:"Uran",description:"Velký vnější měsíc Uranu.",fact:"Oberon patří mezi nejvzdálenější velké měsíce Uranu."},en:{planet:"Uranus",description:"A large outer moon of Uranus.",fact:"Oberon is one of Uranus's outer large moons."},de:{planet:"Uranus",description:"Ein großer äußerer Mond des Uranus.",fact:"Oberon gehört zu den äußeren großen Monden des Uranus."},fr:{planet:"Uranus",description:"Une grande lune extérieure d'Uranus.",fact:"Obéron fait partie des grandes lunes extérieures d'Uranus."}},
+    "Ариэль": {kk:{planet:"Уран",description:"Уранның жарқын мұзды серігі.",fact:"Ариэль Уранның ірі серіктерінің арасында ең жарық беттердің біріне ие."},cs:{planet:"Uran",description:"Jasný ledový měsíc Uranu.",fact:"Ariel má jeden z nejjasnějších povrchů mezi velkými měsíci Uranu."},en:{planet:"Uranus",description:"A bright icy moon of Uranus.",fact:"Ariel has one of the brightest surfaces among Uranus's large moons."},de:{planet:"Uranus",description:"Ein heller Eismond des Uranus.",fact:"Ariel besitzt eine der hellsten Oberflächen unter den großen Uranusmonden."},fr:{planet:"Uranus",description:"Une lune glacée et brillante d'Uranus.",fact:"Ariel possède l'une des surfaces les plus claires des grandes lunes d'Uranus."}},
+    "Рея": {kk:{planet:"Сатурн",description:"Сатурнның көлемі бойынша екінші серігі.",fact:"Рея негізінен су мұзы мен тасты материалдан тұрады."},cs:{planet:"Saturn",description:"Druhý největší měsíc Saturnu.",fact:"Rhea se skládá převážně z vodního ledu a hornin."},en:{planet:"Saturn",description:"The second-largest moon of Saturn.",fact:"Rhea is composed mainly of water ice and rock."},de:{planet:"Saturn",description:"Der zweitgrößte Mond des Saturn.",fact:"Rhea besteht hauptsächlich aus Wassereis und Gestein."},fr:{planet:"Saturne",description:"La deuxième plus grande lune de Saturne.",fact:"Rhéa est principalement composée de glace d'eau et de roches."}},
+    "Япет": {kk:{planet:"Сатурн",description:"Бетінде айқын контраст бар ерекше серік.",fact:"Япет екі жарты шарының жарықтығымен қатты ерекшеленеді."},cs:{planet:"Saturn",description:"Neobvyklý měsíc Saturnu s výrazným kontrastem povrchu.",fact:"Iapetus je známý výrazným rozdílem jasu svých polokoulí."},en:{planet:"Saturn",description:"An unusual moon of Saturn with strong surface contrast.",fact:"Iapetus is known for the striking brightness difference between its hemispheres."},de:{planet:"Saturn",description:"Ein ungewöhnlicher Saturnmond mit starkem Oberflächenkontrast.",fact:"Iapetus ist für den starken Helligkeitsunterschied seiner Hemisphären bekannt."},fr:{planet:"Saturne",description:"Une lune de Saturne au fort contraste de surface.",fact:"Japet est connu pour la différence marquée de luminosité entre ses hémisphères."}}
+};
+Object.entries(newMoonOtherLanguages).forEach(([name,langs])=>{Object.entries(langs).forEach(([lang,data])=>{moons[name][lang]={...moons[name].ru,...data};});});
+
+/* Локализуем единицы измерения новых спутников во всех уже доступных языках. */
+const newMoonMeasurementText = {
+    kk:{unit:"км",about:"шамамен",degree:" °C"},
+    cs:{unit:"km",about:"přibližně",degree:" °C"},
+    en:{unit:"km",about:"about",degree:"°C"},
+    de:{unit:"km",about:"etwa",degree:" °C"},
+    fr:{unit:"km",about:"environ",degree:" °C"},
+    es:{unit:"km",about:"aprox.",degree:" °C"},
+    it:{unit:"km",about:"circa",degree:" °C"}
+};
+for (const [moonName, translations] of Object.entries(newMoonOtherLanguages)) {
+    const base = moons[moonName]?.ru;
+    if (!base) continue;
+    const diameterMatch = String(base.diameter).match(/[0-9][0-9\s]*/);
+    const temperatureMatch = String(base.temperature).match(/[−-]\s*\d+/);
+    for (const [lang, labels] of Object.entries(newMoonMeasurementText)) {
+        if (!moons[moonName][lang]) continue;
+        if (diameterMatch) {
+            const amount = diameterMatch[0].trim().replace(/\s+/g, lang === "en" ? "," : lang === "de" ? "." : " ");
+            moons[moonName][lang].diameter = `${amount} ${labels.unit}`;
+        }
+        if (temperatureMatch) {
+            moons[moonName][lang].temperature = `${labels.about} ${temperatureMatch[0].replace(/\s+/g, "")}${labels.degree}`;
+        }
+    }
+}
+
+
+
 /* =========================================================
-   🇪🇸🇮🇹 ДОБАВЛЕНИЕ ИСПАНСКОГО И ИТАЛЬЯНСКОГО
+   🌙 КАРТОЧКИ СПУТНИКОВ
    ========================================================= */
 
-/* =========================================================
-   🪐 ПЛАНЕТЫ — ESPAÑOL / ITALIANO
-   ========================================================= */
+const moonCardNames = {
 
-const planetsEsIt = {
-
-    "Меркурий": {
-        es: {
-            name: "Mercurio",
-            description: "El planeta más cercano al Sol.",
-            temperature: "de −180°C a +430°C",
-            diameter: "4.879 km",
-            mass: "3,30 × 10²³ kg",
-            distance: "57,9 millones de km",
-            day: "58,6 días terrestres",
-            year: "88 días terrestres",
-            moons: "0",
-            rings: "No",
-            atmosphere: "Casi inexistente",
-            fact: "Mercurio es el planeta más pequeño del Sistema Solar."
-        },
-        it: {
-            name: "Mercurio",
-            description: "Il pianeta più vicino al Sole.",
-            temperature: "da −180°C a +430°C",
-            diameter: "4.879 km",
-            mass: "3,30 × 10²³ kg",
-            distance: "57,9 milioni di km",
-            day: "58,6 giorni terrestri",
-            year: "88 giorni terrestri",
-            moons: "0",
-            rings: "No",
-            atmosphere: "Quasi inesistente",
-            fact: "Mercurio è il pianeta più piccolo del Sistema Solare."
-        }
+    ru: {
+        "Луна": "Луна",
+        "Фобос": "Фобос",
+        "Деймос": "Деймос",
+        "Ио": "Ио",
+        "Европа": "Европа",
+        "Ганимед": "Ганимед",
+        "Каллисто": "Каллисто",
+        "Титан": "Титан",
+        "Энцелад": "Энцелад",
+        "Тритон": "Тритон"
     },
 
-    "Венера": {
-        es: {
-            name: "Venus",
-            description: "El planeta más caliente.",
-            temperature: "aproximadamente +465°C",
-            diameter: "12.104 km",
-            mass: "4,87 × 10²⁴ kg",
-            distance: "108,2 millones de km",
-            day: "243 días terrestres",
-            year: "224,7 días terrestres",
-            moons: "0",
-            rings: "No",
-            atmosphere: "Dióxido de carbono",
-            fact: "Venus es más caliente que Mercurio."
-        },
-        it: {
-            name: "Venere",
-            description: "Il pianeta più caldo.",
-            temperature: "circa +465°C",
-            diameter: "12.104 km",
-            mass: "4,87 × 10²⁴ kg",
-            distance: "108,2 milioni di km",
-            day: "243 giorni terrestri",
-            year: "224,7 giorni terrestri",
-            moons: "0",
-            rings: "No",
-            atmosphere: "Anidride carbonica",
-            fact: "Venere è più calda di Mercurio."
-        }
+    kk: {
+        "Луна": "Ай",
+        "Фобос": "Фобос",
+        "Деймос": "Деймос",
+        "Ио": "Ио",
+        "Европа": "Еуропа",
+        "Ганимед": "Ганимед",
+        "Каллисто": "Каллисто",
+        "Титан": "Титан",
+        "Энцелад": "Энцелад",
+        "Тритон": "Тритон"
     },
 
-    "Земля": {
-        es: {
-            name: "Tierra",
-            description: "Nuestro planeta natal.",
-            temperature: "promedio de +15°C",
-            diameter: "12.742 km",
-            mass: "5,97 × 10²⁴ kg",
-            distance: "149,6 millones de km",
-            day: "23 h 56 min",
-            year: "365,25 días",
-            moons: "1",
-            rings: "No",
-            atmosphere: "Nitrógeno y oxígeno",
-            fact: "La Tierra es el único planeta conocido con vida."
-        },
-        it: {
-            name: "Terra",
-            description: "Il nostro pianeta natale.",
-            temperature: "media di +15°C",
-            diameter: "12.742 km",
-            mass: "5,97 × 10²⁴ kg",
-            distance: "149,6 milioni di km",
-            day: "23 h 56 min",
-            year: "365,25 giorni",
-            moons: "1",
-            rings: "No",
-            atmosphere: "Azoto e ossigeno",
-            fact: "La Terra è l'unico pianeta conosciuto con la vita."
-        }
+    cs: {
+        "Луна": "Měsíc",
+        "Фобос": "Phobos",
+        "Деймос": "Deimos",
+        "Ио": "Io",
+        "Европа": "Europa",
+        "Ганимед": "Ganymed",
+        "Каллисто": "Callisto",
+        "Титан": "Titan",
+        "Энцелад": "Enceladus",
+        "Тритон": "Triton"
     },
 
-    "Марс": {
-        es: {
-            name: "Marte",
-            description: "El planeta rojo.",
-            temperature: "aproximadamente −63°C",
-            diameter: "6.779 km",
-            mass: "6,42 × 10²³ kg",
-            distance: "227,9 millones de km",
-            day: "24 h 37 min",
-            year: "687 días terrestres",
-            moons: "2",
-            rings: "No",
-            atmosphere: "Dióxido de carbono",
-            fact: "Marte alberga el Olympus Mons, el volcán más grande del Sistema Solar."
-        },
-        it: {
-            name: "Marte",
-            description: "Il pianeta rosso.",
-            temperature: "circa −63°C",
-            diameter: "6.779 km",
-            mass: "6,42 × 10²³ kg",
-            distance: "227,9 milioni di km",
-            day: "24 h 37 min",
-            year: "687 giorni terrestri",
-            moons: "2",
-            rings: "No",
-            atmosphere: "Anidride carbonica",
-            fact: "Marte ospita l'Olympus Mons, il vulcano più grande del Sistema Solare."
-        }
+    en: {
+        "Луна": "Moon",
+        "Фобос": "Phobos",
+        "Деймос": "Deimos",
+        "Ио": "Io",
+        "Европа": "Europa",
+        "Ганимед": "Ganymede",
+        "Каллисто": "Callisto",
+        "Титан": "Titan",
+        "Энцелад": "Enceladus",
+        "Тритон": "Triton"
     },
 
-    "Юпитер": {
-        es: {
-            name: "Júpiter",
-            description: "El planeta más grande del Sistema Solar.",
-            temperature: "aproximadamente −110°C",
-            diameter: "139.820 km",
-            mass: "1,90 × 10²⁷ kg",
-            distance: "778,5 millones de km",
-            day: "9 h 56 min",
-            year: "11,86 años terrestres",
-            moons: "95+",
-            rings: "Sí",
-            atmosphere: "Hidrógeno y helio",
-            fact: "La Gran Mancha Roja es una enorme tormenta que existe desde hace siglos."
-        },
-        it: {
-            name: "Giove",
-            description: "Il pianeta più grande del Sistema Solare.",
-            temperature: "circa −110°C",
-            diameter: "139.820 km",
-            mass: "1,90 × 10²⁷ kg",
-            distance: "778,5 milioni di km",
-            day: "9 h 56 min",
-            year: "11,86 anni terrestri",
-            moons: "95+",
-            rings: "Sì",
-            atmosphere: "Idrogeno ed elio",
-            fact: "La Grande Macchia Rossa è una gigantesca tempesta che esiste da secoli."
-        }
+    de: {
+        "Луна": "Mond",
+        "Фобос": "Phobos",
+        "Деймос": "Deimos",
+        "Ио": "Io",
+        "Европа": "Europa",
+        "Ганимед": "Ganymed",
+        "Каллисто": "Kallisto",
+        "Титан": "Titan",
+        "Энцелад": "Enceladus",
+        "Тритон": "Triton"
     },
 
-    "Сатурн": {
-        es: {
-            name: "Saturno",
-            description: "Un planeta con magníficos anillos.",
-            temperature: "aproximadamente −140°C",
-            diameter: "116.460 km",
-            mass: "5,68 × 10²⁶ kg",
-            distance: "1,43 mil millones de km",
-            day: "10 h 42 min",
-            year: "29,45 años terrestres",
-            moons: "140+",
-            rings: "Sí",
-            atmosphere: "Hidrógeno y helio",
-            fact: "Los anillos de Saturno están compuestos principalmente de hielo y roca."
-        },
-        it: {
-            name: "Saturno",
-            description: "Un pianeta con magnifici anelli.",
-            temperature: "circa −140°C",
-            diameter: "116.460 km",
-            mass: "5,68 × 10²⁶ kg",
-            distance: "1,43 miliardi di km",
-            day: "10 h 42 min",
-            year: "29,45 anni terrestri",
-            moons: "140+",
-            rings: "Sì",
-            atmosphere: "Idrogeno ed elio",
-            fact: "Gli anelli di Saturno sono composti principalmente da ghiaccio e roccia."
-        }
-    },
-
-    "Уран": {
-        es: {
-            name: "Urano",
-            description: "Un gigante de hielo.",
-            temperature: "aproximadamente −195°C",
-            diameter: "50.724 km",
-            mass: "8,68 × 10²⁵ kg",
-            distance: "2,87 mil millones de km",
-            day: "17 h 14 min",
-            year: "84 años terrestres",
-            moons: "27",
-            rings: "Sí",
-            atmosphere: "Hidrógeno, helio y metano",
-            fact: "Urano gira casi de lado."
-        },
-        it: {
-            name: "Urano",
-            description: "Un gigante ghiacciato.",
-            temperature: "circa −195°C",
-            diameter: "50.724 km",
-            mass: "8,68 × 10²⁵ kg",
-            distance: "2,87 miliardi di km",
-            day: "17 h 14 min",
-            year: "84 anni terrestri",
-            moons: "27",
-            rings: "Sì",
-            atmosphere: "Idrogeno, elio e metano",
-            fact: "Urano ruota quasi su un fianco."
-        }
-    },
-
-    "Нептун": {
-        es: {
-            name: "Neptuno",
-            description: "El planeta más lejano.",
-            temperature: "aproximadamente −200°C",
-            diameter: "49.244 km",
-            mass: "1,02 × 10²⁶ kg",
-            distance: "4,50 mil millones de km",
-            day: "16 h 6 min",
-            year: "164,8 años terrestres",
-            moons: "14",
-            rings: "Sí",
-            atmosphere: "Hidrógeno, helio y metano",
-            fact: "Neptuno tiene algunos de los vientos más rápidos del Sistema Solar."
-        },
-        it: {
-            name: "Nettuno",
-            description: "Il pianeta più lontano.",
-            temperature: "circa −200°C",
-            diameter: "49.244 km",
-            mass: "1,02 × 10²⁶ kg",
-            distance: "4,50 miliardi di km",
-            day: "16 h 6 min",
-            year: "164,8 anni terrestri",
-            moons: "14",
-            rings: "Sì",
-            atmosphere: "Idrogeno, elio e metano",
-            fact: "Nettuno ha alcuni dei venti più veloci del Sistema Solare."
-        }
-    },
-
-    "Плутон": {
-        es: {
-            name: "Plutón",
-            description: "Un planeta enano del cinturón de Kuiper.",
-            temperature: "aproximadamente −230°C",
-            diameter: "2.377 km",
-            mass: "1,31 × 10²² kg",
-            distance: "aproximadamente 5,9 mil millones de km",
-            day: "153,3 horas",
-            year: "248 años terrestres",
-            moons: "5",
-            rings: "No",
-            atmosphere: "Nitrógeno, metano y monóxido de carbono",
-            fact: "Plutón fue clasificado como planeta enano en 2006."
-        },
-        it: {
-            name: "Plutone",
-            description: "Un pianeta nano della fascia di Kuiper.",
-            temperature: "circa −230°C",
-            diameter: "2.377 km",
-            mass: "1,31 × 10²² kg",
-            distance: "circa 5,9 miliardi di km",
-            day: "153,3 ore",
-            year: "248 anni terrestri",
-            moons: "5",
-            rings: "No",
-            atmosphere: "Azoto, metano e monossido di carbonio",
-            fact: "Plutone è stato classificato come pianeta nano nel 2006."
-        }
+    fr: {
+        "Луна": "Lune",
+        "Фобос": "Phobos",
+        "Деймос": "Déimos",
+        "Ио": "Io",
+        "Европа": "Europe",
+        "Ганимед": "Ganymède",
+        "Каллисто": "Callisto",
+        "Титан": "Titan",
+        "Энцелад": "Encelade",
+        "Тритон": "Triton"
     }
 };
 
 
-/* Добавляем новые языки к существующим планетам */
-
-Object.keys(planetsEsIt).forEach(planetName => {
-
-    if (planets[planetName]) {
-
-        planets[planetName].es = planetsEsIt[planetName].es;
-        planets[planetName].it = planetsEsIt[planetName].it;
-
-    }
-
-    });
-
-
 /* =========================================================
-   🌙 СПУТНИКИ — ESPAÑOL / ITALIANO
-   ========================================================= */
-
-const moonsEsIt = {
-
-    "Луна": {
-        es: {
-            planet: "Tierra",
-            diameter: "3.474 km",
-            temperature: "de −173°C a +127°C",
-            description: "La Luna es el satélite natural de la Tierra.",
-            fact: "La Luna siempre muestra la misma cara a la Tierra."
-        },
-        it: {
-            planet: "Terra",
-            diameter: "3.474 km",
-            temperature: "da −173°C a +127°C",
-            description: "La Luna è il satellite naturale della Terra.",
-            fact: "La Luna mostra sempre la stessa faccia alla Terra."
-        }
-    },
-
-    "Фобос": {
-        es: {
-            planet: "Marte",
-            diameter: "aproximadamente 22 km",
-            temperature: "muy baja",
-            description: "Fobos es la luna más grande y cercana de Marte.",
-            fact: "Fobos se está acercando gradualmente a Marte."
-        },
-        it: {
-            planet: "Marte",
-            diameter: "circa 22 km",
-            temperature: "molto bassa",
-            description: "Fobos è la luna più grande e vicina di Marte.",
-            fact: "Fobos si sta avvicinando gradualmente a Marte."
-        }
-    },
-
-    "Деймос": {
-        es: {
-            planet: "Marte",
-            diameter: "aproximadamente 12 km",
-            temperature: "muy baja",
-            description: "Deimos es una pequeña luna de Marte.",
-            fact: "El nombre Deimos significa «terror»."
-        },
-        it: {
-            planet: "Marte",
-            diameter: "circa 12 km",
-            temperature: "molto bassa",
-            description: "Deimos è una piccola luna di Marte.",
-            fact: "Il nome Deimos significa «terrore»."
-        }
-    },
-
-    "Ио": {
-        es: {
-            planet: "Júpiter",
-            diameter: "3.643 km",
-            temperature: "aproximadamente −130°C",
-            description: "Ío es una luna de Júpiter con volcanes extremadamente activos.",
-            fact: "Ío es el mundo con mayor actividad volcánica del Sistema Solar."
-        },
-        it: {
-            planet: "Giove",
-            diameter: "3.643 km",
-            temperature: "circa −130°C",
-            description: "Io è una luna di Giove con vulcani estremamente attivi.",
-            fact: "Io è il mondo con la maggiore attività vulcanica del Sistema Solare."
-        }
-    },
-
-    "Европа": {
-        es: {
-            planet: "Júpiter",
-            diameter: "3.122 km",
-            temperature: "aproximadamente −160°C",
-            description: "Europa es una luna helada de Júpiter.",
-            fact: "Probablemente existe un océano bajo su superficie helada."
-        },
-        it: {
-            planet: "Giove",
-            diameter: "3.122 km",
-            temperature: "circa −160°C",
-            description: "Europa è una luna ghiacciata di Giove.",
-            fact: "Probabilmente esiste un oceano sotto la sua superficie ghiacciata."
-        }
-    },
-
-    "Ганимед": {
-        es: {
-            planet: "Júpiter",
-            diameter: "5.268 km",
-            temperature: "aproximadamente −160°C",
-            description: "Ganímedes es la luna más grande del Sistema Solar.",
-            fact: "Ganímedes tiene un diámetro mayor que Mercurio."
-        },
-        it: {
-            planet: "Giove",
-            diameter: "5.268 km",
-            temperature: "circa −160°C",
-            description: "Ganimede è la luna più grande del Sistema Solare.",
-            fact: "Ganimede ha un diametro maggiore di quello di Mercurio."
-        }
-    },
-
-    "Каллисто": {
-        es: {
-            planet: "Júpiter",
-            diameter: "4.821 km",
-            temperature: "aproximadamente −140°C",
-            description: "Calisto es una de las lunas más grandes de Júpiter.",
-            fact: "La superficie de Calisto está cubierta de numerosos cráteres de impacto."
-        },
-        it: {
-            planet: "Giove",
-            diameter: "4.821 km",
-            temperature: "circa −140°C",
-            description: "Callisto è una delle lune più grandi di Giove.",
-            fact: "La superficie di Callisto è ricoperta da numerosi crateri da impatto."
-        }
-    },
-
-    "Титан": {
-        es: {
-            planet: "Saturno",
-            diameter: "5.150 km",
-            temperature: "aproximadamente −179°C",
-            description: "Titán es la luna más grande de Saturno.",
-            fact: "Titán tiene una atmósfera densa y mares de hidrocarburos líquidos."
-        },
-        it: {
-            planet: "Saturno",
-            diameter: "5.150 km",
-            temperature: "circa −179°C",
-            description: "Titano è la luna più grande di Saturno.",
-            fact: "Titano possiede una densa atmosfera e mari di idrocarburi liquidi."
-        }
-    },
-
-    "Энцелад": {
-        es: {
-            planet: "Saturno",
-            diameter: "aproximadamente 504 km",
-            temperature: "aproximadamente −200°C",
-            description: "Encélado es una pequeña luna helada de Saturno.",
-            fact: "Desde su región sur salen chorros de vapor de agua y hielo."
-        },
-        it: {
-            planet: "Saturno",
-            diameter: "circa 504 km",
-            temperature: "circa −200°C",
-            description: "Encelado è una piccola luna ghiacciata di Saturno.",
-            fact: "Dalla sua regione meridionale eruttano getti di vapore acqueo e ghiaccio."
-        }
-    },
-
-    "Тритон": {
-        es: {
-            planet: "Neptuno",
-            diameter: "2.707 km",
-            temperature: "aproximadamente −235°C",
-            description: "Tritón es la luna más grande de Neptuno.",
-            fact: "Tritón orbita Neptuno en dirección contraria a la rotación del planeta."
-        },
-        it: {
-            planet: "Nettuno",
-            diameter: "2.707 km",
-            temperature: "circa −235°C",
-            description: "Tritone è la luna più grande di Nettuno.",
-            fact: "Tritone orbita attorno a Nettuno in direzione opposta alla rotazione del pianeta."
-        }
-    }
-};
-
-
-/* Добавляем новые языки к существующим спутникам */
-
-Object.keys(moonsEsIt).forEach(moonName => {
-
-    if (moons[moonName]) {
-
-        moons[moonName].es = moonsEsIt[moonName].es;
-        moons[moonName].it = moonsEsIt[moonName].it;
-
-    }
-
-});
-/* =========================================================
-   🌙 ДОБАВЛЯЕМ ESPAÑOL / ITALIANO В ДЕТАЛИ СПУТНИКОВ
-   ========================================================= */
-
-moonDetailsTranslations.es = Object.fromEntries(
-    Object.entries(moonsEsIt).map(([moonName, data]) => [
-        moonName,
-        data.es
-    ])
-);
-
-moonDetailsTranslations.it = Object.fromEntries(
-    Object.entries(moonsEsIt).map(([moonName, data]) => [
-        moonName,
-        data.it
-    ])
-);
-
-/* =========================================================
-   🌙 ПЕРЕВОДЫ ДЕТАЛЕЙ СПУТНИКОВ
-   ========================================================= */
-
-/*
-   Используем те же переводы, что и в объекте moons.
-   Так moonDetailsTranslations автоматически получает
-   испанский и итальянский.
-*/
-
-moonDetailsTranslations.es = {};
-
-moonDetailsTranslations.it = {};
-
-Object.keys(moonsEsIt).forEach(moonName => {
-
-    moonDetailsTranslations.es[moonName] =
-        moonsEsIt[moonName].es;
-
-    moonDetailsTranslations.it[moonName] =
-        moonsEsIt[moonName].it;
-
-});
-
-
-console.log("🇪🇸 Испанский язык добавлен к планетам и спутникам.");
-console.log("🇮🇹 Итальянский язык добавлен к планетам и спутникам.");
-
-
-/* =========================================================
-   🌙 ОПИСАНИЯ КАРТОЧЕК СПУТНИКОВ
+   🌙 КАРТОЧКИ СПУТНИКОВ — ОПИСАНИЯ
    ========================================================= */
 
 const moonCardTranslations = {
 
     ru: {
         "Луна": "Естественный спутник Земли.",
-        "Фобос": "Крупнейший и ближайший спутник Марса.",
+        "Фобос": "Ближайший спутник Марса.",
         "Деймос": "Небольшой спутник Марса.",
-        "Ио": "Спутник Юпитера с чрезвычайно активными вулканами.",
+        "Ио": "Вулканически активный спутник Юпитера.",
         "Европа": "Ледяной спутник Юпитера.",
         "Ганимед": "Крупнейший спутник Солнечной системы.",
         "Каллисто": "Один из крупнейших спутников Юпитера.",
         "Титан": "Крупнейший спутник Сатурна.",
-        "Энцелад": "Небольшой ледяной спутник Сатурна.",
+        "Энцелад": "Ледяной спутник Сатурна.",
         "Тритон": "Крупнейший спутник Нептуна."
     },
 
     kk: {
         "Луна": "Жердің табиғи серігі.",
-        "Фобос": "Марстың ең үлкен әрі ең жақын серігі.",
+        "Фобос": "Марстың ең жақын серігі.",
         "Деймос": "Марстың кішкентай серігі.",
-        "Ио": "Жанартаулары өте белсенді Юпитер серігі.",
+        "Ио": "Юпитердің жанартаулық белсенді серігі.",
         "Европа": "Юпитердің мұзды серігі.",
         "Ганимед": "Күн жүйесіндегі ең үлкен серік.",
         "Каллисто": "Юпитердің ең ірі серіктерінің бірі.",
         "Титан": "Сатурнның ең үлкен серігі.",
-        "Энцелад": "Сатурнның кішкентай мұзды серігі.",
+        "Энцелад": "Сатурнның мұзды серігі.",
         "Тритон": "Нептунның ең үлкен серігі."
     },
 
     cs: {
         "Луна": "Přirozená družice Země.",
-        "Фобос": "Největší a nejbližší měsíc Marsu.",
+        "Фобос": "Nejbližší měsíc Marsu.",
         "Деймос": "Malý měsíc Marsu.",
-        "Ио": "Měsíc Jupiteru s mimořádně aktivními sopkami.",
+        "Ио": "Vulkanicky aktivní měsíc Jupiteru.",
         "Европа": "Ledový měsíc Jupiteru.",
         "Ганимед": "Největší měsíc Sluneční soustavy.",
         "Каллисто": "Jeden z největších měsíců Jupiteru.",
         "Титан": "Největší měsíc Saturnu.",
-        "Энцелад": "Malý ledový měsíc Saturnu.",
+        "Энцелад": "Ledový měsíc Saturnu.",
         "Тритон": "Největší měsíc Neptunu."
     },
 
     en: {
         "Луна": "Earth's natural satellite.",
-        "Фобос": "The largest and closest moon of Mars.",
+        "Фобос": "The closest moon to Mars.",
         "Деймос": "A small moon of Mars.",
-        "Ио": "A moon of Jupiter with extremely active volcanoes.",
+        "Ио": "A volcanically active moon of Jupiter.",
         "Европа": "An icy moon of Jupiter.",
         "Ганимед": "The largest moon in the Solar System.",
         "Каллисто": "One of Jupiter's largest moons.",
         "Титан": "The largest moon of Saturn.",
-        "Энцелад": "A small icy moon of Saturn.",
+        "Энцелад": "An icy moon of Saturn.",
         "Тритон": "The largest moon of Neptune."
     },
 
     de: {
         "Луна": "Der natürliche Satellit der Erde.",
-        "Фобос": "Der größte und nächste Mond des Mars.",
+        "Фобос": "Der nächstgelegene Mond des Mars.",
         "Деймос": "Ein kleiner Mond des Mars.",
-        "Ио": "Ein Jupitermond mit äußerst aktiven Vulkanen.",
+        "Ио": "Ein vulkanisch aktiver Mond des Jupiter.",
         "Европа": "Ein Eismond des Jupiter.",
         "Ганимед": "Der größte Mond im Sonnensystem.",
         "Каллисто": "Einer der größten Monde des Jupiter.",
         "Титан": "Der größte Mond des Saturn.",
-        "Энцелад": "Ein kleiner Eismond des Saturn.",
+        "Энцелад": "Ein Eismond des Saturn.",
         "Тритон": "Der größte Mond des Neptun."
     },
 
     fr: {
         "Луна": "Le satellite naturel de la Terre.",
-        "Фобос": "Le plus grand et le plus proche satellite de Mars.",
+        "Фобос": "Le satellite le plus proche de Mars.",
         "Деймос": "Un petit satellite de Mars.",
-        "Ио": "Un satellite de Jupiter aux volcans extrêmement actifs.",
+        "Ио": "Un satellite volcanique actif de Jupiter.",
         "Европа": "Un satellite glacé de Jupiter.",
         "Ганимед": "Le plus grand satellite du Système solaire.",
         "Каллисто": "L'un des plus grands satellites de Jupiter.",
         "Титан": "Le plus grand satellite de Saturne.",
-        "Энцелад": "Un petit satellite glacé de Saturne.",
+        "Энцелад": "Un satellite glacé de Saturne.",
         "Тритон": "Le plus grand satellite de Neptune."
-    },
-
-    es: {
-        "Луна": "El satélite natural de la Tierra.",
-        "Фобос": "La luna más grande y cercana de Marte.",
-        "Деймос": "Una pequeña luna de Marte.",
-        "Ио": "Una luna de Júpiter con volcanes extremadamente activos.",
-        "Европа": "Una luna helada de Júpiter.",
-        "Ганимед": "La luna más grande del Sistema Solar.",
-        "Каллисто": "Una de las lunas más grandes de Júpiter.",
-        "Титан": "La luna más grande de Saturno.",
-        "Энцелад": "Una pequeña luna helada de Saturno.",
-        "Тритон": "La luna más grande de Neptuno."
-    },
-
-    it: {
-        "Луна": "Il satellite naturale della Terra.",
-        "Фобос": "La luna più grande e vicina di Marte.",
-        "Деймос": "Una piccola luna di Marte.",
-        "Ио": "Una luna di Giove con vulcani estremamente attivi.",
-        "Европа": "Una luna ghiacciata di Giove.",
-        "Ганимед": "La luna più grande del Sistema Solare.",
-        "Каллисто": "Una delle lune più grandi di Giove.",
-        "Титан": "La luna più grande di Saturno.",
-        "Энцелад": "Una piccola luna ghiacciata di Saturno.",
-        "Тритон": "La luna più grande di Nettuno."
     }
 };
 
 
+/* 🇪🇸🇮🇹 Traducciones adicionales de lunas */
+const moonESIT = {
+    "Луна": {
+        es: { planet: 'Earth', description: 'La Luna es el satélite natural de la Tierra.', fact: 'La Luna siempre muestra la misma cara a la Tierra.' },
+        it: { planet: 'Terra', description: 'La Luna è il satellite naturale della Terra.', fact: 'La Luna mostra sempre lo stesso lato alla Terra.' }
+    },
+    "Фобос": {
+        es: { planet: 'Mars', description: 'Fobos es el satélite más cercano a Marte.', fact: 'Fobos se acerca gradualmente a Marte.' },
+        it: { planet: 'Marte', description: 'Fobos è il satellite più vicino a Marte.', fact: 'Fobos si sta avvicinando gradualmente a Marte.' }
+    },
+    "Деймос": {
+        es: { planet: 'Mars', description: 'Deimos es un pequeño satélite de Marte.', fact: 'El nombre Deimos significa «terror».' },
+        it: { planet: 'Marte', description: 'Deimos è una piccola luna di Marte.', fact: 'Deimos è una piccola luna di Marte.' }
+    },
+    "Ио": {
+        es: { planet: 'Júpiter', description: 'Ío es un mundo volcánicamente activo.', fact: 'Ío es el mundo con mayor actividad volcánica del Sistema Solar.' },
+        it: { planet: 'Giove', description: 'Io è una luna vulcanicamente attiva.', fact: 'Io è il mondo vulcanicamente più attivo del Sistema Solare.' }
+    },
+    "Европа": {
+        es: { planet: 'Júpiter', description: 'Europa es una luna helada de Júpiter.', fact: 'Probablemente hay un océano bajo su superficie helada.' },
+        it: { planet: 'Giove', description: 'Europa è una luna ghiacciata di Giove.', fact: 'Sotto la sua superficie ghiacciata potrebbe esserci un oceano.' }
+    },
+    "Ганимед": {
+        es: { planet: 'Júpiter', description: 'Ganímedes es la luna más grande del Sistema Solar.', fact: 'Ganímedes es la luna más grande del Sistema Solar.' },
+        it: { planet: 'Giove', description: 'Ganimede è la luna più grande del Sistema Solare.', fact: 'Ganimede è la luna più grande del Sistema Solare.' }
+    },
+    "Каллисто": {
+        es: { planet: 'Júpiter', description: 'Calisto es una de las grandes lunas de Júpiter.', fact: 'La superficie de Calisto está cubierta de numerosos cráteres de impacto.' },
+        it: { planet: 'Giove', description: 'Callisto è una delle lune più grandi di Giove.', fact: 'La superficie di Callisto è ricoperta da numerosi crateri d’impatto.' }
+    },
+    "Титан": {
+        es: { planet: 'Saturno', description: 'Titán es la luna más grande de Saturno.', fact: 'Titán tiene una atmósfera densa y lagos de hidrocarburos líquidos.' },
+        it: { planet: 'Saturno', description: 'Titano è la luna più grande di Saturno.', fact: 'Titano possiede una densa atmosfera e laghi di idrocarburi liquidi.' }
+    },
+    "Энцелад": {
+        es: { planet: 'Saturno', description: 'Encélado es una luna helada de Saturno.', fact: 'Desde su región austral brotan chorros de vapor de agua y hielo.' },
+        it: { planet: 'Saturno', description: 'Encelado è una luna ghiacciata di Saturno.', fact: 'Dalla sua regione meridionale fuoriescono pennacchi di vapore acqueo e ghiaccio.' }
+    },
+    "Тритон": {
+        es: { planet: 'Neptuno', description: 'Tritón es la luna más grande de Neptuno.', fact: 'Tritón orbita Neptuno en sentido contrario al giro del planeta.' },
+        it: { planet: 'Nettuno', description: 'Tritone è la luna più grande di Nettuno.', fact: 'Tritone orbita intorno a Nettuno in direzione opposta alla rotazione del pianeta.' }
+    },
+};
+
+Object.entries(moonESIT).forEach(([name, langs]) => {
+    const moon = moons[name];
+    if (!moon) return;
+    Object.entries(langs).forEach(([lang, text]) => {
+        moon[lang] = { ...(moon.ru || {}), ...text };
+    });
+});
+
+moonCardNames.es = {
+    "Луна":"Luna","Фобос":"Fobos","Деймос":"Deimos","Ио":"Ío","Европа":"Europa","Ганимед":"Ganímedes","Каллисто":"Calisto","Титан":"Titán","Энцелад":"Encélado","Тритон":"Tritón",
+    "Харон":"Caronte","Титания":"Titania","Оберон":"Oberón","Ариэль":"Ariel","Рея":"Rea","Япет":"Jápeto"
+};
+moonCardNames.it = {
+    "Луна":"Luna","Фобос":"Fobos","Деймос":"Deimos","Ио":"Io","Европа":"Europa","Ганимед":"Ganimede","Каллисто":"Callisto","Титан":"Titano","Энцелад":"Encelado","Тритон":"Tritone",
+    "Харон":"Caronte","Титания":"Titania","Оберон":"Oberon","Ариэль":"Ariel","Рея":"Rea","Япет":"Giapeto"
+};
+
+moonCardNames.kk = {...moonCardNames.kk,"Харон":"Харон","Титания":"Титания","Оберон":"Оберон","Ариэль":"Ариэль","Рея":"Рея","Япет":"Япет"};
+moonCardNames.cs = {...moonCardNames.cs,"Харон":"Charon","Титания":"Titania","Оберон":"Oberon","Ариэль":"Ariel","Рея":"Rhea","Япет":"Iapetus"};
+moonCardNames.en = {...moonCardNames.en,"Харон":"Charon","Титания":"Titania","Оберон":"Oberon","Ариэль":"Ariel","Рея":"Rhea","Япет":"Iapetus"};
+moonCardNames.de = {...moonCardNames.de,"Харон":"Charon","Титания":"Titania","Оберон":"Oberon","Ариэль":"Ariel","Рея":"Rhea","Япет":"Iapetus"};
+moonCardNames.fr = {...moonCardNames.fr,"Харон":"Charon","Титания":"Titania","Оберон":"Obéron","Ариэль":"Ariel","Рея":"Rhéa","Япет":"Japet"};
+
+moonCardTranslations.es = Object.fromEntries(Object.entries(moonESIT).map(([k,v]) => [k,v.es.description]));
+moonCardTranslations.es["Харон"]="La mayor luna de Plutón."; moonCardTranslations.es["Титания"]="La mayor luna de Urano."; moonCardTranslations.es["Оберон"]="Una gran luna exterior de Urano."; moonCardTranslations.es["Ариэль"]="Una brillante luna helada de Urano."; moonCardTranslations.es["Рея"]="La segunda luna más grande de Saturno."; moonCardTranslations.es["Япет"]="Una luna de Saturno con un gran contraste superficial.";
+moonCardTranslations.it = Object.fromEntries(Object.entries(moonESIT).map(([k,v]) => [k,v.it.description]));
+moonCardTranslations.it["Харон"]="La luna più grande di Plutone."; moonCardTranslations.it["Титания"]="La luna più grande di Urano."; moonCardTranslations.it["Оберон"]="Una grande luna esterna di Urano."; moonCardTranslations.it["Ариэль"]="Una brillante luna ghiacciata di Urano."; moonCardTranslations.it["Рея"]="La seconda luna più grande di Saturno."; moonCardTranslations.it["Япет"]="Una luna di Saturno con un forte contrasto superficiale.";
+Object.keys(newMoonOtherLanguages).forEach(name=>{
+    ["kk","cs","en","de","fr"].forEach(lang=>{
+        moonCardTranslations[lang][name]=newMoonOtherLanguages[name][lang].description;
+    });
+});
+
+
 /* =========================================================
-   🌙 ОБНОВЛЕНИЕ КАРТОЧЕК СПУТНИКОВ
+   🌙 СЕКЦИЯ СПУТНИКОВ
    ========================================================= */
 
-
-
-
-/* =========================================================
-   🌐 СОЗВЕЗДИЯ
-   ========================================================= */
 const moonSectionTranslations = {
 
     ru: {
@@ -3131,364 +2339,502 @@ const moonSectionTranslations = {
     fr: {
         title: "🌙 Lunes des planètes",
         text: "Explore les lunes du Système solaire et découvre davantage ces mondes."
-    },
-
-    es: {
-        title: "🌙 Lunas de los planetas",
-        text: "Explora las lunas del Sistema Solar y descubre más sobre estos mundos."
-    },
-
-    it: {
-        title: "🌙 Lune dei pianeti",
-        text: "Esplora le lune del Sistema Solare e scopri di più su questi mondi."
     }
 };
+
+
+/* =========================================================
+   🌌 СОЗВЕЗДИЯ
+   ========================================================= */
+
+const constellationTranslations = {
+
+    ru: {
+        "Большая Медведица": "Большая Медведица",
+        "Малая Медведица": "Малая Медведица",
+        "Орион": "Орион",
+        "Кассиопея": "Кассиопея",
+        "Лебедь": "Лебедь",
+        "Лира": "Лира",
+        "Андромеда": "Андромеда",
+        "Телец": "Телец",
+        "Скорпион": "Скорпион",
+        "Персей": "Персей"
+    },
+
+    kk: {
+        "Большая Медведица": "Үлкен Аю",
+        "Малая Медведица": "Кіші Аю",
+        "Орион": "Орион",
+        "Кассиопея": "Кассиопея",
+        "Лебедь": "Аққу",
+        "Лира": "Лира",
+        "Андромеда": "Андромеда",
+        "Телец": "Торпақ",
+        "Скорпион": "Сарышаян",
+        "Персей": "Персей"
+    },
+
+    cs: {
+        "Большая Медведица": "Velká medvědice",
+        "Малая Медведица": "Malý medvěd",
+        "Орион": "Orion",
+        "Кассиопея": "Kasiopeia",
+        "Лебедь": "Labuť",
+        "Лира": "Lyra",
+        "Андромеда": "Andromeda",
+        "Телец": "Býk",
+        "Скорпион": "Štír",
+        "Персей": "Perseus"
+    },
+
+    en: {
+        "Большая Медведица": "Ursa Major",
+        "Малая Медведица": "Ursa Minor",
+        "Орион": "Orion",
+        "Кассиопея": "Cassiopeia",
+        "Лебедь": "Cygnus",
+        "Лира": "Lyra",
+        "Андромеда": "Andromeda",
+        "Телец": "Taurus",
+        "Скорпион": "Scorpius",
+        "Персей": "Perseus"
+    },
+
+    de: {
+        "Большая Медведица": "Großer Bär",
+        "Малая Медведица": "Kleiner Bär",
+        "Орион": "Orion",
+        "Кассиопея": "Kassiopeia",
+        "Лебедь": "Schwan",
+        "Лира": "Leier",
+        "Андромеда": "Andromeda",
+        "Телец": "Stier",
+        "Скорпион": "Skorpion",
+        "Персей": "Perseus"
+    },
+
+    fr: {
+        "Большая Медведица": "Grande Ourse",
+        "Малая Медведица": "Petite Ourse",
+        "Орион": "Orion",
+        "Кассиопея": "Cassiopée",
+        "Лебедь": "Cygne",
+        "Лира": "Lyre",
+        "Андромеда": "Andromède",
+        "Телец": "Taureau",
+        "Скорпион": "Scorpion",
+        "Персей": "Persée"
+    }
+};
+
+
+/* =========================================================
+   ♇ КАРЛИКОВЫЕ ПЛАНЕТЫ
+   ========================================================= */
+
+const dwarfPlanets = {
+    "Церера": { icon:"⚪", ru:{name:"Церера",description:"Карликовая планета главного пояса астероидов.",diameter:"≈ 940 км",distance:"≈ 413 млн км",moons:"0",fact:"Церера — крупнейший объект главного пояса астероидов."}, es:{name:"Ceres",description:"Un planeta enano del cinturón principal de asteroides.",diameter:"≈ 940 km",distance:"≈ 413 millones de km",moons:"0",fact:"Ceres es el objeto más grande del cinturón principal de asteroides."}, it:{name:"Cerere",description:"Un pianeta nano della fascia principale degli asteroidi.",diameter:"≈ 940 km",distance:"≈ 413 milioni di km",moons:"0",fact:"Cerere è il più grande oggetto della fascia principale degli asteroidi."} },
+    "Эрида": { icon:"🧊", ru:{name:"Эрида",description:"Очень далёкий карликовый мир рассеянного диска.",diameter:"≈ 2 326 км",distance:"≈ 10,1 млрд км",moons:"1",fact:"Эрида помогла пересмотреть определение планеты в Солнечной системе."}, es:{name:"Eris",description:"Un mundo enano muy lejano del disco disperso.",diameter:"≈ 2 326 km",distance:"≈ 10,1 mil millones de km",moons:"1",fact:"Eris ayudó a impulsar el debate que llevó a redefinir el término planeta."}, it:{name:"Eris",description:"Un mondo nano molto lontano del disco diffuso.",diameter:"≈ 2 326 km",distance:"≈ 10,1 miliardi di km",moons:"1",fact:"Eris contribuì al dibattito che portò a ridefinire il termine pianeta."} },
+    "Хаумеа": { icon:"🥚", ru:{name:"Хаумеа",description:"Быстро вращающийся карликовый мир пояса Койпера.",diameter:"≈ 1 560 км",distance:"≈ 6,5 млрд км",moons:"2",fact:"Хаумеа имеет необычную вытянутую форму из-за быстрого вращения."}, es:{name:"Haumea",description:"Un mundo enano del cinturón de Kuiper que gira muy rápido.",diameter:"≈ 1 560 km",distance:"≈ 6,5 mil millones de km",moons:"2",fact:"Haumea tiene una forma alargada causada por su rápida rotación."}, it:{name:"Haumea",description:"Un mondo nano della fascia di Kuiper che ruota molto rapidamente.",diameter:"≈ 1 560 km",distance:"≈ 6,5 miliardi di km",moons:"2",fact:"Haumea ha una forma allungata dovuta alla sua rapida rotazione."} },
+    "Макемаке": { icon:"🧊", ru:{name:"Макемаке",description:"Ледяной карликовый мир за орбитой Нептуна.",diameter:"≈ 1 430 км",distance:"≈ 6,8 млрд км",moons:"1",fact:"Макемаке — один из крупнейших известных объектов пояса Койпера."}, es:{name:"Makemake",description:"Un mundo enano helado más allá de la órbita de Neptuno.",diameter:"≈ 1 430 km",distance:"≈ 6,8 mil millones de km",moons:"1",fact:"Makemake es uno de los mayores objetos conocidos del cinturón de Kuiper."}, it:{name:"Makemake",description:"Un mondo nano ghiacciato oltre l'orbita di Nettuno.",diameter:"≈ 1 430 km",distance:"≈ 6,8 miliardi di km",moons:"1",fact:"Makemake è uno dei maggiori oggetti conosciuti della fascia di Kuiper."} }
+};
+
+const dwarfPlanetCardTranslations = {
+    ru:{"Церера":["Церера","Крупнейший объект главного пояса астероидов и карликовая планета."],"Эрида":["Эрида","Далёкий карликовый мир рассеянного диска."],"Хаумеа":["Хаумеа","Быстро вращающийся карликовый мир пояса Койпера."],"Макемаке":["Макемаке","Яркий ледяной карликовый мир за орбитой Нептуна."]},
+    es:{"Церера":["Ceres","El mayor objeto del cinturón principal de asteroides y un planeta enano."],"Эрида":["Eris","Un mundo enano lejano del disco disperso."],"Хаумеа":["Haumea","Un mundo enano del cinturón de Kuiper que gira rápidamente."],"Макемаке":["Makemake","Un mundo enano helado más allá de Neptuno."]},
+    it:{"Церера":["Cerere","Il più grande oggetto della fascia principale degli asteroidi e un pianeta nano."],"Эрида":["Eris","Un lontano mondo nano del disco diffuso."],"Хаумеа":["Haumea","Un mondo nano della fascia di Kuiper dalla rapida rotazione."],"Макемаке":["Makemake","Un mondo nano ghiacciato oltre Nettuno."]}
+};
+
+function updateDwarfPlanetCards(){
+    document.querySelectorAll('.dwarf-planet-card').forEach(card=>{
+        const name=card.dataset.dwarf; const data=dwarfPlanetCardTranslations[currentLanguage]?.[name] || dwarfPlanetCardTranslations.ru[name];
+        if(!data)return; const h=card.querySelector('h3'); const p=card.querySelector('p'); if(h)h.textContent=data[0]; if(p)p.textContent=data[1];
+        const img=card.querySelector('img'); if(img)img.alt=data[0];
+    });
+}
+
+function showDwarfPlanet(name){
+    const item=dwarfPlanets[name]; if(!item)return; const data=item[currentLanguage]||item.ru; const modal=document.getElementById('dwarfPlanetModal'); if(!modal)return;
+    modal.dataset.dwarf=name;
+    document.getElementById('dwarfPlanetIcon').textContent=item.icon;
+    document.getElementById('dwarfPlanetName').textContent=data.name;
+    document.getElementById('dwarfPlanetDescription').textContent=data.description;
+    document.getElementById('dwarfDiameter').textContent=data.diameter;
+    document.getElementById('dwarfDistance').textContent=data.distance;
+    document.getElementById('dwarfMoons').textContent=data.moons;
+    document.getElementById('dwarfFact').textContent=data.fact;
+    modal.classList.add('active'); document.body.style.overflow='hidden';
+}
+
+function closeDwarfPlanet(){ const modal=document.getElementById('dwarfPlanetModal'); if(modal){modal.classList.remove('active');modal.dataset.dwarf='';} if(!document.querySelector('.planet-modal.active,.moon-modal.active,.updates-modal.active'))document.body.style.overflow=''; }
+
+/* =========================================================
+   🪐 КОРОТКИЕ ОПИСАНИЯ ПЛАНЕТ
+   ========================================================= */
+
+function updatePlanetCards() {
+
+    document.querySelectorAll(".planet-card").forEach(card => {
+
+        const name = card.dataset.planet;
+
+        if (!name) {
+            return;
+        }
+
+        const planet = planets[name];
+
+        if (!planet) {
+            return;
+        }
+
+        const data = {...planet.ru, ...(planet[currentLanguage] || {})};
+
+        const title = card.querySelector("h2, h3");
+        const description = card.querySelector("p");
+
+        if (title) {
+            title.textContent = data.name;
+        }
+
+        if (description) {
+            description.textContent = data.description;
+        }
+
+        const image = card.querySelector("img");
+        if (image) {
+            image.alt = data.name;
+        }
+    });
+}
+
+
+/* =========================================================
+   🌙 ОБНОВЛЕНИЕ КАРТОЧЕК СПУТНИКОВ
+   ========================================================= */
+
+function updateMoonCards() {
+
+    document.querySelectorAll(".moon-card").forEach(card => {
+
+        const name = card.dataset.moon;
+
+        if (!name) {
+            return;
+        }
+
+        const title = card.querySelector("h3");
+        const description = card.querySelector("p");
+
+        const localizedName = moonCardNames[currentLanguage]?.[name] || name;
+        if (title) {
+            title.textContent = localizedName;
+        }
+
+        if (description) {
+            description.textContent =
+                moonCardTranslations[currentLanguage]?.[name] || moonCardTranslations.ru?.[name] || "";
+        }
+
+        const image = card.querySelector("img");
+        if (image) {
+            image.alt = localizedName;
+        }
+    });
+}
+
+
+/* =========================================================
+   🌙 ОБНОВЛЕНИЕ СЕКЦИИ СПУТНИКОВ
+   ========================================================= */
+
 function updateMoonSectionLanguage() {
 
-    const translation =
-        moonSectionTranslations[currentLanguage] ||
-        moonSectionTranslations.ru;
+    const data = moonSectionTranslations[currentLanguage];
 
-    const title =
-        document.getElementById("moonsTitle");
+    if (!data) {
+        return;
+    }
 
-    const text =
-        document.getElementById("moonsDescription");
+    document.querySelectorAll(".moons-section-title").forEach(element => {
+        element.textContent = data.title;
+    });
+
+    document.querySelectorAll(".moons-section-text").forEach(element => {
+        element.textContent = data.text;
+    });
+
+    const title = document.getElementById("moonsSectionTitle");
+    const text = document.getElementById("moonsSectionText");
 
     if (title) {
-        title.textContent =
-            translation.title;
+        title.textContent = data.title;
     }
 
     if (text) {
-        text.textContent =
-            translation.text;
+        text.textContent = data.text;
     }
 }
+
+
+/* =========================================================
+   🪐 МОДАЛЬНОЕ ОКНО ПЛАНЕТЫ
+   ========================================================= */
+
+function showPlanet(name) {
+
+    if (!planets[name]) {
+        console.error("Планета не найдена:", name);
+        return;
+    }
+
+    const modal = document.getElementById("planetModal");
+
+    if (!modal) {
+        console.error("Не найдено окно planetModal");
+        return;
+    }
+
+    modal.dataset.planet = name;
+
+    fillPlanetModal(name);
+
+    modal.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function fillPlanetModal(name) {
+
+    const planet = planets[name];
+
+    if (!planet) {
+        return;
+    }
+
+    const data = {...planet.ru, ...(planet[currentLanguage] || {})};
+
+    const values = {
+
+        planetIcon: planet.icon,
+
+        planetName: data.name,
+
+        planetDescription: data.description,
+
+        planetTemperature: data.temperature,
+
+        planetDiameter: data.diameter,
+
+        planetMass: data.mass,
+
+        planetDistance: data.distance,
+
+        planetDay: data.day,
+
+        planetYear: data.year,
+
+        planetMoons: data.moons,
+
+        planetRings: data.rings,
+
+        planetAtmosphere: data.atmosphere,
+
+        planetFact: data.fact
+    };
+
+    Object.entries(values).forEach(([id, value]) => {
+
+        const element = document.getElementById(id);
+
+        if (element) {
+            element.textContent = value;
+        }
+    });
+}
+
+
+function closePlanet() {
+
+    const modal = document.getElementById("planetModal");
+
+    if (modal) {
+        modal.classList.remove("active");
+        modal.dataset.planet = "";
+    }
+
+    document.body.style.overflow = "";
+}
+
+
+/* =========================================================
+   🌙 МОДАЛЬНОЕ ОКНО СПУТНИКА
+   ========================================================= */
+
+function showMoon(name) {
+
+    const moon = moons[name];
+
+    if (!moon) {
+        console.error("Спутник не найден:", name);
+        return;
+    }
+
+    const modal = document.getElementById("moonModal");
+
+    if (!modal) {
+        console.error("Не найдено окно moonModal");
+        return;
+    }
+
+    const data = moon[currentLanguage] || moon.ru;
+
+    const labels = {
+
+        ru: {
+            planet: "Планета:",
+            diameter: "Диаметр:",
+            temperature: "Температура:",
+            fact: "Интересный факт:"
+        },
+
+        kk: {
+            planet: "Ғаламшар:",
+            diameter: "Диаметрі:",
+            temperature: "Температурасы:",
+            fact: "Қызықты дерек:"
+        },
+
+        cs: {
+            planet: "Planeta:",
+            diameter: "Průměr:",
+            temperature: "Teplota:",
+            fact: "Zajímavý fakt:"
+        },
+
+        en: {
+            planet: "Planet:",
+            diameter: "Diameter:",
+            temperature: "Temperature:",
+            fact: "Interesting fact:"
+        },
+
+        de: {
+            planet: "Planet:",
+            diameter: "Durchmesser:",
+            temperature: "Temperatur:",
+            fact: "Interessanter Fakt:"
+        },
+
+        fr: {
+            planet: "Planète :",
+            diameter: "Diamètre :",
+            temperature: "Température :",
+            fact: "Fait intéressant :"
+        },
+
+        es: {
+            planet: "Planeta:", diameter: "Diámetro:", temperature: "Temperatura:", fact: "Dato interesante:"
+        },
+
+        it: {
+            planet: "Pianeta:", diameter: "Diametro:", temperature: "Temperatura:", fact: "Curiosità:"
+        },
+        pl: {
+            planet: "Planeta:", diameter: "Średnica:", temperature: "Temperatura:", fact: "Ciekawostka:"
+        },
+        nl: {
+            planet: "Planeet:", diameter: "Diameter:", temperature: "Temperatuur:", fact: "Interessant feit:"
+        }
+    };
+
+    document.getElementById("moonIcon").textContent =
+        moon.icon;
+
+    document.getElementById("moonName").textContent =
+        moonCardNames[currentLanguage]?.[name] || name;
+
+    document.getElementById("moonDescription").textContent =
+        data.description;
+
+    document.getElementById("moonPlanet").textContent =
+        data.planet;
+
+    document.getElementById("moonDiameter").textContent =
+        data.diameter;
+
+    document.getElementById("moonTemperature").textContent =
+        data.temperature;
+
+    document.getElementById("moonFact").textContent =
+        data.fact;
+
+    const currentLabels =
+        labels[currentLanguage] || labels.ru;
+
+    const planetLabel =
+        document.getElementById("moonPlanetLabel");
+
+    const diameterLabel =
+        document.getElementById("moonDiameterLabel");
+
+    const temperatureLabel =
+        document.getElementById("moonTemperatureLabel");
+
+    const factLabel =
+        document.getElementById("moonFactLabel");
+
+    if (planetLabel) {
+        planetLabel.textContent = currentLabels.planet;
+    }
+
+    if (diameterLabel) {
+        diameterLabel.textContent = currentLabels.diameter;
+    }
+
+    if (temperatureLabel) {
+        temperatureLabel.textContent = currentLabels.temperature;
+    }
+
+    if (factLabel) {
+        factLabel.textContent = currentLabels.fact;
+    }
+
+    modal.dataset.moon = name;
+
+    modal.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function closeMoon() {
+
+    const modal = document.getElementById("moonModal");
+
+    if (modal) {
+        modal.classList.remove("active");
+        modal.dataset.moon = "";
+    }
+
+    document.body.style.overflow = "";
+}
+
+
+/* =========================================================
+   🌐 СОЗВЕЗДИЯ
+   ========================================================= */
+
 function updateConstellationLanguage() {
-
-    const constellationTranslations = {
-
-        ru: {
-            "Большая Медведица": "Большая Медведица",
-            "Малая Медведица": "Малая Медведица",
-            "Орион": "Орион",
-            "Кассиопея": "Кассиопея",
-            "Лебедь": "Лебедь",
-            "Лира": "Лира",
-            "Андромеда": "Андромеда",
-            "Телец": "Телец",
-            "Скорпион": "Скорпион",
-            "Персей": "Персей",
-            "Большой Пёс": "Большой Пёс",
-            "Стрелец": "Стрелец",
-            "Близнецы": "Близнецы",
-            "Лев": "Лев",
-            "Цефей": "Цефей",
-            "Пегас": "Пегас"
-        },
-
-        kk: {
-            "Большая Медведица": "Үлкен Аю",
-            "Малая Медведица": "Кіші Аю",
-            "Орион": "Орион",
-            "Кассиопея": "Кассиопея",
-            "Лебедь": "Аққу",
-            "Лира": "Лира",
-            "Андромеда": "Андромеда",
-            "Телец": "Торпақ",
-            "Скорпион": "Сарышаян",
-            "Персей": "Персей",
-            "Большой Пёс": "Үлкен Ит",
-            "Стрелец": "Мерген",
-            "Близнецы": "Егіздер",
-            "Лев": "Арыстан",
-            "Цефей": "Цефей",
-            "Пегас": "Пегас"
-        },
-
-        cs: {
-            "Большая Медведица": "Velká medvědice",
-            "Малая Медведица": "Malý medvěd",
-            "Орион": "Orion",
-            "Кассиопея": "Kasiopeia",
-            "Лебедь": "Labuť",
-            "Лира": "Lyra",
-            "Андромеда": "Andromeda",
-            "Телец": "Býk",
-            "Скорпион": "Štír",
-            "Персей": "Perseus",
-            "Большой Пёс": "Velký pes",
-            "Стрелец": "Střelec",
-            "Близнецы": "Blíženci",
-            "Лев": "Lev",
-            "Цефей": "Cefeus",
-            "Пегас": "Pegas"
-        },
-
-        en: {
-            "Большая Медведица": "Ursa Major",
-            "Малая Медведица": "Ursa Minor",
-            "Орион": "Orion",
-            "Кассиопея": "Cassiopeia",
-            "Лебедь": "Cygnus",
-            "Лира": "Lyra",
-            "Андромеда": "Andromeda",
-            "Телец": "Taurus",
-            "Скорпион": "Scorpius",
-            "Персей": "Perseus",
-            "Большой Пёс": "Canis Major",
-            "Стрелец": "Sagittarius",
-            "Близнецы": "Gemini",
-            "Лев": "Leo",
-            "Цефей": "Cepheus",
-            "Пегас": "Pegasus"
-        },
-
-        de: {
-            "Большая Медведица": "Großer Bär",
-            "Малая Медведица": "Kleiner Bär",
-            "Орион": "Orion",
-            "Кассиопея": "Kassiopeia",
-            "Лебедь": "Schwan",
-            "Лира": "Leier",
-            "Андромеда": "Andromeda",
-            "Телец": "Stier",
-            "Скорпион": "Skorpion",
-            "Персей": "Perseus",
-            "Большой Пёс": "Großer Hund",
-            "Стрелец": "Schütze",
-            "Близнецы": "Zwillinge",
-            "Лев": "Löwe",
-            "Цефей": "Kepheus",
-            "Пегас": "Pegasus"
-        },
-
-        fr: {
-            "Большая Медведица": "Grande Ourse",
-            "Малая Медведица": "Petite Ourse",
-            "Орион": "Orion",
-            "Кассиопея": "Cassiopée",
-            "Лебедь": "Cygne",
-            "Лира": "Lyre",
-            "Андромеда": "Andromède",
-            "Телец": "Taureau",
-            "Скорпион": "Scorpion",
-            "Персей": "Persée",
-            "Большой Пёс": "Grand Chien",
-            "Стрелец": "Sagittaire",
-            "Близнецы": "Gémeaux",
-            "Лев": "Lion",
-            "Цефей": "Céphée",
-            "Пегас": "Pégase"
-        },
-
-        es: {
-            "Большая Медведица": "Osa Mayor",
-            "Малая Медведица": "Osa Menor",
-            "Орион": "Orión",
-            "Кассиопея": "Casiopea",
-            "Лебедь": "Cisne",
-            "Лира": "Lira",
-            "Андромеда": "Andrómeda",
-            "Телец": "Tauro",
-            "Скорпион": "Escorpio",
-            "Персей": "Perseo",
-            "Большой Пёс": "Can Mayor",
-            "Стрелец": "Sagitario",
-            "Близнецы": "Géminis",
-            "Лев": "Leo",
-            "Цефей": "Cefeo",
-            "Пегас": "Pegaso"
-        },
-
-        it: {
-            "Большая Медведица": "Orsa Maggiore",
-            "Малая Медведица": "Orsa Minore",
-            "Орион": "Orione",
-            "Кассиопея": "Cassiopea",
-            "Лебедь": "Cigno",
-            "Лира": "Lira",
-            "Андромеда": "Andromeda",
-            "Телец": "Toro",
-            "Скорпион": "Scorpione",
-            "Персей": "Perseo",
-            "Большой Пёс": "Cane Maggiore",
-            "Стрелец": "Sagittario",
-            "Близнецы": "Gemelli",
-            "Лев": "Leone",
-            "Цефей": "Cefeo",
-            "Пегас": "Pegaso"
-        }
-    };
-
-
-    const constellationDescriptions = {
-
-        ru: {
-            "Большая Медведица": "Одно из самых узнаваемых созвездий северного неба.",
-            "Малая Медведица": "Известное северное созвездие, в котором находится Полярная звезда.",
-            "Орион": "Яркое и легко узнаваемое созвездие зимнего неба.",
-            "Кассиопея": "Созвездие северного неба, узнаваемое по характерной форме буквы W.",
-            "Лебедь": "Созвездие летнего неба, расположенное вдоль Млечного Пути.",
-            "Лира": "Небольшое созвездие, известное яркой звездой Вега.",
-            "Андромеда": "Северное созвездие, названное в честь героини древнегреческих мифов.",
-            "Телец": "Созвездие зодиакального пояса, известное звездным скоплением Плеяды.",
-            "Скорпион": "Яркое созвездие южной части неба с характерной изогнутой формой.",
-            "Персей": "Созвездие северного неба, названное в честь героя древнегреческих мифов.",
-            "Большой Пёс": "Созвездие южного неба, в котором находится яркая звезда Сириус.",
-            "Стрелец": "Зодиакальное созвездие, расположенное в направлении центра Млечного Пути.",
-            "Близнецы": "Зодиакальное созвездие, известное яркими звёздами Кастор и Поллукс.",
-            "Лев": "Зодиакальное созвездие, напоминающее фигуру льва.",
-            "Цефей": "Созвездие северного неба, названное в честь царя из древнегреческой мифологии.",
-            "Пегас": "Большое созвездие северного неба, названное в честь крылатого коня Пегаса."
-        },
-
-        kk: {
-            "Большая Медведица": "Солтүстік аспандағы ең танымал шоқжұлдыздардың бірі.",
-            "Малая Медведица": "Солтүстік аспанда орналасқан, оның құрамында Темірқазық жұлдызы бар.",
-            "Орион": "Қысқы аспандағы жарық әрі оңай танылатын шоқжұлдыз.",
-            "Кассиопея": "W әрпіне ұқсас пішінімен танымал солтүстік аспан шоқжұлдызы.",
-            "Лебедь": "Құс жолының бойында орналасқан жазғы аспан шоқжұлдызы.",
-            "Лира": "Жарқын Вега жұлдызымен танымал шағын шоқжұлдыз.",
-            "Андромеда": "Ежелгі грек мифтеріндегі кейіпкердің атымен аталған солтүстік шоқжұлдыз.",
-            "Телец": "Плеядалар жұлдыздар шоғырымен танымал зодиак шоқжұлдызы.",
-            "Скорпион": "Өзіне тән иілген пішіні бар оңтүстік аспандағы жарық шоқжұлдыз.",
-            "Персей": "Ежелгі грек мифтеріндегі батырдың атымен аталған солтүстік шоқжұлдыз.",
-            "Большой Пёс": "Солтүстік емес, оңтүстік аспанда орналасқан және онда жарық Сириус жұлдызы бар шоқжұлдыз.",
-            "Стрелец": "Құс жолының орталығы бағытына қарай орналасқан зодиак шоқжұлдызы.",
-            "Близнецы": "Кастор мен Поллукс атты жарық жұлдыздарымен танымал зодиак шоқжұлдызы.",
-            "Лев": "Арыстанның бейнесіне ұқсайтын зодиак шоқжұлдызы.",
-            "Цефей": "Ежелгі грек мифологиясындағы патшаның атымен аталған солтүстік шоқжұлдыз.",
-            "Пегас": "Қанатты Пегас атымен аталған үлкен солтүстік аспан шоқжұлдызы."
-        },
-
-        cs: {
-            "Большая Медведица": "Jedno z nejznámějších souhvězdí severní oblohy.",
-            "Малая Медведица": "Známé severní souhvězdí, ve kterém se nachází Polárka.",
-            "Орион": "Jasné a snadno rozpoznatelné souhvězdí zimní oblohy.",
-            "Кассиопея": "Souhvězdí severní oblohy známé svým charakteristickým tvarem písmene W.",
-            "Лебедь": "Souhvězdí letní oblohy ležící podél Mléčné dráhy.",
-            "Лира": "Malé souhvězdí známé jasnou hvězdou Vega.",
-            "Андромеда": "Severní souhvězdí pojmenované po hrdince starořeckých mýtů.",
-            "Телец": "Souhvězdí zvěrokruhu známé hvězdokupou Plejády.",
-            "Скорпион": "Jasné souhvězdí jižní oblohy s charakteristickým zakřiveným tvarem.",
-            "Персей": "Severní souhvězdí pojmenované po hrdinovi starořeckých mýtů.",
-            "Большой Пёс": "Souhvězdí jižní oblohy, ve kterém se nachází jasná hvězda Sirius.",
-            "Стрелец": "Souhvězdí zvěrokruhu ležící směrem ke středu Mléčné dráhy.",
-            "Близнецы": "Souhvězdí zvěrokruhu známé jasnými hvězdami Castor a Pollux.",
-            "Лев": "Souhvězdí zvěrokruhu připomínající postavu lva.",
-            "Цефей": "Souhvězdí severní oblohy pojmenované po králi ze starořecké mytologie.",
-            "Пегас": "Velké souhvězdí severní oblohy pojmenované po okřídleném koni Pegasovi."
-        },
-
-        en: {
-            "Большая Медведица": "One of the most recognizable constellations in the northern sky.",
-            "Малая Медведица": "A well-known northern constellation containing the North Star.",
-            "Орион": "A bright and easily recognizable constellation of the winter sky.",
-            "Кассиопея": "A northern constellation recognizable by its distinctive W shape.",
-            "Лебедь": "A summer constellation located along the Milky Way.",
-            "Лира": "A small constellation known for the bright star Vega.",
-            "Андромеда": "A northern constellation named after a heroine from ancient Greek mythology.",
-            "Телец": "A zodiac constellation known for the Pleiades star cluster.",
-            "Скорпион": "A bright southern constellation with a distinctive curved shape.",
-            "Персей": "A northern constellation named after a hero from ancient Greek mythology.",
-            "Большой Пёс": "A southern constellation containing the bright star Sirius.",
-            "Стрелец": "A zodiac constellation located toward the center of the Milky Way.",
-            "Близнецы": "A zodiac constellation known for the bright stars Castor and Pollux.",
-            "Лев": "A zodiac constellation resembling the figure of a lion.",
-            "Цефей": "A northern constellation named after a king from ancient Greek mythology.",
-            "Пегас": "A large northern constellation named after the winged horse Pegasus."
-        },
-
-        de: {
-            "Большая Медведица": "Eines der bekanntesten Sternbilder des Nordhimmels.",
-            "Малая Медведица": "Ein bekanntes Sternbild des Nordhimmels mit dem Polarstern.",
-            "Орион": "Ein helles und leicht erkennbares Sternbild des Winterhimmels.",
-            "Кассиопея": "Ein Sternbild des Nordhimmels, das an seiner charakteristischen W-Form erkennbar ist.",
-            "Лебедь": "Ein Sommersternbild entlang der Milchstraße.",
-            "Лира": "Ein kleines Sternbild, das für den hellen Stern Vega bekannt ist.",
-            "Андромеда": "Ein nördliches Sternbild, das nach einer Heldin der griechischen Mythologie benannt wurde.",
-            "Телец": "Ein Tierkreissternbild, das für den Sternhaufen der Plejaden bekannt ist.",
-            "Скорпион": "Ein helles Sternbild des Südhimmels mit einer charakteristischen gebogenen Form.",
-            "Персей": "Ein nördliches Sternbild, das nach einem Helden der griechischen Mythologie benannt wurde.",
-            "Большой Пёс": "Ein Sternbild des Südhimmels mit dem hellen Stern Sirius.",
-            "Стрелец": "Ein Tierkreissternbild in Richtung des Zentrums der Milchstraße.",
-            "Близнецы": "Ein Tierkreissternbild mit den hellen Sternen Castor und Pollux.",
-            "Лев": "Ein Tierkreissternbild, das an einen Löwen erinnert.",
-            "Цефей": "Ein Sternbild des Nordhimmels, das nach einem König der griechischen Mythologie benannt wurde.",
-            "Пегас": "Ein großes Sternbild des Nordhimmels, benannt nach dem geflügelten Pferd Pegasus."
-        },
-
-        fr: {
-            "Большая Медведица": "L'une des constellations les plus reconnaissables du ciel boréal.",
-            "Малая Медведица": "Une constellation célèbre du ciel boréal où se trouve l'étoile Polaire.",
-            "Орион": "Une constellation brillante et facilement reconnaissable du ciel hivernal.",
-            "Кассиопея": "Une constellation du ciel boréal reconnaissable à sa forme caractéristique en W.",
-            "Лебедь": "Une constellation estivale située le long de la Voie lactée.",
-            "Лира": "Une petite constellation connue pour son étoile brillante Véga.",
-            "Андромеда": "Une constellation boréale nommée d'après une héroïne de la mythologie grecque.",
-            "Телец": "Une constellation du zodiaque connue pour l'amas des Pléiades.",
-            "Скорпион": "Une constellation brillante du ciel austral à la forme courbée caractéristique.",
-            "Персей": "Une constellation boréale nommée d'après un héros de la mythologie grecque.",
-            "Большой Пёс": "Une constellation du ciel austral où se trouve l'étoile brillante Sirius.",
-            "Стрелец": "Une constellation du zodiaque située en direction du centre de la Voie lactée.",
-            "Близнецы": "Une constellation du zodiaque connue pour les étoiles brillantes Castor et Pollux.",
-            "Лев": "Une constellation du zodiaque évoquant la forme d'un lion.",
-            "Цефей": "Une constellation boréale nommée d'après un roi de la mythologie grecque.",
-            "Пегас": "Une grande constellation boréale nommée d'après le cheval ailé Pégase."
-        },
-
-        es: {
-            "Большая Медведица": "Una de las constelaciones más reconocibles del cielo del norte.",
-            "Малая Медведица": "Una conocida constelación del norte donde se encuentra la Estrella Polar.",
-            "Орион": "Una constelación brillante y fácilmente reconocible del cielo invernal.",
-            "Кассиопея": "Una constelación del norte reconocible por su característica forma de W.",
-            "Лебедь": "Una constelación del cielo de verano situada a lo largo de la Vía Láctea.",
-            "Лира": "Una pequeña constelación conocida por la brillante estrella Vega.",
-            "Андромеда": "Una constelación del norte llamada así por una heroína de la mitología griega.",
-            "Телец": "Una constelación zodiacal conocida por el cúmulo estelar de las Pléyades.",
-            "Скорпион": "Una brillante constelación del cielo austral con una característica forma curva.",
-            "Персей": "Una constelación del norte llamada así por un héroe de la mitología griega.",
-            "Большой Пёс": "Una constelación del cielo austral donde se encuentra la brillante estrella Sirio.",
-            "Стрелец": "Una constelación zodiacal situada en dirección al centro de la Vía Láctea.",
-            "Близнецы": "Una constelación zodiacal conocida por las brillantes estrellas Cástor y Pólux.",
-            "Лев": "Una constelación zodiacal que recuerda la figura de un león.",
-            "Цефей": "Una constelación del norte llamada así por un rey de la mitología griega.",
-            "Пегас": "Una gran constelación del norte llamada así por el caballo alado Pegaso."
-        },
-
-        it: {
-            "Большая Медведица": "Una delle costellazioni più riconoscibili del cielo settentrionale.",
-            "Малая Медведица": "Una famosa costellazione settentrionale dove si trova la Stella Polare.",
-            "Орион": "Una costellazione luminosa e facilmente riconoscibile del cielo invernale.",
-            "Кассиопея": "Una costellazione settentrionale riconoscibile per la caratteristica forma a W.",
-            "Лебедь": "Una costellazione estiva situata lungo la Via Lattea.",
-            "Лира": "Una piccola costellazione conosciuta per la luminosa stella Vega.",
-            "Андромеда": "Una costellazione settentrionale intitolata a un'eroina della mitologia greca.",
-            "Телец": "Una costellazione zodiacale famosa per l'ammasso stellare delle Pleiadi.",
-            "Скорпион": "Una brillante costellazione meridionale dalla caratteristica forma curva.",
-            "Персей": "Una costellazione settentrionale intitolata a un eroe della mitologia greca.",
-            "Большой Пёс": "Una costellazione del cielo meridionale dove si trova la brillante stella Sirio.",
-            "Стрелец": "Una costellazione zodiacale situata in direzione del centro della Via Lattea.",
-            "Близнецы": "Una costellazione zodiacale conosciuta per le stelle luminose Castore e Polluce.",
-            "Лев": "Una costellazione zodiacale che ricorda la figura di un leone.",
-            "Цефей": "Una costellazione settentrionale intitolata a un re della mitologia greca.",
-            "Пегас": "Una grande costellazione settentrionale intitolata al cavallo alato Pegaso."
-        }
-    };
-
 
     const translations =
         constellationTranslations[currentLanguage];
 
-    const descriptions =
-        constellationDescriptions[currentLanguage];
-
-    if (!translations || !descriptions) {
+    if (!translations) {
         return;
     }
-
 
     document
         .querySelectorAll(".constellation-card h2")
@@ -3496,7 +2842,7 @@ function updateConstellationLanguage() {
 
             const originalName =
                 title.dataset.originalName ||
-                title.textContent.trim();
+                title.textContent;
 
             title.dataset.originalName =
                 originalName;
@@ -3506,23 +2852,6 @@ function updateConstellationLanguage() {
                     translations[originalName];
             }
         });
-
-
-    document
-        .querySelectorAll(".constellation-description")
-        .forEach(description => {
-
-            const originalName =
-                description.dataset.originalName;
-
-            if (originalName &&
-                descriptions[originalName]) {
-
-                description.textContent =
-                    descriptions[originalName];
-            }
-        });
-
 
     const backButton =
         document.getElementById("constellationBack");
@@ -3542,17 +2871,472 @@ function updateConstellationLanguage() {
             de: "← Zurück zum Weltraumabenteuer",
 
             fr: "← Retour à l'aventure spatiale",
-
             es: "← Volver a la aventura espacial",
-
-            it: "← Torna all'avventura spaziale"
+            it: "← Torna all’avventura spaziale",
+            pl: "← Wróć do kosmicznej przygody",
+            nl: "← Terug naar het ruimteavontuur"
         };
 
         backButton.textContent =
-            backText[currentLanguage];
+            backText[currentLanguage] || backText.ru;
     }
 }
 
+
+
+
+/* =========================================================
+   🌐 ДОПОЛНИТЕЛЬНАЯ ЛОКАЛИЗАЦИЯ: PL / NL И НОВЫЕ РАЗДЕЛЫ
+   ========================================================= */
+
+Object.assign(languages, {
+    pl: {
+        siteTitle: "🌌 Kosmiczna przygoda Papyrusa",
+        siteSubtitle: "Odkrywaj Układ Słoneczny 🚀",
+        welcomeTitle: "Witaj w kosmosie!",
+        welcomeText: "Wyrusz w podróż po Układzie Słonecznym, odkrywaj planety i poznawaj ciekawostki na ich temat.",
+        startButton: "Rozpocznij podróż 🚀",
+        moonsButton: "🌙 Odkrywaj księżyce",
+        constellationButton: "✨ Marzenia Charlie Morningstar",
+        planetsTitle: "🪐 Planety",
+        temperature: "Temperatura:", diameter: "Średnica:", mass: "Masa:", distance: "Odległość od Słońca:",
+        day: "Długość doby:", year: "Długość roku:", moons: "Księżyce:", rings: "Pierścienie:", atmosphere: "Atmosfera:",
+        fact: "🔭 Ciekawostka", footer: "🌌 Kosmiczna przygoda Papyrusa © 2026", close: "Zamknij",
+        encyclopediaButton: "📚 Encyklopedia Caine’a"
+    },
+    nl: {
+        siteTitle: "🌌 Papyrus’ ruimteavontuur",
+        siteSubtitle: "Verken het zonnestelsel 🚀",
+        welcomeTitle: "Welkom in de ruimte!",
+        welcomeText: "Ga op reis door het zonnestelsel, verken de planeten en ontdek interessante feiten over ze.",
+        startButton: "Begin de reis 🚀",
+        moonsButton: "🌙 Verken de manen",
+        constellationButton: "✨ Charlie Morningstars dromen",
+        planetsTitle: "🪐 Planeten",
+        temperature: "Temperatuur:", diameter: "Diameter:", mass: "Massa:", distance: "Afstand tot de zon:",
+        day: "Lengte van de dag:", year: "Lengte van het jaar:", moons: "Manen:", rings: "Ringen:", atmosphere: "Atmosfeer:",
+        fact: "🔭 Interessant feit", footer: "🌌 Papyrus’ ruimteavontuur © 2026", close: "Sluiten",
+        encyclopediaButton: "📚 Caines encyclopedie"
+    }
+});
+
+const planetPLNL = {
+    "Меркурий": {
+        pl: {name:"Merkury",description:"Planeta znajdująca się najbliżej Słońca.",temperature:"od −180°C do +430°C",diameter:"4 879 km",mass:"3,30 × 10²³ kg",distance:"57,9 mln km",day:"58,6 doby ziemskiej",year:"88 dni ziemskich",moons:"0",rings:"Nie",atmosphere:"Bardzo rzadka egzosfera",fact:"Merkury jest najmniejszą planetą Układu Słonecznego."},
+        nl: {name:"Mercurius",description:"De planeet die het dichtst bij de zon staat.",temperature:"van −180°C tot +430°C",diameter:"4.879 km",mass:"3,30 × 10²³ kg",distance:"57,9 miljoen km",day:"58,6 aardse dagen",year:"88 aardse dagen",moons:"0",rings:"Nee",atmosphere:"Zeer ijle exosfeer",fact:"Mercurius is de kleinste planeet van het zonnestelsel."}
+    },
+    "Венера": {
+        pl: {name:"Wenus",description:"Najgorętsza planeta Układu Słonecznego.",temperature:"około +465°C",diameter:"12 104 km",mass:"4,87 × 10²⁴ kg",distance:"108,2 mln km",day:"243 doby ziemskie",year:"224,7 doby ziemskiej",moons:"0",rings:"Nie",atmosphere:"Głównie dwutlenek węgla",fact:"Wenus jest gorętsza od Merkurego."},
+        nl: {name:"Venus",description:"De heetste planeet van het zonnestelsel.",temperature:"ongeveer +465°C",diameter:"12.104 km",mass:"4,87 × 10²⁴ kg",distance:"108,2 miljoen km",day:"243 aardse dagen",year:"224,7 aardse dagen",moons:"0",rings:"Nee",atmosphere:"Voornamelijk koolstofdioxide",fact:"Venus is heter dan Mercurius."}
+    },
+    "Земля": {
+        pl: {name:"Ziemia",description:"Nasza rodzinna planeta.",temperature:"średnio +15°C",diameter:"12 742 km",mass:"5,97 × 10²⁴ kg",distance:"149,6 mln km",day:"23 godz. 56 min",year:"365,25 doby",moons:"1",rings:"Nie",atmosphere:"Azot i tlen",fact:"Ziemia jest jedyną znaną planetą, na której istnieje życie."},
+        nl: {name:"Aarde",description:"Onze thuisplaneet.",temperature:"gemiddeld +15°C",diameter:"12.742 km",mass:"5,97 × 10²⁴ kg",distance:"149,6 miljoen km",day:"23 uur 56 min",year:"365,25 dagen",moons:"1",rings:"Nee",atmosphere:"Stikstof en zuurstof",fact:"De aarde is de enige bekende planeet waarop leven voorkomt."}
+    },
+    "Марс": {
+        pl: {name:"Mars",description:"Czerwona planeta.",temperature:"średnio około −63°C",diameter:"6 779 km",mass:"6,42 × 10²³ kg",distance:"227,9 mln km",day:"24 godz. 37 min",year:"687 dni ziemskich",moons:"2",rings:"Nie",atmosphere:"Głównie dwutlenek węgla",fact:"Na Marsie znajduje się Olympus Mons, największy wulkan w Układzie Słonecznym."},
+        nl: {name:"Mars",description:"De rode planeet.",temperature:"gemiddeld ongeveer −63°C",diameter:"6.779 km",mass:"6,42 × 10²³ kg",distance:"227,9 miljoen km",day:"24 uur 37 min",year:"687 aardse dagen",moons:"2",rings:"Nee",atmosphere:"Voornamelijk koolstofdioxide",fact:"Op Mars ligt Olympus Mons, de grootste vulkaan van het zonnestelsel."}
+    },
+    "Юпитер": {
+        pl: {name:"Jowisz",description:"Największa planeta Układu Słonecznego.",temperature:"około −110°C na poziomie chmur",diameter:"139 820 km",mass:"1,90 × 10²⁷ kg",distance:"778,5 mln km",day:"9 godz. 56 min",year:"11,86 roku ziemskiego",moons:"95+",rings:"Tak",atmosphere:"Wodór i hel",fact:"Wielka Czerwona Plama to olbrzymia burza obserwowana od stuleci."},
+        nl: {name:"Jupiter",description:"De grootste planeet van het zonnestelsel.",temperature:"ongeveer −110°C bij de wolkentoppen",diameter:"139.820 km",mass:"1,90 × 10²⁷ kg",distance:"778,5 miljoen km",day:"9 uur 56 min",year:"11,86 aardse jaren",moons:"95",rings:"Ja",atmosphere:"Waterstof en helium",fact:"De Grote Rode Vlek is een enorme storm die al eeuwen wordt waargenomen."}
+    },
+    "Сатурн": {
+        pl: {name:"Saturn",description:"Gazowy olbrzym słynący z efektownych pierścieni.",temperature:"około −140°C na poziomie chmur",diameter:"116 460 km",mass:"5,68 × 10²⁶ kg",distance:"1,43 mld km",day:"10 godz. 42 min",year:"29,45 roku ziemskiego",moons:"140+",rings:"Tak",atmosphere:"Wodór i hel",fact:"Pierścienie Saturna składają się głównie z lodu i odłamków skalnych."},
+        nl: {name:"Saturnus",description:"Een gasreus die bekendstaat om zijn opvallende ringen.",temperature:"ongeveer −140°C bij de wolkentoppen",diameter:"116.460 km",mass:"5,68 × 10²⁶ kg",distance:"1,43 miljard km",day:"10 uur 42 min",year:"29,45 aardse jaren",moons:"146",rings:"Ja",atmosphere:"Waterstof en helium",fact:"De ringen van Saturnus bestaan vooral uit ijs en rotsachtig materiaal."}
+    },
+    "Уран": {
+        pl: {name:"Uran",description:"Lodowy olbrzym obracający się niemal na boku.",temperature:"około −195°C",diameter:"50 724 km",mass:"8,68 × 10²⁵ kg",distance:"2,87 mld km",day:"17 godz. 14 min",year:"84 lata ziemskie",moons:"27",rings:"Tak",atmosphere:"Wodór, hel i metan",fact:"Oś obrotu Urana jest nachylona tak mocno, że planeta obraca się niemal na boku."},
+        nl: {name:"Uranus",description:"Een ijsreus die vrijwel op zijn zij draait.",temperature:"ongeveer −195°C",diameter:"50.724 km",mass:"8,68 × 10²⁵ kg",distance:"2,87 miljard km",day:"17 uur 14 min",year:"84 aardse jaren",moons:"28",rings:"Ja",atmosphere:"Waterstof, helium en methaan",fact:"De as van Uranus helt zo sterk dat de planeet bijna op zijn zij draait."}
+    },
+    "Нептун": {
+        pl: {name:"Neptun",description:"Daleka, błękitna planeta o bardzo silnych wiatrach.",temperature:"około −200°C",diameter:"49 244 km",mass:"1,02 × 10²⁶ kg",distance:"4,50 mld km",day:"16 godz. 6 min",year:"164,8 roku ziemskiego",moons:"14",rings:"Tak",atmosphere:"Wodór, hel i metan",fact:"Na Neptunie występują jedne z najszybszych wiatrów w Układzie Słonecznym."},
+        nl: {name:"Neptunus",description:"Een verre blauwe planeet met zeer krachtige winden.",temperature:"ongeveer −200°C",diameter:"49.244 km",mass:"1,02 × 10²⁶ kg",distance:"4,50 miljard km",day:"16 uur 6 min",year:"164,8 aardse jaren",moons:"16",rings:"Ja",atmosphere:"Waterstof, helium en methaan",fact:"Neptunus heeft enkele van de snelste winden in het zonnestelsel."}
+    },
+    "Плутон": {
+        pl: {name:"Pluton",description:"Planeta karłowata w Pasie Kuipera.",temperature:"około −230°C",diameter:"2 377 km",mass:"1,31 × 10²² kg",distance:"około 5,9 mld km",day:"153,3 godziny",year:"248 lat ziemskich",moons:"5",rings:"Nie",atmosphere:"Azot, metan i tlenek węgla",fact:"W 2006 roku Pluton został sklasyfikowany jako planeta karłowata."},
+        nl: {name:"Pluto",description:"Een dwergplaneet in de Kuipergordel.",temperature:"ongeveer −230°C",diameter:"2.377 km",mass:"1,30 × 10²² kg",distance:"ongeveer 5,9 miljard km",day:"153,3 uur",year:"248 aardse jaren",moons:"5",rings:"Nee",atmosphere:"Stikstof, methaan en koolstofmonoxide",fact:"Pluto werd in 2006 geclassificeerd als dwergplaneet."}
+    }
+};
+Object.entries(planetPLNL).forEach(([name, translations]) => {
+    if (!planets[name]) return;
+    Object.entries(translations).forEach(([lang, data]) => {
+        planets[name][lang] = {...data};
+    });
+});
+
+const moonPLNL = {
+    "Луна": {pl:{planet:"Ziemia",diameter:"3 474 km",temperature:"od −173°C do +127°C",description:"Naturalny satelita Ziemi.",fact:"Księżyc zawsze zwraca ku Ziemi niemal tę samą stronę."},nl:{planet:"Aarde",diameter:"3.474 km",temperature:"van −173°C tot +127°C",description:"De natuurlijke satelliet van de aarde.",fact:"De maan laat de aarde steeds vrijwel dezelfde kant zien."}},
+    "Фобос": {pl:{planet:"Mars",diameter:"około 22 km",temperature:"bardzo niska",description:"Największy i bliższy Marsowi z jego dwóch księżyców.",fact:"Fobos stopniowo zbliża się do Marsa."},nl:{planet:"Mars",diameter:"ongeveer 22 km",temperature:"zeer laag",description:"De grootste en dichtstbijzijnde van de twee manen van Mars.",fact:"Phobos komt langzaam dichter bij Mars."}},
+    "Деймос": {pl:{planet:"Mars",diameter:"około 12 km",temperature:"bardzo niska",description:"Niewielki księżyc Marsa.",fact:"Nazwa Deimos oznacza „grozę”."},nl:{planet:"Mars",diameter:"ongeveer 12 km",temperature:"zeer laag",description:"Een kleine maan van Mars.",fact:"De naam Deimos betekent ‘angst’ of ‘schrik’."}},
+    "Ио": {pl:{planet:"Jowisz",diameter:"3 643 km",temperature:"około −130°C",description:"Księżyc Jowisza z niezwykle aktywnymi wulkanami.",fact:"Io jest najbardziej aktywnym wulkanicznie światem w Układzie Słonecznym."},nl:{planet:"Jupiter",diameter:"3.643 km",temperature:"ongeveer −130°C",description:"Een maan van Jupiter met zeer actieve vulkanen.",fact:"Io is de vulkanisch actiefste wereld in het zonnestelsel."}},
+    "Европа": {pl:{planet:"Jowisz",diameter:"3 122 km",temperature:"około −160°C",description:"Lodowy księżyc Jowisza.",fact:"Pod lodową powierzchnią Europy prawdopodobnie znajduje się ocean."},nl:{planet:"Jupiter",diameter:"3.122 km",temperature:"ongeveer −160°C",description:"Een ijzige maan van Jupiter.",fact:"Onder het ijzige oppervlak bevindt zich waarschijnlijk een oceaan."}},
+    "Ганимед": {pl:{planet:"Jowisz",diameter:"5 268 km",temperature:"około −160°C",description:"Największy księżyc w Układzie Słonecznym.",fact:"Ganimedes ma większą średnicę niż Merkury."},nl:{planet:"Jupiter",diameter:"5.268 km",temperature:"ongeveer −160°C",description:"De grootste maan van het zonnestelsel.",fact:"Ganymedes heeft een grotere diameter dan Mercurius."}},
+    "Каллисто": {pl:{planet:"Jowisz",diameter:"4 821 km",temperature:"około −140°C",description:"Jeden z największych księżyców Jowisza.",fact:"Powierzchnię Kallisto pokrywają liczne kratery uderzeniowe."},nl:{planet:"Jupiter",diameter:"4.821 km",temperature:"ongeveer −140°C",description:"Een van de grootste manen van Jupiter.",fact:"Het oppervlak van Callisto is bedekt met veel inslagkraters."}},
+    "Титан": {pl:{planet:"Saturn",diameter:"5 150 km",temperature:"około −179°C",description:"Największy księżyc Saturna.",fact:"Tytan ma gęstą atmosferę oraz jeziora ciekłych węglowodorów."},nl:{planet:"Saturnus",diameter:"5.150 km",temperature:"ongeveer −179°C",description:"De grootste maan van Saturnus.",fact:"Titan heeft een dichte atmosfeer en meren van vloeibare koolwaterstoffen."}},
+    "Энцелад": {pl:{planet:"Saturn",diameter:"około 504 km",temperature:"około −200°C",description:"Niewielki lodowy księżyc Saturna.",fact:"Z jego południowego obszaru tryskają pióropusze pary wodnej i lodu."},nl:{planet:"Saturnus",diameter:"ongeveer 504 km",temperature:"ongeveer −200°C",description:"Een kleine ijzige maan van Saturnus.",fact:"Uit het zuidelijke gebied spuiten pluimen van waterdamp en ijs."}},
+    "Тритон": {pl:{planet:"Neptun",diameter:"2 707 km",temperature:"około −235°C",description:"Największy księżyc Neptuna.",fact:"Triton krąży wokół Neptuna w kierunku przeciwnym do obrotu planety."},nl:{planet:"Neptunus",diameter:"2.707 km",temperature:"ongeveer −235°C",description:"De grootste maan van Neptunus.",fact:"Triton draait rond Neptunus tegen de draairichting van de planeet in."}},
+    "Харон": {pl:{planet:"Pluton",diameter:"1 212 km",temperature:"około −220°C",description:"Największy księżyc Plutona.",fact:"Charon jest tak duży w porównaniu z Plutonem, że układ bywa opisywany jako podwójny."},nl:{planet:"Pluto",diameter:"1.212 km",temperature:"ongeveer −220°C",description:"De grootste maan van Pluto.",fact:"Charon is relatief zo groot dat Pluto en Charon soms als een dubbel systeem worden beschouwd."}},
+    "Титания": {pl:{planet:"Uran",diameter:"1 578 km",temperature:"około −203°C",description:"Największy księżyc Urana.",fact:"Tytania jest największym księżycem Urana."},nl:{planet:"Uranus",diameter:"1.578 km",temperature:"ongeveer −203°C",description:"De grootste maan van Uranus.",fact:"Titania is de grootste maan van Uranus."}},
+    "Оберон": {pl:{planet:"Uran",diameter:"1 523 km",temperature:"około −200°C",description:"Duży, zewnętrzny księżyc Urana.",fact:"Oberon jest jednym z najbardziej oddalonych dużych księżyców Urana."},nl:{planet:"Uranus",diameter:"1.523 km",temperature:"ongeveer −200°C",description:"Een grote, buitenste maan van Uranus.",fact:"Oberon is een van de buitenste grote manen van Uranus."}},
+    "Ариэль": {pl:{planet:"Uran",diameter:"1 158 km",temperature:"około −213°C",description:"Jasny, lodowy księżyc Urana.",fact:"Ariel ma jedną z najjaśniejszych powierzchni wśród dużych księżyców Urana."},nl:{planet:"Uranus",diameter:"1.158 km",temperature:"ongeveer −213°C",description:"Een heldere, ijzige maan van Uranus.",fact:"Ariel heeft een van de helderste oppervlakken van de grote manen van Uranus."}},
+    "Рея": {pl:{planet:"Saturn",diameter:"1 528 km",temperature:"około −174°C",description:"Drugi co do wielkości księżyc Saturna.",fact:"Rea składa się głównie z lodu wodnego i skał."},nl:{planet:"Saturnus",diameter:"1.528 km",temperature:"ongeveer −174°C",description:"De op één na grootste maan van Saturnus.",fact:"Rhea bestaat voornamelijk uit waterijs en gesteente."}},
+    "Япет": {pl:{planet:"Saturn",diameter:"1 469 km",temperature:"około −143°C",description:"Niezwykły księżyc Saturna o silnym kontraście powierzchni.",fact:"Japet wyróżnia się dużą różnicą jasności między półkulami."},nl:{planet:"Saturnus",diameter:"1.469 km",temperature:"ongeveer −143°C",description:"Een bijzondere maan van Saturnus met sterk oppervlaktecontrast.",fact:"Iapetus staat bekend om het grote verschil in helderheid tussen zijn halfronden."}}
+};
+Object.entries(moonPLNL).forEach(([name, langs]) => {
+    if (!moons[name]) return;
+    Object.entries(langs).forEach(([lang, data]) => { moons[name][lang] = {...(moons[name].ru || {}), ...data}; });
+});
+moonCardNames.ru = {...moonCardNames.ru, "Харон":"Харон", "Титания":"Титания", "Оберон":"Оберон", "Ариэль":"Ариэль", "Рея":"Рея", "Япет":"Япет"};
+moonCardTranslations.ru = {...moonCardTranslations.ru,
+    "Харон":"Крупнейший спутник Плутона.",
+    "Титания":"Крупнейший спутник Урана.",
+    "Оберон":"Крупный внешний спутник Урана.",
+    "Ариэль":"Яркий ледяной спутник Урана.",
+    "Рея":"Второй по размеру спутник Сатурна.",
+    "Япет":"Необычный спутник Сатурна с резким контрастом поверхности."
+};
+moonCardNames.pl = {"Луна":"Księżyc","Фобос":"Fobos","Деймос":"Deimos","Ио":"Io","Европа":"Europa","Ганимед":"Ganimedes","Каллисто":"Kallisto","Титан":"Tytan","Энцелад":"Enceladus","Тритон":"Tryton","Харон":"Charon","Титания":"Tytania","Оберон":"Oberon","Ариэль":"Ariel","Рея":"Rea","Япет":"Japet"};
+moonCardNames.nl = {"Луна":"Maan","Фобос":"Phobos","Деймос":"Deimos","Ио":"Io","Европа":"Europa","Ганимед":"Ganymedes","Каллисто":"Callisto","Титан":"Titan","Энцелад":"Enceladus","Тритон":"Triton","Харон":"Charon","Титания":"Titania","Оберон":"Oberon","Ариэль":"Ariel","Рея":"Rhea","Япет":"Iapetus"};
+moonCardTranslations.pl = Object.fromEntries(Object.entries(moonPLNL).map(([name, langs]) => [name, langs.pl.description]));
+moonCardTranslations.nl = Object.fromEntries(Object.entries(moonPLNL).map(([name, langs]) => [name, langs.nl.description]));
+moonSectionTranslations.es = {title:"🌙 Lunas de los planetas",text:"Explora las lunas del Sistema Solar y descubre más sobre estos mundos."};
+moonSectionTranslations.it = {title:"🌙 Lune dei pianeti",text:"Esplora le lune del Sistema Solare e scopri di più su questi mondi."};
+moonSectionTranslations.pl = {title:"🌙 Księżyce planet",text:"Poznaj księżyce Układu Słonecznego i odkrywaj fascynujące światy."};
+moonSectionTranslations.nl = {title:"🌙 Manen van de planeten",text:"Verken de manen van het zonnestelsel en ontdek meer over deze werelden."};
+
+/* Pełne dane dla planet karłowatych we wszystkich językach */
+const dwarfPlanetExtraTranslations = {
+    "Церера": {
+        kk:{name:"Церера",description:"Астероидтардың негізгі белдеуіндегі ергежейлі ғаламшар.",diameter:"≈ 940 км",distance:"≈ 413 млн км",moons:"0",fact:"Церера — негізгі астероид белдеуіндегі ең ірі нысан."},
+        cs:{name:"Ceres",description:"Trpasličí planeta v hlavním pásu asteroidů.",diameter:"≈ 940 km",distance:"≈ 413 mil. km",moons:"0",fact:"Ceres je největším objektem hlavního pásu asteroidů."},
+        en:{name:"Ceres",description:"A dwarf planet in the main asteroid belt.",diameter:"≈ 940 km",distance:"≈ 413 million km",moons:"0",fact:"Ceres is the largest object in the main asteroid belt."},
+        de:{name:"Ceres",description:"Ein Zwergplanet im Hauptasteroidengürtel.",diameter:"≈ 940 km",distance:"≈ 413 Mio. km",moons:"0",fact:"Ceres ist das größte Objekt im Hauptasteroidengürtel."},
+        fr:{name:"Cérès",description:"Une planète naine de la ceinture principale d’astéroïdes.",diameter:"≈ 940 km",distance:"≈ 413 millions de km",moons:"0",fact:"Cérès est le plus grand objet de la ceinture principale d’astéroïdes."},
+        pl:{name:"Ceres",description:"Planeta karłowata w głównym pasie asteroid.",diameter:"≈ 940 km",distance:"≈ 413 mln km",moons:"0",fact:"Ceres jest największym obiektem głównego pasa asteroid."},
+        nl:{name:"Ceres",description:"Een dwergplaneet in de belangrijkste asteroïdengordel.",diameter:"≈ 940 km",distance:"≈ 413 miljoen km",moons:"0",fact:"Ceres is het grootste object in de belangrijkste asteroïdengordel."}
+    },
+    "Эрида": {
+        kk:{name:"Эрида",description:"Шашыраңқы дискідегі өте алыс ергежейлі әлем.",diameter:"≈ 2 326 км",distance:"≈ 10,1 млрд км",moons:"1",fact:"Эрида Күн жүйесіндегі ғаламшар анықтамасын қайта қарауға ықпал етті."},
+        cs:{name:"Eris",description:"Velmi vzdálený trpasličí svět v rozptýleném disku.",diameter:"≈ 2 326 km",distance:"≈ 10,1 mld. km",moons:"1",fact:"Eris pomohla vyvolat přehodnocení definice planety."},
+        en:{name:"Eris",description:"A very distant dwarf world in the scattered disc.",diameter:"≈ 2,326 km",distance:"≈ 10.1 billion km",moons:"1",fact:"Eris helped prompt a rethink of the definition of a planet."},
+        de:{name:"Eris",description:"Eine sehr weit entfernte Zwergwelt in der Streuscheibe.",diameter:"≈ 2.326 km",distance:"≈ 10,1 Mrd. km",moons:"1",fact:"Eris trug dazu bei, die Definition eines Planeten neu zu überdenken."},
+        fr:{name:"Éris",description:"Un monde nain très éloigné du disque diffus.",diameter:"≈ 2 326 km",distance:"≈ 10,1 milliards de km",moons:"1",fact:"Éris a contribué au débat qui a conduit à revoir la définition d’une planète."},
+        pl:{name:"Eris",description:"Bardzo odległy świat karłowaty z dysku rozproszonego.",diameter:"≈ 2 326 km",distance:"≈ 10,1 mld km",moons:"1",fact:"Eris przyczyniła się do ponownego rozważenia definicji planety."},
+        nl:{name:"Eris",description:"Een zeer verre dwergwereld in de verstrooide schijf.",diameter:"≈ 2.326 km",distance:"≈ 10,1 miljard km",moons:"1",fact:"Eris droeg bij aan de herziening van de definitie van een planeet."}
+    },
+    "Хаумеа": {
+        kk:{name:"Хаумеа",description:"Койпер белдеуіндегі жылдам айналатын ергежейлі әлем.",diameter:"≈ 1 560 км",distance:"≈ 6,5 млрд км",moons:"2",fact:"Жылдам айналғандықтан Хаумеаның пішіні созылыңқы."},
+        cs:{name:"Haumea",description:"Rychle rotující trpasličí svět v Kuiperově pásu.",diameter:"≈ 1 560 km",distance:"≈ 6,5 mld. km",moons:"2",fact:"Rychlá rotace dává Haumei protáhlý tvar."},
+        en:{name:"Haumea",description:"A rapidly rotating dwarf world in the Kuiper Belt.",diameter:"≈ 1,560 km",distance:"≈ 6.5 billion km",moons:"2",fact:"Haumea’s rapid rotation gives it an elongated shape."},
+        de:{name:"Haumea",description:"Eine schnell rotierende Zwergwelt im Kuipergürtel.",diameter:"≈ 1.560 km",distance:"≈ 6,5 Mrd. km",moons:"2",fact:"Durch ihre schnelle Rotation ist Haumea länglich geformt."},
+        fr:{name:"Hauméa",description:"Un monde nain du disque de Kuiper qui tourne rapidement.",diameter:"≈ 1 560 km",distance:"≈ 6,5 milliards de km",moons:"2",fact:"Sa rotation rapide donne à Hauméa une forme allongée."},
+        pl:{name:"Haumea",description:"Szybko obracająca się planeta karłowata z Pasa Kuipera.",diameter:"≈ 1 560 km",distance:"≈ 6,5 mld km",moons:"2",fact:"Szybki obrót nadaje Haumei wydłużony kształt."},
+        nl:{name:"Haumea",description:"Een snel draaiende dwergwereld in de Kuipergordel.",diameter:"≈ 1.560 km",distance:"≈ 6,5 miljard km",moons:"2",fact:"Door haar snelle draaiing heeft Haumea een langgerekte vorm."}
+    },
+    "Макемаке": {
+        kk:{name:"Макемаке",description:"Нептун орбитасынан тыс орналасқан мұзды ергежейлі әлем.",diameter:"≈ 1 430 км",distance:"≈ 6,8 млрд км",moons:"1",fact:"Макемаке — Койпер белдеуіндегі ең ірі белгілі нысандардың бірі."},
+        cs:{name:"Makemake",description:"Ledový trpasličí svět za oběžnou dráhou Neptunu.",diameter:"≈ 1 430 km",distance:"≈ 6,8 mld. km",moons:"1",fact:"Makemake patří mezi největší známé objekty Kuiperova pásu."},
+        en:{name:"Makemake",description:"An icy dwarf world beyond Neptune’s orbit.",diameter:"≈ 1,430 km",distance:"≈ 6.8 billion km",moons:"1",fact:"Makemake is one of the largest known objects in the Kuiper Belt."},
+        de:{name:"Makemake",description:"Eine eisige Zwergwelt jenseits der Neptunbahn.",diameter:"≈ 1.430 km",distance:"≈ 6,8 Mrd. km",moons:"1",fact:"Makemake gehört zu den größten bekannten Objekten im Kuipergürtel."},
+        fr:{name:"Makémaké",description:"Un monde nain glacé au-delà de l’orbite de Neptune.",diameter:"≈ 1 430 km",distance:"≈ 6,8 milliards de km",moons:"1",fact:"Makémaké est l’un des plus grands objets connus de la ceinture de Kuiper."},
+        pl:{name:"Makemake",description:"Lodowy świat karłowaty poza orbitą Neptuna.",diameter:"≈ 1 430 km",distance:"≈ 6,8 mld km",moons:"1",fact:"Makemake jest jednym z największych znanych obiektów Pasa Kuipera."},
+        nl:{name:"Makemake",description:"Een ijzige dwergwereld voorbij de baan van Neptunus.",diameter:"≈ 1.430 km",distance:"≈ 6,8 miljard km",moons:"1",fact:"Makemake is een van de grootste bekende objecten in de Kuipergordel."}
+    }
+};
+Object.entries(dwarfPlanetExtraTranslations).forEach(([name, langs]) => Object.entries(langs).forEach(([lang, data]) => {
+    if (dwarfPlanets[name]) dwarfPlanets[name][lang] = data;
+}));
+
+const dwarfCardExtraTranslations = {
+    kk:{"Церера":["Церера","Астероидтардың негізгі белдеуіндегі ең ірі нысан."],"Эрида":["Эрида","Шашыраңқы дискідегі алыс ергежейлі әлем."],"Хаумеа":["Хаумеа","Койпер белдеуіндегі жылдам айналатын әлем."],"Макемаке":["Макемаке","Нептуннан тыс орналасқан мұзды әлем."]},
+    cs:{"Церера":["Ceres","Největší objekt hlavního pásu asteroidů a trpasličí planeta."],"Эрида":["Eris","Vzdálený trpasličí svět v rozptýleném disku."],"Хаумеа":["Haumea","Rychle rotující trpasličí svět v Kuiperově pásu."],"Макемаке":["Makemake","Ledový trpasličí svět za Neptunem."]},
+    en:{"Церера":["Ceres","The largest object in the main asteroid belt and a dwarf planet."],"Эрида":["Eris","A distant dwarf world in the scattered disc."],"Хаумеа":["Haumea","A rapidly rotating dwarf world in the Kuiper Belt."],"Макемаке":["Makemake","An icy dwarf world beyond Neptune."]},
+    de:{"Церера":["Ceres","Das größte Objekt im Hauptasteroidengürtel und ein Zwergplanet."],"Эрида":["Eris","Eine weit entfernte Zwergwelt in der Streuscheibe."],"Хаумеа":["Haumea","Eine schnell rotierende Zwergwelt im Kuipergürtel."],"Макемаке":["Makemake","Eine eisige Zwergwelt jenseits von Neptun."]},
+    fr:{"Церера":["Cérès","Le plus grand objet de la ceinture principale d’astéroïdes et une planète naine."],"Эрида":["Éris","Un monde nain éloigné du disque diffus."],"Хаумеа":["Hauméa","Un monde nain du Kuiper à rotation rapide."],"Макемаке":["Makémaké","Un monde nain glacé au-delà de Neptune."]},
+    es:{"Церера":["Ceres","El mayor objeto del cinturón principal de asteroides y un planeta enano."],"Эрида":["Eris","Un mundo enano lejano del disco disperso."],"Хаумеа":["Haumea","Un mundo enano del cinturón de Kuiper que gira rápidamente."],"Макемаке":["Makemake","Un mundo enano helado más allá de Neptuno."]},
+    it:{"Церера":["Cerere","Il più grande oggetto della fascia principale degli asteroidi e un pianeta nano."],"Эрида":["Eris","Un lontano mondo nano del disco diffuso."],"Хаумеа":["Haumea","Un mondo nano della fascia di Kuiper dalla rapida rotazione."],"Макемаке":["Makemake","Un mondo nano ghiacciato oltre Nettuno."]},
+    pl:{"Церера":["Ceres","Największy obiekt głównego pasa asteroid i planeta karłowata."],"Эрида":["Eris","Odległy świat karłowaty z dysku rozproszonego."],"Хаумеа":["Haumea","Szybko obracająca się planeta karłowata z Pasa Kuipera."],"Макемаке":["Makemake","Lodowy świat karłowaty za orbitą Neptuna."]},
+    nl:{"Церера":["Ceres","Het grootste object in de belangrijkste asteroïdengordel en een dwergplaneet."],"Эрида":["Eris","Een verre dwergwereld in de verstrooide schijf."],"Хаумеа":["Haumea","Een snel draaiende dwergwereld in de Kuipergordel."],"Макемаке":["Makemake","Een ijzige dwergwereld voorbij Neptunus."]}
+};
+Object.assign(dwarfPlanetCardTranslations, dwarfCardExtraTranslations);
+
+/* Vertalingen van extra sterrenbeelden */
+const extraConstellationNames = {
+    "Большой Пёс": {ru:"Большой Пёс",kk:"Үлкен Ит",cs:"Velký pes",en:"Canis Major",de:"Großer Hund",fr:"Grand Chien",es:"Can Mayor",it:"Cane Maggiore",pl:"Wielki Pies",nl:"Grote Hond"},
+    "Стрелец": {ru:"Стрелец",kk:"Мерген",cs:"Střelec",en:"Sagittarius",de:"Schütze",fr:"Sagittaire",es:"Sagitario",it:"Sagittario",pl:"Strzelec",nl:"Boogschutter"},
+    "Близнецы": {ru:"Близнецы",kk:"Егіздер",cs:"Blíženci",en:"Gemini",de:"Zwillinge",fr:"Gémeaux",es:"Géminis",it:"Gemelli",pl:"Bliźnięta",nl:"Tweelingen"},
+    "Лев": {ru:"Лев",kk:"Арыстан",cs:"Lev",en:"Leo",de:"Löwe",fr:"Lion",es:"Leo",it:"Leone",pl:"Lew",nl:"Leeuw"},
+    "Цефей": {ru:"Цефей",kk:"Цефей",cs:"Cefej",en:"Cepheus",de:"Kepheus",fr:"Céphée",es:"Cefeo",it:"Cefeo",pl:"Cefeusz",nl:"Cepheus"},
+    "Пегас": {ru:"Пегас",kk:"Пегас",cs:"Pegas",en:"Pegasus",de:"Pegasus",fr:"Pégase",es:"Pegaso",it:"Pegaso",pl:"Pegaz",nl:"Pegasus"}
+};
+const standardConstellationNames = {
+    "Большая Медведица": {kk:"Үлкен Аю",cs:"Velká medvědice",en:"Ursa Major",de:"Großer Bär",fr:"Grande Ourse",es:"Osa Mayor",it:"Orsa Maggiore",pl:"Wielka Niedźwiedzica",nl:"Grote Beer"},
+    "Малая Медведица": {kk:"Кіші Аю",cs:"Malý medvěd",en:"Ursa Minor",de:"Kleiner Bär",fr:"Petite Ourse",es:"Osa Menor",it:"Orsa Minore",pl:"Mała Niedźwiedzica",nl:"Kleine Beer"},
+    "Орион": {kk:"Орион",cs:"Orion",en:"Orion",de:"Orion",fr:"Orion",es:"Orión",it:"Orione",pl:"Orion",nl:"Orion"},
+    "Кассиопея": {kk:"Кассиопея",cs:"Kasiopeia",en:"Cassiopeia",de:"Kassiopeia",fr:"Cassiopée",es:"Casiopea",it:"Cassiopea",pl:"Kasjopeja",nl:"Cassiopeia"},
+    "Лебедь": {kk:"Аққу",cs:"Labuť",en:"Cygnus",de:"Schwan",fr:"Cygne",es:"Cisne",it:"Cigno",pl:"Łabędź",nl:"Zwaan"},
+    "Лира": {kk:"Лира",cs:"Lyra",en:"Lyra",de:"Leier",fr:"Lyre",es:"Lira",it:"Lira",pl:"Lutnia",nl:"Lier"},
+    "Андромеда": {kk:"Андромеда",cs:"Andromeda",en:"Andromeda",de:"Andromeda",fr:"Andromède",es:"Andrómeda",it:"Andromeda",pl:"Andromeda",nl:"Andromeda"},
+    "Телец": {kk:"Торпақ",cs:"Býk",en:"Taurus",de:"Stier",fr:"Taureau",es:"Tauro",it:"Toro",pl:"Byk",nl:"Stier"},
+    "Скорпион": {kk:"Сарышаян",cs:"Štír",en:"Scorpius",de:"Skorpion",fr:"Scorpion",es:"Escorpio",it:"Scorpione",pl:"Skorpion",nl:"Schorpioen"},
+    "Персей": {kk:"Персей",cs:"Perseus",en:"Perseus",de:"Perseus",fr:"Persée",es:"Perseo",it:"Perseo",pl:"Perseusz",nl:"Perseus"}
+};
+Object.entries(extraConstellationNames).forEach(([ruName, langs]) => {
+    Object.entries(langs).forEach(([lang, translated]) => {
+        if (!constellationTranslations[lang]) constellationTranslations[lang] = {};
+        constellationTranslations[lang][ruName] = translated;
+    });
+});
+Object.entries(standardConstellationNames).forEach(([ruName, langs]) => {
+    Object.entries(langs).forEach(([lang, translated]) => {
+        if (!constellationTranslations[lang]) constellationTranslations[lang] = {};
+        constellationTranslations[lang][ruName] = translated;
+    });
+});
+const constellationPLNL = {
+    "Большая Медведица": {pl:"Wielka Niedźwiedzica",nl:"Grote Beer"},"Малая Медведица":{pl:"Mała Niedźwiedzica",nl:"Kleine Beer"},"Орион":{pl:"Orion",nl:"Orion"},"Кассиопея":{pl:"Kasjopeja",nl:"Cassiopeia"},"Лебедь":{pl:"Łabędź",nl:"Zwaan"},"Лира":{pl:"Lutnia",nl:"Lier"},"Андромеда":{pl:"Andromeda",nl:"Andromeda"},"Телец":{pl:"Byk",nl:"Stier"},"Скорпион":{pl:"Skorpion",nl:"Schorpioen"},"Персей":{pl:"Perseusz",nl:"Perseus"}
+};
+Object.entries(constellationPLNL).forEach(([ruName, langs]) => Object.entries(langs).forEach(([lang, translated]) => {const map = constellationTranslations[lang] || (constellationTranslations[lang] = {}); map[ruName] = translated;}));
+
+/* =========================================================
+   💀 ОБНОВЛЕНИЯ + НОВЫЕ РАЗДЕЛЫ
+   ========================================================= */
+
+const newSectionsTranslations = {
+    ru: {
+        dwarfTitle: "♇ Карликовые планеты", dwarfButton: "🪐 Карликовые планеты",
+        dwarfText: "Исследуй карликовые планеты и другие далёкие миры Солнечной системы.",
+        newMoonTitle: "🌙 Новые спутники", newMoonText: "Ещё несколько интересных спутников для исследования.",
+        spaceObjectsButton: "🌌 Космические объекты", kainButton: "🎪 Энциклопедия Кейна",
+        encyclopedia: "📚 Энциклопедия Кейна", daveLabButton: "Лаборатория<br>безумного<br>Дэйва", atlasButton: "АТЛАС<br>ПОМНИ",
+        updatesTitle: "💀 Санс сообщает о новинках",
+        updatesText: "йоу. на сайте появились новые штуки: Атлас Помни, новые созвездия, лаборатория Дэйва, карликовые планеты и космические объекты. сайт пополняется и новыми языками. заглядывай иногда — кто знает, что появится дальше?",
+        closeHint: "Нажми на Санса, чтобы закрыть окно."
+    
+    },
+    kk: {
+        dwarfTitle: "♇ Ергежейлі ғаламшарлар", dwarfButton: "🪐 Ергежейлі ғаламшарлар",
+        dwarfText: "Ергежейлі ғаламшарлар мен Күн жүйесінің алыс әлемдерін зертте.",
+        newMoonTitle: "🌙 Жаңа серіктер", newMoonText: "Зерттеуге арналған тағы бірнеше қызықты серік.",
+        spaceObjectsButton: "🌌 Ғарыш нысандары", kainButton: "🎪 Кейн энциклопедиясы",
+        encyclopedia: "📚 Кейн энциклопедиясы", daveLabButton: "Ессіз Дэйвтің<br>зертханасы", atlasButton: "ПОМНИ<br>АТЛАСЫ",
+        updatesTitle: "💀 Санс жаңа жаңалықтарды хабарлайды",
+        updatesText: "йоу. сайтта жаңа дүниелер пайда болды: Помни атласы, жаңа шоқжұлдыздар, Дэйвтің зертханасы, ергежейлі ғаламшарлар және ғарыш нысандары. сайтқа жаңа тілдер де қосылып жатыр. анда-санда кіріп тұр — келесіде не пайда боларын кім білсін?",
+        closeHint: "Терезені жабу үшін Сансқа бас."
+    },
+    cs: {
+        dwarfTitle: "♇ Trpasličí planety", dwarfButton: "🪐 Trpasličí planety",
+        dwarfText: "Prozkoumej trpasličí planety a další vzdálené světy Sluneční soustavy.",
+        newMoonTitle: "🌙 Nové měsíce", newMoonText: "Další zajímavé měsíce k prozkoumání.",
+        spaceObjectsButton: "🌌 Vesmírné objekty", kainButton: "🎪 Caineova encyklopedie",
+        encyclopedia: "📚 Caineova encyklopedie", daveLabButton: "Laboratoř<br>šíleného<br>Davea", atlasButton: "ATLAS<br>POMNI",
+        updatesTitle: "💀 Sans hlásí novinky",
+        updatesText: "Nazdar. Na webu se objevily nové věci: Atlas Pomni, nová souhvězdí, laboratoř šíleného Davea, trpasličí planety a vesmírné objekty. Web se také rozšiřuje o další jazyky. Občas se sem vrať — kdo ví, co přibude příště?",
+        closeHint: "Kliknutím na Sansa zavřeš okno."
+    },
+    en: {
+        dwarfTitle: "♇ Dwarf Planets", dwarfButton: "🪐 Dwarf Planets",
+        dwarfText: "Explore dwarf planets and other distant worlds of the Solar System.",
+        newMoonTitle: "🌙 New Moons", newMoonText: "A few more fascinating moons to explore.",
+        spaceObjectsButton: "🌌 Space Objects", kainButton: "🎪 Caine's Encyclopedia",
+        encyclopedia: "📚 Caine's Encyclopedia", daveLabButton: "Crazy Dave's<br>Laboratory", atlasButton: "POMNI'S<br>ATLAS",
+        updatesTitle: "💀 Sans has some news",
+        updatesText: "yo. some new stuff has appeared on the site: Pomni's Atlas, new constellations, Crazy Dave's Lab, dwarf planets, and space objects. the site is also adding more languages. drop by now and then — who knows what might show up next?",
+        closeHint: "Click Sans to close the window."
+    },
+    de: {
+        dwarfTitle: "♇ Zwergplaneten", dwarfButton: "🪐 Zwergplaneten",
+        dwarfText: "Erkunde Zwergplaneten und weitere ferne Welten des Sonnensystems.",
+        newMoonTitle: "🌙 Neue Monde", newMoonText: "Weitere faszinierende Monde zum Entdecken.",
+        spaceObjectsButton: "🌌 Weltraumobjekte", kainButton: "🎪 Caines Enzyklopädie",
+        encyclopedia: "📚 Caines Enzyklopädie", daveLabButton: "Labor des<br>verrückten<br>Dave", atlasButton: "POMNIS<br>ATLAS",
+        updatesTitle: "💀 Sans hat Neuigkeiten",
+        updatesText: "Hey. Auf der Website gibt es Neues: Pomnis Atlas, neue Sternbilder, das Labor des verrückten Dave, Zwergplaneten und Weltraumobjekte. Außerdem kommen weitere Sprachen hinzu. Schau ab und zu vorbei — wer weiß, was als Nächstes auftaucht?",
+        closeHint: "Klicke auf Sans, um das Fenster zu schließen."
+    },
+    fr: {
+        dwarfTitle: "♇ Planètes naines", dwarfButton: "🪐 Planètes naines",
+        dwarfText: "Explore les planètes naines et les mondes lointains du Système solaire.",
+        newMoonTitle: "🌙 Nouvelles lunes", newMoonText: "Quelques lunes fascinantes supplémentaires à explorer.",
+        spaceObjectsButton: "🌌 Objets spatiaux", kainButton: "🎪 Encyclopédie de Caine",
+        encyclopedia: "📚 Encyclopédie de Caine", daveLabButton: "Laboratoire<br>de Dave le Fou", atlasButton: "ATLAS<br>DE POMNI",
+        updatesTitle: "💀 Sans a des nouveautés",
+        updatesText: "Yo. De nouvelles choses sont apparues sur le site : l’Atlas de Pomni, de nouvelles constellations, le laboratoire de Dave le Fou, des planètes naines et des objets spatiaux. Le site accueille aussi de nouvelles langues. Repasse de temps en temps — qui sait ce qui apparaîtra ensuite ?",
+        closeHint: "Clique sur Sans pour fermer la fenêtre."
+    },
+    es: {
+        dwarfTitle: "♇ Planetas enanos", dwarfButton: "🪐 Planetas enanos",
+        dwarfText: "Explora planetas enanos y otros mundos lejanos del Sistema Solar.",
+        newMoonTitle: "🌙 Nuevas lunas", newMoonText: "Algunas lunas fascinantes más para explorar.",
+        spaceObjectsButton: "🌌 Objetos espaciales", kainButton: "🎪 Enciclopedia de Caine",
+        encyclopedia: "📚 Enciclopedia de Caine", daveLabButton: "Laboratorio<br>del Loco Dave", atlasButton: "ATLAS<br>DE POMNI",
+        updatesTitle: "💀 Sans trae novedades",
+        updatesText: "hey. han aparecido cosas nuevas en la web: el Atlas de Pomni, nuevas constelaciones, el laboratorio del Loco Dave, planetas enanos y objetos espaciales. También se están añadiendo más idiomas. pásate de vez en cuando; quién sabe qué aparecerá después.",
+        closeHint: "Haz clic en Sans para cerrar la ventana."
+    },
+    it: {
+        dwarfTitle: "♇ Pianeti nani", dwarfButton: "🪐 Pianeti nani",
+        dwarfText: "Esplora i pianeti nani e altri mondi lontani del Sistema Solare.",
+        newMoonTitle: "🌙 Nuove lune", newMoonText: "Altre lune affascinanti da esplorare.",
+        spaceObjectsButton: "🌌 Oggetti spaziali", kainButton: "🎪 Enciclopedia di Caine",
+        encyclopedia: "📚 Enciclopedia di Caine", daveLabButton: "Laboratorio<br>di Dave il Pazzo", atlasButton: "ATLANTE<br>DI POMNI",
+        updatesTitle: "💀 Le novità di Sans",
+        updatesText: "ehi. sul sito sono comparse nuove cose: l’Atlante di Pomni, nuove costellazioni, il laboratorio di Dave il Pazzo, pianeti nani e oggetti spaziali. Stiamo aggiungendo anche altre lingue. torna ogni tanto — chissà cosa comparirà la prossima volta.",
+        closeHint: "Clicca su Sans per chiudere la finestra."
+    },
+    pl: {
+        dwarfTitle: "♇ Planety karłowate", dwarfButton: "🪐 Planety karłowate",
+        dwarfText: "Odkrywaj planety karłowate i inne odległe światy Układu Słonecznego.",
+        newMoonTitle: "🌙 Nowe księżyce", newMoonText: "Poznaj kolejne fascynujące księżyce.",
+        spaceObjectsButton: "🌌 Obiekty kosmiczne", kainButton: "🎪 Encyklopedia Caine’a",
+        encyclopedia: "📚 Encyklopedia Caine’a", daveLabButton: "Laboratorium<br>Szalonego Dave’a", atlasButton: "ATLAS<br>POMNI",
+        updatesTitle: "💀 Sans ma nowości",
+        updatesText: "hej. na stronie pojawiły się nowe rzeczy: Atlas Pomni, nowe gwiazdozbiory, laboratorium Szalonego Dave’a, planety karłowate i obiekty kosmiczne. Dodajemy też kolejne języki. zaglądaj od czasu do czasu — kto wie, co pojawi się następnym razem?",
+        closeHint: "Kliknij Sansa, aby zamknąć okno."
+    },
+    nl: {
+        dwarfTitle: "♇ Dwergplaneten", dwarfButton: "🪐 Dwergplaneten",
+        dwarfText: "Verken dwergplaneten en andere verre werelden van het zonnestelsel.",
+        newMoonTitle: "🌙 Nieuwe manen", newMoonText: "Ontdek nog meer interessante manen.",
+        spaceObjectsButton: "🌌 Ruimteobjecten", kainButton: "🎪 Caines encyclopedie",
+        encyclopedia: "📚 Caines encyclopedie", daveLabButton: "Laboratorium<br>van Gekke Dave", atlasButton: "POMNI'S<br>ATLAS",
+        updatesTitle: "💀 Sans heeft nieuws",
+        updatesText: "yo. er zijn nieuwe dingen op de site verschenen: Pomni's Atlas, nieuwe sterrenbeelden, het lab van Gekke Dave, dwergplaneten en ruimteobjecten. Er worden ook meer talen toegevoegd. kom af en toe terug — wie weet wat er hierna verschijnt?",
+        closeHint: "Klik op Sans om het venster te sluiten."
+    }
+};
+
+Object.keys(newSectionsTranslations).forEach(lang=>{ if(languages[lang]) languages[lang].encyclopediaButton=newSectionsTranslations[lang].encyclopedia; });
+
+function updateNewSectionsLanguage() {
+    const t =
+        newSectionsTranslations[currentLanguage] ||
+        newSectionsTranslations.ru;
+
+    const setText = (id, value) => {
+        const element = document.getElementById(id);
+
+        if (element && value !== undefined) {
+            element.textContent = value;
+        }
+    };
+
+    // Карликовые планеты и спутники
+    setText("dwarfPlanetsTitle", t.dwarfTitle);
+    setText("dwarfPlanetsText", t.dwarfText);
+    setText("newMoonsTitle", t.newMoonTitle);
+    setText("newMoonsText", t.newMoonText);
+
+    // Заголовок окна Санса
+    setText("updatesTitle", t.updatesTitle);
+
+    // Десять абзацев объявления Санса
+    if (t.sansUpdates) {
+        t.sansUpdates.forEach((paragraph, index) => {
+            setText(`sansUpdate${index + 1}`, paragraph);
+        });
+    }
+
+    setText("updatesCloseHint", t.closeHint);
+
+    // Кнопки новых разделов
+    setText("spaceObjectsButton", t.spaceObjectsButton);
+    setText("kainButton", t.kainButton);
+    setText("dwarfPlanetsButton", t.dwarfButton);
+
+    // Лаборатория Дэйва
+    const daveButton =
+        document.querySelector(".dave-lab-triangle");
+
+    const daveLabel =
+        daveButton?.querySelector("span");
+
+    if (daveLabel && t.daveLabButton !== undefined) {
+        daveLabel.innerHTML = t.daveLabButton;
+    }
+
+    if (daveButton && t.daveLabButton !== undefined) {
+        const label = t.daveLabButton.replace(/<br\s*\/?>/gi, " ");
+        daveButton.setAttribute("aria-label", label);
+        daveButton.setAttribute("title", label);
+    }
+
+    // Атлас Помни
+    const atlasLabel =
+        document.querySelector(".pomni-atlas-title");
+
+    if (atlasLabel && t.atlasButton !== undefined) {
+        atlasLabel.innerHTML = t.atlasButton;
+    }
+
+    const atlasButton =
+        document.querySelector(".pomni-atlas-button");
+
+    if (atlasButton && t.atlasButton !== undefined) {
+        const label = t.atlasButton.replace(/<br\s*\/?>/gi, " ");
+        atlasButton.setAttribute("aria-label", label);
+        atlasButton.setAttribute("title", label);
+    }
+
+    // Кнопка Санса
+    const sansButton =
+        document.getElementById("sansUpdateButton");
+
+    if (sansButton && t.updatesTitle !== undefined) {
+        sansButton.setAttribute("aria-label", t.updatesTitle);
+    }
+
+    // Кнопка закрытия окна
+    const closeButton =
+        document.querySelector(
+            "#updatesModal .updates-close-button"
+        );
+
+    if (closeButton) {
+        const hint =
+            t.closeHint || "Close window";
+
+        closeButton.setAttribute("aria-label", hint);
+
+        const image = closeButton.querySelector("img");
+
+        if (image) {
+            image.alt = hint;
+        }
+    }
+}
+
+function updateDwarfModalLabels(){ const t=languages[currentLanguage]||languages.ru; const map={dwarfDiameterLabel:t.diameter,dwarfDistanceLabel:t.distance,dwarfMoonsLabel:t.moons,dwarfFactLabel:t.fact}; Object.entries(map).forEach(([id,v])=>{const e=document.getElementById(id);if(e)e.textContent=v;}); }
+
+function openUpdatesModal() {
+    const modal = document.getElementById("updatesModal");
+    if (!modal) {
+        console.error("Не найдено окно updatesModal. Проверь index.html.");
+        return;
+    }
+
+    // Перевод уже применяется при выборе языка. Не обновляем DOM повторно при клике.
+    modal.classList.add("active");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+}
+
+function closeUpdatesModal() {
+    const modal = document.getElementById("updatesModal");
+    if (!modal) return;
+
+    modal.classList.remove("active");
+    modal.setAttribute("aria-hidden", "true");
+
+    // Не включаем прокрутку, если другое модальное окно всё ещё открыто.
+    const anotherModalIsOpen = document.querySelector(
+        "#planetModal.active, #moonModal.active, #dwarfPlanetModal.active"
+    );
+    if (!anotherModalIsOpen) {
+        document.body.style.overflow = "";
+    }
+}
 
 /* =========================================================
    🌐 СМЕНА ЯЗЫКА
@@ -3568,63 +3352,128 @@ function changeLanguage(language) {
         return;
     }
 
+
+    /* =========================================
+       СОХРАНЯЕМ ВЫБРАННЫЙ ЯЗЫК
+       ========================================= */
+
     currentLanguage = language;
 
     console.log("Текущий язык:", currentLanguage);
-
+    
     localStorage.setItem(
         "siteLanguage",
         language
     );
 
+
     document.documentElement.lang =
         language === "kk"
             ? "kk"
             : language;
-            
-
-                // 🪐 Обновляем карточки планет
-    updatePlanetCards();
-
-    // 🌙 Обновляем карточки спутников
-    updateMoonCards();
-
-    // 🌙 Обновляем заголовок и описание секции спутников
-    updateMoonSectionLanguage();
-
-    const text = languages[language];
 
 
-    /* =====================================================
-       🌌 ГЛАВНАЯ СТРАНИЦА
-       ===================================================== */
+    /* =========================================
+       СТРАНИЦА СОЗВЕЗДИЙ
+       ========================================= */
+
+    if (
+        document.querySelector(".constellation-card") &&
+        typeof updateConstellationPage === "function"
+    ) {
+
+        updateConstellationPage();
+
+
+        const dropdown =
+            document.getElementById(
+                "languageDropdown"
+            );
+
+
+        if (dropdown) {
+
+            dropdown.classList.remove(
+                "open"
+            );
+
+        }
+
+
+        return;
+    }
+
+
+    /* =========================================
+       ОБЫЧНАЯ ГЛАВНАЯ СТРАНИЦА
+       ========================================= */
+
+    const text =
+        languages[language];
+
+    document.title = text.siteTitle;
 
     const elements = {
 
-        siteTitle: text.siteTitle,
-        siteSubtitle: text.siteSubtitle,
-        welcomeTitle: text.welcomeTitle,
-        welcomeText: text.welcomeText,
-        startButton: text.startButton,
-        moonsButton: text.moonsButton,
-        spaceObjectsButton: text.spaceObjectsButton,
-        kainButton: text.kainButton,
-        dwarfPlanetsButton: text.dwarfPlanetsButton,
-        constellationButton: text.constellationButton,
-        planetsTitle: text.planetsTitle,
+        siteTitle:
+            text.siteTitle,
 
-        labelTemperature: text.temperature,
-        labelDiameter: text.diameter,
-        labelMass: text.mass,
-        labelDistance: text.distance,
-        labelDay: text.day,
-        labelYear: text.year,
-        labelMoons: text.moons,
-        labelRings: text.rings,
-        labelAtmosphere: text.atmosphere,
+        siteSubtitle:
+            text.siteSubtitle,
 
-        factTitle: text.fact,
-        footerText: text.footer
+        welcomeTitle:
+            text.welcomeTitle,
+
+        welcomeText:
+            text.welcomeText,
+
+        startButton:
+            text.startButton,
+
+        moonsButton:
+            text.moonsButton,
+
+        constellationButton:
+            text.constellationButton,
+
+        encyclopediaButton:
+            text.encyclopediaButton || "📚 Энциклопедия Кейна",
+
+        planetsTitle:
+            text.planetsTitle,
+
+        labelTemperature:
+            text.temperature,
+
+        labelDiameter:
+            text.diameter,
+
+        labelMass:
+            text.mass,
+
+        labelDistance:
+            text.distance,
+
+        labelDay:
+            text.day,
+
+        labelYear:
+            text.year,
+
+        labelMoons:
+            text.moons,
+
+        labelRings:
+            text.rings,
+
+        labelAtmosphere:
+            text.atmosphere,
+
+        factTitle:
+            text.fact,
+
+        footerText:
+            text.footer
     };
 
 
@@ -3634,77 +3483,27 @@ function changeLanguage(language) {
             const element =
                 document.getElementById(id);
 
-            if (element && value !== undefined) {
-                element.textContent = value;
+
+            if (element) {
+
+                element.textContent =
+                    value;
+
             }
 
         }
     );
 
 
-    /* =====================================================
-       💀 САНС
-       ===================================================== */
-
-    const updatesTitle =
-        document.getElementById("updatesTitle");
-
-    if (updatesTitle) {
-        updatesTitle.textContent =
-            text.updatesTitle;
-    }
-
-
-    if (typeof sansUpdateTranslations !== "undefined") {
-
-        const sansTexts =
-            sansUpdateTranslations[language] ||
-            sansUpdateTranslations.ru;
-
-        for (let i = 1; i <= 10; i++) {
-
-            const element =
-                document.getElementById(
-                    `sansUpdate${i}`
-                );
-
-            if (
-                element &&
-                sansTexts &&
-                sansTexts[i - 1]
-            ) {
-                element.textContent =
-                    sansTexts[i - 1];
-            }
-
-        }
-
-    }
-
-
-    const sansUpdateButton =
-        document.getElementById(
-            "sansUpdateButton"
-        );
-
-    if (sansUpdateButton) {
-
-        sansUpdateButton.setAttribute(
-            "aria-label",
-            text.updatesTitle
-        );
-
-    }
-
-
-    /* =====================================================
-       🌐 КНОПКА ЯЗЫКА
-       ===================================================== */
+    /* =========================================
+       КНОПКА ВЫБРАННОГО ЯЗЫКА
+       ========================================= */
 
     const languageButton =
         document.getElementById(
             "languageButton"
         );
+
 
     const languageData = {
 
@@ -3746,67 +3545,64 @@ function changeLanguage(language) {
         it: {
             name: "Italiano",
             flag: "images/italy.jpg"
+        },
+        pl: {
+            name: "Polski",
+            emoji: "🇵🇱"
+        },
+        nl: {
+            name: "Nederlands",
+            emoji: "🇳🇱"
         }
-
     };
 
 
     const selected =
         languageData[language];
 
-    if (
-        languageButton &&
-        selected
-    ) {
 
-        languageButton.innerHTML = `
-            <img
-                src="${selected.flag}"
-                alt="${selected.name}"
-            >
-            ${selected.name}
-        `;
+    if (languageButton && selected) {
 
+        languageButton.innerHTML = selected.flag
+            ? `<img src="${selected.flag}" alt="${selected.name}"> ${selected.name}`
+            : `${selected.emoji} ${selected.name}`;
     }
 
 
-    /* =====================================================
-       🪐 ПЛАНЕТЫ
-       ===================================================== */
+    /* =========================================
+       ПЛАНЕТЫ
+       ========================================= */
 
-    if (typeof updatePlanetCards === "function") {
-        updatePlanetCards();
-    }
+    updatePlanetCards();
 
 
-    /* =====================================================
-       🌙 СПУТНИКИ
-       ===================================================== */
+    /* =========================================
+       СПУТНИКИ
+       ========================================= */
 
-    if (typeof updateMoonCards === "function") {
-        updateMoonCards();
-    }
+    updateMoonCards();
 
-    if (typeof updateMoonSectionLanguage === "function") {
-        updateMoonSectionLanguage();
-    }
+    updateMoonSectionLanguage();
+
+    updateDwarfPlanetCards();
+    updateNewSectionsLanguage();
+    updateDwarfModalLabels();
 
 
-    /* =====================================================
-       ✨ СОЗВЕЗДИЯ
-       ===================================================== */
+/* =========================================
+   СОЗВЕЗДИЯ
+   ========================================= */
 
 if (
-    typeof updateConstellationLanguage === "function" &&
-    document.querySelector(".constellation-card")
+    !document.querySelector(".constellation-card")
 ) {
     updateConstellationLanguage();
 }
 
 
-    /* =====================================================
-       ❌ КНОПКИ ЗАКРЫТИЯ
-       ===================================================== */
+    /* =========================================
+       КНОПКИ ЗАКРЫТИЯ
+       ========================================= */
 
     document
         .querySelectorAll(".close-button")
@@ -3820,14 +3616,15 @@ if (
         });
 
 
-    /* =====================================================
-       🪐 ОТКРЫТАЯ ПЛАНЕТА
-       ===================================================== */
+    /* =========================================
+       ЕСЛИ МОДАЛЬНОЕ ОКНО ПЛАНЕТЫ ОТКРЫТО
+       ========================================= */
 
     const planetModal =
         document.getElementById(
             "planetModal"
         );
+
 
     if (
         planetModal &&
@@ -3837,24 +3634,23 @@ if (
         const name =
             planetModal.dataset.planet;
 
-        if (
-            name &&
-            typeof fillPlanetModal === "function"
-        ) {
+
+        if (name) {
             fillPlanetModal(name);
         }
 
     }
 
 
-    /* =====================================================
-       🌙 ОТКРЫТЫЙ СПУТНИК
-       ===================================================== */
+    /* =========================================
+       ЕСЛИ МОДАЛЬНОЕ ОКНО СПУТНИКА ОТКРЫТО
+       ========================================= */
 
     const moonModal =
         document.getElementById(
             "moonModal"
         );
+
 
     if (
         moonModal &&
@@ -3864,24 +3660,23 @@ if (
         const name =
             moonModal.dataset.moon;
 
-        if (
-            name &&
-            typeof showMoon === "function"
-        ) {
+
+        if (name) {
             showMoon(name);
         }
 
     }
 
 
-    /* =====================================================
-       🌐 ЗАКРЫВАЕМ МЕНЮ
-       ===================================================== */
+    /* =========================================
+       ЗАКРЫВАЕМ МЕНЮ ЯЗЫКОВ
+       ========================================= */
 
     const dropdown =
         document.getElementById(
             "languageDropdown"
         );
+
 
     if (dropdown) {
 
@@ -4001,6 +3796,20 @@ document.addEventListener(
             );
         }
 
+        const dwarfModal = document.getElementById("dwarfPlanetModal");
+        if (dwarfModal) {
+            dwarfModal.addEventListener("click", event => {
+                if (event.target === dwarfModal) closeDwarfPlanet();
+            });
+        }
+
+        const updatesModal = document.getElementById("updatesModal");
+        if (updatesModal) {
+            updatesModal.addEventListener("click", event => {
+                if (event.target === updatesModal) closeUpdatesModal();
+            });
+        }
+
 
         /* Запускаем выбранный язык */
 
@@ -4021,6 +3830,8 @@ document.addEventListener(
 
             closePlanet();
             closeMoon();
+            closeDwarfPlanet();
+            closeUpdatesModal();
         }
     }
 );
@@ -4211,346 +4022,331 @@ document.addEventListener(
 );
 
 
+const savedLanguage =
+    localStorage.getItem("siteLanguage") || "ru";
 
-// 💀 Окно «Новые дополнения»
+changeLanguage(savedLanguage);
 
-function openUpdatesModal() {
-    const modal = document.getElementById("updatesModal");
+/* 💀 Новое объявление Санса на 10 языках */
+(() => {
+    const sansNews = {
+        ru: {
+            updatesTitle: "💀 Санс вещает о новинках",
+            updatesText: `йоу. это снова я, санс. сайт опять разросся, пока я экономил силы. ну, кто-то же должен был за всем этим наблюдать.
 
-    if (modal) {
-        modal.style.display = "flex";
-    }
-}
+<br><br>В меню появились новые кнопки: «Космические объекты», «Энциклопедия Кейна», «Карликовые планеты», «Атлас Помни» и лаборатория безумного Дэйва. В «Мечтах Чарли Морнингстар» стало больше созвездий, появились новые спутники и четыре карликовые планеты: Церера, Эрида, Хаумеа и Макемаке. И да, это Кейн, не Каин. я проверил. почти.
 
-function closeUpdatesModal() {
-    const modal = document.getElementById("updatesModal");
+<br><br>В Атласе есть поиск по 11 космическим объектам, сведения о них, викторина из 10 вопросов, достижения, сохранение прогресса, звуковые эффекты и космический босс с пятью сложными вопросами. Дэйв тоже ждёт тебя в лаборатории. постарайся не нажимать все кнопки сразу. хотя зрелище было бы неплохое.
 
-    if (modal) {
-        modal.style.display = "none";
-    }
-}
+<br><br>Теперь сайт поддерживает десять языков: русский, казахский, чешский, английский, немецкий, французский, испанский, итальянский, польский и нидерландский. новые кнопки и страницы помогут найти больше интересного, а кое-где могут прятаться секреты. я ничего не обещал.
 
-// Закрытие окна при клике по затемнённому фону
-document.addEventListener("click", function (event) {
-    const modal = document.getElementById("updatesModal");
+<br><br>короче, осматривайся, исследуй новые разделы и ищи сюрпризы. если найдёшь что-то раньше меня, скажи, что так и было задумано. нажми на меня, чтобы закрыть окно.`,
+            closeHint: "Нажми на Санса, чтобы закрыть окно."
+        },
 
-    if (event.target === modal) {
-        closeUpdatesModal();
+        kk: {
+            updatesTitle: "💀 Санс жаңалықтарды хабарлайды",
+            updatesText: `йоу. бұл тағы мен, Санс. мен күшімді үнемдеп жатқанда сайт тағы да үлкейіп кетіпті. біреу бәрін бақылап отыруы керек қой.
+
+<br><br>Мәзірге жаңа батырмалар қосылды: «Ғарыш нысандары», «Кейн энциклопедиясы», «Ергежейлі ғаламшарлар», «Помни атласы» және Ессіз Дэйвтің зертханасы. «Чарли Морнингстардың армандары» бөлімінде шоқжұлдыздар көбейді, жаңа серіктер мен төрт ергежейлі ғаламшар қосылды: Церера, Эрида, Хаумеа және Макемаке. Айтпақшы, ол — Кейн, Каин емес. тексеріп көрдім. дерлік.
+
+<br><br>Атласта 11 ғарыш нысанын іздеуге, олар туралы мәлімет оқуға, 10 сұрақтық викторинадан өтуге, жетістіктер жинауға, прогресті сақтауға, дыбыстарды тыңдауға және бес қиын сұрағы бар ғарыштық боспен шайқасуға болады. Дэйв те зертханасында күтіп отыр. барлық батырманы бірден баспа. дегенмен, қызық болар еді.
+
+<br><br>Енді сайт он тілді қолдайды: орыс, қазақ, чех, ағылшын, неміс, француз, испан, итальян, поляк және нидерланд тілдері. жаңа батырмалар мен беттер зерттейтін дүниелерді көбейтеді. кей жерлерде құпиялар да болуы мүмкін. мен ештеңе уәде еткен жоқпын.
+
+<br><br>қысқасы, айналаны қарап шық, жаңа бөлімдерді зертте және тосынсыйларды ізде. бірдеңені менен бұрын тапсаң, бәрі жоспар бойынша болды деп айта сал. терезені жабу үшін мені бас.`,
+            closeHint: "Терезені жабу үшін Сансқа бас."
+        },
+
+        cs: {
+            updatesTitle: "💀 Sans hlásí novinky",
+            updatesText: `Nazdar, tady zase Sans. Web se zase rozrostl, zatímco jsem šetřil energii. Někdo to tu přece musel hlídat.
+
+<br><br>V nabídce přibyly nové odkazy: Vesmírné objekty, Caineova encyklopedie, Trpasličí planety, Atlas Pomni a Laboratoř šíleného Davea. Ve „Snech Charlieho Morningstarové“ najdeš více souhvězdí, přibyly nové měsíce a čtyři trpasličí planety: Ceres, Eris, Haumea a Makemake. A ano, je to Caine, ne Kain. kontroloval jsem to. skoro.
+
+<br><br>Atlas nabízí vyhledávání 11 vesmírných objektů, jejich informace, kvíz s 10 otázkami, úspěchy, ukládání postupu, zvukové efekty a kosmického bosse s pěti těžkými otázkami. Dave na tebe čeká v laboratoři. nemačkej všechna tlačítka najednou. i když by to byla podívaná.
+
+<br><br>Web nyní podporuje deset jazyků: ruštinu, kazaštinu, češtinu, angličtinu, němčinu, francouzštinu, španělštinu, italštinu, polštinu a nizozemštinu. Nová tlačítka a stránky ti pomohou najít další zajímavosti. možná se někde skrývají i tajemství. nic jsem neslíbil.
+
+<br><br>Tak se rozhlédni, prozkoumej nové sekce a hledej překvapení. když něco objevíš přede mnou, řekni, že to tak bylo v plánu. Kliknutím na mě okno zavřeš.`,
+            closeHint: "Kliknutím na Sansa zavřeš okno."
+        },
+
+        en: {
+            updatesTitle: "💀 Sans has some news",
+            updatesText: `yo. sans here again. the site got bigger while I was conserving energy. somebody had to keep an eye on things, right?
+
+<br><br>New menu buttons lead to Space Objects, Caine's Encyclopedia, Dwarf Planets, Pomni's Atlas, and Crazy Dave's Lab. Charlie Morningstar's Dreams has more constellations, and there are new moons plus four dwarf planets to explore: Ceres, Eris, Haumea, and Makemake. and yes, it's Caine, not Cain. I checked. mostly.
+
+<br><br>The Atlas has a search feature for 11 space objects, information about them, a 10-question quiz, achievements, saved progress, sound effects, and a cosmic boss with five tough questions. Dave is waiting in his lab, too. try not to press every button at once. though I'd probably watch.
+
+<br><br>The site now supports ten languages: Russian, Kazakh, Czech, English, German, French, Spanish, Italian, Polish, and Dutch. New buttons and pages make it easier to find things to explore. there might even be a few secrets hidden around. I promised nothing.
+
+<br><br>anyway, look around, explore the new sections, and hunt for surprises. if you find something before me, just say I planned it that way. click me to close this window.`,
+            closeHint: "Click Sans to close the window."
+        },
+
+        de: {
+            updatesTitle: "💀 Sans hat Neuigkeiten",
+            updatesText: `yo. hier ist wieder Sans. die Website ist gewachsen, während ich Energie gespart habe. irgendwer musste schließlich ein Auge darauf haben.
+
+<br><br>Im Menü gibt es neue Schaltflächen für Weltraumobjekte, Caines Enzyklopädie, Zwergplaneten, Pomnis Atlas und Crazy Daves Labor. Bei Charlies Morningstars Träumen sind weitere Sternbilder dazugekommen. Außerdem gibt es neue Monde und vier Zwergplaneten zu entdecken: Ceres, Eris, Haumea und Makemake. und ja, es heißt Caine, nicht Kain. ich hab nachgesehen. mehr oder weniger.
+
+<br><br>Der Atlas bietet eine Suche nach 11 Weltraumobjekten, Informationen über sie, ein Quiz mit 10 Fragen, Erfolge, gespeicherten Fortschritt, Soundeffekte und einen kosmischen Boss mit fünf kniffligen Fragen. Dave wartet ebenfalls in seinem Labor. klick besser nicht alle Schaltflächen gleichzeitig. obwohl ... das wäre unterhaltsam.
+
+<br><br>Die Website unterstützt jetzt zehn Sprachen: Russisch, Kasachisch, Tschechisch, Englisch, Deutsch, Französisch, Spanisch, Italienisch, Polnisch und Niederländisch. Neue Schaltflächen und Seiten führen zu weiteren Dingen, die du entdecken kannst. vielleicht sind auch Geheimnisse versteckt. ich habe nichts versprochen.
+
+<br><br>Also, schau dich um, erkunde die neuen Bereiche und such nach Überraschungen. wenn du etwas vor mir findest, behaupte einfach, ich hätte es so geplant. Klick auf mich, um das Fenster zu schließen.`,
+            closeHint: "Klicke auf Sans, um das Fenster zu schließen."
+        },
+
+        fr: {
+            updatesTitle: "💀 Sans a des nouveautés",
+            updatesText: `yo. c'est encore Sans. le site a grandi pendant que j'économisais mon énergie. quelqu'un devait bien garder un œil sur tout ça.
+
+<br><br>Le menu propose de nouveaux boutons : Objets spatiaux, Encyclopédie de Caine, Planètes naines, Atlas de Pomni et Laboratoire de Dave le Fou. La page « Les rêves de Charlie Morningstar » accueille davantage de constellations. De nouvelles lunes sont arrivées, ainsi que quatre planètes naines : Cérès, Éris, Hauméa et Makémaké. et oui, c'est Caine, pas Caïn. j'ai vérifié. à peu près.
+
+<br><br>L'Atlas permet de rechercher parmi 11 objets spatiaux, de consulter leurs fiches, de répondre à un quiz de 10 questions, de gagner des succès, de sauvegarder sa progression, d'écouter des effets sonores et d'affronter un boss cosmique avec cinq questions difficiles. Dave t'attend aussi dans son laboratoire. évite de cliquer sur tous les boutons à la fois. quoique, ça pourrait être drôle.
+
+<br><br>Le site propose maintenant dix langues : russe, kazakh, tchèque, anglais, allemand, français, espagnol, italien, polonais et néerlandais. Les nouveaux boutons et les nouvelles pages donnent encore plus de choses à découvrir. quelques secrets sont peut-être cachés quelque part. je n'ai rien promis.
+
+<br><br>bon, fais un tour, explore les nouvelles sections et cherche les surprises. si tu trouves quelque chose avant moi, dis que je l'avais prévu. Clique sur moi pour fermer cette fenêtre.`,
+            closeHint: "Clique sur Sans pour fermer la fenêtre."
+        },
+
+        es: {
+            updatesTitle: "💀 Sans trae novedades",
+            updatesText: `hey. soy Sans otra vez. la web ha crecido mientras yo ahorraba energía. alguien tenía que vigilar todo esto, ¿no?
+
+<br><br>El menú tiene nuevos botones para Objetos espaciales, la Enciclopedia de Caine, Planetas enanos, el Atlas de Pomni y el Laboratorio del Loco Dave. En «Los sueños de Charlie Morningstar» hay más constelaciones. También llegaron nuevas lunas y cuatro planetas enanos: Ceres, Eris, Haumea y Makemake. y sí, es Caine, no Caín. lo comprobé. más o menos.
+
+<br><br>El Atlas permite buscar entre 11 objetos espaciales, leer sus fichas, hacer un cuestionario de 10 preguntas, conseguir logros, guardar el progreso, escuchar efectos de sonido y enfrentarse a un jefe cósmico con cinco preguntas difíciles. Dave también te espera en su laboratorio. intenta no pulsar todos los botones a la vez. aunque sería divertido verlo.
+
+<br><br>La web ahora ofrece diez idiomas: ruso, kazajo, checo, inglés, alemán, francés, español, italiano, polaco y neerlandés. Los nuevos botones y páginas añaden más cosas por explorar. quizá haya secretos escondidos por ahí. no he prometido nada.
+
+<br><br>en fin, echa un vistazo, explora las nuevas secciones y busca sorpresas. si descubres algo antes que yo, di que estaba planeado. pulsa sobre mí para cerrar la ventana.`,
+            closeHint: "Haz clic en Sans para cerrar la ventana."
+        },
+
+        it: {
+            updatesTitle: "💀 Le novità di Sans",
+            updatesText: `ehi. sono di nuovo Sans. il sito è cresciuto mentre risparmiavo energie. qualcuno doveva pur tenere d'occhio tutto questo.
+
+<br><br>Nel menu ci sono nuovi pulsanti per Oggetti spaziali, Enciclopedia di Caine, Pianeti nani, Atlante di Pomni e Laboratorio di Dave il Pazzo. «I sogni di Charlie Morningstar» ora contiene più costellazioni. Sono arrivati anche nuovi satelliti e quattro pianeti nani: Cerere, Eris, Haumea e Makemake. e sì, è Caine, non Caino. ho controllato. più o meno.
+
+<br><br>Nell'Atlante puoi cercare tra 11 oggetti spaziali e leggere le loro schede, affrontare un quiz di 10 domande, ottenere obiettivi, salvare i progressi, ascoltare effetti sonori e sfidare un boss cosmico con cinque domande difficili. Dave ti aspetta anche nel suo laboratorio. cerca di non premere tutti i pulsanti insieme. anche se sarebbe divertente.
+
+<br><br>Il sito ora supporta dieci lingue: russo, kazako, ceco, inglese, tedesco, francese, spagnolo, italiano, polacco e neerlandese. I nuovi pulsanti e le nuove pagine aggiungono altre cose da esplorare. magari ci sono anche dei segreti nascosti. non ho promesso niente.
+
+<br><br>insomma, dai un'occhiata, esplora le nuove sezioni e cerca sorprese. se trovi qualcosa prima di me, facciamo finta che fosse tutto programmato. clicca su di me per chiudere la finestra.`,
+            closeHint: "Clicca su Sans per chiudere la finestra."
+        },
+
+        pl: {
+            updatesTitle: "💀 Sans ma nowości",
+            updatesText: `yo. tu znowu Sans. strona urosła, kiedy oszczędzałem energię. ktoś przecież musiał mieć na to wszystko oko.
+
+<br><br>W menu pojawiły się nowe przyciski: Obiekty kosmiczne, Encyklopedia Caine’a, Planety karłowate, Atlas Pomni i Laboratorium Szalonego Dave’a. W „Marzeniach Charlie Morningstar” doszły kolejne gwiazdozbiory. Pojawiły się też nowe księżyce i cztery planety karłowate: Ceres, Eris, Haumea i Makemake. i tak, chodzi o Caine’a, nie Kaina. sprawdziłem. prawie na pewno.
+
+<br><br>Atlas ma wyszukiwarkę 11 obiektów kosmicznych, ich opisy, quiz z 10 pytaniami, osiągnięcia, zapisywanie postępów, efekty dźwiękowe oraz kosmicznego bossa z pięcioma trudnymi pytaniami. Dave też czeka w swoim laboratorium. postaraj się nie klikać wszystkiego naraz. chociaż... obejrzałbym to.
+
+<br><br>Strona obsługuje teraz dziesięć języków: rosyjski, kazachski, czeski, angielski, niemiecki, francuski, hiszpański, włoski, polski i niderlandzki. nowe przyciski i strony dają więcej rzeczy do odkrycia. może gdzieś kryją się też sekrety. niczego nie obiecywałem.
+
+<br><br>no dobra, rozejrzyj się, sprawdź nowe działy i poszukaj niespodzianek. jeśli coś odkryjesz przede mną, powiedzmy, że tak właśnie planowałem. kliknij mnie, żeby zamknąć okno.`,
+            closeHint: "Kliknij Sansa, aby zamknąć okno."
+        },
+
+        nl: {
+            updatesTitle: "💀 Sans heeft nieuws",
+            updatesText: `yo. sans hier weer. de website is gegroeid terwijl ik energie aan het besparen was. iemand moest dit allemaal toch in de gaten houden.
+
+<br><br>In het menu staan nieuwe knoppen voor Ruimteobjecten, Caines encyclopedie, Dwergplaneten, Pomni's Atlas en het lab van Gekke Dave. Bij Charlie Morningstars Dromen zijn nieuwe sterrenbeelden toegevoegd. Ook zijn er nieuwe manen en vier dwergplaneten om te ontdekken: Ceres, Eris, Haumea en Makemake. en ja, het is Caine, niet Kaïn. ik heb het gecontroleerd. ongeveer.
+
+<br><br>In de Atlas kun je zoeken tussen 11 ruimteobjecten en hun informatie lezen, een quiz met 10 vragen doen, prestaties behalen, je voortgang opslaan, geluidseffecten horen en een kosmische eindbaas met vijf lastige vragen uitdagen. Dave wacht ook in zijn lab. probeer niet alle knoppen tegelijk in te drukken. al zou dat best grappig zijn.
+
+<br><br>De website ondersteunt nu tien talen: Russisch, Kazachs, Tsjechisch, Engels, Duits, Frans, Spaans, Italiaans, Pools en Nederlands. Met de nieuwe knoppen en pagina's valt er nog meer te ontdekken. misschien liggen er geheimen verstopt. ik heb niets beloofd.
+
+<br><br>goed, kijk rond, ontdek de nieuwe onderdelen en zoek naar verrassingen. als jij iets eerder vindt dan ik, doen we alsof ik het zo gepland had. klik op mij om dit venster te sluiten.`,
+            closeHint: "Klik op Sans om het venster te sluiten."
+        }
+    };
+// Переводы десяти отдельных абзацев Санса
+
+
+const sansUpdatesTranslations = {
+    ru: [
+        "💀 хей. это снова я, санс. у нас тут кое-что новенькое.",
+        "🚧 кстати, это пока демоверсия. Маленков ещё не доделал всё, что хотел, но обязательно доделает… когда перестанет есть блины. 🥞",
+        "🔮 встречай Атлас Помни! теперь исследовать космос стало ещё интереснее.",
+        "🧭 в атласе тебя ждут поиск, викторина, достижения и сохранение прогресса.",
+        "👾 а ещё там есть звуки и босс. надеюсь, ты не испугаешься. хе-хе.",
+        "🧪 следующее дополнение — Лаборатория безумного Дэйва!",
+        "🌻 готовь растения и защищайся от зомби. Дэйв явно опять что-то задумал.",
+        "⚔️ впереди целых 20 волн! посмотрим, как далеко ты сможешь пройти.",
+        "🇵🇱 кстати, теперь на сайте есть польский язык. dzień dobry!",
+        "🇳🇱 а ещё добавлен нидерландский язык. hallo, космические путешественники!",
+        "ну вот и все новости. загляни в новые разделы, а потом нажми на меня, чтобы закрыть окно. heh."
+    ],
+
+    kk: [
+        "💀 сәлем. бұл тағы да мен, Санс. бізде бірнеше жаңалық бар.",
+        "🚧 айтпақшы, бұл әзірге демо-нұсқа. Маленков әлі өзі қалағанның бәрін аяқтаған жоқ, бірақ міндетті түрде аяқтайды… тек құймақ жеуді тоқтатқан кезде. 🥞",
+        "🔮 Помни атласымен таныс! Енді ғарышты зерттеу одан да қызықты.",
+        "🧭 атласта іздеу, викторина, жетістіктер және прогресті сақтау мүмкіндігі бар.",
+        "👾 сонымен қатар дыбыстар мен бастық бар. қорқып қалма, хе-хе.",
+        "🧪 келесі жаңалық — Ессіз Дэйвтің зертханасы!",
+        "🌻 өсімдіктерді дайындап, зомбилерден қорған. Дэйв тағы бірдеңе ойлап тапқан сияқты.",
+        "⚔️ сені 20 толқын күтіп тұр! қаншалықты алысқа жете алатыныңды көрейік.",
+        "🇵🇱 айтпақшы, енді сайтта поляк тілі бар. dzień dobry!",
+        "🇳🇱 сонымен қатар нидерланд тілі де қосылды. hallo, ғарыш саяхатшылары!",
+        "жаңалықтар әзірге осы. жаңа бөлімдерді қарап шық та, терезені жабу үшін мені бас. heh."
+    ],
+
+    cs: [
+        "💀 čau. to jsem zase já, Sans. máme tu pár novinek.",
+        "🚧 mimochodem, tohle je zatím jen demo. Malenkov ještě nedokončil všechno, co chtěl, ale určitě to dodělá… až přestane jíst palačinky. 🥞",
+        "🔮 seznam se s Atlasem Pomni! Objevování vesmíru je teď ještě zajímavější.",
+        "🧭 atlas nabízí vyhledávání, kvíz, úspěchy a ukládání postupu.",
+        "👾 najdeš v něm také zvuky a bosse. snad se nebudeš bát. hehe.",
+        "🧪 další novinkou je Laboratoř šíleného Davea!",
+        "🌻 připrav rostliny a braň se zombíkům. Dave zase určitě něco vymyslel.",
+        "⚔️ čeká tě celých 20 vln! Uvidíme, jak daleko se dostaneš.",
+        "🇵🇱 mimochodem, web teď podporuje polštinu. dzień dobry!",
+        "🇳🇱 přibyla také nizozemština. hallo, vesmírní cestovatelé!",
+        "to je pro dnešek všechno. prozkoumej nové sekce a kliknutím na mě zavři okno. heh."
+    ],
+
+    en: [
+        "💀 hey. it's me again, Sans. we've got some new stuff.",
+        "🚧 by the way, this is still a demo version. Malenkov hasn't finished everything he wanted yet, but he will… once he stops eating pancakes. 🥞",
+        "🔮 meet Pomni's Atlas! Exploring space just got more interesting.",
+        "🧭 the atlas includes search, a quiz, achievements, and saved progress.",
+        "👾 there are also sounds and a boss. hope you don't get scared. heh-heh.",
+        "🧪 the next addition is Crazy Dave's Lab!",
+        "🌻 prepare your plants and defend yourself against zombies. Dave's up to something again.",
+        "⚔️ there are 20 waves to survive! Let's see how far you can get.",
+        "🇵🇱 by the way, Polish is now available on the website. dzień dobry!",
+        "🇳🇱 Dutch has been added too. hallo, space travelers!",
+        "that's all the news for now. check out the new sections, then click me to close this window. heh."
+    ],
+
+    de: [
+        "💀 hey. ich bin's wieder, Sans. wir haben ein paar Neuigkeiten.",
+        "🚧 übrigens ist das hier erst eine Demoversion. Malenkov hat noch nicht alles fertiggestellt, was er vorhatte, aber er wird es noch schaffen… sobald er aufhört, Pfannkuchen zu essen. 🥞",
+        "🔮 lerne Pomnis Atlas kennen! Die Erkundung des Weltraums macht jetzt noch mehr Spaß.",
+        "🧭 der Atlas bietet eine Suche, ein Quiz, Erfolge und gespeicherten Fortschritt.",
+        "👾 außerdem gibt es Geräusche und einen Boss. Hoffentlich erschrickst du nicht. Hehe.",
+        "🧪 die nächste Neuerung ist Crazy Daves Labor!",
+        "🌻 mach deine Pflanzen bereit und verteidige dich gegen Zombies. Dave hat bestimmt wieder etwas ausgeheckt.",
+        "⚔️ ganze 20 Wellen warten auf dich! Mal sehen, wie weit du kommst.",
+        "🇵🇱 übrigens ist die Website jetzt auch auf Polnisch verfügbar. dzień dobry!",
+        "🇳🇱 außerdem wurde Niederländisch hinzugefügt. hallo, Weltraumreisende!",
+        "das waren alle Neuigkeiten. Schau dir die neuen Bereiche an und klicke dann auf mich, um das Fenster zu schließen. Heh."
+    ],
+
+    fr: [
+        "💀 salut. c'est encore moi, Sans. nous avons quelques nouveautés.",
+        "🚧 au fait, ce n’est encore qu’une version démo. Malenkov n’a pas terminé tout ce qu’il voulait ajouter, mais il le fera… dès qu’il arrêtera de manger des crêpes. 🥞",
+        "🔮 découvre l'Atlas de Pomni ! Explorer l'espace devient encore plus intéressant.",
+        "🧭 l'atlas propose une recherche, un quiz, des succès et la sauvegarde de la progression.",
+        "👾 il contient aussi des sons et un boss. j'espère que tu n'auras pas peur. hé hé.",
+        "🧪 la prochaine nouveauté, c'est le Laboratoire du fou Dave !",
+        "🌻 prépare tes plantes et défends-toi contre les zombies. Dave prépare sûrement encore quelque chose.",
+        "⚔️ vingt vagues t'attendent ! Voyons jusqu'où tu pourras aller.",
+        "🇵🇱 au fait, le polonais est maintenant disponible sur le site. dzień dobry !",
+        "🇳🇱 le néerlandais a également été ajouté. hallo, voyageurs de l'espace !",
+        "c'est tout pour les nouvelles. découvre les nouvelles sections, puis clique sur moi pour fermer cette fenêtre. hé."
+    ],
+
+    es: [
+        "💀 hey. soy yo otra vez, Sans. tenemos algunas novedades.",
+        "🚧 por cierto, esta todavía es una versión de demostración. Malenkov aún no ha terminado todo lo que quería añadir, pero lo hará… cuando deje de comer tortitas. 🥞",
+        "🔮 ¡conoce el Atlas de Pomni! Explorar el espacio ahora es aún más interesante.",
+        "🧭 el atlas incluye búsqueda, un cuestionario, logros y guardado del progreso.",
+        "👾 también hay sonidos y un jefe. espero que no te asustes. je, je.",
+        "🧪 ¡la siguiente novedad es el Laboratorio del loco Dave!",
+        "🌻 prepara tus plantas y defiéndete de los zombis. Dave seguro que trama algo otra vez.",
+        "⚔️ ¡te esperan 20 oleadas! Veamos hasta dónde puedes llegar.",
+        "🇵🇱 por cierto, ahora la página también está disponible en polaco. dzień dobry.",
+        "🇳🇱 también hemos añadido el neerlandés. ¡hallo, viajeros espaciales!",
+        "eso es todo por ahora. explora las nuevas secciones y luego pulsa sobre mí para cerrar esta ventana. je."
+    ],
+
+    it: [
+        "💀 ehi. sono di nuovo io, Sans. ci sono alcune novità.",
+        "🚧 a proposito, questa è ancora una versione demo. Malenkov non ha ancora finito tutto quello che voleva aggiungere, ma lo farà… appena smetterà di mangiare pancake. 🥞",
+        "🔮 scopri l'Atlante di Pomni! Esplorare lo spazio è diventato ancora più interessante.",
+        "🧭 l'atlante include una ricerca, un quiz, obiettivi e il salvataggio dei progressi.",
+        "👾 ci sono anche suoni e un boss. spero che tu non ti spaventi. eheh.",
+        "🧪 la prossima novità è il Laboratorio del folle Dave!",
+        "🌻 prepara le tue piante e difenditi dagli zombi. Dave sta sicuramente escogitando qualcosa.",
+        "⚔️ ti aspettano ben 20 ondate! Vediamo fin dove riuscirai ad arrivare.",
+        "🇵🇱 a proposito, ora il sito è disponibile anche in polacco. dzień dobry!",
+        "🇳🇱 abbiamo aggiunto anche l'olandese. hallo, viaggiatori dello spazio!",
+        "per ora è tutto. esplora le nuove sezioni e poi clicca su di me per chiudere questa finestra. heh."
+    ],
+
+    pl: [
+        "💀 hej. to znowu ja, Sans. mamy kilka nowości.",
+        "🚧 tak przy okazji, to na razie wersja demonstracyjna. Malenkov nie dokończył jeszcze wszystkiego, co chciał dodać, ale na pewno to zrobi… kiedy przestanie jeść naleśniki. 🥞",
+        "🔮 poznaj Atlas Pomni! Odkrywanie kosmosu stało się jeszcze ciekawsze.",
+        "🧭 atlas oferuje wyszukiwanie, quiz, osiągnięcia i zapisywanie postępów.",
+        "👾 są tam również dźwięki i boss. mam nadzieję, że się nie przestraszysz. he he.",
+        "🧪 kolejną nowością jest Laboratorium Szalonego Dave'a!",
+        "🌻 przygotuj rośliny i broń się przed zombie. Dave znowu coś kombinuje.",
+        "⚔️ czeka na ciebie aż 20 fal! Zobaczymy, jak daleko zajdziesz.",
+        "🇵🇱 przy okazji, na stronie jest już dostępny język polski. dzień dobry!",
+        "🇳🇱 dodaliśmy również język niderlandzki. hallo, kosmiczni podróżnicy!",
+        "to już wszystkie nowości. odwiedź nowe sekcje, a potem kliknij mnie, aby zamknąć to okno. heh."
+    ],
+
+    nl: [
+        "💀 hé. ik ben er weer, Sans. we hebben wat nieuws.",
+        "🚧 trouwens, dit is voorlopig nog een demoversie. Malenkov heeft nog niet alles afgemaakt wat hij wilde toevoegen, maar dat komt zeker goed… zodra hij stopt met pannenkoeken eten. 🥞",
+        "🔮 maak kennis met Pomni's Atlas! De ruimte verkennen is nu nog interessanter.",
+        "🧭 de atlas bevat een zoekfunctie, een quiz, prestaties en opgeslagen voortgang.",
+        "👾 er zijn ook geluiden en een eindbaas. hopelijk schrik je niet. hehe.",
+        "🧪 de volgende toevoeging is Crazy Dave's Laboratorium!",
+        "🌻 maak je planten klaar en verdedig jezelf tegen zombies. Dave heeft vast weer iets bedacht.",
+        "⚔️ er wachten maar liefst 20 golven op je! Eens kijken hoe ver je komt.",
+        "🇵🇱 trouwens, de website is nu ook beschikbaar in het Pools. dzień dobry!",
+        "🇳🇱 ook het Nederlands is toegevoegd. hallo, ruimtereizigers!",
+        "dat was het nieuws voor nu. ontdek de nieuwe onderdelen en klik daarna op mij om dit venster te sluiten. heh."
+    ]
+};
+
+
+
+Object.entries(sansUpdatesTranslations).forEach(([lang, paragraphs]) => {
+    if (sansNews[lang]) {
+        sansNews[lang].sansUpdates = paragraphs;
     }
 });
-// ======================================================
-// 🚀 СИСТЕМА КАРТОЧЕК ПЛАНЕТ И СПУТНИКОВ
-// ======================================================
 
-function getCurrentLanguageData(data) {
-    if (!data) return null;
-
-    return (
-        data[currentLanguage] ||
-        data.ru ||
-        Object.values(data).find(
-            value =>
-                value &&
-                typeof value === "object" &&
-                value.name
-        ) ||
-        null
-    );
-}
-
-
-// ======================================================
-// 🪐 ОТКРЫТИЕ ПЛАНЕТЫ
-// ======================================================
-
-function showPlanet(name) {
-
-    const planet = planets[name];
-
-    if (!planet) {
-        console.error("Планета не найдена:", name);
+    if (typeof newSectionsTranslations === "undefined") {
+        console.error(
+            "Словарь newSectionsTranslations не найден. Проверь, что основной script.js содержит переводы новых разделов."
+        );
         return;
     }
 
-    const data = getCurrentLanguageData(planet);
-
-    if (!data) {
-        console.error("Нет данных для планеты:", name);
-        return;
-    }
-
-    const modal = document.getElementById("planetModal");
-
-    if (!modal) {
-        console.error("Не найдено окно planetModal");
-        return;
-    }
-
-    document.getElementById("planetIcon").textContent =
-        planet.icon || "🪐";
-
-    document.getElementById("planetName").textContent =
-        data.name || name;
-
-    document.getElementById("planetDescription").textContent =
-        data.description || "";
-
-    document.getElementById("planetTemperature").textContent =
-        data.temperature || "—";
-
-    document.getElementById("planetDiameter").textContent =
-        data.diameter || "—";
-
-    document.getElementById("planetMass").textContent =
-        data.mass || "—";
-
-    document.getElementById("planetDistance").textContent =
-        data.distance || "—";
-
-    document.getElementById("planetDay").textContent =
-        data.day || "—";
-
-    document.getElementById("planetYear").textContent =
-        data.year || "—";
-
-    document.getElementById("planetMoons").textContent =
-        data.moons || "—";
-
-    document.getElementById("planetRings").textContent =
-        data.rings || "—";
-
-    document.getElementById("planetAtmosphere").textContent =
-        data.atmosphere || "—";
-
-    document.getElementById("planetFact").textContent =
-        data.fact || "";
-
-    modal.classList.add("active");
-    modal.style.display = "flex";
-
-    document.body.classList.add("modal-open");
-
-    // Запоминаем открытую планету
-    window.currentOpenPlanet = name;
-}
-
-
-// ======================================================
-// 🌙 ОТКРЫТИЕ СПУТНИКА
-// ======================================================
-
-function showMoon(name) {
-
-    const moon = moons[name];
-
-    if (!moon) {
-        console.error("Спутник не найден:", name);
-        return;
-    }
-
-    const data = getCurrentLanguageData(moon);
-
-    if (!data) {
-        console.error("Нет данных для спутника:", name);
-        return;
-    }
-
-    const modal = document.getElementById("moonModal");
-
-    if (!modal) {
-        console.error("Не найдено окно moonModal");
-        return;
-    }
-
-    document.getElementById("moonIcon").textContent =
-        moon.icon || "🌕";
-
-    document.getElementById("moonName").textContent =
-        data.name || name;
-
-    document.getElementById("moonDescription").textContent =
-        data.description || "";
-
-    document.getElementById("moonPlanet").textContent =
-        data.planet || "—";
-
-    document.getElementById("moonDiameter").textContent =
-        data.diameter || "—";
-
-    document.getElementById("moonTemperature").textContent =
-        data.temperature || "—";
-
-    document.getElementById("moonFact").textContent =
-        data.fact || "";
-
-    modal.classList.add("active");
-    modal.style.display = "flex";
-
-    document.body.classList.add("modal-open");
-
-    // Запоминаем открытый спутник
-    window.currentOpenMoon = name;
-}
-
-
-// ======================================================
-// ✕ ЗАКРЫТИЕ ПЛАНЕТЫ
-// ======================================================
-
-function closePlanet() {
-
-    const modal = document.getElementById("planetModal");
-
-    if (modal) {
-        modal.classList.remove("active");
-        modal.style.display = "none";
-    }
-
-    window.currentOpenPlanet = null;
-
-    document.body.classList.remove("modal-open");
-}
-
-
-// ======================================================
-// ✕ ЗАКРЫТИЕ СПУТНИКА
-// ======================================================
-
-function closeMoon() {
-
-    const modal = document.getElementById("moonModal");
-
-    if (modal) {
-        modal.classList.remove("active");
-        modal.style.display = "none";
-    }
-
-    window.currentOpenMoon = null;
-
-    document.body.classList.remove("modal-open");
-}
-
-
-// ======================================================
-// 🌍 ПЕРЕВОД КАРТОЧЕК ПЛАНЕТ
-// ======================================================
-
-function updatePlanetCards() {
-
-    document.querySelectorAll(".planet-card").forEach(card => {
-
-        const name = card.dataset.planet;
-
-        if (!name || !planets[name]) return;
-
-        const data = getCurrentLanguageData(planets[name]);
-
-        if (!data) return;
-
-        const title = card.querySelector("h3");
-        const description = card.querySelector("p");
-
-        if (title) {
-            title.textContent = data.name || name;
-        }
-
-        if (description) {
-            description.textContent =
-                data.description || "";
+    Object.entries(sansNews).forEach(([lang, news]) => {
+        if (newSectionsTranslations[lang]) {
+            Object.assign(newSectionsTranslations[lang], news);
         }
     });
-}
 
-
-// ======================================================
-// 🌙 ПЕРЕВОД КАРТОЧЕК СПУТНИКОВ
-// ======================================================
-
-// ======================================================
-// 🌙 ПЕРЕВОД КАРТОЧЕК СПУТНИКОВ
-// ======================================================
-
-
-
-
-// ======================================================
-// 🌐 ОБНОВЛЕНИЕ ОТКРЫТОГО ОКНА ПРИ СМЕНЕ ЯЗЫКА
-// ======================================================
-
-function refreshOpenModalLanguage() {
-
-    if (window.currentOpenPlanet) {
-        showPlanet(window.currentOpenPlanet);
+    if (typeof updateNewSectionsLanguage === "function") {
+        updateNewSectionsLanguage();
     }
-
-    if (window.currentOpenMoon) {
-        showMoon(window.currentOpenMoon);
-    }
-}
-
-
-// ======================================================
-// 🌌 ОБЩЕЕ ОБНОВЛЕНИЕ
-// ======================================================
-
-function refreshCardsLanguage() {
-
-    updatePlanetCards();
-    updateMoonCards();
-    refreshOpenModalLanguage();
-}
-
-
-// ======================================================
-// 🚀 ЗАПУСК
-// ======================================================
+})();
+/* =========================================
+   💀 ОБНОВЛЯЕМ ПЕРЕВОДЫ САНСА
+   ПОСЛЕ ЗАГРУЗКИ ВСЕХ СЛОВАРЕЙ
+   ========================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
-
-    updatePlanetCards();
-    updateMoonCards();
-
-});
-
-
-// ======================================================
-// 🌠 ЗАКРЫТИЕ ПО КЛИКУ ВНЕ ОКНА
-// ======================================================
-
-document.addEventListener("click", event => {
-
-    const planetModal =
-        document.getElementById("planetModal");
-
-    const moonModal =
-        document.getElementById("moonModal");
-
-    if (
-        planetModal &&
-        event.target === planetModal
-    ) {
-        closePlanet();
+    if (typeof updateNewSectionsLanguage === "function") {
+        updateNewSectionsLanguage();
     }
-
-    if (
-        moonModal &&
-        event.target === moonModal
-    ) {
-        closeMoon();
-    }
-
-});
-
-
-// ======================================================
-// ⌨️ ЗАКРЫТИЕ ПО ESC
-// ======================================================
-
-document.addEventListener("keydown", event => {
-
-    if (event.key !== "Escape") return;
-
-    closePlanet();
-    closeMoon();
-
-});
+}); 

@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Космический атлас — Папайрус</title>
+    <link rel="stylesheet" href="space-atlas.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="back-button">← На главную</a>
+        <h1>🌌 Космический атлас</h1>
+        <p>Исследуй Вселенную вместе с Папайрусом!</p>
+    </header>
+
+    <main>
+        <input
+            type="text"
+            id="search"
+            placeholder="🔎 Найти космический объект..."
+        >
+
+        <section id="space-objects" class="objects-grid">
+
+            <article class="object-card" data-name="Солнце">
+                <img class="object-image" src="images/sun.jpg" alt="Солнце">
+                <h2>Солнце</h2>
+                <p>Звезда, которая освещает и согревает нашу планетную систему.</p>
+                <button onclick="showInfo('Солнце')">Исследовать</button>
+            </article>
+
+            <article class="object-card" data-name="Земля">
+                <img class="object-image" src="images/earth.jpg" alt="Земля">
+                <h2>Земля</h2>
+                <p>Наш родной мир, на котором существует жизнь.</p>
+                <button onclick="showInfo('Земля')">Исследовать</button>
+            </article>
+
+            <article class="object-card" data-name="Марс">
+                <img class="object-image" src="images/mars.jpg" alt="Марс">
+                <h2>Марс</h2>
+                <p>Красная планета с вулканами, каньонами и ледяными запасами.</p>
+                <button onclick="showInfo('Марс')">Исследовать</button>
+            </article>
+
+            <article class="object-card" data-name="Плутон">
+                <img class="object-image" src="images/pluto.jpg" alt="Плутон">
+                <h2>Плутон</h2>
+                <p>Карликовая планета в поясе Койпера за орбитой Нептуна.</p>
+                <button onclick="showInfo('Плутон')">Исследовать</button>
+            </article>
+            
+<article class="object-card" data-name="Меркурий">
+    <img class="object-image" src="images/mercury.jpg" alt="Меркурий">
+    <h2>Меркурий</h2>
+    <p>Самая близкая к Солнцу планета.</p>
+    <button onclick="showInfo('Меркурий')">Исследовать</button>
+</article>
+
+<article class="object-card" data-name="Венера">
+    <img class="object-image" src="images/venus.jpg" alt="Венера">
+    <h2>Венера</h2>
+    <p>Очень горячая планета с плотной атмосферой.</p>
+    <button onclick="showInfo('Венера')">Исследовать</button>
+</article>
+
+<article class="object-card" data-name="Уран">
+    <img class="object-image" src="images/uranus.jpg" alt="Уран">
+    <h2>Уран</h2>
+    <p>Ледяной гигант, вращающийся почти на боку.</p>
+    <button onclick="showInfo('Уран')">Исследовать</button>
+</article>
+
+            
+<article class="object-card" data-name="Луна">
+    <img class="object-image" src="images/moon.jpg" alt="Луна">
+    <h2>Луна</h2>
+    <p>Естественный спутник Земли, покрытый кратерами.</p>
+    <button onclick="showInfo('Луна')">Исследовать</button>
+</article>
+
+<article class="object-card" data-name="Юпитер">
+    <img class="object-image" src="images/jupiter.jpg" alt="Юпитер">
+    <h2>Юпитер</h2>
+    <p>Самая большая планета Солнечной системы.</p>
+    <button onclick="showInfo('Юпитер')">Исследовать</button>
+</article>
+
+<article class="object-card" data-name="Сатурн">
+    <img class="object-image" src="images/saturn.jpg" alt="Сатурн">
+    <h2>Сатурн</h2>
+    <p>Газовый гигант со знаменитой системой колец.</p>
+    <button onclick="showInfo('Сатурн')">Исследовать</button>
+</article>
+
+<article class="object-card" data-name="Нептун">
+    <img class="object-image" src="images/neptune.jpg" alt="Нептун">
+    <h2>Нептун</h2>
+    <p>Далёкий ледяной гигант на окраине Солнечной системы.</p>
+    <button onclick="showInfo('Нептун')">Исследовать</button>
+</article>
+
+
+        </section>
+
+        <section id="info-panel" class="info-panel" hidden>
+            <h2 id="info-title"></h2>
+            <p id="info-description"></p>
+            <button onclick="closeInfo()">Закрыть</button>
+        </section>
+
+        <section class="mission">
+            <h2>🎯 Задание исследователя</h2>
+            <p>Открой информацию о трёх разных космических объектах!</p>
+            <p id="progress">Исследовано объектов: 0 из 3</p>
+            <p id="achievement" hidden>
+                🏆 Достижение открыто: «Первый исследователь»!
+            </p>
+        </section>
+    </main>
+<section class="mission" id="space-quiz">
+    <h2>🎮 Космическая викторина</h2>
+    <p>Проверь, насколько хорошо ты знаешь Солнечную систему!</p>
+
+    <div id="quiz-content">
+        <p id="quiz-question">Готов к космическому испытанию?</p>
+        <div id="quiz-answers"></div>
+        <p id="quiz-feedback"></p>
+        <p id="quiz-score">Очки: 0</p>
+        <button id="quiz-start" onclick="startQuiz()">
+            🚀 Начать викторину
+        </button>
+        <button id="quiz-next" onclick="nextQuestion()" hidden>
+            Следующий вопрос →
+        </button>
+    </div>
+</section>
+<section class="mission" id="space-boss">
+    <h2>👾 Космический босс</h2>
+    <p>Впереди пять сложнейших вопросов. Сможешь победить?</p>
+
+    <div id="boss-arena">
+        <div id="boss-avatar" style="font-size:64px;text-align:center;">
+            👾
+        </div>
+
+        <p id="boss-status">Босс ждёт вызова!</p>
+        <p id="boss-lives">❤️ ❤️ ❤️</p>
+        <p id="boss-question">Готов к битве?</p>
+
+        <div id="boss-answers"></div>
+        <p id="boss-feedback"></p>
+
+        <button id="boss-start" onclick="startBossBattle()">
+            ⚔️ Начать битву
+        </button>
+
+        <button id="boss-next" onclick="nextBossQuestion()" hidden>
+            Следующий вопрос →
+        </button>
+    </div>
+</section>
+
+<script src="space-atlas.js"></script>
+<script src="space-atlas-localization.js"></script>
+<script src="page-language-menu.js"></script>
+</body>
+</html>

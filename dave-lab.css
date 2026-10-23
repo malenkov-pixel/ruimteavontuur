@@ -1,0 +1,988 @@
+
+/* =================================
+   🌻 КОСМИЧЕСКАЯ ЛАБОРАТОРИЯ ДЭЙВА
+   ================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --grass: #77c943;
+    --dark-grass: #347c32;
+    --purple: #6438a8;
+    --dark-purple: #251442;
+    --gold: #ffd95a;
+    --cream: #fff7d6;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    color: #fffbea;
+    background:
+        radial-gradient(ellipse at 50% 0%, #4e3a82 0%, transparent 55%),
+        linear-gradient(180deg, #21113e, #152d36 55%, #244c25);
+    background-attachment: fixed;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.lab-header {
+    position: relative;
+    overflow: hidden;
+    padding: 55px 20px 45px;
+    text-align: center;
+    background:
+        linear-gradient(135deg, rgba(71, 137, 48, 0.94),
+        rgba(37, 88, 42, 0.96));
+    border-bottom: 7px solid #e6b942;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.lab-header::before,
+.lab-header::after {
+    content: "✦";
+    position: absolute;
+    color: rgba(255, 238, 126, 0.65);
+    font-size: 42px;
+    animation: sparkle 3s ease-in-out infinite;
+}
+
+.lab-header::before {
+    top: 35px;
+    left: 10%;
+}
+
+.lab-header::after {
+    right: 12%;
+    bottom: 40px;
+    animation-delay: 1.5s;
+}
+
+.dave-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    border: 5px solid var(--gold);
+    border-radius: 50%;
+    background: #fff5c9;
+    font-size: 57px;
+    box-shadow: 0 0 25px rgba(255, 217, 90, 0.45);
+    animation: bob 3s ease-in-out infinite;
+}
+
+.lab-label {
+    color: #fff0a3;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+h1 {
+    max-width: 950px;
+    margin: 15px auto;
+    color: #fff4a8;
+    font-size: clamp(30px, 5vw, 54px);
+    line-height: 1.12;
+    text-shadow: 3px 4px 0 #3c6025, 0 0 20px #a4e86c;
+}
+
+.subtitle {
+    max-width: 720px;
+    margin: 15px auto 25px;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.dave-message {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 700px;
+    margin: 30px auto 0;
+    padding: 16px 20px;
+    text-align: left;
+    color: #33264b;
+    background: var(--cream);
+    border: 4px solid #d8b451;
+    border-radius: 20px;
+    box-shadow: 0 7px 0 rgba(25, 53, 25, 0.4);
+}
+
+.dave-message span {
+    font-size: 43px;
+}
+
+.dave-message p {
+    margin: 0;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+main {
+    width: min(1150px, 92%);
+    margin: 0 auto;
+    padding: 35px 0 55px;
+}
+
+.intro {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.intro h2 {
+    color: #ffe77a;
+    font-size: clamp(25px, 4vw, 34px);
+    text-shadow: 2px 3px #36264d;
+}
+
+.intro p {
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.7;
+    color: #e4f3d6;
+}
+
+.space-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.space-card {
+    position: relative;
+    overflow: hidden;
+    padding: 27px;
+    color: #2b2940;
+    background: linear-gradient(145deg, #fffbdc, #e4f6bb);
+    border: 4px solid #83c94d;
+    border-radius: 24px;
+    box-shadow:
+        0 8px 0 #32682f,
+        0 12px 25px rgba(0, 0, 0, 0.25);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.space-card::after {
+    content: "";
+    position: absolute;
+    top: -45px;
+    right: -45px;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: rgba(255, 219, 88, 0.23);
+    pointer-events: none;
+}
+
+.space-card:hover {
+    transform: translateY(-6px);
+    border-color: #ffdc56;
+    box-shadow:
+        0 12px 0 #32682f,
+        0 18px 35px rgba(0, 0, 0, 0.3);
+}
+
+.object-icon {
+    display: grid;
+    place-items: center;
+    width: 78px;
+    height: 78px;
+    margin-bottom: 15px;
+    background: #d8efb4;
+    border: 3px solid #82b84e;
+    border-radius: 22px;
+    font-size: 43px;
+    box-shadow: inset 0 0 15px rgba(63, 117, 42, 0.12);
+}
+
+.space-card h3 {
+    margin: 8px 0;
+    color: #3a602c;
+    font-size: 25px;
+}
+
+.category {
+    display: inline-block;
+    margin: 5px 0 10px;
+    padding: 6px 11px;
+    color: #fff7d6;
+    background: var(--purple);
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.space-card > p:not(.category) {
+    line-height: 1.75;
+}
+
+.space-card button {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    margin-top: 10px;
+    padding: 13px 16px;
+    color: #302049;
+    background: linear-gradient(#ffe779, #f4b938);
+    border: 3px solid #d79b29;
+    border-radius: 13px;
+    font-size: 15px;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #a36c21;
+    transition: transform 0.15s, filter 0.15s;
+}
+
+.space-card button:hover {
+    filter: brightness(1.08);
+    transform: translateY(-2px);
+}
+
+.space-card button:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 #a36c21;
+}
+
+.experiment-panel {
+    position: relative;
+    margin-top: 35px;
+    padding: 28px;
+    color: #fff9db;
+    background: linear-gradient(145deg, #57378a, #30204f);
+    border: 4px solid #ffdb62;
+    border-radius: 22px;
+    box-shadow: 0 0 30px rgba(191, 151, 255, 0.25);
+    animation: appear 0.3s ease-out;
+}
+
+.experiment-panel h2 {
+    padding-right: 35px;
+    color: #ffe783;
+}
+
+.experiment-panel p {
+    line-height: 1.8;
+}
+
+.close-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    background: #a83d56;
+    border: 2px solid #ffb1b1;
+    border-radius: 12px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.dave-note {
+    margin-top: 20px;
+    padding: 15px;
+    color: #352448;
+    background: #fff0a5;
+    border-radius: 13px;
+    font-weight: bold;
+    line-height: 1.7;
+}
+
+footer {
+    padding: 28px 20px;
+    text-align: center;
+    color: #e4f3d6;
+    background: rgba(9, 17, 26, 0.55);
+    border-top: 3px solid #4d8c3c;
+    line-height: 1.8;
+}
+
+footer a {
+    color: #ffe783;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0.35;
+        transform: scale(0.8) rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2) rotate(25deg);
+    }
+}
+
+@keyframes bob {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 650px) {
+    .space-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lab-header {
+        padding: 40px 18px;
+    }
+
+    .dave-message {
+        align-items: flex-start;
+        padding: 14px;
+    }
+
+    .dave-message span {
+        font-size: 34px;
+    }
+
+    .space-card {
+        padding: 22px;
+    }
+
+    .lab-label {
+        letter-spacing: 1.5px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+/* 🌌 Изображения космической лаборатории */
+
+.space-image {
+    display: block;
+    width: 100%;
+    height: 210px;
+    margin-bottom: 18px;
+    object-fit: cover;
+    border: 4px solid #8bcf54;
+    border-radius: 17px;
+    box-shadow: 0 5px 0 #32682f, 0 0 18px rgba(126, 224, 91, 0.25);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.space-card:hover .space-image {
+    transform: scale(1.025);
+    border-color: #ffdc56;
+    box-shadow: 0 5px 0 #32682f, 0 0 25px rgba(255, 220, 86, 0.55);
+}
+
+@media (max-width: 650px) {
+    .space-image {
+        height: 190px;
+    }
+}
+
+/* 🧟 Космическое нашествие зомби */
+
+.zombie-zone {
+    position: relative;
+    min-height: 190px;
+    margin-top: 25px;
+    overflow: hidden;
+    background:
+        repeating-linear-gradient(
+            0deg,
+            #387c31 0px,
+            #387c31 24px,
+            #438f38 24px,
+            #438f38 48px
+        );
+    border-top: 5px solid #8dca50;
+    border-bottom: 5px solid #244f26;
+}
+
+.zombie-caption {
+    position: relative;
+    z-index: 2;
+    padding: 13px;
+    color: #fff4a8;
+    background: rgba(30, 35, 25, 0.8);
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.zombie-walk {
+    position: absolute;
+    bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    animation: zombie-walk 12s linear infinite;
+}
+
+.zombie-walk > span:first-child {
+    display: inline-block;
+    font-size: 55px;
+    filter: drop-shadow(2px 4px 2px rgba(0, 0, 0, 0.4));
+    animation: zombie-bob 0.7s ease-in-out infinite alternate;
+}
+
+.zombie-one {
+    left: -180px;
+}
+
+.zombie-two {
+    left: -220px;
+    bottom: 0;
+    animation-delay: -4s;
+    animation-duration: 15s;
+}
+
+.zombie-three {
+    left: -160px;
+    bottom: 8px;
+    animation-delay: -8s;
+    animation-duration: 18s;
+}
+
+.zombie-speech {
+    padding: 7px 10px;
+    color: #33264b;
+    background: #fff7d6;
+    border: 2px solid #d8b451;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 900;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+@keyframes zombie-walk {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(100vw + 300px));
+    }
+}
+
+@keyframes zombie-bob {
+    from {
+        transform: translateY(0) rotate(-4deg);
+    }
+
+    to {
+        transform: translateY(-7px) rotate(4deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .zombie-walk,
+    .zombie-walk > span:first-child {
+        animation-play-state: paused;
+    }
+}
+/* 🎮 Игровая площадка Безумного Дэйва */
+
+.game-section {
+    margin: 35px 0 45px;
+    padding: 25px;
+    color: #fff8d9;
+    background: linear-gradient(145deg, #4e842e, #28532b);
+    border: 5px solid #e7c34d;
+    border-radius: 25px;
+    box-shadow: 0 9px 0 #173d25, 0 15px 30px #0005;
+}
+
+.game-section h2 {
+    margin-top: 0;
+    color: #fff29b;
+    text-align: center;
+    font-size: clamp(25px, 4vw, 36px);
+    text-shadow: 2px 3px #345122;
+}
+
+.game-description {
+    text-align: center;
+    line-height: 1.6;
+}
+
+.game-status {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 22px 0;
+}
+
+.sun-counter,
+.wave-counter {
+    padding: 12px 18px;
+    color: #382b45;
+    background: #ffed8a;
+    border: 3px solid #d6aa37;
+    border-radius: 14px;
+    font-weight: 900;
+}
+
+.plant-selector {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.plant-choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-height: 85px;
+    padding: 12px 8px;
+    color: #2e4c27;
+    background: #e5f6c2;
+    border: 3px solid #8ec94d;
+    border-radius: 15px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.plant-choice span {
+    color: #70501a;
+    font-size: 13px;
+}
+
+.plant-choice:hover {
+    transform: translateY(-3px);
+    background: #fff4a6;
+}
+
+.plant-choice.selected {
+    background: #fff18a;
+    border-color: #ffb52e;
+    box-shadow: 0 0 15px #ffdf67;
+}
+
+#game-message {
+    min-height: 24px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.garden-board {
+    display: grid;
+    grid-template-columns: repeat(9, minmax(0, 1fr));
+    gap: 3px;
+    padding: 7px;
+    overflow: hidden;
+    background: #234b28;
+    border: 4px solid #b2d96b;
+    border-radius: 13px;
+}
+
+.garden-cell {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1;
+    min-width: 0;
+    padding: 0;
+    background: #75bd4c;
+    border: 2px solid #4e913b;
+    border-radius: 5px;
+    font-size: clamp(15px, 3vw, 32px);
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.garden-cell:nth-child(even) {
+    background: #65ad43;
+}
+
+.garden-cell:hover {
+    background: #a6df63;
+}
+
+.garden-cell:focus-visible {
+    outline: 3px solid #ffe36c;
+    outline-offset: -3px;
+}
+
+.game-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.game-controls button {
+    padding: 13px 20px;
+    color: #332447;
+    background: linear-gradient(#ffed8a, #f3bd42);
+    border: 3px solid #d9a337;
+    border-radius: 13px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.game-controls button:hover {
+    filter: brightness(1.08);
+}
+
+@media (max-width: 550px) {
+    .game-section {
+        padding: 15px 10px;
+    }
+
+    .plant-selector {
+        grid-template-columns: 1fr;
+    }
+
+    .garden-board {
+        gap: 2px;
+        padding: 3px;
+    }
+
+    .garden-cell {
+        border-width: 1px;
+    }
+}
+/* 🧟 Зомби на игровом газоне */
+
+.garden-board {
+    position: relative;
+}
+
+.garden-cell {
+    position: relative;
+    z-index: 1;
+}
+
+.garden-zombie {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    width: 10%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(20px, 3vw, 34px);
+    pointer-events: none;
+    transition: left 0.65s linear;
+    filter: drop-shadow(2px 3px 2px #18351a);
+}
+
+.plant-choice:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#start-wave:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* 🟢 Снаряды горохострелов */
+.garden-board {
+    position: relative;
+}
+
+.garden-cell {
+    position: relative;
+    z-index: 1;
+}
+
+.garden-zombie {
+    position: absolute;
+    z-index: 3;
+    left: 94%;
+    width: 10%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(20px, 3vw, 34px);
+    pointer-events: none;
+    transition: left 0.1s linear;
+    filter: drop-shadow(2px 3px 2px #18351a);
+}
+
+.garden-pea {
+    position: absolute;
+    z-index: 4;
+    width: 5%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(12px, 2vw, 22px);
+    pointer-events: none;
+    filter: drop-shadow(0 0 5px #a8ff4f);
+}
+
+.plant-choice:disabled,
+#start-wave:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ☀️ Солнца, которые можно собирать */
+.garden-sun {
+    position: absolute;
+    z-index: 6;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    background: #fff1a1;
+    border: 2px solid #ffca38;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #ffdc4d;
+    animation: garden-sun-glow 1s ease-in-out infinite alternate;
+}
+
+.garden-sun:hover {
+    transform: scale(1.2);
+}
+
+@keyframes garden-sun-glow {
+    from { box-shadow: 0 0 7px #ffdc4d; }
+    to { box-shadow: 0 0 20px #ffdc4d; }
+}
+
+/* 🧟 Полоски здоровья */
+.garden-health-bar {
+    position: absolute;
+    top: -5px;
+    left: 10%;
+    width: 80%;
+    height: 5px;
+    overflow: hidden;
+    background: #542b25;
+    border: 1px solid #241c19;
+    border-radius: 5px;
+}
+
+.garden-health-fill {
+    width: 100%;
+    height: 100%;
+    background: #6bea4d;
+    transition: width 0.2s ease, background 0.2s ease;
+}
+
+.garden-health-fill[style*="50%"] {
+    background: #ffd447;
+}
+
+/* 🦷 Зомби кусает растение */
+.garden-zombie-biting .garden-zombie-face {
+    animation: zombie-bite 0.25s ease-in-out infinite alternate;
+}
+
+@keyframes zombie-bite {
+    from {
+        transform: rotate(-8deg) translateX(-2px);
+    }
+    to {
+        transform: rotate(8deg) translateX(2px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .garden-zombie-biting .garden-zombie-face {
+        animation: none;
+    }
+}
+
+/* 🪣 Зомби с ведром */
+.bucket-zombie .garden-zombie-face {
+    display: inline-block;
+    filter: drop-shadow(0 0 5px #e3d8b1);
+    animation: bucket-wobble 1.2s ease-in-out infinite alternate;
+}
+
+/* ⚡ Быстрый зомби */
+.fast-zombie .garden-zombie-face {
+    display: inline-block;
+    filter: drop-shadow(0 0 5px #aaff74);
+    animation: fast-zombie-run 0.25s ease-in-out infinite alternate;
+}
+
+@keyframes bucket-wobble {
+    from { transform: rotate(-5deg); }
+    to { transform: rotate(5deg); }
+}
+
+@keyframes fast-zombie-run {
+    from { transform: translateY(0); }
+    to { transform: translateY(-4px); }
+}
+
+/* 🏆 ФИНАЛ КАМПАНИИ */
+.campaign-victory-screen[hidden] {
+    display: none !important;
+}
+
+.campaign-victory-screen {
+    position: relative;
+    overflow: hidden;
+    margin: 30px auto;
+    padding: 35px 20px;
+    max-width: 850px;
+    border: 4px solid #ffd84d;
+    border-radius: 24px;
+    color: #fff8cf;
+    text-align: center;
+    background:
+        radial-gradient(ellipse at center, #315a24 0%, #142a16 55%, #09140c 100%);
+    box-shadow:
+        0 0 20px #ffdc52,
+        0 0 55px #65c941,
+        inset 0 0 35px #ffd84d33;
+    animation: victoryAppear 0.8s ease-out;
+}
+
+.victory-content {
+    position: relative;
+    z-index: 1;
+}
+
+.victory-fireworks {
+    font-size: clamp(30px, 6vw, 60px);
+    margin-bottom: 10px;
+    animation: fireworksGlow 1.5s ease-in-out infinite alternate;
+}
+
+.victory-trophy {
+    font-size: 80px;
+    animation: trophyBounce 1.5s ease-in-out infinite;
+}
+
+.campaign-victory-screen h2 {
+    margin: 10px 0;
+    color: #ffe45e;
+    font-size: clamp(42px, 8vw, 76px);
+    font-weight: 900;
+    text-shadow:
+        0 0 10px #ffb700,
+        0 0 25px #ff8800;
+}
+
+.victory-subtitle {
+    color: #aaff8a;
+    font-size: clamp(18px, 4vw, 28px);
+    font-weight: bold;
+}
+
+.victory-plants {
+    margin: 20px 0;
+    font-size: 45px;
+    letter-spacing: 8px;
+}
+
+.victory-message {
+    color: #ffe45e;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.victory-dave {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 2px dashed #aaff8a;
+    border-radius: 15px;
+    background: #00000044;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.campaign-victory-screen button {
+    padding: 14px 24px;
+    border: 3px solid #ffe45e;
+    border-radius: 12px;
+    color: #17220d;
+    background: linear-gradient(#fff18a, #ffbd28);
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.campaign-victory-screen button:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 20px #ffdf53;
+}
+
+@keyframes victoryAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fireworksGlow {
+    from {
+        filter: brightness(0.8);
+        transform: scale(0.96);
+    }
+    to {
+        filter: brightness(1.4);
+        transform: scale(1.04);
+    }
+}
+
+@keyframes trophyBounce {
+    0%, 100% { transform: translateY(0) rotate(-4deg); }
+    50% { transform: translateY(-12px) rotate(4deg); }
+}

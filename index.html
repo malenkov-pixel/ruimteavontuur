@@ -67,6 +67,16 @@
                 <img src="images/italy.jpg" alt="Italiano">
                 Italiano
             </button>
+<button onclick="changeLanguage('pl')">
+    <img src="images/poland.png" alt="Polski">
+    Polski
+</button>
+
+<button onclick="changeLanguage('nl')">
+    <img src="images/netherlands.png" alt="Nederlands">
+    Nederlands
+</button>
+
 
         </div>
 
@@ -188,6 +198,10 @@
             изучай планеты и узнавай интересные факты о них.
         </p>
 
+
+<div class="main-menu-layout">
+
+    <div class="main-menu-primary">
         <button
             onclick="scrollToPlanets()"
             id="startButton"
@@ -195,6 +209,19 @@
             Начать путешествие 🚀
         </button>
 
+        <div class="dave-button-slot">
+            <button
+                class="dave-lab-triangle"
+                onclick="window.location.href='dave-lab.html'"
+                aria-label="Лаборатория безумного Дэйва"
+                title="Лаборатория безумного Дэйва"
+            >
+                <span>Лаборатория<br>безумного<br>Дэйва</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="main-menu-secondary">
         <button
             onclick="scrollToMoons()"
             id="moonsButton"
@@ -202,6 +229,23 @@
             🌙 Исследовать спутники
         </button>
 
+        <a
+            href="constellations.html"
+            id="constellationButton"
+        >
+            ✨ Мечты Чарли Морнингстар
+        </a>
+
+        <a
+            href="dwarf-planets.html"
+            class="dwarf-planets-button"
+            id="dwarfPlanetsButton"
+        >
+            🪐 Карликовые планеты
+        </a>
+    </div>
+
+    <div class="main-menu-extra">
         <a
             href="space-objects.html"
             class="space-objects-button"
@@ -218,22 +262,19 @@
             🎪 Энциклопедия Кейна
         </a>
 
-        <a
-            href="constellations.html"
-            id="constellationButton"
-        >
-            ✨ Мечты Чарли Морнингстар
-        </a>
+        <div class="atlas-button-container">
+            <button
+                class="pomni-atlas-button"
+                onclick="window.location.href='space-atlas.html'"
+                aria-label="Атлас Помни"
+                title="Атлас Помни"
+            >
+                <span class="pomni-atlas-title">АТЛАС<br>ПОМНИ</span>
+            </button>
+        </div>
+    </div>
 
-        <a
-            href="dwarf-planets.html"
-            class="dwarf-planets-button"
-            id="dwarfPlanetsButton"
-        >
-            🪐 Карликовые планеты
-        </a>
-
-    </section>
+</div>
 
 
         <section class="planets" id="planets">
