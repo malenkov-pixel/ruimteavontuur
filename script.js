@@ -3546,14 +3546,15 @@ function changeLanguage(language) {
             name: "Italiano",
             flag: "images/italy.jpg"
         },
-        pl: {
-            name: "Polski",
-            emoji: "🇵🇱"
-        },
-        nl: {
-            name: "Nederlands",
-            emoji: "🇳🇱"
-        }
+      pl: {
+    name: "Polski",
+    flag: "images/poland.png"
+},
+
+nl: {
+    name: "Nederlands",
+    flag: "images/netherlands.png"
+}
     };
 
 
@@ -4314,7 +4315,35 @@ const sansUpdatesTranslations = {
         "dat was het nieuws voor nu. ontdek de nieuwe onderdelen en klik daarna op mij om dit venster te sluiten. heh."
     ]
 };
+// 💀 Санс объявляет о полноценном обновлении
+const fullUpdateMessages = {
+    ru: "🚀 хорошие новости! это уже полноценное обновление, а не демоверсия! новые разделы готовы, польский и нидерландский языки добавлены. Маленков всё-таки справился… хотя блины, наверное, ему помогли. 🥞",
 
+    kk: "🚀 жақсы жаңалық! енді бұл демо-нұсқа емес, толыққанды жаңарту! жаңа бөлімдер дайын, поляк және нидерланд тілдері қосылды. Маленков ақыры бәрін аяқтады… құймақтардың көмегі тиген шығар. 🥞",
+
+    cs: "🚀 skvělé zprávy! už jde o plnohodnotnou aktualizaci, ne o demo verzi! nové sekce jsou připravené a přibyla polština i nizozemština. Malenkov to nakonec zvládl… možná mu pomohly palačinky. 🥞",
+
+    en: "🚀 good news! this is now a full update, not a demo version! The new sections are ready, and Polish and Dutch have been added. Malenkov finally pulled it off… maybe the pancakes helped. 🥞",
+
+    de: "🚀 gute Nachrichten! Das ist jetzt ein vollständiges Update und keine Demoversion mehr! Die neuen Bereiche sind fertig, und Polnisch sowie Niederländisch sind hinzugekommen. Malenkov hat es tatsächlich geschafft… vielleicht haben die Pfannkuchen geholfen. 🥞",
+
+    fr: "🚀 bonne nouvelle ! il s'agit maintenant d'une mise à jour complète, et non plus d'une version démo ! Les nouvelles sections sont prêtes, et le polonais ainsi que le néerlandais ont été ajoutés. Malenkov a finalement réussi… les crêpes l'ont peut-être aidé. 🥞",
+
+    es: "🚀 ¡buenas noticias! ¡ahora es una actualización completa, no una versión de demostración! Las nuevas secciones están listas y se han añadido el polaco y el neerlandés. Malenkov por fin lo consiguió… quizá las tortitas le ayudaron. 🥞",
+
+    it: "🚀 buone notizie! ora è un aggiornamento completo, non più una versione demo! Le nuove sezioni sono pronte e sono state aggiunte le lingue polacca e neerlandese. Malenkov ce l'ha finalmente fatta… forse i pancake lo hanno aiutato. 🥞",
+
+    pl: "🚀 świetna wiadomość! to już pełna aktualizacja, a nie wersja demonstracyjna! Nowe sekcje są gotowe, a na stronie pojawiły się języki polski i niderlandzki. Malenkovowi w końcu się udało… może pomogły mu naleśniki. 🥞",
+
+    nl: "🚀 goed nieuws! dit is nu een volledige update en geen demoversie meer! De nieuwe onderdelen zijn klaar en Pools en Nederlands zijn toegevoegd. Malenkov heeft het eindelijk voor elkaar gekregen… misschien hebben de pannenkoeken geholpen. 🥞"
+};
+
+// Заменяем старое сообщение о демоверсии новым
+Object.entries(fullUpdateMessages).forEach(([lang, message]) => {
+    if (Array.isArray(sansUpdatesTranslations[lang])) {
+        sansUpdatesTranslations[lang][1] = message;
+    }
+});
 
 
 Object.entries(sansUpdatesTranslations).forEach(([lang, paragraphs]) => {

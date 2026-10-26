@@ -451,7 +451,118 @@ const constellationPageTranslations = {
             "Южный Крест": "Una piccola ma distintiva costellazione del cielo australe a forma di croce.",
             "Кентавр": "Una grande costellazione del cielo australe che contiene il sistema stellare Alfa Centauri."
         }
+        },
+
+    // 🇵🇱 Polski
+    pl: {
+        title: "✨ Marzenia Charlie Morningstar",
+        subtitle: "Witamy w świecie gwiazdozbiorów",
+        back: "← Powrót do kosmicznej przygody",
+
+        names: {
+            "Большая Медведица": "Wielka Niedźwiedzica",
+            "Малая Медведица": "Mała Niedźwiedzica",
+            "Орион": "Orion",
+            "Кассиопея": "Kasjopeja",
+            "Лебедь": "Łabędź",
+            "Лира": "Lutnia",
+            "Андромеда": "Andromeda",
+            "Телец": "Byk",
+            "Скорпион": "Skorpion",
+            "Персей": "Perseusz",
+            "Большой Пёс": "Wielki Pies",
+            "Стрелец": "Strzelec",
+            "Близнецы": "Bliźnięta",
+            "Лев": "Lew",
+            "Цефей": "Cefeusz",
+            "Пегас": "Pegaz",
+            "Водолей": "Wodnik",
+            "Дева": "Panna",
+            "Козерог": "Koziorożec",
+            "Южный Крест": "Krzyż Południa",
+            "Кентавр": "Centaur"
+        },
+
+        descriptions: {
+            "Большая Медведица": "Jeden z najbardziej rozpoznawalnych gwiazdozbiorów północnego nieba.",
+            "Малая Медведица": "Znany gwiazdozbiór północnego nieba, w którym znajduje się Gwiazda Polarna.",
+            "Орион": "Jasny i łatwo rozpoznawalny gwiazdozbiór zimowego nieba.",
+            "Кассиопея": "Gwiazdozbiór północnego nieba rozpoznawalny dzięki charakterystycznemu kształtowi litery W.",
+            "Лебедь": "Gwiazdozbiór letniego nieba położony wzdłuż Drogi Mlecznej.",
+            "Лира": "Niewielki gwiazdozbiór znany z jasnej gwiazdy Wega.",
+            "Андромеда": "Gwiazdozbiór północnego nieba nazwany na cześć bohaterki starożytnych mitów greckich.",
+            "Телец": "Gwiazdozbiór zodiakalny znany z gromady gwiazd Plejady.",
+            "Скорпион": "Jasny gwiazdozbiór południowego nieba o charakterystycznym zakrzywionym kształcie.",
+            "Персей": "Gwiazdozbiór północnego nieba nazwany na cześć bohatera mitologii greckiej.",
+            "Большой Пёс": "Gwiazdozbiór południowego nieba, w którym znajduje się jasna gwiazda Syriusz.",
+            "Стрелец": "Gwiazdozbiór zodiakalny położony w kierunku centrum Drogi Mlecznej.",
+            "Близнецы": "Gwiazdozbiór zodiakalny znany z jasnych gwiazd Kastor i Polluks.",
+            "Лев": "Gwiazdozbiór zodiakalny przypominający sylwetkę lwa.",
+            "Цефей": "Gwiazdozbiór północnego nieba nazwany na cześć króla z mitologii greckiej.",
+            "Пегас": "Duży gwiazdozbiór północnego nieba nazwany na cześć skrzydlatego konia Pegaza.",
+            "Водолей": "Gwiazdozbiór zodiakalny położony między Koziorożcem a Rybami.",
+            "Дева": "Duży gwiazdozbiór zodiakalny, w którego obszarze znajduje się jasna gwiazda Spica.",
+            "Козерог": "Gwiazdozbiór zodiakalny południowego nieba przedstawiany jako mityczne stworzenie będące pół kozłem, pół rybą.",
+            "Южный Крест": "Niewielki, ale łatwo rozpoznawalny gwiazdozbiór południowego nieba w kształcie krzyża.",
+            "Кентавр": "Duży gwiazdozbiór południowego nieba, w którym znajduje się układ gwiazd Alfa Centauri."
+        }
+    },
+
+    // 🇳🇱 Nederlands
+    nl: {
+        title: "✨ De dromen van Charlie Morningstar",
+        subtitle: "Welkom in de wereld van de sterrenbeelden",
+        back: "← Terug naar het ruimteavontuur",
+
+        names: {
+            "Большая Медведица": "Grote Beer",
+            "Малая Медведица": "Kleine Beer",
+            "Орион": "Orion",
+            "Кассиопея": "Cassiopeia",
+            "Лебедь": "Zwaan",
+            "Лира": "Lier",
+            "Андромеда": "Andromeda",
+            "Телец": "Stier",
+            "Скорпион": "Schorpioen",
+            "Персей": "Perseus",
+            "Большой Пёс": "Grote Hond",
+            "Стрелец": "Boogschutter",
+            "Близнецы": "Tweelingen",
+            "Лев": "Leeuw",
+            "Цефей": "Cepheus",
+            "Пегас": "Pegasus",
+            "Водолей": "Waterman",
+            "Дева": "Maagd",
+            "Козерог": "Steenbok",
+            "Южный Крест": "Zuiderkruis",
+            "Кентавр": "Centaur"
+        },
+
+        descriptions: {
+            "Большая Медведица": "Een van de herkenbaarste sterrenbeelden aan de noordelijke hemel.",
+            "Малая Медведица": "Een bekend sterrenbeeld aan de noordelijke hemel waarin de Poolster staat.",
+            "Орион": "Een helder en gemakkelijk herkenbaar sterrenbeeld aan de winterhemel.",
+            "Кассиопея": "Een sterrenbeeld aan de noordelijke hemel dat herkenbaar is aan zijn karakteristieke W-vorm.",
+            "Лебедь": "Een sterrenbeeld aan de zomerhemel dat langs de Melkweg ligt.",
+            "Лира": "Een klein sterrenbeeld dat bekendstaat om de heldere ster Wega.",
+            "Андромеда": "Een sterrenbeeld aan de noordelijke hemel, vernoemd naar een heldin uit de oude Griekse mythologie.",
+            "Телец": "Een sterrenbeeld van de dierenriem dat bekendstaat om de sterrenhoop de Pleiaden.",
+            "Скорпион": "Een helder sterrenbeeld aan de zuidelijke hemel met een kenmerkende gebogen vorm.",
+            "Персей": "Een sterrenbeeld aan de noordelijke hemel, vernoemd naar een held uit de Griekse mythologie.",
+            "Большой Пёс": "Een sterrenbeeld aan de zuidelijke hemel waarin de heldere ster Sirius staat.",
+            "Стрелец": "Een sterrenbeeld van de dierenriem in de richting van het centrum van de Melkweg.",
+            "Близнецы": "Een sterrenbeeld van de dierenriem dat bekendstaat om de heldere sterren Castor en Pollux.",
+            "Лев": "Een sterrenbeeld van de dierenriem dat op de gestalte van een leeuw lijkt.",
+            "Цефей": "Een sterrenbeeld aan de noordelijke hemel, vernoemd naar een koning uit de Griekse mythologie.",
+            "Пегас": "Een groot sterrenbeeld aan de noordelijke hemel, vernoemd naar het gevleugelde paard Pegasus.",
+            "Водолей": "Een sterrenbeeld van de dierenriem tussen Steenbok en Vissen.",
+            "Дева": "Een groot sterrenbeeld van de dierenriem waarin de heldere ster Spica ligt.",
+            "Козерог": "Een sterrenbeeld van de dierenriem aan de zuidelijke hemel, verbonden met een mythisch wezen dat half geit en half vis is.",
+            "Южный Крест": "Een klein maar opvallend sterrenbeeld aan de zuidelijke hemel in de vorm van een kruis.",
+            "Кентавр": "Een groot sterrenbeeld aan de zuidelijke hemel waarin het stersysteem Alpha Centauri ligt."
+        }
     }
+
 
 };
 
@@ -582,9 +693,19 @@ const languageInfo = {
         flag: "images/spain.jpg"
     },
 
-    it: {
+        it: {
         name: "Italiano",
         flag: "images/italy.jpg"
+    },
+
+    pl: {
+        name: "Polski",
+        flag: "images/poland.png"
+    },
+
+    nl: {
+        name: "Nederlands",
+        flag: "images/netherlands.png"
     }
 
 };

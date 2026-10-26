@@ -591,7 +591,1028 @@
             translateStaticPage();
         });
     }
+/* =========================================================
+   🌌 ПОЛНАЯ ЛОКАЛИЗАЦИЯ АТЛАСА ПОМНИ
+   Языки: en, fr, de, es, it, pl, nl, kk, cs
+   Вставить перед if (document.readyState === "loading")
+   ========================================================= */
 
+const atlasPatchTranslations = {
+    "Сириус": ["Sirius", "Sirius", "Sirius", "Sirio", "Sirio", "Syriusz", "Sirius", "Сириус", "Sirius"],
+    "Полярная звезда": ["Polaris", "Étoile polaire", "Polarstern", "Estrella Polar", "Stella Polare", "Gwiazda Polarna", "Poolster", "Темірқазық", "Polárka"],
+    "Бетельгейзе": ["Betelgeuse", "Bételgeuse", "Beteigeuze", "Betelgeuse", "Betelgeuse", "Betelgeza", "Betelgeuze", "Бетельгейзе", "Betelgeuze"],
+    "Титан": ["Titan", "Titan", "Titan", "Titán", "Titano", "Tytan", "Titan", "Титан", "Titan"],
+    "Европа": ["Europa", "Europe", "Europa", "Europa", "Europa", "Europa", "Europa", "Еуропа", "Europa"],
+    "Фобос": ["Phobos", "Phobos", "Phobos", "Fobos", "Fobos", "Fobos", "Phobos", "Фобос", "Phobos"],
+
+    // ВИКТОРИНА — все 10 вопросов
+    "Какая звезда находится в центре Солнечной системы?": [
+        "Which star is at the centre of the Solar System?",
+        "Quelle étoile se trouve au centre du Système solaire ?",
+        "Welcher Stern befindet sich im Zentrum des Sonnensystems?",
+        "¿Qué estrella se encuentra en el centro del sistema solar?",
+        "Quale stella si trova al centro del Sistema solare?",
+        "Która gwiazda znajduje się w centrum Układu Słonecznego?",
+        "Welke ster staat in het midden van het zonnestelsel?",
+        "Күн жүйесінің орталығында қандай жұлдыз орналасқан?",
+        "Která hvězda se nachází ve středu Sluneční soustavy?"
+    ],
+    "Какая планета известна своими знаменитыми кольцами?": [
+        "Which planet is famous for its rings?",
+        "Quelle planète est célèbre pour ses anneaux ?",
+        "Welcher Planet ist für seine berühmten Ringe bekannt?",
+        "¿Qué planeta es famoso por sus anillos?",
+        "Quale pianeta è famoso per i suoi anelli?",
+        "Która planeta słynie ze swoich pierścieni?",
+        "Welke planeet staat bekend om zijn ringen?",
+        "Қай ғаламшар өзінің әйгілі сақиналарымен танымал?",
+        "Která planeta je známá svými slavnými prstenci?"
+    ],
+    "Какая планета является крупнейшей в Солнечной системе?": [
+        "Which planet is the largest in the Solar System?",
+        "Quelle est la plus grande planète du Système solaire ?",
+        "Welcher Planet ist der größte im Sonnensystem?",
+        "¿Cuál es el planeta más grande del sistema solar?",
+        "Qual è il pianeta più grande del Sistema solare?",
+        "Która planeta jest największa w Układzie Słonecznym?",
+        "Welke planeet is de grootste in het zonnestelsel?",
+        "Күн жүйесіндегі ең үлкен ғаламшар қайсы?",
+        "Která planeta je největší ve Sluneční soustavě?"
+    ],
+    "Как называется естественный спутник Земли?": [
+        "What is Earth's natural satellite called?",
+        "Comment s'appelle le satellite naturel de la Terre ?",
+        "Wie heißt der natürliche Satellit der Erde?",
+        "¿Cómo se llama el satélite natural de la Tierra?",
+        "Come si chiama il satellite naturale della Terra?",
+        "Jak nazywa się naturalny satelita Ziemi?",
+        "Hoe heet de natuurlijke satelliet van de aarde?",
+        "Жердің табиғи серігі қалай аталады?",
+        "Jak se nazývá přirozená družice Země?"
+    ],
+    "Какая планета находится ближе всего к Солнцу?": [
+        "Which planet is closest to the Sun?",
+        "Quelle planète est la plus proche du Soleil ?",
+        "Welcher Planet ist der Sonne am nächsten?",
+        "¿Qué planeta está más cerca del Sol?",
+        "Quale pianeta è più vicino al Sole?",
+        "Która planeta znajduje się najbliżej Słońca?",
+        "Welke planeet staat het dichtst bij de zon?",
+        "Күнге ең жақын ғаламшар қайсы?",
+        "Která planeta je nejblíže Slunci?"
+    ],
+    "Какую планету называют Красной планетой?": [
+        "Which planet is called the Red Planet?",
+        "Quelle planète appelle-t-on la planète rouge ?",
+        "Welcher Planet wird als Roter Planet bezeichnet?",
+        "¿Qué planeta se conoce como el planeta rojo?",
+        "Quale pianeta viene chiamato il Pianeta Rosso?",
+        "Którą planetę nazywa się Czerwoną Planetą?",
+        "Welke planeet wordt de Rode Planeet genoemd?",
+        "Қай ғаламшарды Қызыл ғаламшар деп атайды?",
+        "Které planetě se říká Rudá planeta?"
+    ],
+    "Какая из этих планет является ледяным гигантом?": [
+        "Which of these planets is an ice giant?",
+        "Laquelle de ces planètes est une géante glacée ?",
+        "Welcher dieser Planeten ist ein Eisriese?",
+        "¿Cuál de estos planetas es un gigante helado?",
+        "Quale di questi pianeti è un gigante ghiacciato?",
+        "Która z tych planet jest lodowym olbrzymem?",
+        "Welke van deze planeten is een ijsreus?",
+        "Осы ғаламшарлардың қайсысы мұз алыбы?",
+        "Která z těchto planet je ledový obr?"
+    ],
+    "Как называется карликовая планета в поясе Койпера?": [
+        "Which dwarf planet is located in the Kuiper Belt?",
+        "Comment s'appelle la planète naine située dans la ceinture de Kuiper ?",
+        "Wie heißt der Zwergplanet im Kuipergürtel?",
+        "¿Cómo se llama el planeta enano del cinturón de Kuiper?",
+        "Come si chiama il pianeta nano nella fascia di Kuiper?",
+        "Jak nazywa się planeta karłowata znajdująca się w Pasie Kuipera?",
+        "Hoe heet de dwergplaneet in de Kuipergordel?",
+        "Койпер белдеуіндегі ергежейлі ғаламшар қалай аталады?",
+        "Jak se nazývá trpasličí planeta v Kuiperově pásu?"
+    ],
+    "На какой планете находится Большое красное пятно?": [
+        "Which planet has the Great Red Spot?",
+        "Sur quelle planète se trouve la Grande Tache rouge ?",
+        "Auf welchem Planeten befindet sich der Große Rote Fleck?",
+        "¿En qué planeta se encuentra la Gran Mancha Roja?",
+        "Su quale pianeta si trova la Grande Macchia Rossa?",
+        "Na której planecie znajduje się Wielka Czerwona Plama?",
+        "Op welke planeet bevindt zich de Grote Rode Vlek?",
+        "Үлкен қызыл дақ қай ғаламшарда орналасқан?",
+        "Na které planetě se nachází Velká rudá skvrna?"
+    ],
+    "Какая планета вращается почти на боку?": [
+        "Which planet rotates almost on its side?",
+        "Quelle planète tourne presque sur le côté ?",
+        "Welcher Planet dreht sich fast auf der Seite?",
+        "¿Qué planeta gira casi de lado?",
+        "Quale pianeta ruota quasi su un fianco?",
+        "Która planeta obraca się niemal na boku?",
+        "Welke planeet draait bijna op zijn kant?",
+        "Қай ғаламшар бүйірімен айналатындай болып айналады?",
+        "Která planeta se otáčí téměř na boku?"
+    ],
+
+    // БИТВА С КОСМИЧЕСКИМ БОССОМ — 5 вопросов
+    "Почему Венера горячее Меркурия, хотя находится дальше от Солнца?": [
+        "Why is Venus hotter than Mercury even though it is farther from the Sun?",
+        "Pourquoi Vénus est-elle plus chaude que Mercure alors qu'elle est plus éloignée du Soleil ?",
+        "Warum ist die Venus heißer als Merkur, obwohl sie weiter von der Sonne entfernt ist?",
+        "¿Por qué Venus está más caliente que Mercurio si está más lejos del Sol?",
+        "Perché Venere è più calda di Mercurio anche se è più lontana dal Sole?",
+        "Dlaczego Wenus jest gorętsza od Merkurego, mimo że znajduje się dalej od Słońca?",
+        "Waarom is Venus heter dan Mercurius, hoewel ze verder van de zon staat?",
+        "Шолпан Күннен алысырақ болса да, неге Меркурийден ыстық?",
+        "Proč je Venuše teplejší než Merkur, přestože je dál od Slunce?"
+    ],
+    "Что находится за орбитой Нептуна и содержит множество ледяных тел?": [
+        "What lies beyond Neptune's orbit and contains many icy bodies?",
+        "Qu'est-ce qui se trouve au-delà de l'orbite de Neptune et contient de nombreux corps glacés ?",
+        "Was liegt jenseits der Neptunbahn und enthält viele eisige Körper?",
+        "¿Qué se encuentra más allá de la órbita de Neptuno y contiene muchos cuerpos helados?",
+        "Che cosa si trova oltre l'orbita di Nettuno e contiene molti corpi ghiacciati?",
+        "Co znajduje się za orbitą Neptuna i zawiera wiele lodowych ciał?",
+        "Wat ligt voorbij de baan van Neptunus en bevat veel ijzige hemellichamen?",
+        "Нептун орбитасының ар жағында көптеген мұзды денелерден тұратын не бар?",
+        "Co se nachází za oběžnou dráhou Neptunu a obsahuje mnoho ledových těles?"
+    ],
+    "Почему на Луне почти не сохраняются следы жидкой воды на поверхности?": [
+        "Why does liquid water barely remain on the Moon's surface?",
+        "Pourquoi l'eau liquide ne laisse-t-elle presque aucune trace à la surface de la Lune ?",
+        "Warum bleiben auf der Mondoberfläche kaum Spuren von flüssigem Wasser erhalten?",
+        "¿Por qué apenas quedan rastros de agua líquida en la superficie de la Luna?",
+        "Perché sulla superficie lunare rimangono pochissime tracce di acqua liquida?",
+        "Dlaczego na powierzchni Księżyca prawie nie zachowują się ślady ciekłej wody?",
+        "Waarom blijven er op het maanoppervlak nauwelijks sporen van vloeibaar water achter?",
+        "Неліктен Ай бетінде сұйық судың іздері дерлік сақталмайды?",
+        "Proč na povrchu Měsíce téměř nezůstávají stopy kapalné vody?"
+    ],
+    "Как учёные определяют состав атмосферы далёких планет по свету?": [
+        "How do scientists determine the atmospheric composition of distant planets from light?",
+        "Comment les scientifiques déterminent-ils la composition de l'atmosphère des planètes lointaines grâce à la lumière ?",
+        "Wie bestimmen Forschende anhand von Licht die Zusammensetzung der Atmosphäre ferner Planeten?",
+        "¿Cómo determinan los científicos la composición de la atmósfera de planetas lejanos a partir de la luz?",
+        "Come fanno gli scienziati a determinare la composizione atmosferica di pianeti lontani attraverso la luce?",
+        "Jak naukowcy określają skład atmosfery odległych planet na podstawie światła?",
+        "Hoe bepalen wetenschappers aan de hand van licht de samenstelling van de atmosfeer van verre planeten?",
+        "Ғалымдар жарық арқылы алыс ғаламшарлардың атмосфера құрамын қалай анықтайды?",
+        "Jak vědci určují složení atmosféry vzdálených planet pomocí světla?"
+    ],
+    "Почему газовые гиганты могут иметь меньшую среднюю плотность, чем каменистые планеты?": [
+        "Why can gas giants have a lower average density than rocky planets?",
+        "Pourquoi les géantes gazeuses peuvent-elles avoir une densité moyenne inférieure à celle des planètes rocheuses ?",
+        "Warum können Gasriesen eine geringere mittlere Dichte als Gesteinsplaneten haben?",
+        "¿Por qué los gigantes gaseosos pueden tener una densidad media menor que los planetas rocosos?",
+        "Perché i giganti gassosi possono avere una densità media inferiore a quella dei pianeti rocciosi?",
+        "Dlaczego gazowe olbrzymy mogą mieć mniejszą średnią gęstość niż planety skaliste?",
+        "Waarom kunnen gasreuzen een lagere gemiddelde dichtheid hebben dan rotsachtige planeten?",
+        "Неліктен газ алыптарының орташа тығыздығы тасты ғаламшарлардан төмен болуы мүмкін?",
+        "Proč mohou mít plynní obři nižší průměrnou hustotu než kamenné planety?"
+    ],
+
+    // Варианты ответов — Венера и Меркурий
+    "Из-за сильного парникового эффекта": [
+        "Because of the strong greenhouse effect",
+        "À cause du puissant effet de serre",
+        "Wegen des starken Treibhauseffekts",
+        "Debido al fuerte efecto invernadero",
+        "A causa del forte effetto serra",
+        "Z powodu silnego efektu cieplarnianego",
+        "Door het sterke broeikaseffect",
+        "Күшті жылыжай әсерінен",
+        "Kvůli silnému skleníkovému efektu"
+    ],
+    "Из-за более близкой орбиты": [
+        "Because it has a closer orbit",
+        "À cause d'une orbite plus proche",
+        "Wegen einer näheren Umlaufbahn",
+        "Debido a una órbita más cercana",
+        "A causa di un'orbita più vicina",
+        "Z powodu bliższej orbity",
+        "Door een kleinere afstand in zijn baan",
+        "Орбитасы жақынырақ болғандықтан",
+        "Kvůli bližší oběžné dráze"
+    ],
+    "Из-за постоянных вулканических извержений": [
+        "Because of constant volcanic eruptions",
+        "À cause d'éruptions volcaniques constantes",
+        "Wegen ständiger Vulkanausbrüche",
+        "Debido a las constantes erupciones volcánicas",
+        "A causa delle continue eruzioni vulcaniche",
+        "Z powodu nieustannych erupcji wulkanicznych",
+        "Door voortdurende vulkaanuitbarstingen",
+        "Үздіксіз жанартау атқылауларына байланысты",
+        "Kvůli neustálým sopečným erupcím"
+    ],
+    "Из-за отсутствия атмосферы": [
+        "Because it has no atmosphere",
+        "À cause de l'absence d'atmosphère",
+        "Wegen der fehlenden Atmosphäre",
+        "Debido a la ausencia de atmósfera",
+        "A causa dell'assenza di atmosfera",
+        "Z powodu braku atmosfery",
+        "Door het ontbreken van een atmosfeer",
+        "Атмосферасы болмағандықтан",
+        "Kvůli absenci atmosféry"
+    ],
+
+    // Варианты ответов — пояс Койпера
+    "Главный пояс астероидов": [
+        "The main asteroid belt",
+        "La ceinture principale d'astéroïdes",
+        "Der Hauptasteroidengürtel",
+        "El cinturón principal de asteroides",
+        "La fascia principale degli asteroidi",
+        "Główny pas planetoid",
+        "De belangrijkste asteroïdengordel",
+        "Негізгі астероидтар белдеуі",
+        "Hlavní pás asteroidů"
+    ],
+    "Облака Венеры": [
+        "The clouds of Venus",
+        "Les nuages de Vénus",
+        "Die Wolken der Venus",
+        "Las nubes de Venus",
+        "Le nubi di Venere",
+        "Chmury Wenus",
+        "De wolken van Venus",
+        "Шолпанның бұлттары",
+        "Mraky Venuše"
+    ],
+    "Солнечная корона": [
+        "The solar corona",
+        "La couronne solaire",
+        "Die Sonnenkorona",
+        "La corona solar",
+        "La corona solare",
+        "Korona słoneczna",
+        "De zonnecorona",
+        "Күн тәжі",
+        "Sluneční koróna"
+    ],
+
+    // Варианты ответов — Луна
+    "Луна слишком близка к Земле": [
+        "The Moon is too close to Earth",
+        "La Lune est trop proche de la Terre",
+        "Der Mond ist der Erde zu nahe",
+        "La Luna está demasiado cerca de la Tierra",
+        "La Luna è troppo vicina alla Terra",
+        "Księżyc jest zbyt blisko Ziemi",
+        "De maan staat te dicht bij de aarde",
+        "Ай Жерге тым жақын",
+        "Měsíc je příliš blízko Zemi"
+    ],
+    "У Луны нет океанов из-за магнитного поля Земли": [
+        "The Moon has no oceans because of Earth's magnetic field",
+        "La Lune n'a pas d'océans à cause du champ magnétique terrestre",
+        "Der Mond hat wegen des Erdmagnetfelds keine Ozeane",
+        "La Luna no tiene océanos debido al campo magnético terrestre",
+        "La Luna non ha oceani a causa del campo magnetico terrestre",
+        "Księżyc nie ma oceanów z powodu pola magnetycznego Ziemi",
+        "De maan heeft geen oceanen door het magnetisch veld van de aarde",
+        "Жердің магнит өрісіне байланысты Айда мұхиттар жоқ",
+        "Měsíc nemá oceány kvůli magnetickému poli Země"
+    ],
+    "На поверхности почти нет атмосферного давления": [
+        "There is almost no atmospheric pressure at the surface",
+        "La pression atmosphérique à la surface est presque inexistante",
+        "An der Oberfläche herrscht fast kein atmosphärischer Druck",
+        "En la superficie casi no hay presión atmosférica",
+        "Sulla superficie la pressione atmosferica è quasi assente",
+        "Na powierzchni prawie nie ma ciśnienia atmosferycznego",
+        "Aan het oppervlak is er bijna geen luchtdruk",
+        "Беткі қабатта атмосфералық қысым дерлік жоқ",
+        "Na povrchu téměř není žádný atmosférický tlak"
+    ],
+    "Луна постоянно покрыта облаками": [
+        "The Moon is constantly covered in clouds",
+        "La Lune est constamment couverte de nuages",
+        "Der Mond ist ständig von Wolken bedeckt",
+        "La Luna está siempre cubierta de nubes",
+        "La Luna è costantemente coperta di nuvole",
+        "Księżyc jest stale pokryty chmurami",
+        "De maan is voortdurend bedekt met wolken",
+        "Ай үнемі бұлттармен жабылған",
+        "Měsíc je neustále pokryt mraky"
+    ],
+
+    // Варианты ответов — спектры
+    "По цвету фотографий без дополнительных измерений": [
+        "By the colour of photos without additional measurements",
+        "À la couleur des photos sans mesures supplémentaires",
+        "Anhand der Fotofarbe ohne zusätzliche Messungen",
+        "Por el color de las fotografías sin mediciones adicionales",
+        "Dal colore delle fotografie senza misurazioni aggiuntive",
+        "Na podstawie koloru zdjęć bez dodatkowych pomiarów",
+        "Aan de hand van fotokleuren zonder extra metingen",
+        "Қосымша өлшеусіз фотосуреттердің түсіне қарап",
+        "Podle barvy fotografií bez dalších měření"
+    ],
+    "По спектральным линиям света": [
+        "By the spectral lines in light",
+        "À l'aide des raies spectrales de la lumière",
+        "Anhand der Spektrallinien des Lichts",
+        "Mediante las líneas espectrales de la luz",
+        "Attraverso le righe spettrali della luce",
+        "Na podstawie linii widmowych światła",
+        "Aan de hand van de spectraallijnen van licht",
+        "Жарықтың спектрлік сызықтары арқылы",
+        "Pomocí spektrálních čar světla"
+    ],
+    "По скорости вращения планеты вокруг оси": [
+        "By the planet's rotation speed",
+        "À l'aide de la vitesse de rotation de la planète",
+        "Anhand der Rotationsgeschwindigkeit des Planeten",
+        "Por la velocidad de rotación del planeta",
+        "Attraverso la velocità di rotazione del pianeta",
+        "Na podstawie prędkości obrotu planety",
+        "Aan de hand van de draaisnelheid van de planeet",
+        "Ғаламшардың өз осінен айналу жылдамдығы арқылы",
+        "Podle rychlosti otáčení planety"
+    ],
+    "По количеству спутников": [
+        "By the number of moons",
+        "À l'aide du nombre de satellites",
+        "Anhand der Anzahl der Monde",
+        "Por la cantidad de lunas",
+        "Attraverso il numero di lune",
+        "Na podstawie liczby księżyców",
+        "Aan de hand van het aantal manen",
+        "Серіктерінің саны арқылы",
+        "Podle počtu měsíců"
+    ],
+
+    // Варианты ответов — газовые гиганты
+    "Они состоят преимущественно из лёгких веществ": [
+        "They consist mainly of lightweight substances",
+        "Ils sont principalement composés de substances légères",
+        "Sie bestehen überwiegend aus leichten Stoffen",
+        "Están compuestos principalmente de sustancias ligeras",
+        "Sono composti soprattutto da sostanze leggere",
+        "Składają się głównie z lekkich substancji",
+        "Ze bestaan voornamelijk uit lichte stoffen",
+        "Олар негізінен жеңіл заттардан тұрады",
+        "Skládají se převážně z lehkých látek"
+    ],
+    "У них нет гравитации": [
+        "They have no gravity",
+        "Ils n'ont pas de gravité",
+        "Sie haben keine Schwerkraft",
+        "No tienen gravedad",
+        "Non hanno gravità",
+        "Nie mają grawitacji",
+        "Ze hebben geen zwaartekracht",
+        "Оларда тартылыс күші жоқ",
+        "Nemají gravitaci"
+    ],
+    "Они не имеют внутреннего строения": [
+        "They have no internal structure",
+        "Ils n'ont pas de structure interne",
+        "Sie haben keine innere Struktur",
+        "No tienen estructura interna",
+        "Non hanno una struttura interna",
+        "Nie mają budowy wewnętrznej",
+        "Ze hebben geen inwendige structuur",
+        "Олардың ішкі құрылысы жоқ",
+        "Nemají vnitřní strukturu"
+    ],
+    "Они находятся вне Солнечной системы": [
+        "They are outside the Solar System",
+        "Ils se trouvent en dehors du Système solaire",
+        "Sie befinden sich außerhalb des Sonnensystems",
+        "Están fuera del sistema solar",
+        "Si trovano al di fuori del Sistema solare",
+        "Znajdują się poza Układem Słonecznym",
+        "Ze bevinden zich buiten het zonnestelsel",
+        "Олар Күн жүйесінен тыс орналасқан",
+        "Nacházejí se mimo Sluneční soustavu"
+    ],
+
+    // Общие сообщения игр
+    "Пять загадок Вселенной. Пять великих исследований. И ни одного гарантийного талона на оборудование!": [
+        "Five mysteries of the universe. Five great investigations. And not a single warranty for the equipment!",
+        "Cinq mystères de l’Univers. Cinq grandes recherches. Et aucune garantie pour le matériel !",
+        "Fünf Geheimnisse des Universums. Fünf große Forschungsprojekte. Und keine Garantie für die Ausrüstung!",
+        "Cinco misterios del universo. Cinco grandes investigaciones. ¡Y ni una sola garantía para el equipo!",
+        "Cinque misteri dell’universo. Cinque grandi ricerche. E nessuna garanzia per l’attrezzatura!",
+        "Pięć tajemnic Wszechświata. Pięć wielkich badań. I ani jednej gwarancji na sprzęt!",
+        "Vijf mysteries van het universum. Vijf grote onderzoeken. En geen enkele garantie op de apparatuur!",
+        "Ғаламның бес жұмбағы. Бес үлкен зерттеу. Жабдыққа кепілдік те жоқ!",
+        "Pět záhad vesmíru. Pět velkých výzkumů. A ani jedna záruka na vybavení!"
+    ],
+    "✅ Верно! Отличная работа!": [
+        "✅ Correct! Great job!",
+        "✅ Exact ! Excellent travail !",
+        "✅ Richtig! Gute Arbeit!",
+        "✅ ¡Correcto! ¡Buen trabajo!",
+        "✅ Esatto! Ottimo lavoro!",
+        "✅ Dobrze! Świetna robota!",
+        "✅ Goed! Goed gedaan!",
+        "✅ Дұрыс! Жарайсың!",
+        "✅ Správně! Skvělá práce!"
+    ],
+    "🏆 Посмотреть результат": [
+        "🏆 View results",
+        "🏆 Voir le résultat",
+        "🏆 Ergebnis anzeigen",
+        "🏆 Ver resultados",
+        "🏆 Mostra il risultato",
+        "🏆 Zobacz wynik",
+        "🏆 Resultaat bekijken",
+        "🏆 Нәтижені көру",
+        "🏆 Zobrazit výsledek"
+    ],
+    "🔄 Играть снова": [
+        "🔄 Play again",
+        "🔄 Rejouer",
+        "🔄 Noch einmal spielen",
+        "🔄 Jugar de nuevo",
+        "🔄 Gioca di nuovo",
+        "🔄 Zagraj ponownie",
+        "🔄 Opnieuw spelen",
+        "🔄 Қайта ойнау",
+        "🔄 Hrát znovu"
+    ],
+    "🔄 Сразиться снова": [
+        "🔄 Fight again",
+        "🔄 Recommencer le combat",
+        "🔄 Erneut kämpfen",
+        "🔄 Luchar de nuevo",
+        "🔄 Combatti di nuovo",
+        "🔄 Walcz ponownie",
+        "🔄 Opnieuw vechten",
+        "🔄 Қайта шайқасу",
+        "🔄 Bojovat znovu"
+    ],
+    "✨ Попадание! Ты нанёс боссу урон!": [
+        "✨ Hit! You damaged the boss!",
+        "✨ Touché ! Tu as blessé le boss !",
+        "✨ Treffer! Du hast dem Boss Schaden zugefügt!",
+        "✨ ¡Impacto! ¡Has dañado al jefe!",
+        "✨ Colpito! Hai danneggiato il boss!",
+        "✨ Trafienie! Zadałeś obrażenia bossowi!",
+        "✨ Raak! Je hebt de baas beschadigd!",
+        "✨ Дәл тиді! Сен боссқа зақым келтірдің!",
+        "✨ Zásah! Způsobil jsi bossovi poškození!"
+    ],
+    "🌟 НЕВЕРОЯТНО! Ты ответил правильно на все вопросы!": [
+        "🌟 AMAZING! You answered every question correctly!",
+        "🌟 INCROYABLE ! Tu as répondu correctement à toutes les questions !",
+        "🌟 UNGLAUBLICH! Du hast alle Fragen richtig beantwortet!",
+        "🌟 ¡INCREÍBLE! ¡Has respondido bien a todas las preguntas!",
+        "🌟 INCREDIBILE! Hai risposto correttamente a tutte le domande!",
+        "🌟 NIESAMOWITE! Odpowiedziałeś poprawnie na wszystkie pytania!",
+        "🌟 GEWELDIG! Je hebt alle vragen goed beantwoord!",
+        "🌟 КЕРЕМЕТ! Барлық сұраққа дұрыс жауап бердің!",
+        "🌟 NEUVĚŘITELNÉ! Odpověděl jsi správně na všechny otázky!"
+    ],
+    "🚀 Отличный результат! Ты много знаешь о космосе!": [
+        "🚀 Great result! You know a lot about space!",
+        "🚀 Excellent résultat ! Tu connais bien l'espace !",
+        "🚀 Tolles Ergebnis! Du weißt viel über den Weltraum!",
+        "🚀 ¡Gran resultado! ¡Sabes mucho sobre el espacio!",
+        "🚀 Ottimo risultato! Sai molto sullo spazio!",
+        "🚀 Świetny wynik! Dużo wiesz o kosmosie!",
+        "🚀 Geweldig resultaat! Je weet veel over de ruimte!",
+        "🚀 Тамаша нәтиже! Сен ғарыш туралы көп білесің!",
+        "🚀 Skvělý výsledek! O vesmíru toho víš hodně!"
+    ],
+    "🪐 Хорошее начало! Продолжай исследовать космос!": [
+        "🪐 Good start! Keep exploring space!",
+        "🪐 Bon début ! Continue à explorer l'espace !",
+        "🪐 Guter Anfang! Erforsche weiter den Weltraum!",
+        "🪐 ¡Buen comienzo! ¡Sigue explorando el espacio!",
+        "🪐 Buon inizio! Continua a esplorare lo spazio!",
+        "🪐 Dobry początek! Odkrywaj dalej kosmos!",
+        "🪐 Goed begin! Blijf de ruimte verkennen!",
+        "🪐 Жақсы бастама! Ғарышты зерттеуді жалғастыр!",
+        "🪐 Dobrý začátek! Pokračuj ve zkoumání vesmíru!"
+    ],
+    "🌌 Впереди ещё много открытий. Попробуй снова!": [
+        "🌌 Many discoveries lie ahead. Try again!",
+        "🌌 Beaucoup de découvertes t'attendent. Réessaie !",
+        "🌌 Es gibt noch viel zu entdecken. Versuche es erneut!",
+        "🌌 Aún quedan muchos descubrimientos. ¡Inténtalo de nuevo!",
+        "🌌 Ti aspettano ancora tante scoperte. Riprova!",
+        "🌌 Przed tobą jeszcze wiele odkryć. Spróbuj ponownie!",
+        "🌌 Er valt nog veel te ontdekken. Probeer het opnieuw!",
+        "🌌 Алда әлі талай жаңалық бар. Қайта көр!",
+        "🌌 Ještě tě čeká mnoho objevů. Zkus to znovu!"
+    ],
+    "БОСС ПОБЕЖДЁН!": [
+        "BOSS DEFEATED!", "BOSS VAINCU !", "BOSS BESIEGT!",
+        "¡JEFE DERROTADO!", "BOSS SCONFITTO!", "BOSS POKONANY!",
+        "BAAS VERSLAGEN!", "БОСС ЖЕҢІЛДІ!", "BOSS PORAŽEN!"
+    ],
+    "Ты выдержал все пять вопросов!": [
+        "You made it through all five questions!",
+        "Tu as réussi les cinq questions !",
+        "Du hast alle fünf Fragen überstanden!",
+        "¡Has superado las cinco preguntas!",
+        "Hai superato tutte e cinque le domande!",
+        "Przetrwałeś wszystkie pięć pytań!",
+        "Je hebt alle vijf vragen doorstaan!",
+        "Сен бес сұрақтың бәрінен өттің!",
+        "Zvládl jsi všech pět otázek!"
+    ],
+    "🏆 Победа! Ты настоящий покоритель космоса!": [
+        "🏆 Victory! You're a true conqueror of space!",
+        "🏆 Victoire ! Tu es un véritable conquérant de l'espace !",
+        "🏆 Sieg! Du bist ein wahrer Bezwinger des Weltraums!",
+        "🏆 ¡Victoria! ¡Eres un auténtico conquistador del espacio!",
+        "🏆 Vittoria! Sei un vero conquistatore dello spazio!",
+        "🏆 Zwycięstwo! Jesteś prawdziwym zdobywcą kosmosu!",
+        "🏆 Gewonnen! Je bent een echte veroveraar van de ruimte!",
+        "🏆 Жеңіс! Сен нағыз ғарыш бағындырушысысың!",
+        "🏆 Vítězství! Jsi skutečný dobyvatel vesmíru!"
+    ],
+    "БИТВА ПРОИГРАНА": [
+        "BATTLE LOST", "COMBAT PERDU", "KAMPF VERLOREN",
+        "BATALLA PERDIDA", "BATTAGLIA PERSA", "WALKA PRZEGRANA",
+        "GEVECHT VERLOREN", "ШАЙҚАС ЖЕҢІЛДІ", "SOUBOJ PROHRÁN"
+    ],
+    "Босс оказался сильнее на этот раз.": [
+        "The boss was stronger this time.",
+        "Le boss était plus fort cette fois.",
+        "Der Boss war diesmal stärker.",
+        "El jefe fue más fuerte esta vez.",
+        "Questa volta il boss era più forte.",
+        "Tym razem boss okazał się silniejszy.",
+        "De baas was deze keer sterker.",
+        "Бұл жолы босс күштірек болды.",
+        "Boss byl tentokrát silnější."
+    ],
+    "💫 Передохни и попробуй ещё раз!": [
+        "💫 Take a breather and try again!",
+        "💫 Reprends ton souffle et réessaie !",
+        "💫 Atme kurz durch und versuche es erneut!",
+        "💫 Descansa un momento e inténtalo otra vez.",
+        "💫 Fai una pausa e riprova!",
+        "💫 Odpocznij chwilę i spróbuj ponownie!",
+        "💫 Neem even pauze en probeer het opnieuw!",
+        "💫 Демалып алып, қайта көр!",
+        "💫 Odpočiň si a zkus to znovu!"
+    ]
+};
+
+/* Добавляем строки к уже существующему словарю переводов. */
+Object.assign(allTranslations, atlasPatchTranslations);
+
+Object.keys(atlasPatchTranslations).forEach(key => {
+    translationLookup[key.toLocaleLowerCase("ru-RU")] =
+        atlasPatchTranslations[key];
+});
+
+/* Перевод динамических строк с числами. */
+const atlasDynamicLabels = {
+    en: { question: "Question", of: "of", score: "Score", finalScore: "Final score", explored: "Objects explored", overall: "Overall progress", quizDone: "Quiz complete! Your score: ", quizWrong: "❌ Not quite! Correct answer: ", bossWrong: "💥 Wrong! Correct answer: " },
+    fr: { question: "Question", of: "sur", score: "Score", finalScore: "Score final", explored: "Objets explorés", overall: "Progression totale", quizDone: "Quiz terminé ! Ton résultat : ", quizWrong: "❌ Pas tout à fait ! Bonne réponse : ", bossWrong: "💥 Erreur ! Bonne réponse : " },
+    de: { question: "Frage", of: "von", score: "Punkte", finalScore: "Endpunktzahl", explored: "Erforschte Objekte", overall: "Gesamtfortschritt", quizDone: "Quiz abgeschlossen! Dein Ergebnis: ", quizWrong: "❌ Nicht ganz! Richtige Antwort: ", bossWrong: "💥 Falsch! Richtige Antwort: " },
+    es: { question: "Pregunta", of: "de", score: "Puntuación", finalScore: "Puntuación final", explored: "Objetos explorados", overall: "Progreso total", quizDone: "¡Cuestionario terminado! Tu resultado: ", quizWrong: "❌ ¡No exactamente! Respuesta correcta: ", bossWrong: "💥 ¡Error! Respuesta correcta: " },
+    it: { question: "Domanda", of: "di", score: "Punteggio", finalScore: "Punteggio finale", explored: "Oggetti esplorati", overall: "Progresso totale", quizDone: "Quiz completato! Il tuo risultato: ", quizWrong: "❌ Non proprio! Risposta corretta: ", bossWrong: "💥 Errore! Risposta corretta: " },
+    pl: { question: "Pytanie", of: "z", score: "Punkty", finalScore: "Wynik końcowy", explored: "Zbadane obiekty", overall: "Łączny postęp", quizDone: "Quiz ukończony! Twój wynik: ", quizWrong: "❌ Nie całkiem! Prawidłowa odpowiedź: ", bossWrong: "💥 Błąd! Prawidłowa odpowiedź: " },
+    nl: { question: "Vraag", of: "van", score: "Score", finalScore: "Eindscore", explored: "Onderzochte objecten", overall: "Totale voortgang", quizDone: "Quiz voltooid! Jouw resultaat: ", quizWrong: "❌ Niet helemaal! Goed antwoord: ", bossWrong: "💥 Fout! Goed antwoord: " },
+    kk: { question: "Сұрақ", of: "/", score: "Ұпай", finalScore: "Қорытынды ұпай", explored: "Зерттелген нысандар", overall: "Жалпы прогресс", quizDone: "Викторина аяқталды! Нәтижең: ", quizWrong: "❌ Онша дұрыс емес! Дұрыс жауап: ", bossWrong: "💥 Қате! Дұрыс жауап: " },
+    cs: { question: "Otázka", of: "z", score: "Body", finalScore: "Celkové skóre", explored: "Prozkoumané objekty", overall: "Celkový postup", quizDone: "Kvíz dokončen! Tvůj výsledek: ", quizWrong: "❌ Ne tak docela! Správná odpověď: ", bossWrong: "💥 Chyba! Správná odpověď: " }
+};
+
+/* Сохраняем старый переводчик и дополняем его, а не ломаем. */
+const atlasPreviousTranslateText = translateText;
+
+function atlasTranslateDynamicText(value, language) {
+    const labels = atlasDynamicLabels[language];
+    if (!labels) return null;
+
+    const text = String(value ?? "").trim();
+    let match;
+
+    match = text.match(/^Вопрос (\d+) из (\d+): (.+)$/);
+    if (match) {
+        return `${labels.question} ${match[1]} ${labels.of} ${match[2]}: ${atlasPreviousTranslateText(match[3], language)}`;
+    }
+
+    match = text.match(/^Вопрос (\d+) из (\d+)$/);
+    if (match) {
+        return `${labels.question} ${match[1]} ${labels.of} ${match[2]}`;
+    }
+
+    match = text.match(/^Исследовано объектов: (\d+) из (\d+)$/);
+    if (match) {
+        return `${labels.explored}: ${match[1]} / ${match[2]}`;
+    }
+
+    match = text.match(/^Общий прогресс: (\d+)%$/);
+    if (match) {
+        return `${labels.overall}: ${match[1]}%`;
+    }
+
+    match = text.match(/^Очки: (\d+)$/);
+    if (match) {
+        return `${labels.score}: ${match[1]}`;
+    }
+
+    match = text.match(/^Итоговые очки: (\d+) из (\d+)$/);
+    if (match) {
+        return `${labels.finalScore}: ${match[1]} ${labels.of} ${match[2]}`;
+    }
+
+    match = text.match(/^🏆 Викторина завершена! Твой результат: (\d+) из (\d+)\.$/);
+    if (match) {
+        return `🏆 ${labels.quizDone}${match[1]} ${labels.of} ${match[2]}.`;
+    }
+
+    match = text.match(/^❌ Не совсем! Правильный ответ: (.+)\.$/);
+    if (match) {
+        return `${labels.quizWrong}${atlasPreviousTranslateText(match[1], language)}.`;
+    }
+
+    match = text.match(/^💥 Ошибка! Правильный ответ: (.+)\.$/);
+    if (match) {
+        return `${labels.bossWrong}${atlasPreviousTranslateText(match[1], language)}.`;
+    }
+
+    return null;
+}
+
+/* Подменяем переводчик: сначала динамические строки, затем обычный словарь. */
+translateText = function (text, language) {
+    if (!text || language === "ru") return text;
+
+    const dynamic = atlasTranslateDynamicText(text, language);
+    if (dynamic !== null) {
+        return String(text).replace(String(text).trim(), dynamic);
+    }
+
+    return atlasPreviousTranslateText(text, language);
+};
+
+/* Переводим placeholder и подсказки, в том числе у полей ввода. */
+function atlasTranslateAttributes(language) {
+    const attributes = ["title", "aria-label", "placeholder", "alt", "value"];
+
+    document.querySelectorAll("*").forEach(element => {
+        attributes.forEach(attribute => {
+            if (!element.hasAttribute(attribute)) return;
+
+            let originals = originalAttributeMap.get(element);
+            if (!originals) {
+                originals = {};
+                originalAttributeMap.set(element, originals);
+            }
+
+            if (!(attribute in originals)) {
+                originals[attribute] = element.getAttribute(attribute);
+            }
+
+            const original = originals[attribute];
+            const translated = translateText(original, language);
+
+            if (element.getAttribute(attribute) !== translated) {
+                element.setAttribute(attribute, translated);
+            }
+        });
+    });
+}
+
+/* После обычного перевода страницы обновляем и атрибуты. */
+const atlasPreviousTranslateStaticPage = translateStaticPage;
+
+translateStaticPage = function () {
+    atlasPreviousTranslateStaticPage();
+    atlasTranslateAttributes(getLanguage());
+};
+
+/* Переводим страницу повторно при смене языка через главное меню. */
+if (
+    typeof window.changeLanguage === "function" &&
+    !window.__atlasLanguageWrapped
+) {
+    const atlasOriginalChangeLanguage = window.changeLanguage;
+
+    window.changeLanguage = function (language) {
+        const result = atlasOriginalChangeLanguage.apply(this, arguments);
+
+        window.setTimeout(() => {
+            if (languageIndex[language] !== undefined || language === "ru") {
+                translateStaticPage();
+            }
+        }, 0);
+
+        return result;
+    };
+
+    window.__atlasLanguageWrapped = true;
+}
+
+/* Подстраховка для переключателей языка, созданных через HTML. */
+document.addEventListener("click", event => {
+    const control = event.target.closest(
+        "[data-language], [onclick*='changeLanguage'], .language-option, .language-item"
+    );
+
+    if (control) {
+        window.setTimeout(() => translateStaticPage(), 0);
+    }
+}, true);
+
+/* Поиск учитывает переведённые названия и описания карточек. */
+const atlasSearchInput = document.getElementById("search");
+
+if (atlasSearchInput && !atlasSearchInput.dataset.localizedSearchAttached) {
+    atlasSearchInput.dataset.localizedSearchAttached = "true";
+
+    atlasSearchInput.addEventListener("input", function () {
+        const query = this.value.trim().toLocaleLowerCase();
+
+        document.querySelectorAll(".object-card").forEach(card => {
+            const searchableText =
+                `${card.textContent} ${card.dataset.name || ""}`.toLocaleLowerCase();
+
+            card.hidden = query
+                ? !searchableText.includes(query)
+                : false;
+        });
+    });
+}
+// =====================================================
+// ДОПОЛНЕНИЕ ПЕРЕВОДА КОСМИЧЕСКОГО АТЛАСА
+// Порядок языков: en, fr, de, es, it, pl, nl, kk, cs
+// =====================================================
+
+const atlasCompletePhraseTranslations = {
+    "← На главную": [
+        "← Home", "← Accueil", "← Zur Startseite",
+        "← Volver al inicio", "← Torna alla pagina principale",
+        "← Strona główna", "← Naar de hoofdpagina",
+        "← Басты бетке", "← Zpět na hlavní stránku"
+    ],
+
+    "Исследуй Вселенную вместе с Папайрусом!": [
+        "Explore the universe with Papyrus!",
+        "Explore l’Univers avec Papyrus !",
+        "Erkunde das Universum mit Papyrus!",
+        "¡Explora el universo con Papyrus!",
+        "Esplora l’universo con Papyrus!",
+        "Odkrywaj Wszechświat z Papyrusem!",
+        "Ontdek het heelal samen met Papyrus!",
+        "Папируспен бірге Ғаламды зертте!",
+        "Prozkoumej vesmír s Papyrusem!"
+    ],
+
+    "Звезда, которая освещает и согревает нашу планетную систему.": [
+        "The star that lights and warms our planetary system.",
+        "L’étoile qui éclaire et réchauffe notre système planétaire.",
+        "Der Stern, der unser Planetensystem erhellt und erwärmt.",
+        "La estrella que ilumina y calienta nuestro sistema planetario.",
+        "La stella che illumina e riscalda il nostro sistema planetario.",
+        "Gwiazda, która oświetla i ogrzewa nasz układ planetarny.",
+        "De ster die ons planetenstelsel verlicht en verwarmt.",
+        "Ғаламшарлар жүйемізді жарықтандырып, жылытатын жұлдыз.",
+        "Hvězda, která osvětluje a zahřívá naši planetární soustavu."
+    ],
+
+    "Наш родной мир, на котором существует жизнь.": [
+        "Our home world, where life exists.",
+        "Notre monde, où la vie existe.",
+        "Unsere Heimatwelt, auf der Leben existiert.",
+        "Nuestro mundo, donde existe la vida.",
+        "Il nostro mondo, dove esiste la vita.",
+        "Nasz domowy świat, na którym istnieje życie.",
+        "Onze thuiswereld, waar leven bestaat.",
+        "Тіршілік бар туған әлеміміз.",
+        "Náš domovský svět, na kterém existuje život."
+    ],
+
+    "Красная планета с вулканами, каньонами и ледяными запасами.": [
+        "The Red Planet, with volcanoes, canyons and ice deposits.",
+        "La planète rouge, avec ses volcans, ses canyons et ses réserves de glace.",
+        "Der Rote Planet mit Vulkanen, Canyons und Eisvorkommen.",
+        "El planeta rojo, con volcanes, cañones y depósitos de hielo.",
+        "Il Pianeta Rosso, con vulcani, canyon e depositi di ghiaccio.",
+        "Czerwona planeta z wulkanami, kanionami i pokładami lodu.",
+        "De rode planeet met vulkanen, ravijnen en ijsvoorraden.",
+        "Жанартаулары, каньондары және мұз қоры бар Қызыл ғаламшар.",
+        "Rudá planeta se sopkami, kaňony a zásobami ledu."
+    ],
+
+    "Карликовая планета в поясе Койпера за орбитой Нептуна.": [
+        "A dwarf planet in the Kuiper Belt beyond Neptune’s orbit.",
+        "Une planète naine dans la ceinture de Kuiper, au-delà de l’orbite de Neptune.",
+        "Ein Zwergplanet im Kuipergürtel jenseits der Neptunbahn.",
+        "Un planeta enano del cinturón de Kuiper, más allá de la órbita de Neptuno.",
+        "Un pianeta nano nella fascia di Kuiper, oltre l’orbita di Nettuno.",
+        "Planeta karłowata w Pasie Kuipera za orbitą Neptuna.",
+        "Een dwergplaneet in de Kuipergordel voorbij de baan van Neptunus.",
+        "Нептун орбитасынан тыс Койпер белдеуінде орналасқан ергежейлі ғаламшар.",
+        "Trpasličí planeta v Kuiperově pásu za oběžnou dráhou Neptunu."
+    ],
+
+    "Самая близкая к Солнцу планета.": [
+        "The planet closest to the Sun.",
+        "La planète la plus proche du Soleil.",
+        "Der Planet, der der Sonne am nächsten ist.",
+        "El planeta más cercano al Sol.",
+        "Il pianeta più vicino al Sole.",
+        "Planeta najbliższa Słońcu.",
+        "De planeet die het dichtst bij de zon staat.",
+        "Күнге ең жақын ғаламшар.",
+        "Planeta nejbližší Slunci."
+    ],
+
+    "Очень горячая планета с плотной атмосферой.": [
+        "A very hot planet with a dense atmosphere.",
+        "Une planète très chaude à l’atmosphère dense.",
+        "Ein sehr heißer Planet mit dichter Atmosphäre.",
+        "Un planeta muy caliente con una atmósfera densa.",
+        "Un pianeta molto caldo con un’atmosfera densa.",
+        "Bardzo gorąca planeta z gęstą atmosferą.",
+        "Een zeer hete planeet met een dichte atmosfeer.",
+        "Атмосферасы тығыз, өте ыстық ғаламшар.",
+        "Velmi horká planeta s hustou atmosférou."
+    ],
+
+    "Ледяной гигант, вращающийся почти на боку.": [
+        "An ice giant that rotates almost on its side.",
+        "Une géante glacée qui tourne presque sur le côté.",
+        "Ein Eisriese, der sich fast auf der Seite dreht.",
+        "Un gigante helado que gira casi de lado.",
+        "Un gigante ghiacciato che ruota quasi su un fianco.",
+        "Lodowy olbrzym obracający się niemal na boku.",
+        "Een ijsreus die bijna op zijn kant draait.",
+        "Бүйірімен айналатындай болып айналатын мұз алыбы.",
+        "Ledový obr, který se otáčí téměř na boku."
+    ],
+
+    "Естественный спутник Земли, покрытый кратерами.": [
+        "Earth’s natural satellite, covered with craters.",
+        "Le satellite naturel de la Terre, couvert de cratères.",
+        "Der natürliche Satellit der Erde, bedeckt mit Kratern.",
+        "El satélite natural de la Tierra, cubierto de cráteres.",
+        "Il satellite naturale della Terra, ricoperto di crateri.",
+        "Naturalny satelita Ziemi pokryty kraterami.",
+        "De natuurlijke satelliet van de aarde, bedekt met kraters.",
+        "Кратерлермен көмкерілген Жердің табиғи серігі.",
+        "Přirozená družice Země pokrytá krátery."
+    ],
+
+    "Самая большая планета Солнечной системы.": [
+        "The largest planet in the Solar System.",
+        "La plus grande planète du Système solaire.",
+        "Der größte Planet des Sonnensystems.",
+        "El planeta más grande del sistema solar.",
+        "Il pianeta più grande del Sistema solare.",
+        "Największa planeta Układu Słonecznego.",
+        "De grootste planeet van het zonnestelsel.",
+        "Күн жүйесіндегі ең үлкен ғаламшар.",
+        "Největší planeta Sluneční soustavy."
+    ],
+
+    "Газовый гигант со знаменитой системой колец.": [
+        "A gas giant with a famous ring system.",
+        "Une géante gazeuse dotée d’un célèbre système d’anneaux.",
+        "Ein Gasriese mit einem berühmten Ringsystem.",
+        "Un gigante gaseoso con un famoso sistema de anillos.",
+        "Un gigante gassoso con un famoso sistema di anelli.",
+        "Gazowy olbrzym ze słynnym systemem pierścieni.",
+        "Een gasreus met een beroemd ringenstelsel.",
+        "Әйгілі сақиналар жүйесі бар газ алыбы.",
+        "Plynný obr se známou soustavou prstenců."
+    ],
+
+    "Далёкий ледяной гигант на окраине Солнечной системы.": [
+        "A distant ice giant at the edge of the Solar System.",
+        "Une lointaine géante glacée aux confins du Système solaire.",
+        "Ein ferner Eisriese am Rand des Sonnensystems.",
+        "Un gigante helado lejano en los confines del sistema solar.",
+        "Un gigante ghiacciato lontano, ai confini del Sistema solare.",
+        "Daleki lodowy olbrzym na obrzeżach Układu Słonecznego.",
+        "Een verre ijsreus aan de rand van het zonnestelsel.",
+        "Күн жүйесінің шетінде орналасқан алыстағы мұз алыбы.",
+        "Vzdálený ledový obr na okraji Sluneční soustavy."
+    ],
+
+    "Исследовать": [
+        "Explore", "Explorer", "Erkunden",
+        "Explorar", "Esplora", "Badaj",
+        "Onderzoeken", "Зерттеу", "Prozkoumat"
+    ],
+
+    "🎯 Задание исследователя": [
+        "🎯 Explorer Mission", "🎯 Mission d’exploration",
+        "🎯 Forscheraufgabe", "🎯 Misión del explorador",
+        "🎯 Missione dell’esploratore", "🎯 Zadanie odkrywcy",
+        "🎯 Onderzoeksmissie", "🎯 Зерттеушінің тапсырмасы",
+        "🎯 Úkol průzkumníka"
+    ],
+
+    "Открой информацию о трёх разных космических объектах!": [
+        "Discover information about three different space objects!",
+        "Découvre des informations sur trois objets spatiaux différents !",
+        "Entdecke Informationen über drei verschiedene Weltraumobjekte!",
+        "¡Descubre información sobre tres objetos espaciales diferentes!",
+        "Scopri informazioni su tre diversi oggetti spaziali!",
+        "Poznaj informacje o trzech różnych obiektach kosmicznych!",
+        "Ontdek informatie over drie verschillende ruimteobjecten!",
+        "Үш түрлі ғарыш нысаны туралы ақпаратты аш!",
+        "Objev informace o třech různých vesmírných objektech!"
+    ],
+
+    "🎮 Космическая викторина": [
+        "🎮 Space Quiz", "🎮 Quiz spatial",
+        "🎮 Weltraumquiz", "🎮 Cuestionario espacial",
+        "🎮 Quiz spaziale", "🎮 Kosmiczny quiz",
+        "🎮 Ruimtequiz", "🎮 Ғарыш викторинасы",
+        "🎮 Vesmírný kvíz"
+    ],
+
+    "Космическая викторина": [
+        "Space Quiz", "Quiz spatial",
+        "Weltraumquiz", "Cuestionario espacial",
+        "Quiz spaziale", "Kosmiczny quiz",
+        "Ruimtequiz", "Ғарыш викторинасы",
+        "Vesmírný kvíz"
+    ],
+
+    "Проверь, насколько хорошо ты знаешь Солнечную систему!": [
+        "Test how well you know the Solar System!",
+        "Teste tes connaissances sur le Système solaire !",
+        "Teste dein Wissen über das Sonnensystem!",
+        "¡Pon a prueba tus conocimientos del sistema solar!",
+        "Metti alla prova la tua conoscenza del Sistema solare!",
+        "Sprawdź, jak dobrze znasz Układ Słoneczny!",
+        "Test hoe goed je het zonnestelsel kent!",
+        "Күн жүйесі туралы біліміңді тексер!",
+        "Ověř si, jak dobře znáš Sluneční soustavu!"
+    ],
+
+    "Впереди пять сложнейших вопросов. Сможешь победить?": [
+        "Five very challenging questions lie ahead. Can you win?",
+        "Cinq questions très difficiles t’attendent. Peux-tu gagner ?",
+        "Fünf äußerst schwierige Fragen warten auf dich. Kannst du gewinnen?",
+        "Te esperan cinco preguntas muy difíciles. ¿Podrás ganar?",
+        "Ti aspettano cinque domande difficilissime. Riuscirai a vincere?",
+        "Przed tobą pięć bardzo trudnych pytań. Czy uda ci się wygrać?",
+        "Er wachten vijf bijzonder moeilijke vragen op je. Kun je winnen?",
+        "Алда бес өте қиын сұрақ бар. Жеңе аласың ба?",
+        "Čeká tě pět velmi obtížných otázek. Dokážeš vyhrát?"
+    ],
+
+    "Босс ждёт вызова!": [
+        "The boss awaits your challenge!",
+        "Le boss attend ton défi !",
+        "Der Boss wartet auf deine Herausforderung!",
+        "¡El jefe espera tu desafío!",
+        "Il boss attende la tua sfida!",
+        "Boss czeka na twoje wyzwanie!",
+        "De eindbaas wacht op je uitdaging!",
+        "Босс сенің шақыруыңды күтіп тұр!",
+        "Boss čeká na tvou výzvu!"
+    ],
+
+    "Готов к битве?": [
+        "Ready for battle?", "Prêt pour le combat ?",
+        "Bereit für den Kampf?", "¿Listo para la batalla?",
+        "Pronto per la battaglia?", "Gotowy do walki?",
+        "Klaar voor de strijd?", "Шайқасқа дайынсың ба?",
+        "Jsi připraven na bitvu?"
+    ],
+
+    "⚔️ Начать битву": [
+        "⚔️ Start Battle", "⚔️ Commencer le combat",
+        "⚔️ Kampf starten", "⚔️ Iniciar batalla",
+        "⚔️ Inizia la battaglia", "⚔️ Rozpocznij bitwę",
+        "⚔️ Begin het gevecht", "⚔️ Шайқасты бастау",
+        "⚔️ Zahájit bitvu"
+    ],
+
+    "🏆 Достижение открыто: «Первый исследователь»!": [
+        "🏆 Achievement unlocked: “First Explorer”!",
+        "🏆 Succès débloqué : « Premier explorateur » !",
+        "🏆 Errungenschaft freigeschaltet: „Erster Entdecker“!",
+        "🏆 ¡Logro desbloqueado: «Primer explorador»!",
+        "🏆 Obiettivo sbloccato: «Primo esploratore»!",
+        "🏆 Osiągnięcie odblokowane: „Pierwszy odkrywca”!",
+        "🏆 Prestatie ontgrendeld: ‘Eerste ontdekkingsreiziger’!",
+        "🏆 Жетістік ашылды: «Алғашқы зерттеуші»!",
+        "🏆 Úspěch odemčen: „První průzkumník“!"
+    ]
+};
+
+// Регистрируем целые фразы, чтобы слова не переводились по частям.
+Object.assign(allTranslations, atlasCompletePhraseTranslations);
+
+Object.keys(atlasCompletePhraseTranslations).forEach(key => {
+    translationLookup[key.toLocaleLowerCase("ru-RU")] =
+        atlasCompletePhraseTranslations[key];
+});
+/* =========================================================
+   КОНЕЦ ДОПОЛНЕНИЯ ДЛЯ АТЛАСА
+   ========================================================= */
     if (document.readyState === "loading") {
         document.addEventListener(
             "DOMContentLoaded",

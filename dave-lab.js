@@ -73,6 +73,7 @@ const experiments = {
     }
 };
 
+
 function showExperiment(objectId) {
     const experiment = experiments[objectId];
 
@@ -90,21 +91,40 @@ function showExperiment(objectId) {
         return;
     }
 
-    title.textContent = experiment.title;
+    const lang = window.daveLabLanguage || "ru";
+
+    const translate = text => {
+        if (typeof window.translateDaveLabText === "function") {
+            return window.translateDaveLabText(text, lang);
+        }
+
+        return text;
+    };
+
+    title.textContent = translate(experiment.title);
 
     description.textContent =
-        experiment.description + "\n\n" + experiment.fact;
+        translate(experiment.description) +
+        "\n\n" +
+        translate(experiment.fact);
 
     description.style.whiteSpace = "pre-line";
 
-    note.textContent = "🧔 Безумный Дэйв: «" + experiment.dave + "»";
+    note.textContent =
+        "🧔 " +
+        translate("Безумный Дэйв:") +
+        " «" +
+        translate(experiment.dave) +
+        "»";
 
     panel.hidden = false;
+
     panel.scrollIntoView({
         behavior: "smooth",
         block: "center"
     });
 }
+
 
 function closeExperiment() {
     const panel = document.getElementById("experiment-panel");

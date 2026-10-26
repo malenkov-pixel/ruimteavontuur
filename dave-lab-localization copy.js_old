@@ -1,0 +1,237 @@
+/* Локализация лаборатории Дэйва: ru, kk, cs, en, de, fr, es, it, pl, nl */
+(() => {
+  'use strict';
+  const langs = ['ru','kk','cs','en','de','fr','es','it','pl','nl'];
+
+  const map = Object.create(null);
+  const n = s => String(s ?? '').replace(/\s+/g, ' ').trim();
+  const rows = [
+    ['Космическая лаборатория Безумного Дэйва','Ғарыштық Ессіз Дэйв зертханасы','Kosmická laboratoř Šíleného Davea',"Crazy Dave's Space Lab",'Verrücktes Daves Weltraumlabor','Le laboratoire spatial de Dave le Fou','Laboratorio espacial de Dave el Loco','Laboratorio spaziale di Dave il Pazzo','Kosmiczne laboratorium Szalonego Dave’a','Ruimtelaboratorium van Gekke Dave'],
+    ['НЕСАНКЦИОНИРОВАННЫЙ ЭКСПЕРИМЕНТ № 42','РҰҚСАТСЫЗ ЭКСПЕРИМЕНТ № 42','NEPOVOLENÝ EXPERIMENT č. 42','UNAUTHORIZED EXPERIMENT NO. 42','NICHT GENEHMIGTES EXPERIMENT NR. 42','EXPÉRIENCE NON AUTORISÉE N° 42','EXPERIMENTO NO AUTORIZADO N.º 42','ESPERIMENTO NON AUTORIZZATO N. 42','NIEAUTORYZOWANY EKSPERYMENT NR 42','NIET-GEAUTORISEERD EXPERIMENT NR. 42'],
+    ['Наука! Космос! Растения! И, возможно, немного мозгов!','Ғылым! Ғарыш! Өсімдіктер! Мүмкін, аздап ми да бар шығар!','Věda! Vesmír! Rostliny! A možná i trochu mozků!','Science! Space! Plants! And maybe a few brains!','Wissenschaft! Weltraum! Pflanzen! Und vielleicht ein paar Gehirne!','Science ! Espace ! Plantes ! Et peut-être quelques cerveaux !','¡Ciencia! ¡Espacio! ¡Plantas! ¡Y quizá algunos cerebros!','Scienza! Spazio! Piante! E magari anche qualche cervello!','Nauka! Kosmos! Rośliny! I być może trochę mózgów!','Wetenschap! Ruimte! Planten! En misschien een paar hersenen!'],
+    ['БРРРРРРРР! Добро пожаловать в мою лабораторию! Я собираюсь исследовать ВСЮ ВСЕЛЕННУЮ! Где моя кастрюля?!','БРРРРРР! Зертханама қош келдің! Мен БҮКІЛ ҒАЛАМДЫ зерттемекпін! Менің қазаным қайда?!','BRRRRR! Vítej v mé laboratoři! Chystám se prozkoumat CELÝ VESMÍR! Kde mám hrnec?!',"BRRRRRR! Welcome to my lab! I'm going to explore the ENTIRE UNIVERSE! Where's my pot?!",'BRRRRRR! Willkommen in meinem Labor! Ich werde das GANZE UNIVERSUM erforschen! Wo ist mein Kochtopf?!','Brrrrrr ! Bienvenue dans mon laboratoire ! Je vais explorer TOUT L’UNIVERS ! Où est ma marmite ?!','¡BRRRRRR! ¡Bienvenido a mi laboratorio! ¡Voy a explorar TODO EL UNIVERSO! ¿Dónde está mi olla?','BRRRRRR! Benvenuto nel mio laboratorio! Esplorerò TUTTO L’UNIVERSO! Dov’è la mia pentola?!','BRRRRRR! Witaj w moim laboratorium! Zbadam CAŁY WSZECHŚWIAT! Gdzie jest mój garnek?!','BRRRRRR! Welkom in mijn laboratorium! Ik ga het HELE HEELAL onderzoeken! Waar is mijn kookpot?!'],
+    ['🌱 Защити лабораторию Дэйва!','🌱 Дэйвтің зертханасын қорға!','🌱 Braň Daveovu laboratoř!','🌱 Defend Dave’s Lab!','🌱 Verteidige Daves Labor!','🌱 Défends le laboratoire de Dave !','🌱 ¡Defiende el laboratorio de Dave!','🌱 Difendi il laboratorio di Dave!','🌱 Broń laboratorium Dave’a!','🌱 Verdedig Daves lab!'],
+    ['Выбирай растения и готовься к нашествию зомби!','Өсімдіктерді таңдап, зомбилер шабуылына дайындал!','Vyber si rostliny a připrav se na invazi zombíků!','Choose your plants and prepare for the zombie invasion!','Wähle Pflanzen und bereite dich auf die Zombie-Invasion vor!','Choisis tes plantes et prépare-toi à l’invasion des zombies !','¡Elige plantas y prepárate para la invasión zombi!','Scegli le piante e preparati all’invasione degli zombi!','Wybierz rośliny i przygotuj się na inwazję zombie!','Kies planten en bereid je voor op de zombie-invasie!'],
+    ['☀️ Солнце:','☀️ Күн:','☀️ Slunce:','☀️ Sun:','☀️ Sonne:','☀️ Soleil :','☀️ Sol:','☀️ Sole:','☀️ Słońce:','☀️ Zon:'],
+    ['🧟 Волна:','🧟 Толқын:','🧟 Vlna:','🧟 Wave:','🧟 Welle:','🧟 Vague :','🧟 Oleada:','🧟 Ondata:','🧟 Fala:','🧟 Golf:'],
+    ['🟢 Горохострел','🟢 Асбұршақ атқыш','🟢 Hráškomet','🟢 Peashooter','🟢 Erbsenkanone','🟢 Lance-pois','🟢 Lanzaguisantes','🟢 Sparasemi','🟢 Plujka','🟢 Erwtenknaller'],
+    ['🌻 Подсолнух','🌻 Күнбағыс','🌻 Slunečnice','🌻 Sunflower','🌻 Sonnenblume','🌻 Tournesol','🌻 Girasol','🌻 Girasole','🌻 Słonecznik','🌻 Zonnebloem'],
+    ['🥔 Орехостена','🥔 Жаңғақ-қабырға','🥔 Ořechová zeď','🥔 Wall-nut','🥔 Wallnuss','🥔 Noix','🥔 Nuez','🥔 Noce','🥔 Orzech','🥔 Walnoot'],
+    ['Выбери растение, затем нажми на клетку газона!','Өсімдікті таңдап, содан кейін көгалдағы ұяшықты бас!','Vyber rostlinu a potom klikni na políčko trávníku!','Choose a plant, then click a lawn tile!','Wähle eine Pflanze und klicke dann auf ein Rasenfeld!','Choisis une plante, puis clique sur une case de la pelouse !','¡Elige una planta y después pulsa una casilla del césped!','Scegli una pianta, poi fai clic su una casella del prato!','Wybierz roślinę, a następnie kliknij pole trawnika!','Kies een plant en klik daarna op een vakje van het gazon!'],
+    ['Игровой газон','Ойын көгал алаңы','Herní trávník','Game lawn','Spielfeld','Pelouse de jeu','Césped de juego','Prato di gioco','Plansza z trawnikiem','Speelgazon'],
+    ['🧟 Начать волну','🧟 Толқынды бастау','🧟 Spustit vlnu','🧟 Start Wave','🧟 Welle starten','🧟 Lancer la vague','🧟 Iniciar oleada','🧟 Avvia ondata','🧟 Rozpocznij falę','🧟 Start golf'],
+    ['🔄 Новая игра','🔄 Жаңа ойын','🔄 Nová hra','🔄 New Game','🔄 Neues Spiel','🔄 Nouvelle partie','🔄 Nueva partida','🔄 Nuova partita','🔄 Nowa gra','🔄 Nieuw spel'],
+    ['🔬 Космический каталог','🔬 Ғарыш каталогы','🔬 Vesmírný katalog','🔬 Space Catalogue','🔬 Weltraumkatalog','🔬 Catalogue spatial','🔬 Catálogo espacial','🔬 Catalogo spaziale','🔬 Katalog kosmiczny','🔬 Ruimtecatalogus'],
+    ['Пять загадок Вселенной. Пять великих исследований. И ни одного гарантийного талона на оборудование!','Ғаламның бес жұмбағы. Бес ұлы зерттеу. Ал жабдыққа кепілдік талоны мүлде жоқ!','Pět záhad vesmíru. Pět velkých výzkumů. A ani jeden záruční list na vybavení!','Five mysteries of the universe. Five great investigations. And not a single warranty for the equipment!','Fünf Geheimnisse des Universums. Fünf große Forschungsprojekte. Und keine Garantie für die Ausrüstung!','Cinq mystères de l’Univers. Cinq grandes recherches. Et aucun bon de garantie pour le matériel !','Cinco misterios del universo. Cinco grandes investigaciones. ¡Y ni una sola garantía para el equipo!','Cinque misteri dell’universo. Cinque grandi ricerche. E neanche una garanzia per l’attrezzatura!','Pięć tajemnic Wszechświata. Pięć wielkich badań. I ani jednej gwarancji na sprzęt!','Vijf mysteries van het heelal. Vijf grote onderzoeken. En geen garantie op de apparatuur!'],
+    ['Изучить объект','Нысанды зерттеу','Prozkoumat objekt','Study Object','Objekt untersuchen','Étudier l’objet','Estudiar objeto','Studia l’oggetto','Zbadaj obiekt','Object onderzoeken'],
+    ['Проксима Центавра','Проксима Центавра','Proxima Centauri','Proxima Centauri','Proxima Centauri','Proxima du Centaure','Próxima Centauri','Proxima Centauri','Proxima Centauri','Proxima Centauri'],
+    ['Красный карлик','Қызыл ергежейлі','Červený trpaslík','Red dwarf','Roter Zwerg','Naine rouge','Enana roja','Nana rossa','Czerwony karzeł','Rode dwerg'],
+    ['Ближайшая к Солнцу звезда. Дэйв хочет выяснить, можно ли вырастить подсолнух на планете возле неё.','Күнге ең жақын жұлдыз. Дэйв оның маңындағы планетада күнбағыс өсіруге бола ма, соны білгісі келеді.','Hvězda nejbližší Slunci. Dave chce zjistit, zda lze na planetě v její blízkosti vypěstovat slunečnici.','The star closest to the Sun. Dave wants to find out whether a sunflower could grow on a planet near it.','Der Stern, der der Sonne am nächsten ist. Dave will herausfinden, ob auf einem Planeten in seiner Nähe eine Sonnenblume wachsen könnte.','L’étoile la plus proche du Soleil. Dave veut savoir si un tournesol pourrait pousser sur une planète voisine.','La estrella más cercana al Sol. Dave quiere averiguar si podría cultivar un girasol en un planeta cercano.','La stella più vicina al Sole. Dave vuole scoprire se su un pianeta vicino potrebbe crescere un girasole.','Gwiazda najbliższa Słońcu. Dave chce sprawdzić, czy na pobliskiej planecie dałoby się wyhodować słonecznik.','De ster die het dichtst bij de zon staat. Dave wil ontdekken of er op een planeet in de buurt een zonnebloem kan groeien.'],
+    ['Экзопланеты','Экзопланеталар','Exoplanety','Exoplanets','Exoplaneten','Exoplanètes','Exoplanetas','Esopianeti','Egzoplanety','Exoplaneten'],
+    ['Миры других звёзд','Басқа жұлдыздардың әлемдері','Světy jiných hvězd','Worlds around other stars','Welten anderer Sterne','Mondes d’autres étoiles','Mundos de otras estrellas','Mondi di altre stelle','Światy innych gwiazd','Werelden bij andere sterren'],
+        ['Экзопланеты — это планеты за пределами нашей Солнечной системы.','Экзопланеталар — Күн жүйесінен тыс орналасқан ғаламшарлар.','Exoplanety jsou planety mimo naši Sluneční soustavu.','Exoplanets are planets beyond our Solar System.','Exoplaneten sind Planeten außerhalb unseres Sonnensystems.','Les exoplanètes sont des planètes situées au-delà de notre Système solaire.','Los exoplanetas son planetas que están fuera de nuestro sistema solar.','Gli esopianeti sono pianeti che si trovano al di fuori del nostro Sistema solare.','Egzoplanety to planety znajdujące się poza Układem Słonecznym.','Exoplaneten zijn planeten buiten ons zonnestelsel.'],
+    ['Туманность Ориона','Орион тұмандығы','Mlhovina v Orionu','Orion Nebula','Orionnebel','Nébuleuse d’Orion','Nebulosa de Orión','Nebulosa di Orione','Mgławica Oriona','Orionnevel'],
+    ['Звёздные ясли','Жұлдыздар бесігі','Hvězdná kolébka','Stellar Nursery','Sternenwiege','Berceau d’étoiles','Cuna estelar','Culla stellare','Gwiezdny żłobek','Sterrenkraamkamer'],
+    ['Облако газа и пыли, где рождаются новые звёзды. Дэйв надеется найти там космический сад!','Жаңа жұлдыздар пайда болатын газ бен шаң бұлты. Дэйв сол жерден ғарыштық бақ тапқысы келеді!','Oblak plynu a prachu, kde vznikají nové hvězdy. Dave tam doufá najít vesmírnou zahradu!','A cloud of gas and dust where new stars are born. Dave hopes to find a cosmic garden there!','Eine Gas- und Staubwolke, in der neue Sterne entstehen. Dave hofft, dort einen kosmischen Garten zu finden!','Un nuage de gaz et de poussière où naissent de nouvelles étoiles. Dave espère y trouver un jardin cosmique !','Una nube de gas y polvo donde nacen nuevas estrellas. ¡Dave espera encontrar allí un jardín cósmico!','Una nube di gas e polvere dove nascono nuove stelle. Dave spera di trovarci un giardino cosmico!','Obłok gazu i pyłu, w którym rodzą się nowe gwiazdy. Dave ma nadzieję znaleźć tam kosmiczny ogród!','Een wolk van gas en stof waar nieuwe sterren ontstaan. Dave hoopt daar een kosmische tuin te vinden!'],
+    ['Чёрные дыры','Қара құрдымдар','Černé díry','Black Holes','Schwarze Löcher','Trous noirs','Agujeros negros','Buchi neri','Czarne dziury','Zwarte gaten'],
+    ['Гравитационные монстры','Гравитациялық құбыжықтар','Gravitační monstra','Gravity Monsters','Gravitationsmonster','Monstres gravitationnels','Monstruos gravitatorios','Mostri gravitazionali','Grawitacyjne potwory','Zwaartekrachtmonsters'],
+    ['Области пространства с настолько сильной гравитацией, что даже свет не может выбраться из-за горизонта событий. Дэйв не рекомендует проверять это на собственном опыте.','Гравитациясы соншалық күшті болғандықтан, оқиға көкжиегінен тіпті жарық та шыға алмайтын кеңістік аймақтары. Дэйв мұны өз тәжірибеңде тексеруге кеңес бермейді.','Oblasti prostoru s tak silnou gravitací, že zpoza horizontu událostí neunikne ani světlo. Dave nedoporučuje ověřovat si to na vlastní kůži.','Regions of space with gravity so strong that not even light can escape beyond the event horizon. Dave does not recommend testing this yourself.','Bereiche des Weltraums mit einer so starken Gravitation, dass nicht einmal Licht hinter dem Ereignishorizont entkommen kann. Dave empfiehlt keinen Selbstversuch.','Des régions de l’espace où la gravité est si forte que même la lumière ne peut s’échapper de l’horizon des événements. Dave déconseille de vérifier cela soi-même.','Regiones del espacio con una gravedad tan intensa que ni siquiera la luz puede escapar del horizonte de sucesos. Dave no recomienda comprobarlo por cuenta propia.','Regioni dello spazio con una gravità così intensa che nemmeno la luce può sfuggire oltre l’orizzonte degli eventi. Dave sconsiglia di verificarlo di persona.','Obszary przestrzeni o tak silnej grawitacji, że nawet światło nie może wydostać się zza horyzontu zdarzeń. Dave nie poleca sprawdzać tego na własną rękę.','Gebieden in de ruimte met zo’n sterke zwaartekracht dat zelfs licht niet voorbij de waarnemingshorizon kan ontsnappen. Dave raadt af om dit zelf te testen.'],
+    ['Галактика Андромеды','Андромеда галактикасы','Galaxie v Andromedě','Andromeda Galaxy','Andromedagalaxie','Galaxie d’Andromède','Galaxia de Andrómeda','Galassia di Andromeda','Galaktyka Andromedy','Andromedastelsel'],
+    ['Соседка Млечного Пути','Құс жолының көршісі','Sousedka Mléčné dráhy','Milky Way’s Neighbour','Nachbarin der Milchstraße','Voisine de la Voie lactée','Vecina de la Vía Láctea','Vicina della Via Lattea','Sąsiadka Drogi Mlecznej','Buurgalaxie van de Melkweg'],
+    ['Большая спиральная галактика примерно в 2,5 миллиона световых лет от Земли. Дэйв мечтает устроить там самую большую теплицу во Вселенной.','Жерден шамамен 2,5 миллион жарық жылы қашықтықта орналасқан үлкен шиыршықты галактика. Дэйв онда Ғаламдағы ең үлкен жылыжайды ашуды армандайды.','Velká spirální galaxie vzdálená od Země asi 2,5 milionu světelných let. Dave sní o tom, že tam postaví největší skleník ve vesmíru.','A large spiral galaxy about 2.5 million light-years from Earth. Dave dreams of building the biggest greenhouse in the universe there.','Eine große Spiralgalaxie, etwa 2,5 Millionen Lichtjahre von der Erde entfernt. Dave träumt davon, dort das größte Gewächshaus des Universums zu errichten.','Une grande galaxie spirale située à environ 2,5 millions d’années-lumière de la Terre. Dave rêve d’y construire la plus grande serre de l’Univers.','Una gran galaxia espiral situada a unos 2,5 millones de años luz de la Tierra. Dave sueña con construir allí el invernadero más grande del universo.','Una grande galassia a spirale a circa 2,5 milioni di anni luce dalla Terra. Dave sogna di costruirvi la serra più grande dell’universo.','Duża galaktyka spiralna oddalona o około 2,5 miliona lat świetlnych od Ziemi. Dave marzy o zbudowaniu tam największej szklarni we Wszechświecie.','Een groot spiraalstelsel op ongeveer 2,5 miljoen lichtjaar van de aarde. Dave droomt ervan daar de grootste kas van het heelal te bouwen.'],
+    ['🔬 Факт:','🔬 Дерек:','🔬 Fakt:','🔬 Fact:','🔬 Fakt:','🔬 Fait :','🔬 Dato:','🔬 Curiosità:','🔬 Ciekawostka:','🔬 Weetje:'],
+    ['Проверить эксперимент','Тәжірибені тексеру','Ověřit experiment','Test Experiment','Experiment testen','Tester l’expérience','Probar el experimento','Prova l’esperimento','Przetestuj eksperyment','Experiment testen'],
+    ['Закрыть','Жабу','Zavřít','Close','Schließen','Fermer','Cerrar','Chiudi','Zamknij','Sluiten'],
+    ['Эксперименты','Тәжірибелер','Experimenty','Experiments','Experimente','Expériences','Experimentos','Esperimenti','Eksperymenty','Experimenten'],
+    ['Безумный Дэйв','Ессіз Дэйв','Šílený Dave','Crazy Dave','Verrückter Dave','Dave le Fou','Dave el Loco','Dave il Pazzo','Szalony Dave','Gekke Dave'],
+    ['Новая игра','Жаңа ойын','Nová hra','New Game','Neues Spiel','Nouvelle partie','Nueva partida','Nuova partita','Nowa gra','Nieuw spel'],
+    ['Начать игру','Ойынды бастау','Spustit hru','Start Game','Spiel starten','Commencer','Iniciar juego','Inizia il gioco','Rozpocznij grę','Spel starten'],
+    ['Победа!','Жеңіс!','Vítězství!','Victory!','Sieg!','Victoire !','¡Victoria!','Vittoria!','Zwycięstwo!','Gewonnen!'],
+    ['Поражение!','Жеңіліс!','Porážka!','Defeat!','Niederlage!','Défaite !','¡Derrota!','Sconfitta!','Porażka!','Verloren!'],
+    ['Все 20 волн пройдены! Лаборатория Дэйва спасена!','Барлық 20 толқыннан өттің! Дэйвтің зертханасы құтқарылды!','Všech 20 vln je za tebou! Daveova laboratoř je zachráněna!','All 20 waves completed! Dave’s lab is saved!','Alle 20 Wellen geschafft! Daves Labor ist gerettet!','Les 20 vagues sont terminées ! Le laboratoire de Dave est sauvé !','¡Has superado las 20 oleadas! ¡El laboratorio de Dave está a salvo!','Hai superato tutte le 20 ondate! Il laboratorio di Dave è salvo!','Wszystkie 20 fal ukończone! Laboratorium Dave’a jest uratowane!','Alle 20 golven zijn voltooid! Daves lab is gered!'],
+        ['Волна','Толқын','Vlna','Wave','Welle','Vague','Oleada','Ondata','Fala','Golf'],
+    ['Ряд','Қатар','Řada','Row','Reihe','Rangée','Fila','Riga','Rząd','Rij'],
+    ['Клетка','Ұяшық','Políčko','Tile','Feld','Case','Casilla','Casella','Pole','Vakje'],
+    ['Здоровье','Денсаулық','Zdraví','Health','Gesundheit','Santé','Salud','Salute','Zdrowie','Gezondheid'],
+    ['Солнце собрано!','Күн жиналды!','Slunce sesbíráno!','Sun collected!','Sonne gesammelt!','Soleil récolté !','¡Sol recogido!','Sole raccolto!','Słońce zebrane!','Zon verzameld!'],
+    ['Собрать 25 солнц','25 күн жинау','Sesbírat 25 sluncí','Collect 25 sun','25 Sonnen sammeln','Récolter 25 soleils','Recoger 25 soles','Raccogli 25 soli','Zbierz 25 słoneczek','Verzamel 25 zonnen'],
+    ['Зомби побеждён!','Зомби жеңілді!','Zombie poražen!','Zombie defeated!','Zombie besiegt!','Zombie vaincu !','¡Zombi derrotado!','Zombie sconfitto!','Zombie pokonany!','Zombie verslagen!'],
+    ['Зомби прорвались!','Зомбилер басып кірді!','Zombie pronikli!','The zombies broke through!','Die Zombies sind durchgebrochen!','Les zombies ont percé !','¡Los zombis han atravesado la defensa!','Gli zombi hanno sfondato!','Zombie się przedarły!','De zombies zijn doorgebroken!'],
+    ['Сначала выбери растение!','Алдымен өсімдікті таңда!','Nejprve vyber rostlinu!','Choose a plant first!','Wähle zuerst eine Pflanze!','Choisis d’abord une plante !','¡Elige primero una planta!','Scegli prima una pianta!','Najpierw wybierz roślinę!','Kies eerst een plant!'],
+    ['Не хватает солнца!','Күн жеткіліксіз!','Nedostatek slunce!','Not enough sun!','Nicht genug Sonne!','Pas assez de soleil !','¡No hay suficiente sol!','Sole insufficiente!','Za mało słońca!','Niet genoeg zon!'],
+    ['Эта клетка уже занята!','Бұл ұяшық бос емес!','Toto políčko je už obsazené!','This tile is already occupied!','Dieses Feld ist bereits belegt!','Cette case est déjà occupée !','¡Esta casilla ya está ocupada!','Questa casella è già occupata!','To pole jest już zajęte!','Dit vakje is al bezet!'],
+    ['Дождись окончания волны!','Толқын аяқталғанша күт!','Počkej, až vlna skončí!','Wait until the wave ends!','Warte, bis die Welle vorbei ist!','Attends la fin de la vague !','¡Espera a que termine la oleada!','Aspetta che finisca l’ondata!','Poczekaj, aż fala się skończy!','Wacht tot de golf voorbij is!'],
+    ['Во время волны новые растения пока сажать нельзя!','Толқын кезінде жаңа өсімдіктерді отырғызуға болмайды!','Během vlny nelze sázet nové rostliny!','You cannot plant new plants during a wave!','Während einer Welle kannst du keine neuen Pflanzen setzen!','Tu ne peux pas planter de nouvelles plantes pendant une vague !','¡No puedes plantar nuevas plantas durante una oleada!','Non puoi piantare nuove piante durante un’ondata!','Podczas fali nie można sadzić nowych roślin!','Tijdens een golf kun je geen nieuwe planten planten!'],
+    ['Новая игра! Выбери растения и подготовь газон. 🌱','Жаңа ойын! Өсімдіктерді таңдап, көгалды дайында. 🌱','Nová hra! Vyber rostliny a připrav trávník. 🌱','New game! Choose plants and prepare the lawn. 🌱','Neues Spiel! Wähle Pflanzen und bereite den Rasen vor. 🌱','Nouvelle partie ! Choisis tes plantes et prépare la pelouse. 🌱','¡Nueva partida! Elige plantas y prepara el césped. 🌱','Nuova partita! Scegli le piante e prepara il prato. 🌱','Nowa gra! Wybierz rośliny i przygotuj trawnik. 🌱','Nieuw spel! Kies planten en bereid het gazon voor. 🌱'],
+    ['Подсолнухи произвели','Күнбағыстар өндірді','Slunečnice vyprodukovaly','Sunflowers produced','Sonnenblumen haben produziert','Les tournesols ont produit','Los girasoles han producido','I girasoli hanno prodotto','Słoneczniki wyprodukowały','Zonnebloemen hebben geproduceerd'],
+    ['Горошина попала! Осталось здоровья зомби:','Асбұршақ тиді! Зомбидің қалған денсаулығы:','Hrášek zasáhl! Zbývající zdraví zombie:','Pea hit! Zombie health remaining:','Erbse getroffen! Verbleibende Zombie-Gesundheit:','Le petit pois a touché sa cible ! Santé restante du zombie :','¡El guisante ha acertado! Salud restante del zombi:','Il pisello ha colpito! Salute rimanente dello zombie:','Groch trafił! Pozostałe zdrowie zombie:','Erwt geraakt! Resterende gezondheid van de zombie:'],
+    ['Победа! 🌻 +50 солнц. Подготовься к волне','Жеңіс! 🌻 +50 күн. Толқынға дайындал','Vítězství! 🌻 +50 sluncí. Připrav se na vlnu','Victory! 🌻 +50 sun. Prepare for wave','Sieg! 🌻 +50 Sonne. Bereite dich auf die Welle vor','Victoire ! 🌻 +50 soleils. Prépare-toi pour la vague','¡Victoria! 🌻 +50 soles. Prepárate para la oleada','Vittoria! 🌻 +50 soli. Preparati per l’ondata','Zwycięstwo! 🌻 +50 słońc. Przygotuj się na falę','Gewonnen! 🌻 +50 zon. Bereid je voor op golf'],
+    ['Зомби идут справа налево! 🧟','Зомбилер оңнан солға қарай келе жатыр! 🧟','Zombie jdou zprava doleva! 🧟','Zombies are coming from right to left! 🧟','Zombies kommen von rechts nach links! 🧟','Les zombies arrivent de droite à gauche ! 🧟','¡Los zombis vienen de derecha a izquierda! 🧟','Gli zombi arrivano da destra a sinistra! 🧟','Zombie idą z prawej na lewo! 🧟','Zombies komen van rechts naar links! 🧟'],
+    ['Выбери клетку.','Ұяшықты таңда.','Vyber políčko.','Choose a tile.','Wähle ein Feld.','Choisis une case.','Elige una casilla.','Scegli una casella.','Wybierz pole.','Kies een vakje.'],
+    ['Растение посажено!','Өсімдік отырғызылды!','Rostlina zasazena!','Plant placed!','Pflanze gesetzt!','Plante installée !','¡Planta colocada!','Pianta posizionata!','Roślina posadzona!','Plant geplaatst!'],
+    ['Солнца недостаточно для этого растения!','Бұл өсімдікке күн жеткіліксіз!','Pro tuto rostlinu nemáš dost slunce!','Not enough sun for this plant!','Nicht genug Sonne für diese Pflanze!','Pas assez de soleil pour cette plante !','¡No hay suficiente sol para esta planta!','Sole insufficiente per questa pianta!','Za mało słońca na tę roślinę!','Niet genoeg zon voor deze plant!'],
+    ['Нажми «Новая игра», чтобы начать заново.','Қайта бастау үшін «Жаңа ойын» түймесін бас.','Klikni na „Nová hra“ a začni znovu.','Click “New Game” to start again.','Klicke auf „Neues Spiel“, um erneut zu beginnen.','Clique sur « Nouvelle partie » pour recommencer.','Pulsa «Nueva partida» para empezar de nuevo.','Fai clic su «Nuova partita» per ricominciare.','Kliknij „Nowa gra”, aby zacząć od nowa.','Klik op ‘Nieuw spel’ om opnieuw te beginnen.'],
+    ['Лаборатория Дэйва спасена!','Дэйвтің зертханасы құтқарылды!','Daveova laboratoř je zachráněna!','Dave’s lab is saved!','Daves Labor ist gerettet!','Le laboratoire de Dave est sauvé !','¡El laboratorio de Dave está a salvo!','Il laboratorio di Dave è salvo!','Laboratorium Dave’a jest uratowane!','Daves lab is gered!'],
+        ['Растения','Өсімдіктер','Rostliny','Plants','Pflanzen','Plantes','Plantas','Piante','Rośliny','Planten'],
+    ['Зомби','Зомбилер','Zombie','Zombies','Zombies','Zombies','Zombis','Zombi','Zombie','Zombies'],
+    ['Солнечная энергия','Күн энергиясы','Sluneční energie','Solar energy','Sonnenenergie','Énergie solaire','Energía solar','Energia solare','Energia słoneczna','Zonne-energie'],
+    ['Защита','Қорғаныс','Obrana','Defense','Verteidigung','Défense','Defensa','Difesa','Obrona','Verdediging'],
+    ['Лаборатория','Зертхана','Laboratoř','Laboratory','Labor','Laboratoire','Laboratorio','Laboratorio','Laboratorium','Laboratorium'],
+    ['Космос','Ғарыш','Vesmír','Space','Weltraum','Espace','Espacio','Spazio','Kosmos','Ruimte'],
+    ['Звезда','Жұлдыз','Hvězda','Star','Stern','Étoile','Estrella','Stella','Gwiazda','Ster'],
+    ['Планета','Ғаламшар','Planeta','Planet','Planet','Planète','Planeta','Pianeta','Planeta','Planeet'],
+    ['Галактика','Галактика','Galaxie','Galaxy','Galaxie','Galaxie','Galaxia','Galassia','Galaktyka','Melkwegstelsel'],
+    ['Научный эксперимент','Ғылыми тәжірибе','Vědecký experiment','Scientific experiment','Wissenschaftliches Experiment','Expérience scientifique','Experimento científico','Esperimento scientifico','Eksperyment naukowy','Wetenschappelijk experiment'],
+    ['Исследовать','Зерттеу','Prozkoumat','Explore','Erforschen','Explorer','Explorar','Esplora','Zbadaj','Onderzoeken'],
+    ['Начать эксперимент','Тәжірибені бастау','Spustit experiment','Start Experiment','Experiment starten','Lancer l’expérience','Iniciar experimento','Avvia esperimento','Rozpocznij eksperyment','Experiment starten'],
+    ['Эксперимент завершён!','Тәжірибе аяқталды!','Experiment dokončen!','Experiment complete!','Experiment abgeschlossen!','Expérience terminée !','¡Experimento terminado!','Esperimento completato!','Eksperyment zakończony!','Experiment voltooid!'],
+    ['Ошибка эксперимента!','Тәжірибе қатесі!','Chyba experimentu!','Experiment error!','Experimentfehler!','Erreur d’expérience !','¡Error en el experimento!','Errore dell’esperimento!','Błąd eksperymentu!','Experimentfout!'],
+    ['Вернуться','Қайту','Zpět','Return','Zurückkehren','Retour','Volver','Torna indietro','Wróć','Terug'],
+    ['Продолжить','Жалғастыру','Pokračovat','Continue','Weiter','Continuer','Continuar','Continua','Kontynuuj','Doorgaan'],
+    ['Готово!','Дайын!','Hotovo!','Done!','Fertig!','Terminé !','¡Listo!','Fatto!','Gotowe!','Klaar!'],
+    ['Загрузка…','Жүктелуде…','Načítání…','Loading…','Wird geladen…','Chargement…','Cargando…','Caricamento…','Ładowanie…','Laden…'],
+    ['Подготовка лаборатории…','Зертхана дайындалуда…','Příprava laboratoře…','Preparing the lab…','Labor wird vorbereitet…','Préparation du laboratoire…','Preparando el laboratorio…','Preparazione del laboratorio…','Przygotowywanie laboratorium…','Laboratorium voorbereiden…'],
+    ['Внимание!','Назар аудар!','Pozor!','Warning!','Achtung!','Attention !','¡Atención!','Attenzione!','Uwaga!','Let op!'],
+    ['Успех!','Сәттілік!','Úspěch!','Success!','Erfolg!','Réussite !','¡Éxito!','Successo!','Sukces!','Succes!'],
+    ['Попробуй ещё раз','Қайтадан көр','Zkus to znovu','Try again','Versuche es erneut','Réessaie','Inténtalo de nuevo','Riprova','Spróbuj ponownie','Probeer opnieuw'],
+    ['Растение готово к посадке','Өсімдік отырғызуға дайын','Rostlina je připravena k zasazení','Plant ready to be planted','Pflanze bereit zum Einpflanzen','Plante prête à être plantée','Planta lista para plantar','Pianta pronta per essere piantata','Roślina gotowa do posadzenia','Plant klaar om te planten'],
+    ['Зомби приближается!','Зомби жақындап келеді!','Zombie se blíží!','Zombie approaching!','Zombie nähert sich!','Un zombie approche !','¡Se acerca un zombi!','Uno zombie si avvicina!','Zombie się zbliża!','Zombie nadert!'],
+    ['Волна начинается!','Толқын басталды!','Vlna začíná!','Wave starting!','Die Welle beginnt!','La vague commence !','¡Comienza la oleada!','L’ondata comincia!','Fala się zaczyna!','De golf begint!'],
+    ['Все растения посажены','Барлық өсімдіктер отырғызылды','Všechny rostliny jsou zasazeny','All plants planted','Alle Pflanzen sind gesetzt','Toutes les plantes sont plantées','Todas las plantas están plantadas','Tutte le piante sono state piantate','Wszystkie rośliny posadzone','Alle planten zijn geplant'],
+    ['Собирай солнце, чтобы покупать растения!','Өсімдіктер сатып алу үшін күн жина!','Sbírej slunce a kupuj rostliny!','Collect sun to buy plants!','Sammle Sonne, um Pflanzen zu kaufen!','Récolte du soleil pour acheter des plantes !','¡Recoge sol para comprar plantas!','Raccogli il sole per comprare piante!','Zbieraj słońce, aby kupować rośliny!','Verzamel zon om planten te kopen!'],
+    ['Не позволяй зомби добраться до лаборатории!','Зомбилердің зертханаға жетуіне жол берме!','Nedovol zombíkům dostat se do laboratoře!','Do not let zombies reach the lab!','Lass die Zombies nicht ins Labor gelangen!','Ne laisse pas les zombies atteindre le laboratoire !','¡No dejes que los zombis lleguen al laboratorio!','Non lasciare che gli zombi raggiungano il laboratorio!','Nie pozwól zombie dotrzeć do laboratorium!','Laat de zombies het lab niet bereiken!'],
+    ['Дэйв доволен твоей работой!','Дэйв сенің жұмысыңа риза!','Dave je s tvou prací spokojen!','Dave is pleased with your work!','Dave ist mit deiner Arbeit zufrieden!','Dave est satisfait de ton travail !','¡Dave está satisfecho con tu trabajo!','Dave è soddisfatto del tuo lavoro!','Dave jest zadowolony z twojej pracy!','Dave is tevreden over je werk!'],
+    ['Дэйв: «Нужно больше растений!»','Дэйв: «Өсімдіктерді көбейту керек!»','Dave: „Potřebujeme více rostlin!“','Dave: “We need more plants!”','Dave: „Wir brauchen mehr Pflanzen!“','Dave : « Il nous faut plus de plantes ! »','Dave: «¡Necesitamos más plantas!»','Dave: «Servono più piante!»','Dave: „Potrzebujemy więcej roślin!”','Dave: “We hebben meer planten nodig!”'],
+    ['Выберите растение','Өсімдікті таңдаңыз','Vyber rostlinu','Choose a plant','Pflanze auswählen','Choisissez une plante','Elige una planta','Scegli una pianta','Wybierz roślinę','Kies een plant'],
+['Растение выбрано','Өсімдік таңдалды','Rostlina vybrána','Plant selected','Pflanze ausgewählt','Plante sélectionnée','Planta seleccionada','Pianta selezionata','Wybrano roślinę','Plant geselecteerd'],
+['Недостаточно солнечных очков','Күн ұпайлары жеткіліксіз','Nedostatek slunečních bodů','Not enough sun points','Nicht genug Sonnenpunkte','Pas assez de points de soleil','No tienes suficientes puntos de sol','Punti sole insufficienti','Za mało punktów słońca','Niet genoeg zonnepunten'],
+['Солнце','Күн','Slunce','Sun','Sonne','Soleil','Sol','Sole','Słońce','Zon'],
+['Здоровье','Денсаулық','Zdraví','Health','Gesundheit','Santé','Salud','Salute','Zdrowie','Gezondheid'],
+['Волна','Толқын','Vlna','Wave','Welle','Vague','Oleada','Ondata','Fala','Golf'],
+['Уровень','Деңгей','Úroveň','Level','Level','Niveau','Nivel','Livello','Poziom','Niveau'],
+['Пауза','Үзіліс','Pauza','Pause','Pause','Pause','Pausa','Pausa','Pauza','Pauze'],
+['Продолжить','Жалғастыру','Pokračovat','Resume','Fortsetzen','Reprendre','Continuar','Riprendi','Wznów','Hervatten'],
+['Заново','Қайта бастау','Znovu','Restart','Neu starten','Recommencer','Reiniciar','Ricomincia','Uruchom ponownie','Opnieuw starten'],
+['Начать игру','Ойынды бастау','Spustit hru','Start game','Spiel starten','Démarrer le jeu','Iniciar juego','Avvia il gioco','Rozpocznij grę','Start spel'],
+['Игра окончена','Ойын аяқталды','Konec hry','Game over','Spiel vorbei','Fin de partie','Fin del juego','Partita terminata','Koniec gry','Spel afgelopen'],
+['Победа!','Жеңіс!','Vítězství!','Victory!','Sieg!','Victoire !','¡Victoria!','Vittoria!','Zwycięstwo!','Overwinning!'],
+['Попробуйте ещё раз','Қайталап көріңіз','Zkuste to znovu','Try again','Versuchen Sie es erneut','Réessayez','Inténtalo de nuevo','Riprova','Spróbuj ponownie','Probeer het opnieuw'],
+['Загрузка...','Жүктелуде...','Načítání...','Loading...','Wird geladen...','Chargement...','Cargando...','Caricamento...','Ładowanie...','Laden...'],
+['Настройки','Параметрлер','Nastavení','Settings','Einstellungen','Paramètres','Ajustes','Impostazioni','Ustawienia','Instellingen'],
+['Звук','Дыбыс','Zvuk','Sound','Ton','Son','Sonido','Suono','Dźwięk','Geluid'],
+['Музыка','Музыка','Hudba','Music','Musik','Musique','Música','Musica','Muzyka','Muziek'],
+['Включить','Қосу','Zapnout','Enable','Einschalten','Activer','Activar','Attiva','Włącz','Inschakelen'],
+['Выключить','Өшіру','Vypnout','Disable','Ausschalten','Désactiver','Desactivar','Disattiva','Wyłącz','Uitschakelen'],
+['Назад','Артқа','Zpět','Back','Zurück','Retour','Volver','Indietro','Wstecz','Terug'],
+['Закрыть','Жабу','Zavřít','Close','Schließen','Fermer','Cerrar','Chiudi','Zamknij','Sluiten'],
+['Да','Иә','Ano','Yes','Ja','Oui','Sí','Sì','Tak','Ja'],
+['Нет','Жоқ','Ne','No','Nein','Non','No','No','Nie','Nee'],
+['Подтвердить','Растау','Potvrdit','Confirm','Bestätigen','Confirmer','Confirmar','Conferma','Potwierdź','Bevestigen'],
+['Отмена','Бас тарту','Zrušit','Cancel','Abbrechen','Annuler','Cancelar','Annulla','Anuluj','Annuleren'],
+['Новая игра','Жаңа ойын','Nová hra','New game','Neues Spiel','Nouvelle partie','Nueva partida','Nuova partita','Nowa gra','Nieuw spel'],
+['Продолжить игру','Ойынды жалғастыру','Pokračovat ve hře','Continue game','Spiel fortsetzen','Continuer la partie','Continuar partida','Continua la partita','Kontynuuj grę','Spel voortzetten'],
+['Сохранить','Сақтау','Uložit','Save','Speichern','Enregistrer','Guardar','Salva','Zapisz','Opslaan'],
+['Загрузка сохранения...','Сақталған ойын жүктелуде...','Načítání uložené hry...','Loading save...','Spielstand wird geladen...','Chargement de la sauvegarde...','Cargando partida guardada...','Caricamento del salvataggio...','Wczytywanie zapisu...','Opgeslagen spel laden...'],
+];
+
+const normalize = text =>
+  String(text ?? '').replace(/\s+/g, ' ').trim();
+
+const translations = {};
+
+for (const row of rows) {
+  const original = normalize(row[0]);
+  if (!original) continue;
+
+  translations[original] = {};
+
+  langs.forEach((lang, index) => {
+    translations[original][lang] = row[index] || original;
+  });
+}
+
+function detectDaveLabLanguage() {
+  const saved = localStorage.getItem('siteLanguage');
+
+  if (langs.includes(saved)) {
+    return saved;
+  }
+
+  return 'ru';
+}
+
+function translateDaveLabText(text, lang) {
+  const original = normalize(text);
+  return translations[original]?.[lang] ?? text;
+}
+
+function applyDaveLabLanguage(root = document.body) {
+  const lang = detectDaveLabLanguage();
+
+  const walker = document.createTreeWalker(
+    root,
+    NodeFilter.SHOW_TEXT
+  );
+
+  const textNodes = [];
+
+  while (walker.nextNode()) {
+    textNodes.push(walker.currentNode);
+  }
+
+  for (const node of textNodes) {
+    if (!node.nodeValue.trim()) continue;
+
+    if (!node.dataset.originalText) {
+      node.dataset.originalText = node.nodeValue;
+    }
+
+    node.nodeValue = translateDaveLabText(
+      node.dataset.originalText,
+      lang
+    );
+  }
+
+  root.querySelectorAll?.('[placeholder], [title], [aria-label]').forEach(el => {
+    for (const attr of ['placeholder', 'title', 'aria-label']) {
+      if (!el.hasAttribute(attr)) continue;
+
+      const key = `original${attr}`;
+
+      if (!el.dataset[key]) {
+        el.dataset[key] = el.getAttribute(attr);
+      }
+
+      el.setAttribute(
+        attr,
+        translateDaveLabText(el.dataset[key], lang)
+      );
+    }
+  });
+}
+
+window.applyDaveLabLanguage = applyDaveLabLanguage;
+
+document.addEventListener('DOMContentLoaded', () => {
+  applyDaveLabLanguage();
+
+  const observer = new MutationObserver(mutations => {
+    for (const mutation of mutations) {
+      for (const node of mutation.addedNodes) {
+        if (node.nodeType === Node.ELEMENT_NODE) {
+          applyDaveLabLanguage(node);
+        } else if (node.nodeType === Node.TEXT_NODE) {
+          const lang = detectDaveLabLanguage();
+          node.nodeValue = translateDaveLabText(node.nodeValue, lang);
+        }
+      }
+    }
+  });
+
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+});
+
+})();

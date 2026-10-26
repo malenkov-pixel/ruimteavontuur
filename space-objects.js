@@ -894,7 +894,289 @@ const extraObjects = {
 
 };
 
+// =====================================================
+// 🇵🇱 POLSKI + 🇳🇱 NEDERLANDS
+// Полная локализация страницы «Космические объекты»
+// =====================================================
 
+// 🌐 Информация о языках и флагах
+Object.assign(languageInfo, {
+    pl: {
+        name: "Polski",
+        flag: "images/poland.png"
+    },
+
+    nl: {
+        name: "Nederlands",
+        flag: "images/netherlands.png"
+    }
+});
+
+
+// 🌌 Основные надписи страницы
+Object.assign(translations, {
+    pl: {
+        title: "Obiekty kosmiczne",
+        subtitle: "Odkrywaj niezwykłe obiekty Wszechświata",
+        introTitle: "🔭 Co kryje się w kosmosie?",
+        introText:
+            "Wszechświat jest pełen niezwykłych obiektów — od ogromnych gwiazd i mgławic po asteroidy, komety i czarne dziury.",
+        back: "← Powrót do kosmicznej przygody",
+        fact: "🔭 Ciekawostka",
+        footer: "🌌 Kosmiczna przygoda Papyrusa © 2026"
+    },
+
+    nl: {
+        title: "Ruimteobjecten",
+        subtitle: "Ontdek de bijzondere objecten van het heelal",
+        introTitle: "🔭 Wat verbergt de ruimte?",
+        introText:
+            "Het heelal zit vol bijzondere objecten — van enorme sterren en nevels tot asteroïden, kometen en zwarte gaten.",
+        back: "← Terug naar het ruimteavontuur",
+        fact: "🔭 Interessant weetje",
+        footer: "🌌 Het ruimteavontuur van Papyrus © 2026"
+    }
+});
+
+
+// ☄️ Комета
+Object.assign(objects.comet, {
+    pl: {
+        title: "Kometa",
+        description:
+            "Kometa to niewielkie ciało kosmiczne zbudowane głównie z lodu, pyłu i cząstek skalnych.",
+        fact:
+            "Gdy kometa zbliża się do Słońca, jej lód się nagrzewa, a wokół jądra powstaje koma i warkocz."
+    },
+
+    nl: {
+        title: "Komeet",
+        description:
+            "Een komeet is een klein hemellichaam dat voornamelijk bestaat uit ijs, stof en rotsdeeltjes.",
+        fact:
+            "Wanneer een komeet de zon nadert, warmt het ijs op en kunnen er een coma en een staart ontstaan."
+    }
+});
+
+
+// 🪨 Астероид
+Object.assign(objects.asteroid, {
+    pl: {
+        title: "Asteroida",
+        description:
+            "Asteroida to skalne lub metaliczne ciało niebieskie krążące wokół Słońca.",
+        fact:
+            "Większość znanych asteroid Układu Słonecznego znajduje się w głównym pasie asteroid między Marsem a Jowiszem."
+    },
+
+    nl: {
+        title: "Asteroïde",
+        description:
+            "Een asteroïde is een rotsachtig of metalen hemellichaam dat om de zon draait.",
+        fact:
+            "De meeste bekende asteroïden in het zonnestelsel bevinden zich in de belangrijkste asteroïdengordel tussen Mars en Jupiter."
+    }
+});
+
+
+// 🌠 Метеор
+Object.assign(objects.meteor, {
+    pl: {
+        title: "Meteor",
+        description:
+            "Meteor to zjawisko świetlne powstające, gdy ciało kosmiczne wchodzi w atmosferę.",
+        fact:
+            "Bardzo jasne meteory są czasami nazywane bolidami."
+    },
+
+    nl: {
+        title: "Meteoor",
+        description:
+            "Een meteoor is een lichtverschijnsel dat ontstaat wanneer een ruimtedeeltje de atmosfeer binnendringt.",
+        fact:
+            "Zeer heldere meteoren worden soms vuurballen genoemd."
+    }
+});
+
+
+// 🌌 Туманность
+Object.assign(objects.nebula, {
+    pl: {
+        title: "Mgławica",
+        description:
+            "Mgławica to ogromny obłok gazu i pyłu w przestrzeni kosmicznej.",
+        fact:
+            "Niektóre mgławice są obszarami, w których rodzą się nowe gwiazdy."
+    },
+
+    nl: {
+        title: "Nevel",
+        description:
+            "Een nevel is een enorme wolk van gas en stof in de ruimte.",
+        fact:
+            "Sommige nevels zijn gebieden waar nieuwe sterren ontstaan."
+    }
+});
+
+
+// ⭐ Звезда
+Object.assign(objects.star, {
+    pl: {
+        title: "Gwiazda",
+        description:
+            "Gwiazda to ogromne, gorące ciało niebieskie emitujące energię.",
+        fact:
+            "Słońce jest gwiazdą znajdującą się najbliżej Ziemi."
+    },
+
+    nl: {
+        title: "Ster",
+        description:
+            "Een ster is een enorm, heet hemellichaam dat energie uitstraalt.",
+        fact:
+            "De zon is de ster die het dichtst bij de aarde staat."
+    }
+});
+
+
+// 🕳️ Чёрная дыра
+Object.assign(objects.blackHole, {
+    pl: {
+        title: "Czarna dziura",
+        description:
+            "Czarna dziura to obszar przestrzeni o niezwykle silnej grawitacji.",
+        fact:
+            "Granica, zza której światło nie może już uciec, nazywa się horyzontem zdarzeń."
+    },
+
+    nl: {
+        title: "Zwart gat",
+        description:
+            "Een zwart gat is een gebied in de ruimte met een extreem sterke zwaartekracht.",
+        fact:
+            "De grens waarachter licht niet meer kan ontsnappen, heet de waarnemingshorizon."
+    }
+});
+
+
+// 🌌 Дополнительные космические объекты
+
+// Галактика
+Object.assign(extraObjects.galaxy.names, {
+    pl: "Galaktyka",
+    nl: "Sterrenstelsel"
+});
+
+Object.assign(extraObjects.galaxy.descriptions, {
+    pl:
+        "Ogromny układ złożony z gwiazd, gazu, pyłu i innych składników.",
+    nl:
+        "Een enorm systeem dat bestaat uit sterren, gas, stof en andere bestanddelen."
+});
+
+Object.assign(extraObjects.galaxy.facts, {
+    pl: "Słońce znajduje się w galaktyce Drogi Mlecznej.",
+    nl: "De zon bevindt zich in het sterrenstelsel de Melkweg."
+});
+
+
+// Пульсар
+Object.assign(extraObjects.pulsar.names, {
+    pl: "Pulsar",
+    nl: "Pulsar"
+});
+
+Object.assign(extraObjects.pulsar.descriptions, {
+    pl:
+        "Szybko obracająca się gwiazda neutronowa, która emituje regularne impulsy promieniowania.",
+    nl:
+        "Een snel draaiende neutronenster die regelmatig stralingspulsen uitzendt."
+});
+
+Object.assign(extraObjects.pulsar.facts, {
+    pl:
+        "Niektóre pulsary obracają się dziesiątki, a nawet setki razy na sekundę.",
+    nl:
+        "Sommige pulsars draaien tientallen of zelfs honderden keren per seconde."
+});
+
+
+// Нейтронная звезда
+Object.assign(extraObjects.neutronStar.names, {
+    pl: "Gwiazda neutronowa",
+    nl: "Neutronenster"
+});
+
+Object.assign(extraObjects.neutronStar.descriptions, {
+    pl:
+        "Niezwykle gęsta pozostałość masywnej gwiazdy po zakończeniu jej ewolucji.",
+    nl:
+        "Een extreem dicht overblijfsel van een zware ster aan het einde van haar evolutie."
+});
+
+Object.assign(extraObjects.neutronStar.facts, {
+    pl: "Gwiazdy neutronowe mają niezwykle dużą gęstość.",
+    nl: "Neutronensterren hebben een uitzonderlijk hoge dichtheid."
+});
+
+
+// Красный гигант
+Object.assign(extraObjects.redGiant.names, {
+    pl: "Czerwony olbrzym",
+    nl: "Rode reus"
+});
+
+Object.assign(extraObjects.redGiant.descriptions, {
+    pl:
+        "Etap życia gwiazdy, w którym znacznie zwiększa ona swoje rozmiary wskutek zmian zachodzących w jej wnętrzu.",
+    nl:
+        "Een fase in het leven van een ster waarin deze sterk uitzet door veranderingen in haar binnenste."
+});
+
+Object.assign(extraObjects.redGiant.facts, {
+    pl: "W odległej przyszłości Słońce również stanie się czerwonym olbrzymem.",
+    nl: "In de verre toekomst zal de zon ook een rode reus worden."
+});
+
+
+// Белый карлик
+Object.assign(extraObjects.whiteDwarf.names, {
+    pl: "Biały karzeł",
+    nl: "Witte dwerg"
+});
+
+Object.assign(extraObjects.whiteDwarf.descriptions, {
+    pl:
+        "Gorąca i gęsta pozostałość gwiazdy, która zakończyła główny etap swojego życia.",
+    nl:
+        "Een heet en dicht overblijfsel van een ster die het grootste deel van haar leven heeft doorlopen."
+});
+
+Object.assign(extraObjects.whiteDwarf.facts, {
+    pl: "Białe karły stopniowo stygną z upływem czasu.",
+    nl: "Witte dwergen koelen na verloop van tijd geleidelijk af."
+});
+
+
+// Сверхновая
+Object.assign(extraObjects.supernova.names, {
+    pl: "Supernowa",
+    nl: "Supernova"
+});
+
+Object.assign(extraObjects.supernova.descriptions, {
+    pl:
+        "Niezwykle potężne zjawisko kosmiczne związane z końcem życia niektórych gwiazd.",
+    nl:
+        "Een uiterst krachtige kosmische gebeurtenis die verband houdt met het einde van sommige sterren."
+});
+
+Object.assign(extraObjects.supernova.facts, {
+    pl:
+        "Supernowe mogą przez krótki czas świecić niezwykle jasno.",
+    nl:
+        "Supernova's kunnen korte tijd uitzonderlijk helder schijnen."
+});
 function toggleLanguageMenu() {
 
     const dropdown =
