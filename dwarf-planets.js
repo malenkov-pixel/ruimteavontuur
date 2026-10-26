@@ -643,93 +643,154 @@ const dwarfTranslations = {
     },
 
 
-    it: {
-
+       it: {
         name: "Italiano",
-
-        title:
-            "🪐 Pianeti nani",
-
-        subtitle:
-            "Piccoli mondi del Sistema Solare.",
-
-        back:
-            "← Avventura spaziale",
-
-        sectionTitle:
-            "🌌 Pianeti nani conosciuti",
-
-        sectionDescription:
-            "Esplora i mondi insoliti del Sistema Solare.",
-
-        explore:
-            "🔭 Esplora",
-
-        close:
-            "Chiudi",
-
-        footer:
-            "🌌 Avventura spaziale di Papyrus © 2026",
+        title: "🪐 Pianeti nani",
+        subtitle: "Piccoli mondi del Sistema Solare.",
+        back: "← Avventura spaziale",
+        sectionTitle: "🌌 Pianeti nani conosciuti",
+        sectionDescription: "Esplora i mondi insoliti del Sistema Solare.",
+        explore: "🔭 Esplora",
+        close: "Chiudi",
+        footer: "🌌 Avventura spaziale di Papyrus © 2026",
 
         planets: {
-
             "Плутон": {
                 name: "Plutone",
-                short:
-                    "Un famoso mondo nano ai confini del Sistema Solare.",
-                description:
-                    "Plutone si trova nella fascia di Kuiper oltre l'orbita di Nettuno. È composto da una miscela di roccia e ghiaccio. La sua superficie contiene ghiaccio di azoto, metano e acqua. Plutone ha cinque lune conosciute, la più grande delle quali è Caronte.",
-                image:
-                    "images/pluto.jpg",
+                short: "Un famoso mondo nano ai confini del Sistema Solare.",
+                description: "Plutone si trova nella fascia di Kuiper oltre l'orbita di Nettuno. È composto da una miscela di roccia e ghiaccio. La sua superficie contiene ghiaccio di azoto, metano e acqua. Plutone ha cinque lune conosciute, la più grande delle quali è Caronte.",
+                image: "images/pluto.jpg",
                 symbol: "♇"
             },
-
             "Церера": {
                 name: "Cerere",
-                short:
-                    "Il più grande oggetto della fascia principale degli asteroidi.",
-                description:
-                    "Cerere si trova nella fascia principale degli asteroidi, tra le orbite di Marte e Giove. È l'unico pianeta nano ufficialmente riconosciuto nella parte interna del Sistema Solare. Cerere contiene materiale roccioso e ghiaccio.",
-                image:
-                    "images/ceres.jpg",
+                short: "Il più grande oggetto della fascia principale degli asteroidi.",
+                description: "Cerere si trova nella fascia principale degli asteroidi, tra le orbite di Marte e Giove. È l'unico pianeta nano ufficialmente riconosciuto nella parte interna del Sistema Solare. Cerere contiene materiale roccioso e ghiaccio.",
+                image: "images/ceres.jpg",
                 symbol: "⚳"
             },
-
             "Хаумеа": {
                 name: "Haumea",
-                short:
-                    "Un mondo ghiacciato a rotazione rapida della fascia di Kuiper.",
-                description:
-                    "Haumea si trova nella fascia di Kuiper oltre Nettuno. Ruota molto velocemente e per questo ha una forma allungata. Ha due lune conosciute e un sistema di anelli.",
-               image:
-                    "https://malenkov-pixel.github.io/ruimteavontuur/images/Haumea.jpg",
+                short: "Un mondo ghiacciato a rotazione rapida della fascia di Kuiper.",
+                description: "Haumea si trova nella fascia di Kuiper oltre Nettuno. Ruota molto velocemente e per questo ha una forma allungata. Ha due lune conosciute e un sistema di anelli.",
+                image: "images/Haumea.jpg",
                 symbol: "🪐"
             },
-
             "Макемаке": {
                 name: "Makemake",
-                short:
-                    "Un freddo mondo ghiacciato oltre Nettuno.",
-                description:
-                    "Makemake è un grande oggetto della fascia di Kuiper situato molto oltre Nettuno. La sua superficie contiene grandi quantità di sostanze volatili congelate, tra cui il metano. Makemake ha una luna conosciuta.",
-                image:
-                    "images/makemake.jpg",
+                short: "Un freddo mondo ghiacciato oltre Nettuno.",
+                description: "Makemake è un grande oggetto della fascia di Kuiper situato molto oltre Nettuno. La sua superficie contiene grandi quantità di sostanze volatili congelate, tra cui il metano. Makemake ha una luna conosciuta.",
+                image: "images/makemake.jpg",
                 symbol: "🪐"
             },
-
             "Эрида": {
                 name: "Eris",
-                short:
-                    "Un mondo nano molto lontano del disco diffuso.",
-                description:
-                    "Eris si trova in una regione molto lontana del Sistema Solare associata al disco diffuso. Le sue dimensioni sono simili a quelle di Plutone. Eris ha una luna conosciuta, Disnomia.",
-                image:
-                    "images/eris.jpg",
+                short: "Un mondo nano molto lontano del disco diffuso.",
+                description: "Eris si trova in una regione molto lontana del Sistema Solare associata al disco diffuso. Le sue dimensioni sono simili a quelle di Plutone. Eris ha una luna conosciuta, Disnomia.",
+                image: "images/eris.jpg",
                 symbol: "🪐"
             }
-
         }
+    },
 
+    pl: {
+        name: "Polski",
+        title: "🪐 Planety karłowate",
+        subtitle: "Małe światy Układu Słonecznego.",
+        back: "← Kosmiczna przygoda",
+        sectionTitle: "🌌 Znane planety karłowate",
+        sectionDescription: "Odkrywaj niezwykłe światy Układu Słonecznego.",
+        explore: "🔭 Odkrywaj",
+        close: "Zamknij",
+        footer: "🌌 Kosmiczna przygoda Papyrusa © 2026",
+
+        planets: {
+            "Плутон": {
+                name: "Pluton",
+                short: "Znany świat karłowaty na obrzeżach Układu Słonecznego.",
+                description: "Pluton znajduje się w Pasie Kuipera, za orbitą Neptuna. Składa się z mieszaniny skał i lodu. Na jego powierzchni występują lód azotowy, metanowy i wodny. Pluton ma pięć znanych księżyców, z których największy to Charon.",
+                image: "images/pluto.jpg",
+                symbol: "♇"
+            },
+            "Церера": {
+                name: "Ceres",
+                short: "Największy obiekt głównego pasa planetoid.",
+                description: "Ceres znajduje się w głównym pasie planetoid między orbitami Marsa i Jowisza. Jest jedyną oficjalnie uznaną planetą karłowatą w wewnętrznej części Układu Słonecznego. Zawiera materiały skalne i lód.",
+                image: "images/ceres.jpg",
+                symbol: "⚳"
+            },
+            "Хаумеа": {
+                name: "Haumea",
+                short: "Szybko obracający się lodowy świat w Pasie Kuipera.",
+                description: "Haumea znajduje się w Pasie Kuipera za orbitą Neptuna. Obraca się wyjątkowo szybko, dlatego ma wydłużony kształt. Ma dwa znane księżyce i własny system pierścieni.",
+                image: "images/Haumea.jpg",
+                symbol: "🪐"
+            },
+            "Макемаке": {
+                name: "Makemake",
+                short: "Zimny, lodowy świat za orbitą Neptuna.",
+                description: "Makemake to duży obiekt Pasa Kuipera położony daleko za Neptunem. Jego powierzchnia zawiera dużo zamarzniętych substancji lotnych, w tym metan. Makemake ma jeden znany księżyc.",
+                image: "images/makemake.jpg",
+                symbol: "🪐"
+            },
+            "Эрида": {
+                name: "Eris",
+                short: "Bardzo odległy świat karłowaty dysku rozproszonego.",
+                description: "Eris znajduje się w bardzo odległym regionie Układu Słonecznego związanym z dyskiem rozproszonym. Jej rozmiar jest zbliżony do rozmiaru Plutona. Eris ma jeden znany księżyc, Dysnomię.",
+                image: "images/eris.jpg",
+                symbol: "🪐"
+            }
+        }
+    },
+
+    nl: {
+        name: "Nederlands",
+        title: "🪐 Dwergplaneten",
+        subtitle: "Kleine werelden van het zonnestelsel.",
+        back: "← Ruimteavontuur",
+        sectionTitle: "🌌 Bekende dwergplaneten",
+        sectionDescription: "Ontdek de bijzondere werelden van het zonnestelsel.",
+        explore: "🔭 Ontdekken",
+        close: "Sluiten",
+        footer: "🌌 Het ruimteavontuur van Papyrus © 2026",
+
+        planets: {
+            "Плутон": {
+                name: "Pluto",
+                short: "Een bekende dwergwereld aan de rand van het zonnestelsel.",
+                description: "Pluto bevindt zich in de Kuipergordel, voorbij de baan van Neptunus. De planeet bestaat uit een mengsel van gesteente en ijs. Het oppervlak bevat stikstof-, methaan- en waterijs. Pluto heeft vijf bekende manen, waarvan Charon de grootste is.",
+                image: "images/pluto.jpg",
+                symbol: "♇"
+            },
+            "Церера": {
+                name: "Ceres",
+                short: "Het grootste object in de belangrijkste planetoïdengordel.",
+                description: "Ceres bevindt zich in de belangrijkste planetoïdengordel tussen de banen van Mars en Jupiter. Het is de enige officieel erkende dwergplaneet in het binnenste deel van het zonnestelsel. Ceres bevat gesteente en ijs.",
+                image: "images/ceres.jpg",
+                symbol: "⚳"
+            },
+            "Хаумеа": {
+                name: "Haumea",
+                short: "Een snel draaiende ijswereld in de Kuipergordel.",
+                description: "Haumea bevindt zich in de Kuipergordel, voorbij de baan van Neptunus. Ze draait uitzonderlijk snel en heeft daardoor een langgerekte vorm. Haumea heeft twee bekende manen en een eigen ringensysteem.",
+                image: "images/Haumea.jpg",
+                symbol: "🪐"
+            },
+            "Макемаке": {
+                name: "Makemake",
+                short: "Een koude ijswereld voorbij de baan van Neptunus.",
+                description: "Makemake is een groot object in de Kuipergordel, ver voorbij Neptunus. Het oppervlak bevat veel bevroren vluchtige stoffen, waaronder methaan. Makemake heeft één bekende maan.",
+                image: "images/makemake.jpg",
+                symbol: "🪐"
+            },
+            "Эрида": {
+                name: "Eris",
+                short: "Een zeer verre dwergwereld in de verstrooide schijf.",
+                description: "Eris bevindt zich in een zeer ver gebied van het zonnestelsel dat samenhangt met de verstrooide schijf. Ze is ongeveer vergelijkbaar in grootte met Pluto. Eris heeft één bekende maan, Dysnomia.",
+                image: "images/eris.jpg",
+                symbol: "🪐"
+            }
+        }
     }
 
 };
@@ -936,16 +997,9 @@ function openDwarfModal(originalName) {
     }
 
 
-    if (image) {
-
-    image.src =
-        "https://malenkov-pixel.github.io/ruimteavontuur/images/Haumea.jpg";
-        console.log("КАРТИНКА:", image.src);
-console.log("ШИРИНА:", image.width);
-console.log("ВЫСОТА:", image.height);
-
-    image.alt =
-        data.name;
+if (image) {
+    image.src = data.image;
+    image.alt = data.name;
 }
 
 
