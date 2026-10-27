@@ -3689,6 +3689,47 @@ if (
 
 }
 function toggleLanguageMenu() {
+    const dropdown = document.getElementById("languageDropdown");
+    const button = document.getElementById("languageButton");
+
+    if (!dropdown || !button) return;
+
+    // Если список уже открыт — закрываем его
+    if (dropdown.classList.contains("open")) {
+        dropdown.classList.remove("open");
+        return;
+    }
+
+    // Перемещаем список непосредственно в body,
+    // чтобы родительские элементы не прятали его позади карточек
+    if (dropdown.parentElement !== document.body) {
+        document.body.appendChild(dropdown);
+    }
+
+    // Определяем положение кнопки на экране
+    const rect = button.getBoundingClientRect();
+
+    dropdown.style.setProperty("position", "fixed", "important");
+    dropdown.style.setProperty("z-index", "2147483647", "important");
+
+    const menuWidth = dropdown.offsetWidth || 190;
+    const menuHeight = dropdown.offsetHeight || 300;
+
+    const left = Math.max(
+        10,
+        Math.min(rect.left, window.innerWidth - menuWidth - 10)
+    );
+
+    const top = Math.max(
+        10,
+        Math.min(rect.bottom + 10, window.innerHeight - menuHeight - 10)
+    );
+
+    dropdown.style.setProperty("left", `${left}px`, "important");
+    dropdown.style.setProperty("top", `${top}px`, "important");
+
+    dropdown.classList.add("open");
+}{
 
     const dropdown =
         document.getElementById("languageDropdown");
@@ -3704,7 +3745,21 @@ document.addEventListener(
     event => {
 
         const menu =
-            document.querySelector(".language-menu");
+            document.addEventListener("click", event => {
+    const menu = document.querySelector(".language-menu");
+    const dropdown = document.getElementById("languageDropdown");
+
+    if (!menu || !dropdown) return;
+
+    // Не закрываем список, если нажали на кнопку языка
+    // или внутри самого раскрытого списка
+    if (
+        !menu.contains(event.target) &&
+        !dropdown.contains(event.target)
+    ) {
+        dropdown.classList.remove("open");
+    }
+});;
 
         const dropdown =
             document.getElementById("languageDropdown");

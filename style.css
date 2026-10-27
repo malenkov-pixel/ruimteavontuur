@@ -2422,3 +2422,116 @@ footer {
     transform: rotate(2deg) scale(1.06) !important;
     filter: brightness(1.15) !important;
 }
+
+/* 🌐 Список языков — поверх остальных элементов сайта */
+.language-selector,
+.language-switcher,
+.language-dropdown-container,
+.language-control {
+    position: relative !important;
+    z-index: 99998 !important;
+}
+
+/* 📋 Само раскрывающееся меню языков */
+.language-menu,
+.language-dropdown,
+.language-dropdown-menu,
+.language-dropdown-content,
+.language-options,
+.language-list,
+#languageMenu,
+#languageDropdownMenu,
+#languageOptions {
+    z-index: 99999 !important;
+}
+
+/* 🖱️ Кнопки выбора языка внутри списка */
+.language-menu button,
+.language-dropdown button,
+.language-dropdown-menu button,
+.language-dropdown-content button,
+.language-options button,
+.language-list button {
+    position: relative;
+    z-index: 100000;
+}
+
+/* 🌐 ПОДНИМАЕМ ШАПКУ САЙТА НАД ОСТАЛЬНЫМИ СЕКЦИЯМИ */
+/* 🌐 Поднимаем только меню языков */
+.language-menu {
+    z-index: 2147483000 !important;
+}
+
+/* 📋 Список языков поверх карточек */
+#languageDropdown {
+    z-index: 2147483001 !important;
+}
+
+/* ✨ Открытый список */
+#languageDropdown.open {
+    z-index: 2147483001 !important;
+}
+/* Контейнер выбора языка */
+.language-menu {
+    position: relative !important;
+    z-index: 2147483001 !important;
+    overflow: visible !important;
+}
+
+/* Раскрывающийся список языков */
+#languageDropdown.language-dropdown {
+    position: absolute !important;
+    z-index: 2147483002 !important;
+    overflow: visible !important;
+}
+
+/* Когда список открыт */
+#languageDropdown.language-dropdown.open {
+    z-index: 2147483002 !important;
+    visibility: visible;
+}
+
+/* 🌐 Меню языков всегда следует за экраном */
+.language-menu {
+    position: fixed !important;
+
+    top: 20px !important;
+    left: 20px !important;
+
+    z-index: 2147483000 !important;
+}
+
+/* 📋 Список языков поверх содержимого сайта */
+#languageDropdown {
+    position: absolute !important;
+    z-index: 2147483001 !important;
+}
+
+/* 📱 Положение на маленьких экранах */
+@media (max-width: 550px) {
+    .language-menu {
+        top: 12px !important;
+        left: 12px !important;
+    }
+}
+/* 🌐 Кнопка языков остаётся на экране */
+.language-menu {
+    position: fixed !important;
+    top: 20px !important;
+    left: 20px !important;
+    z-index: 2147483647 !important;
+}
+
+/* 📋 Список языков выводится поверх содержимого сайта */
+#languageDropdown.language-dropdown {
+    position: fixed !important;
+    z-index: 2147483647 !important;
+}
+
+/* 📱 Отступы на маленьком экране */
+@media (max-width: 550px) {
+    .language-menu {
+        top: 12px !important;
+        left: 12px !important;
+    }
+}
