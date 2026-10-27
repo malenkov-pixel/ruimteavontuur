@@ -253,6 +253,44 @@
         >
             🌌 Космические объекты
         </a>
+        
+<!-- 💌 Личные послания -->
+<div class="personal-message-buttons">
+    <button
+        class="personal-message-button miras-button"
+        onclick="openPersonalMessage('miras')"
+    >
+        Для Мираса
+    </button>
+
+    <button
+        class="personal-message-button alikhan-button"
+        onclick="openPersonalMessage('alikhan')"
+    >
+        Для Алихана
+    </button>
+</div>
+
+<!-- 💌 Окна личных посланий -->
+<div id="personalMessageModal" class="personal-message-modal">
+    <div class="personal-message-content">
+        <h2 id="personalMessageTitle">Для Мираса</h2>
+
+        <div id="personalMessageText" class="personal-message-text"></div>
+
+        <button
+            class="personal-message-close"
+            
+<button
+    class="personal-message-close"
+    onclick="closePersonalMessage()"
+>
+    Закрыть
+</button>
+
+    </div>
+</div>
+
 
         <a
             href="kain-encyclopedia.html"

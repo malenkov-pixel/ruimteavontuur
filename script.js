@@ -4379,3 +4379,64 @@ document.addEventListener("DOMContentLoaded", () => {
         updateNewSectionsLanguage();
     }
 }); 
+
+/* =========================================
+   💌 ЛИЧНЫЕ ПОСЛАНИЯ
+========================================= */
+
+const personalMessages = {
+    miras: {
+        title: "Для Мираса",
+        text: `непослушный алихан это не для тебя послание иди в свою кнопку
+
+даров мирас хотел тебе сказать что не воспринимай мои слова в серьёз тогда не знаю почему но мне кажется что ты разочарован в чём то и на самом деле ни одно слово нн было адресовано тебе если тебе показалось иное то тебе кажется не бери всё близко к сердцу ведь всё же не каждое слово то правда то и не сбылось тем более ваще у тебя там миллион будет впереди комуникаций которые будут и по хреще меня обзываться поэтому по стоять за себя те придётся хотя ты это и без моих убеждений знаешь стримись живи и продвигайся дальше`
+    },
+
+    alikhan: {
+        title: "Для Алихана",
+        text: `наивный мирас что тут лезешь не для тебя тут слова они не тебе нужны так что вали отсюда
+
+здаров алихан чё хотел тебе сказать так это то что несмотря на все травли что ты получал в школе ты ж всё понимал что это всё не так прям было для тя опазно но уважение кидаю что не стал как нытик и слабак жаловаться а пережил тот период унижений которые я тебе надовал в 9 классе и если я делал это для прикола и больше иронизировал это но с другими придурками лучше не лезть в драку: если они сильнее, отойди и обратись за помощью. Это не слабость, а способ защитить себя. В общем живи радуйся и не комплексуй дышы полной грудью и т.д (а ещё на другие языки это сообщение можешь не проверять я не переводил)`
+    }
+};
+
+function openPersonalMessage(person) {
+    const message = personalMessages[person];
+    const modal = document.getElementById("personalMessageModal");
+    const title = document.getElementById("personalMessageTitle");
+    const text = document.getElementById("personalMessageText");
+
+    if (!message || !modal || !title || !text) {
+        return;
+    }
+
+    title.textContent = message.title;
+    text.textContent = message.text;
+
+    modal.classList.add("open");
+    document.body.style.overflow = "hidden";
+}
+
+function closePersonalMessage() {
+    const modal = document.getElementById("personalMessageModal");
+
+    if (modal) {
+        modal.classList.remove("open");
+    }
+
+    document.body.style.overflow = "";
+}
+
+document.addEventListener("click", function (event) {
+    const modal = document.getElementById("personalMessageModal");
+
+    if (modal && event.target === modal) {
+        closePersonalMessage();
+    }
+});
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+        closePersonalMessage();
+    }
+});
