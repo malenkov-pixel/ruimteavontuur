@@ -3688,48 +3688,20 @@ if (
     }
 
 }
+
 function toggleLanguageMenu() {
-    const dropdown = document.getElementById("languageDropdown");
-    const button = document.getElementById("languageButton");
+   
+    if (!dropdown || !menu) return;
 
-    if (!dropdown || !button) return;
-
-    // Если список уже открыт — закрываем его
-    if (dropdown.classList.contains("open")) {
-        dropdown.classList.remove("open");
-        return;
+    // Возвращаем список внутрь исходного меню
+    if (dropdown.parentElement !== menu) {
+        menu.appendChild(dropdown);
     }
 
-    // Перемещаем список непосредственно в body,
-    // чтобы родительские элементы не прятали его позади карточек
-    if (dropdown.parentElement !== document.body) {
-        document.body.appendChild(dropdown);
-    }
+    // Открываем или закрываем список
+    dropdown.classList.toggle("open");
+}
 
-    // Определяем положение кнопки на экране
-    const rect = button.getBoundingClientRect();
-
-    dropdown.style.setProperty("position", "fixed", "important");
-    dropdown.style.setProperty("z-index", "2147483647", "important");
-
-    const menuWidth = dropdown.offsetWidth || 190;
-    const menuHeight = dropdown.offsetHeight || 300;
-
-    const left = Math.max(
-        10,
-        Math.min(rect.left, window.innerWidth - menuWidth - 10)
-    );
-
-    const top = Math.max(
-        10,
-        Math.min(rect.bottom + 10, window.innerHeight - menuHeight - 10)
-    );
-
-    dropdown.style.setProperty("left", `${left}px`, "important");
-    dropdown.style.setProperty("top", `${top}px`, "important");
-
-    dropdown.classList.add("open");
-}{
 
     const dropdown =
         document.getElementById("languageDropdown");
@@ -3737,42 +3709,22 @@ function toggleLanguageMenu() {
     if (dropdown) {
         dropdown.classList.toggle("open");
     }
-}
 
 
-document.addEventListener(
-    "click",
-    event => {
 
-        const menu =
-            document.addEventListener("click", event => {
+
+document.addEventListener("click", event => {
     const menu = document.querySelector(".language-menu");
     const dropdown = document.getElementById("languageDropdown");
 
     if (!menu || !dropdown) return;
 
-    // Не закрываем список, если нажали на кнопку языка
-    // или внутри самого раскрытого списка
-    if (
-        !menu.contains(event.target) &&
-        !dropdown.contains(event.target)
-    ) {
+    // Закрываем меню только при клике за его пределами
+    if (!menu.contains(event.target)) {
         dropdown.classList.remove("open");
     }
-});;
+});
 
-        const dropdown =
-            document.getElementById("languageDropdown");
-
-        if (!menu || !dropdown) {
-            return;
-        }
-
-        if (!menu.contains(event.target)) {
-            dropdown.classList.remove("open");
-        }
-    }
-);
 
 
 /* =========================================================
@@ -4495,3 +4447,55 @@ document.addEventListener("keydown", function (event) {
         closePersonalMessage();
     }
 });
+
+/* 🌐 Закрепляем весь контейнер языков поверх страницы */
+function ensureLanguageMenuOnTop() {
+    const menu = document.querySelector(".language-menu");
+    const dropdown = document.getElementById("languageDropdown");
+
+    if (!menu || !dropdown) return null;
+
+    // Переносим весь контейнер из header непосредственно в body
+    if (menu.parentElement !== document.body) {
+        document.body.appendChild(menu);
+    }
+
+    // Список должен оставаться внутри контейнера
+    if (dropdown.parentElement !== menu) {
+        menu.appendChild(dropdown);
+    }
+
+    return { menu, dropdown };
+}
+
+/* Открытие и закрытие списка */
+function toggleLanguageMenu() {
+    const elements = ensureLanguageMenuOnTop();
+
+    if (!elements) return;
+
+    elements.dropdown.classList.toggle("open");
+}
+
+/* Закрытие при клике за пределами меню */
+document.addEventListener("click", event => {
+    const elements = ensureLanguageMenuOnTop();
+
+    if (!elements) return;
+
+    const { menu, dropdown } = elements;
+
+    if (!menu.contains(event.target)) {
+        dropdown.classList.remove("open");
+    }
+});
+
+/* Подготавливаем меню после загрузки HTML */
+if (document.readyState === "loading") {
+    document.addEventListener(
+        "DOMContentLoaded",
+        ensureLanguageMenuOnTop
+    );
+} else {
+    ensureLanguageMenuOnTop();
+}
