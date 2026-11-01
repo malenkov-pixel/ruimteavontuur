@@ -4499,3 +4499,53 @@ if (document.readyState === "loading") {
 } else {
     ensureLanguageMenuOnTop();
 }
+
+/* =========================================
+   🎃 ПЕРЕКЛЮЧЕНИЕ ХЭЛЛОУИНСКОЙ ТЕМЫ
+   ========================================= */
+
+function applyHalloweenTheme(enabled) {
+    document.body.classList.toggle("halloween-theme", enabled);
+
+    const button = document.getElementById("halloweenThemeButton");
+
+    if (button) {
+        button.textContent = enabled
+            ? "🌌 Обычная тема"
+            : "🎃 Хэллоуин";
+
+        button.setAttribute(
+            "aria-pressed",
+            String(enabled)
+        );
+    }
+
+    try {
+        localStorage.setItem(
+            "siteHalloweenTheme",
+            enabled ? "on" : "off"
+        );
+    } catch (error) {
+        console.warn("Не удалось сохранить оформление:", error);
+    }
+}
+
+function toggleHalloweenTheme() {
+    const enabled =
+        !document.body.classList.contains("halloween-theme");
+
+    applyHalloweenTheme(enabled);
+}
+
+/* Восстанавливаем выбранную тему после обновления */
+document.addEventListener("DOMContentLoaded", () => {
+    let savedTheme = "off";
+
+    try {
+        savedTheme = localStorage.getItem("siteHalloweenTheme") || "off";
+    } catch (error) {
+        console.warn("Не удалось прочитать настройки темы:", error);
+    }
+
+    applyHalloweenTheme(savedTheme === "on");
+});

@@ -2596,3 +2596,486 @@ body > .language-menu #languageDropdown.open {
         left: 12px !important;
     }
 }
+
+/* =========================================
+   🎃 ПЕРЕКЛЮЧАТЕЛЬ ХЭЛЛОУИНСКОЙ ТЕМЫ
+   ========================================= */
+
+.halloween-theme-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2147483646;
+
+    padding: 12px 20px;
+    border: 2px solid rgba(255, 153, 65, 0.8);
+    border-radius: 999px;
+
+    background: linear-gradient(135deg, #3a1748, #171020);
+    color: #fff0d6;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 15px rgba(255, 112, 35, 0.35),
+        0 0 25px rgba(130, 40, 160, 0.2);
+
+    transition: 0.25s ease;
+}
+
+.halloween-theme-button:hover {
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 0 25px rgba(255, 112, 35, 0.7);
+}
+
+/* =========================================
+   🦇 ХЭЛЛОУИНСКОЕ ОФОРМЛЕНИЕ
+   ========================================= */
+
+body.halloween-theme {
+    background:
+        radial-gradient(
+            circle at 18% 18%,
+            rgba(255, 95, 20, 0.25),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 82% 70%,
+            rgba(130, 35, 150, 0.28),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #08040c,
+            #1c0b1d 48%,
+            #09040c
+        );
+
+    background-attachment: fixed;
+}
+
+/* Заголовки */
+body.halloween-theme header h1 {
+    color: #ffb66c;
+    text-shadow:
+        0 0 10px #ff7518,
+        0 0 25px #b83b19,
+        0 0 50px #622080;
+}
+
+body.halloween-theme header p {
+    color: #e4c2e8;
+}
+
+body.halloween-theme .intro h2,
+body.halloween-theme .planets h2,
+body.halloween-theme .moons h2 {
+    color: #ffb66c;
+    text-shadow:
+        0 0 12px rgba(255, 100, 20, 0.8),
+        0 0 28px rgba(140, 40, 160, 0.55);
+}
+
+/* Текст */
+body.halloween-theme .intro p,
+body.halloween-theme .moons p {
+    color: #e0cde2;
+}
+
+/* Карточки планет и спутников */
+body.halloween-theme .planet-card,
+body.halloween-theme .moon-card {
+    background: linear-gradient(
+        145deg,
+        rgba(47, 18, 43, 0.94),
+        rgba(15, 8, 24, 0.95)
+    ) !important;
+
+    border-color: rgba(255, 132, 60, 0.4) !important;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.5),
+        0 0 18px rgba(180, 65, 35, 0.15);
+}
+
+body.halloween-theme .planet-card h3,
+body.halloween-theme .moon-card h3 {
+    color: #ffbd83;
+}
+
+body.halloween-theme .planet-card p,
+body.halloween-theme .moon-card p {
+    color: #dfc4df;
+}
+
+body.halloween-theme .planet-card:hover,
+body.halloween-theme .moon-card:hover {
+    border-color: rgba(255, 145, 65, 0.85) !important;
+    box-shadow: 0 0 30px rgba(255, 100, 30, 0.3);
+}
+
+/* Кнопки главного меню */
+body.halloween-theme .intro button,
+body.halloween-theme #constellationButton {
+    background: linear-gradient(
+        135deg,
+        #ed6a19,
+        #8b32a8
+    ) !important;
+
+    color: white !important;
+
+    box-shadow:
+        0 0 18px rgba(255, 100, 20, 0.4),
+        0 0 25px rgba(140, 50, 170, 0.25);
+}
+
+/* Меню языков */
+body.halloween-theme .language-button {
+    border-color: rgba(255, 145, 65, 0.65);
+    background: linear-gradient(135deg, #381b42, #160e20);
+}
+
+body.halloween-theme .language-dropdown {
+    border-color: rgba(255, 145, 65, 0.55);
+    background: linear-gradient(145deg, #30152f, #100913);
+}
+
+body.halloween-theme .language-dropdown button:hover {
+    background: rgba(255, 110, 35, 0.2);
+}
+
+/* Информационные окна */
+body.halloween-theme .modal-content,
+body.halloween-theme .moon-modal-content {
+    border-color: rgba(255, 135, 60, 0.55);
+    box-shadow:
+        0 0 25px rgba(255, 100, 25, 0.2),
+        0 0 40px rgba(130, 40, 160, 0.2);
+}
+
+/* Подвал */
+body.halloween-theme footer {
+    color: #cba9d0;
+    border-color: rgba(255, 135, 60, 0.25);
+}
+
+/* Кнопка на маленьких экранах */
+@media (max-width: 550px) {
+    .halloween-theme-button {
+        top: 12px;
+        right: 12px;
+        padding: 9px 13px;
+        font-size: 13px;
+    }
+}
+
+/* 🎃 Хэллоуинская кнопка — под выбором языка */
+.halloween-theme-button {
+    position: fixed !important;
+
+    top: 75px !important;
+    left: 20px !important;
+    right: auto !important;
+
+    z-index: 2147483646 !important;
+}
+
+/* 📱 Для маленьких экранов */
+@media (max-width: 550px) {
+    .halloween-theme-button {
+        top: 62px !important;
+        left: 12px !important;
+        right: auto !important;
+    }
+}
+
+/* =========================================
+   🎃 ХЭЛЛОУИНСКИЕ КАРТИНКИ
+   ========================================= */
+
+/* Украшения скрыты в обычном режиме */
+.halloween-decor {
+    position: fixed;
+    z-index: 3;
+    pointer-events: none;
+
+    object-fit: contain;
+    opacity: 0;
+    visibility: hidden;
+
+    filter: drop-shadow(0 8px 14px rgba(255, 100, 25, 0.35));
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.5s ease,
+        visibility 0.4s ease;
+}
+
+/* Показываем украшения при включённом Хэллоуине */
+body.halloween-theme .halloween-decor {
+    opacity: 0.92;
+    visibility: visible;
+}
+
+/* 🧹 Метла — внизу справа */
+.halloween-broom {
+    width: 175px;
+    right: 18px;
+    bottom: 25px;
+    transform: rotate(-18deg);
+}
+
+/* 🎃 Обычная тыква — внизу слева */
+.halloween-pumpkin {
+    width: 125px;
+    left: 18px;
+    bottom: 25px;
+    transform: rotate(8deg);
+}
+
+/* 💀 Изолированный череп — справа */
+.halloween-human-skull {
+    width: 105px;
+    right: 24px;
+    top: 38%;
+    transform: rotate(12deg);
+}
+
+/* 👻 Страшная тыква — слева */
+.halloween-scary-pumpkin {
+    width: 145px;
+    left: 12px;
+    top: 55%;
+    transform: rotate(-9deg);
+}
+
+/* ☠️ Череп — справа в нижней части */
+.halloween-skull {
+    width: 95px;
+    right: 25px;
+    bottom: 34%;
+    transform: rotate(-10deg);
+}
+
+/* =========================================
+   🧙 ШЛЯПЫ НА ВСЕХ ДЕВЯТИ ПЛАНЕТАХ
+   ========================================= */
+
+body.halloween-theme .planet-card::before {
+    content: "";
+
+    position: absolute;
+    top: 3px;
+    left: 50%;
+
+    width: 110px;
+    height: 90px;
+
+    background-image: url("images/with_hat.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    transform: translateX(-50%) rotate(-9deg);
+
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* Шляпа остаётся над фотографией при наведении */
+body.halloween-theme .planet-card:hover::before {
+    transform: translateX(-50%) rotate(-9deg) scale(1.06);
+}
+
+/* 📱 На узких экранах оставляем только часть декора */
+@media (max-width: 650px) {
+    .halloween-human-skull,
+    .halloween-skull {
+        display: none;
+    }
+
+    .halloween-broom {
+        width: 105px;
+        right: 5px;
+        bottom: 10px;
+    }
+
+    .halloween-pumpkin {
+        width: 90px;
+        left: 5px;
+        bottom: 10px;
+    }
+
+    .halloween-scary-pumpkin {
+        width: 90px;
+        left: 5px;
+        top: auto;
+        bottom: 115px;
+    }
+
+    body.halloween-theme .planet-card::before {
+        width: 90px;
+        height: 75px;
+    }
+}
+
+/* 🎃 Декор закреплён на странице, а не на экране */
+.halloween-decorations {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.halloween-decor {
+    position: absolute !important;
+}
+
+/* Метла */
+.halloween-broom {
+    position: absolute !important;
+}
+
+/* Тыквы */
+.halloween-pumpkin,
+.halloween-scary-pumpkin {
+    position: absolute !important;
+}
+
+/* Черепа */
+.halloween-human-skull,
+.halloween-skull {
+    position: absolute !important;
+}
+
+/* =========================================
+   🎃 ХЭЛЛОУИНСКАЯ СХОДКА В ПОДВАЛЕ
+   ========================================= */
+
+.halloween-footer-gallery {
+    display: none;
+    width: 100%;
+    max-width: 1150px;
+    margin: 30px auto 5px;
+    padding: 22px 15px;
+
+    border: 1px solid rgba(255, 130, 45, 0.45);
+    border-radius: 22px;
+
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(120, 40, 100, 0.18),
+            transparent 70%
+        ),
+        rgba(12, 5, 20, 0.65);
+
+    box-shadow:
+        0 0 25px rgba(255, 105, 25, 0.15),
+        inset 0 0 25px rgba(130, 45, 130, 0.12);
+}
+
+/* Показываем галерею только в хэллоуинском режиме */
+body.halloween-theme .halloween-footer-gallery {
+    display: block;
+}
+
+.halloween-gallery-title {
+    margin-bottom: 22px;
+
+    color: #ffad65;
+    font-size: clamp(20px, 3vw, 28px);
+
+    text-align: center;
+
+    text-shadow:
+        0 0 10px rgba(255, 105, 25, 0.7),
+        0 0 25px rgba(150, 55, 170, 0.45);
+}
+
+/* Все изображения собираются вместе */
+.halloween-gallery-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 18px;
+}
+
+/* Карточки изображений */
+.halloween-gallery-items img {
+    display: block;
+
+    width: 125px;
+    height: 125px;
+
+    padding: 8px;
+
+    object-fit: contain;
+
+    border: 1px solid rgba(255, 145, 75, 0.3);
+    border-radius: 18px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(100, 35, 95, 0.35),
+            rgba(10, 5, 18, 0.8)
+        );
+
+    filter:
+        drop-shadow(0 5px 9px rgba(0, 0, 0, 0.5));
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Эффект при наведении */
+.halloween-gallery-items img:hover {
+    transform: translateY(-8px) rotate(-3deg) scale(1.08);
+
+    border-color: rgba(255, 155, 75, 0.85);
+
+    box-shadow:
+        0 0 18px rgba(255, 110, 35, 0.3),
+        0 0 25px rgba(130, 45, 160, 0.25);
+}
+
+/* Котёл — главный экспонат */
+.halloween-gallery-items img[src*="boiler"] {
+    width: 155px;
+    height: 145px;
+
+    border-color: rgba(170, 80, 210, 0.6);
+
+    box-shadow:
+        0 0 18px rgba(140, 55, 190, 0.35);
+}
+
+/* 📱 Телефоны */
+@media (max-width: 600px) {
+    .halloween-gallery-items {
+        gap: 10px;
+    }
+
+    .halloween-gallery-items img {
+        width: 95px;
+        height: 95px;
+    }
+
+    .halloween-gallery-items img[src*="boiler"] {
+        width: 110px;
+        height: 105px;
+    }
+}
