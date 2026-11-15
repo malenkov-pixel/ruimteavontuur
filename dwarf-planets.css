@@ -963,3 +963,507 @@ footer {
     background-color: #94754e;
     filter: sepia(0.5);
 }
+
+
+/* =========================================
+   🎃 КАРЛИКОВЫЕ ПЛАНЕТЫ — HALLOWEEN EDITION
+   Включается только при активной теме
+========================================= */
+
+/* Мистический фон */
+
+body.halloween-theme {
+    position: relative;
+    color: #fff0e8;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(130, 35, 105, 0.25),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 55%,
+            rgba(180, 45, 20, 0.17),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(105, 35, 145, 0.2),
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #09030e,
+            #190817,
+            #10040c,
+            #08030b
+        );
+}
+
+/* Мистический туман */
+
+body.halloween-theme::before {
+    content: "";
+    position: fixed;
+    inset: -20%;
+    z-index: -1;
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            ellipse at 20% 50%,
+            rgba(112, 37, 130, 0.12),
+            transparent 40%
+        ),
+        radial-gradient(
+            ellipse at 80% 30%,
+            rgba(190, 55, 20, 0.09),
+            transparent 40%
+        );
+
+    animation: halloweenFog 18s ease-in-out infinite alternate;
+}
+
+@keyframes halloweenFog {
+    from {
+        transform: translate(-3%, 0) scale(1);
+    }
+
+    to {
+        transform: translate(3%, 2%) scale(1.12);
+    }
+}
+
+/* Звёздный фон */
+
+body.halloween-theme .space-background {
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(255, 225, 190, 0.85) 1px,
+            transparent 1.5px
+        ),
+        radial-gradient(
+            circle,
+            rgba(200, 130, 255, 0.7) 1px,
+            transparent 1.5px
+        ),
+        radial-gradient(
+            circle,
+            rgba(255, 100, 55, 0.6) 1px,
+            transparent 1.5px
+        );
+
+    background-size:
+        95px 95px,
+        145px 145px,
+        190px 190px;
+
+    background-position:
+        10px 20px,
+        50px 80px,
+        90px 30px;
+}
+
+/* Шапка */
+
+body.halloween-theme .dwarf-header {
+    border-bottom: 1px solid rgba(255, 105, 55, 0.3);
+
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(130, 35, 85, 0.3),
+            transparent 70%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(24, 6, 20, 0.96),
+            rgba(12, 4, 15, 0.85)
+        );
+
+    box-shadow:
+        0 10px 50px rgba(0, 0, 0, 0.6),
+        0 5px 35px rgba(160, 45, 40, 0.12);
+}
+
+body.halloween-theme .dwarf-header h1 {
+    background:
+        linear-gradient(
+            90deg,
+            #fff0d5,
+            #ff9b42,
+            #d58bff,
+            #ff554c,
+            #fff0d5
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    filter: drop-shadow(0 0 15px rgba(255, 95, 35, 0.3));
+}
+
+body.halloween-theme .dwarf-header p {
+    color: #d9b8cb;
+}
+
+/* Кнопка возврата */
+
+body.halloween-theme .back-link {
+    color: #ffbf91;
+    border-color: rgba(255, 125, 75, 0.4);
+    background: rgba(90, 25, 48, 0.3);
+}
+
+body.halloween-theme .back-link:hover {
+    color: white;
+    background: rgba(150, 45, 45, 0.4);
+
+    box-shadow:
+        0 0 18px rgba(255, 95, 45, 0.35);
+}
+
+/* Меню языков */
+
+body.halloween-theme .language-menu > button {
+    border-color: rgba(205, 120, 170, 0.45);
+    background: rgba(35, 9, 32, 0.9);
+}
+
+body.halloween-theme .language-menu > button:hover {
+    background: rgba(105, 35, 85, 0.8);
+
+    box-shadow:
+        0 0 18px rgba(195, 80, 140, 0.35);
+}
+
+body.halloween-theme .language-dropdown {
+    border-color: rgba(200, 100, 155, 0.4);
+    background: rgba(20, 5, 19, 0.98);
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.7),
+        0 0 20px rgba(145, 35, 105, 0.15);
+}
+
+body.halloween-theme .language-dropdown button:hover {
+    background: rgba(170, 65, 110, 0.3);
+}
+
+/* Заголовок раздела */
+
+body.halloween-theme .dwarf-section h2 {
+    color: #ffd1b0;
+
+    text-shadow:
+        0 0 12px rgba(255, 95, 45, 0.3),
+        0 0 30px rgba(155, 55, 130, 0.3);
+}
+
+body.halloween-theme .section-description {
+    color: #c9a9bd;
+}
+
+/* Карточки планет */
+
+body.halloween-theme .dwarf-card {
+    border-color: rgba(185, 90, 125, 0.35);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(48, 17, 43, 0.96),
+            rgba(18, 6, 19, 0.98)
+        );
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.5),
+        inset 0 0 25px rgba(110, 35, 85, 0.08);
+}
+
+body.halloween-theme .dwarf-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #ff763e,
+            #bc66d5,
+            transparent
+        );
+
+    opacity: 0.7;
+    z-index: 2;
+}
+
+body.halloween-theme .dwarf-card:hover {
+    border-color: rgba(255, 130, 80, 0.75);
+
+    box-shadow:
+        0 0 25px rgba(255, 85, 40, 0.2),
+        0 0 35px rgba(155, 55, 145, 0.2),
+        0 20px 45px rgba(0, 0, 0, 0.6);
+}
+
+/* Изображения */
+
+body.halloween-theme .planet-image {
+    background: #100611;
+}
+
+/* Содержимое карточек */
+
+body.halloween-theme .planet-symbol {
+    filter:
+        drop-shadow(0 0 8px rgba(255, 125, 65, 0.5));
+}
+
+body.halloween-theme .card-content h3 {
+    color: #ffd0b0;
+
+    text-shadow:
+        0 0 12px rgba(190, 75, 100, 0.25);
+}
+
+body.halloween-theme .card-content p {
+    color: #cdb3c5;
+}
+
+/* Кнопки исследования */
+
+body.halloween-theme .explore-button {
+    border-color: rgba(255, 145, 80, 0.45);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(155, 55, 45, 0.9),
+            rgba(105, 35, 115, 0.9)
+        );
+}
+
+body.halloween-theme .explore-button:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #c54d32,
+            #873b9c
+        );
+
+    box-shadow:
+        0 0 20px rgba(255, 100, 50, 0.35);
+}
+
+/* Затемнение модального окна */
+
+body.halloween-theme .dwarf-modal {
+    background: rgba(8, 0, 12, 0.88);
+    backdrop-filter: blur(10px);
+}
+
+/* Модальное окно */
+
+body.halloween-theme .dwarf-modal-content {
+    border-color: rgba(220, 110, 125, 0.5);
+
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(125, 35, 100, 0.22),
+            transparent 40%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(45, 13, 38, 0.99),
+            rgba(13, 4, 16, 0.99)
+        );
+
+    box-shadow:
+        0 0 40px rgba(200, 65, 85, 0.2),
+        0 0 70px rgba(125, 40, 150, 0.15),
+        0 30px 80px rgba(0, 0, 0, 0.8);
+}
+
+body.halloween-theme .modal-symbol {
+    filter:
+        drop-shadow(0 0 10px rgba(255, 125, 65, 0.5));
+}
+
+body.halloween-theme .modal-info h2 {
+    color: #ffb58b;
+
+    text-shadow:
+        0 0 15px rgba(255, 85, 45, 0.3);
+}
+
+body.halloween-theme .modal-info p {
+    color: #e0cbd8;
+}
+
+/* Кнопка закрытия */
+
+body.halloween-theme .modal-close {
+    border-color: rgba(255, 200, 190, 0.4);
+    background: rgba(30, 5, 20, 0.8);
+}
+
+body.halloween-theme .modal-close:hover {
+    background: rgba(170, 40, 50, 0.85);
+
+    box-shadow:
+        0 0 18px rgba(255, 65, 55, 0.4);
+}
+
+/* Подвал */
+
+body.halloween-theme footer {
+    border-top-color: rgba(190, 75, 110, 0.25);
+
+    color: rgba(220, 180, 200, 0.65);
+    background: rgba(12, 3, 13, 0.9);
+
+    box-shadow:
+        0 -10px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Адаптация для телефонов */
+
+@media (max-width: 700px) {
+    body.halloween-theme .dwarf-header {
+        padding-top: 80px;
+    }
+}
+
+/* =========================================
+   🥔 GARDEN GAME — СОХРАНЁННЫЕ СТИЛИ
+   Эти правила работают в обоих режимах
+========================================= */
+
+.garden-cell.wallnut-damaged {
+    background-color: #b8a46a;
+    filter: sepia(0.25);
+}
+
+.garden-cell.wallnut-damaged::after {
+    content: "╲";
+    position: absolute;
+    z-index: 2;
+
+    color: #573b2b;
+    font-size: 30px;
+    font-weight: 900;
+
+    pointer-events: none;
+    transform: rotate(-20deg);
+}
+
+.garden-cell.wallnut-cracked {
+    background-color: #94754e;
+    filter: sepia(0.5);
+}
+
+.garden-cell.wallnut-cracked::after {
+    content: "╳";
+    position: absolute;
+    z-index: 2;
+
+    color: #3e2921;
+    font-size: 32px;
+    font-weight: 900;
+
+    text-shadow: 1px 1px #e3c68b;
+    pointer-events: none;
+
+    animation: wallnut-crack 0.4s ease-in-out;
+}
+
+.garden-cell.plant-bitten {
+    animation: plant-bite 0.25s ease-in-out;
+}
+
+@keyframes wallnut-crack {
+    from {
+        transform: scale(0.5) rotate(-25deg);
+    }
+
+    to {
+        transform: scale(1) rotate(0);
+    }
+}
+
+@keyframes plant-bite {
+    0%, 100% {
+        transform: translateX(0);
+    }
+
+    35% {
+        transform: translateX(-3px);
+    }
+
+    70% {
+        transform: translateX(3px);
+    }
+}
+
+.garden-board {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(9, minmax(0, 1fr));
+
+    gap: 3px;
+    padding: 7px;
+
+    overflow: hidden;
+
+    background: #234b28;
+    border: 4px solid #b2d96b;
+    border-radius: 13px;
+}
+
+.garden-cell {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+    place-items: center;
+
+    aspect-ratio: 1;
+    min-width: 0;
+    padding: 0;
+
+    background: #75bd4c;
+    border: 2px solid #4e913b;
+    border-radius: 5px;
+
+    font-size: clamp(15px, 3vw, 32px);
+
+    cursor: pointer;
+    filter: none;
+}
+
+.garden-cell:nth-child(even) {
+    background: #65ad43;
+}
+
+.garden-cell:hover {
+    background: #a6df63;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .garden-cell.wallnut-cracked::after,
+    .garden-cell.plant-bitten,
+    body.halloween-theme::before,
+    body.halloween-theme .space-background {
+        animation: none;
+    }
+}

@@ -1,0 +1,597 @@
+
+/* =========================================
+   ХЭЛЛОУИНСКИЕ УКРАШЕНИЯ ДЛЯ ВСЕХ СТРАНИЦ
+========================================= */
+
+.halloween-page-decor-layer {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s ease;
+}
+
+body.halloween-theme .halloween-page-decor-layer {
+    opacity: 1;
+    visibility: visible;
+}
+
+.halloween-page-decor {
+    display: block;
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    overflow: visible;
+    opacity: .82;
+    pointer-events: none;
+    filter: drop-shadow(0 0 9px rgba(180, 100, 255, .45));
+}
+
+/* Верхние углы */
+.hpage-decor-top-left {
+    top: 12px;
+    left: 12px;
+}
+
+.hpage-decor-top-right {
+    top: 12px;
+    right: 12px;
+}
+
+/* Нижние углы */
+.hpage-decor-bottom-left {
+    bottom: 12px;
+    left: 12px;
+}
+
+.hpage-decor-bottom-right {
+    bottom: 12px;
+    right: 12px;
+}
+
+/* Боковые части */
+.hpage-decor-mid-left {
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+.hpage-decor-mid-right {
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+/* Небольшое движение */
+.halloween-page-decor-layer .halloween-page-decor {
+    animation: hpage-floating 5s ease-in-out infinite;
+}
+
+.halloween-page-decor-layer .halloween-page-decor:nth-child(2) {
+    animation-delay: 1.2s;
+}
+
+.halloween-page-decor-layer .halloween-page-decor:nth-child(3) {
+    animation-delay: 2.1s;
+}
+
+@keyframes hpage-floating {
+    0%, 100% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -8px;
+    }
+}
+
+/* Маленькие украшения на карточках */
+.halloween-card-corner {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    width: 38px;
+    height: 38px;
+    z-index: 3;
+    opacity: 0;
+    pointer-events: none;
+    filter: drop-shadow(0 0 8px rgba(255, 145, 55, .55));
+    transition: opacity .3s ease;
+}
+
+body.halloween-theme .halloween-card-corner {
+    opacity: .85;
+}
+
+/* На телефонах уменьшаем фигурки */
+@media (max-width: 650px) {
+    .halloween-page-decor {
+        width: 43px;
+        height: 43px;
+    }
+
+    .hpage-decor-top-left,
+    .hpage-decor-bottom-left {
+        left: 5px;
+    }
+
+    .hpage-decor-top-right,
+    .hpage-decor-bottom-right {
+        right: 5px;
+    }
+
+    .halloween-card-corner {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* Учитываем настройки уменьшения движения */
+@media (prefers-reduced-motion: reduce) {
+    .halloween-page-decor-layer .halloween-page-decor {
+        animation: none;
+    }
+}
+
+/* ==========================================
+   🎃 HALLOWEEN THEME — ОБЩЕЕ ОФОРМЛЕНИЕ
+   Работает на всех страницах сайта
+========================================== */
+
+body.halloween-theme {
+    --halloween-purple: #9b4dff;
+    --halloween-orange: #ff8a24;
+    --halloween-red: #a51d42;
+    --halloween-border: rgba(174, 83, 255, 0.48);
+    --halloween-text: #eee3f5;
+
+    color: var(--halloween-text);
+    background-color: #0a0710;
+
+    /* Сохраняем исходный космический фон и добавляем
+       только внутреннее зловещее свечение */
+    box-shadow: inset 0 0 180px rgba(106, 25, 100, 0.20);
+}
+
+/* Заголовки */
+
+body.halloween-theme h1,
+body.halloween-theme h2,
+body.halloween-theme h3,
+body.halloween-theme h4 {
+    color: #e3b5ff;
+    text-shadow:
+        0 0 8px rgba(174, 76, 255, 0.65),
+        0 0 22px rgba(125, 35, 190, 0.35);
+}
+
+/* Основной текст */
+
+body.halloween-theme p,
+body.halloween-theme li,
+body.halloween-theme label {
+    color: #d7c9e0;
+}
+
+/* Шапки страниц */
+
+body.halloween-theme header {
+    border-color: rgba(155, 77, 255, 0.35);
+}
+
+body.halloween-theme header h1 {
+    text-shadow:
+        0 0 10px rgba(180, 70, 255, 0.8),
+        0 0 28px rgba(255, 100, 30, 0.22);
+}
+
+/* Карточки на всех страницах */
+
+body.halloween-theme .planet-card,
+body.halloween-theme .moon-card,
+body.halloween-theme .constellation-card,
+body.halloween-theme .satellite-card,
+body.halloween-theme .dwarf-planet-card,
+body.halloween-theme .atlas-card,
+body.halloween-theme .history-card,
+body.halloween-theme .card,
+body.halloween-theme [class*="-card"] {
+    background-color: rgba(19, 10, 29, 0.92);
+    border-color: var(--halloween-border);
+    box-shadow:
+        0 0 12px rgba(112, 35, 170, 0.18),
+        inset 0 0 18px rgba(80, 20, 100, 0.12);
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Зловещее свечение карточек при наведении */
+
+body.halloween-theme .planet-card:hover,
+body.halloween-theme .moon-card:hover,
+body.halloween-theme .constellation-card:hover,
+body.halloween-theme .satellite-card:hover,
+body.halloween-theme .dwarf-planet-card:hover,
+body.halloween-theme .atlas-card:hover,
+body.halloween-theme .history-card:hover,
+body.halloween-theme .card:hover,
+body.halloween-theme [class*="-card"]:hover {
+    border-color: var(--halloween-orange);
+    box-shadow:
+        0 0 12px rgba(255, 105, 25, 0.32),
+        0 0 30px rgba(150, 40, 220, 0.28);
+}
+
+/* Кнопки */
+
+
+/* ==================================================
+   🎃 ОСОБОЕ ХЭЛЛОУИНСКОЕ ОФОРМЛЕНИЕ МЕНЮ
+   Космические объекты / Кейн / Атлас Помни
+================================================== */
+
+/* 🌌 КОСМИЧЕСКИЕ ОБЪЕКТЫ */
+
+body.halloween-theme #spaceObjectsButton {
+    color: #fff0dc;
+    background:
+        radial-gradient(
+            circle at 15% 50%,
+            rgba(255, 130, 55, 0.2),
+            transparent 38%
+        ),
+        linear-gradient(
+            135deg,
+            #100d20,
+            #352044 55%,
+            #50233e
+        );
+
+    border: 1px solid rgba(255, 158, 91, 0.7);
+
+    box-shadow:
+        inset 0 0 15px rgba(170, 75, 210, 0.15),
+        0 0 12px rgba(140, 60, 190, 0.3),
+        0 0 24px rgba(255, 105, 40, 0.12);
+
+    text-shadow: 0 0 8px rgba(255, 160, 90, 0.45);
+}
+
+body.halloween-theme #spaceObjectsButton:hover {
+    color: #fff8ed;
+    border-color: #ffad62;
+
+    background:
+        radial-gradient(
+            circle at 20% 50%,
+            rgba(255, 139, 55, 0.3),
+            transparent 42%
+        ),
+        linear-gradient(
+            135deg,
+            #21112e,
+            #57265f,
+            #702b3f
+        );
+
+    box-shadow:
+        0 0 15px rgba(255, 120, 50, 0.4),
+        0 0 35px rgba(165, 70, 220, 0.4);
+
+    transform: translateY(-3px);
+}
+
+
+/* 🎪 ЭНЦИКЛОПЕДИЯ КЕЙНА */
+
+body.halloween-theme #kainButton {
+    color: #fff0f1;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(255, 105, 55, 0.22),
+            transparent 38%
+        ),
+        linear-gradient(
+            135deg,
+            #170817,
+            #54112f 48%,
+            #26102f
+        );
+
+    border: 1px solid rgba(255, 90, 110, 0.7);
+
+    box-shadow:
+        inset 0 0 18px rgba(190, 30, 75, 0.2),
+        0 0 15px rgba(180, 30, 75, 0.35),
+        0 0 30px rgba(115, 35, 145, 0.2);
+
+    text-shadow:
+        0 0 7px rgba(255, 95, 110, 0.6);
+}
+
+body.halloween-theme #kainButton:hover {
+    color: white;
+    border-color: #ff887e;
+
+    background:
+        linear-gradient(
+            135deg,
+            #290b20,
+            #791b3c,
+            #371344
+        );
+
+    box-shadow:
+        0 0 18px rgba(255, 55, 85, 0.5),
+        0 0 35px rgba(155, 55, 200, 0.35);
+
+    transform: translateY(-3px);
+}
+
+
+/* 🎭 АТЛАС ПОМНИ
+   Сохраняем оригинальное деление: красная / синяя половины.
+   Не превращаем квадрат в обычную кнопку.
+*/
+
+body.halloween-theme button.pomni-atlas-button {
+    appearance: none;
+
+    width: 120px;
+    height: 120px;
+    min-width: 120px;
+
+    padding: 8px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        to right,
+        #f32645 0%,
+        #f32645 50%,
+        #287bff 50%,
+        #287bff 100%
+    ) !important;
+
+    color: #ffffff !important;
+
+    border: 2px solid #ffffff !important;
+    border-radius: 8px !important;
+
+    box-shadow:
+        0 0 0 3px rgba(106, 46, 130, 0.35),
+        0 0 18px rgba(160, 60, 190, 0.35),
+        0 0 28px rgba(255, 105, 50, 0.18);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+body.halloween-theme .pomni-atlas-title {
+    display: block;
+
+    padding: 5px 2px;
+
+    color: #ffffff;
+    background: rgba(20, 10, 35, 0.72);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 4px;
+
+    text-shadow:
+        0 0 5px #ffffff,
+        0 0 12px rgba(255, 110, 190, 0.8);
+}
+
+body.halloween-theme button.pomni-atlas-button:hover {
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 0 3px rgba(150, 65, 180, 0.5),
+        0 0 22px rgba(255, 65, 110, 0.45),
+        0 0 35px rgba(65, 115, 255, 0.45);
+}
+
+body.halloween-theme button.pomni-atlas-button:active {
+    transform: scale(0.97);
+}
+
+
+/* 📚 ЭНЦИКЛОПЕДИЯ КЕЙНА — ВНУТРЕННИЕ КАРТОЧКИ */
+
+body.halloween-theme .history-card {
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(150, 50, 180, 0.14),
+            transparent 42%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(31, 12, 34, 0.96),
+            rgba(17, 9, 25, 0.97),
+            rgba(43, 13, 36, 0.94)
+        );
+
+    border: 1px solid rgba(176, 80, 155, 0.48);
+
+    box-shadow:
+        inset 0 0 22px rgba(120, 35, 105, 0.16),
+        0 8px 25px rgba(0, 0, 0, 0.4),
+        0 0 13px rgba(135, 45, 155, 0.15);
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+body.halloween-theme .history-card:hover {
+    border-color: rgba(255, 117, 85, 0.8);
+
+    box-shadow:
+        inset 0 0 22px rgba(150, 35, 100, 0.2),
+        0 10px 30px rgba(0, 0, 0, 0.45),
+        0 0 22px rgba(205, 65, 105, 0.28);
+
+    transform: translateY(-4px);
+}
+
+body.halloween-theme .history-card > span {
+    filter:
+        drop-shadow(0 0 7px rgba(255, 130, 75, 0.55))
+        drop-shadow(0 0 13px rgba(165, 65, 190, 0.35));
+}
+
+
+/* Кнопки языков на странице Кейна */
+
+body.halloween-theme .kain-languages button {
+    color: #f5e8ff;
+
+    background: linear-gradient(
+        135deg,
+        #21112c,
+        #49203e
+    );
+
+    border: 1px solid rgba(175, 85, 185, 0.55);
+    border-radius: 10px;
+
+    box-shadow: 0 0 9px rgba(140, 55, 165, 0.18);
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+body.halloween-theme .kain-languages button:hover {
+    color: #fff4e8;
+    border-color: #ff9b66;
+
+    background: linear-gradient(
+        135deg,
+        #42162e,
+        #68213c
+    );
+
+    box-shadow:
+        0 0 12px rgba(255, 110, 65, 0.3),
+        0 0 20px rgba(150, 55, 190, 0.25);
+}
+
+/* Ссылки */
+
+body.halloween-theme a {
+    color: #d8a5ff;
+    transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+body.halloween-theme a:hover {
+    color: #ffab55;
+    text-shadow: 0 0 10px rgba(255, 115, 30, 0.65);
+}
+
+/* Поля ввода и выпадающие меню */
+
+body.halloween-theme input,
+body.halloween-theme textarea,
+body.halloween-theme select {
+    color: #f0e1ff;
+    background-color: rgba(17, 9, 26, 0.96);
+    border-color: rgba(155, 77, 255, 0.55);
+}
+
+body.halloween-theme input:focus,
+body.halloween-theme textarea:focus,
+body.halloween-theme select:focus {
+    outline: none;
+    border-color: var(--halloween-orange);
+    box-shadow: 0 0 12px rgba(255, 120, 35, 0.32);
+}
+
+/* Модальные окна */
+
+body.halloween-theme .modal-content,
+body.halloween-theme .modal-dialog,
+body.halloween-theme [role="dialog"] {
+    background-color: rgba(15, 7, 24, 0.97);
+    border-color: rgba(165, 75, 230, 0.65);
+    box-shadow:
+        0 0 25px rgba(135, 35, 190, 0.3),
+        0 0 55px rgba(90, 15, 50, 0.25);
+}
+
+/* Нижняя часть страниц */
+
+body.halloween-theme footer {
+    border-color: rgba(155, 77, 255, 0.38);
+    color: #c9acd9;
+    text-shadow: 0 0 8px rgba(140, 55, 190, 0.4);
+}
+
+/* Разделители */
+
+body.halloween-theme hr {
+    border-color: rgba(155, 77, 255, 0.4);
+    box-shadow: 0 0 8px rgba(155, 77, 255, 0.2);
+}
+
+/* Выделенный текст */
+
+body.halloween-theme ::selection {
+    color: #fff;
+    background-color: #8734a8;
+}
+
+/* Полоса прокрутки */
+
+body.halloween-theme::-webkit-scrollbar {
+    width: 10px;
+}
+
+body.halloween-theme::-webkit-scrollbar-track {
+    background: #100a17;
+}
+
+body.halloween-theme::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+        180deg,
+        #7932a8,
+        #a94a32,
+        #4a205f
+    );
+    border-radius: 10px;
+}
+
+body.halloween-theme::-webkit-scrollbar-thumb:hover {
+    background: #c26936;
+}
+
+/* Не отключаем анимации для людей,
+   использующих настройку уменьшения движения */
+@media (prefers-reduced-motion: reduce) {
+    body.halloween-theme *,
+    body.halloween-theme *::before,
+    body.halloween-theme *::after {
+        scroll-behavior: auto;
+        transition-duration: 0.01ms;
+    }
+}
+/* 🎭 АТЛАС ПОМНИ — отключаем большие хэллоуинские стикеры */
+body.space-atlas-page .halloween-page-decor-layer {
+    display: none !important;
+}

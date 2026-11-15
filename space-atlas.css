@@ -1,240 +1,1519 @@
 
+/* =========================================================
+   🌌 SPACE ATLAS — PAPYRUS EDITION
+   🎃 COSMIC NIGHTMARE
+   Обычная тема + Хэллоуинская тема
+========================================================= */
+
 * {
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
-    color: #f4f3ff;
-    background:
-        radial-gradient(circle at 15% 20%, #28205b 0, transparent 30%),
-        radial-gradient(circle at 85% 75%, #102d59 0, transparent 35%),
-        #050714;
-    overflow-x: hidden;
+html {
+    scroll-behavior: smooth;
 }
 
-/* Звёздное небо */
+/* =========================================================
+   1. ОСНОВНЫЕ ПЕРЕМЕННЫЕ — ОБЫЧНАЯ ТЕМА
+========================================================= */
+
+body {
+    --text-main: #f4edff;
+    --text-secondary: #c5c9ee;
+    --text-muted: #aeb4d8;
+
+    --accent: #bda0ff;
+    --accent-bright: #72bdff;
+    --accent-secondary: #ff789e;
+
+    --border-color: rgba(147, 95, 190, .4);
+
+    --card-background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(91, 101, 185, .2),
+            transparent 65%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(28, 34, 72, .96),
+            rgba(12, 12, 30, .98)
+        );
+
+    --page-background:
+        radial-gradient(
+            ellipse at 12% 15%,
+            rgba(30, 110, 210, .22),
+            transparent 35%
+        ),
+        radial-gradient(
+            ellipse at 88% 20%,
+            rgba(190, 35, 75, .2),
+            transparent 35%
+        ),
+        radial-gradient(
+            ellipse at 50% 90%,
+            rgba(100, 38, 150, .17),
+            transparent 45%
+        ),
+        linear-gradient(
+            145deg,
+            #070914,
+            #100b20 48%,
+            #090916
+        );
+
+    --button-background:
+        linear-gradient(
+            120deg,
+            #286fc5,
+            #7044b6,
+            #bd315d
+        );
+
+    position: relative;
+    isolation: isolate;
+
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-main);
+
+    background: var(--page-background);
+}
+
+/* =========================================================
+   2. 🎃 ХЭЛЛОУИНСКАЯ ТЕМА
+========================================================= */
+
+body.halloween-theme {
+    --text-main: #fff0e5;
+    --text-secondary: #e2c6c9;
+    --text-muted: #c09eaa;
+
+    --accent: #ffb16f;
+    --accent-bright: #ff713d;
+    --accent-secondary: #d18aff;
+
+    --border-color: rgba(210, 91, 66, .55);
+
+    --card-background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(125, 43, 66, .3),
+            transparent 65%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(48, 18, 36, .98),
+            rgba(15, 8, 21, .99)
+        );
+
+    --page-background:
+        radial-gradient(
+            ellipse at 12% 15%,
+            rgba(130, 36, 43, .3),
+            transparent 35%
+        ),
+        radial-gradient(
+            ellipse at 88% 20%,
+            rgba(105, 36, 120, .3),
+            transparent 35%
+        ),
+        radial-gradient(
+            ellipse at 50% 90%,
+            rgba(195, 75, 25, .16),
+            transparent 45%
+        ),
+        linear-gradient(
+            145deg,
+            #08050a,
+            #1b0916 48%,
+            #09050d
+        );
+
+    --button-background:
+        linear-gradient(
+            120deg,
+            #a63b25,
+            #71305d,
+            #462052
+        );
+
+    color: var(--text-main);
+    background: var(--page-background);
+}
+
+/* =========================================================
+   3. ✨ ЗВЁЗДЫ И КОСМИЧЕСКАЯ АТМОСФЕРА
+========================================================= */
+
 body::before {
     content: "";
+
     position: fixed;
     inset: 0;
-    pointer-events: none;
+
     z-index: -1;
+    pointer-events: none;
+
     background-image:
-        radial-gradient(2px 2px at 20% 30%, white 50%, transparent 100%),
-        radial-gradient(1px 1px at 70% 20%, #a8c7ff 50%, transparent 100%),
-        radial-gradient(2px 2px at 40% 80%, white 50%, transparent 100%),
-        radial-gradient(1px 1px at 85% 55%, white 50%, transparent 100%),
-        radial-gradient(2px 2px at 10% 70%, #c9b5ff 50%, transparent 100%);
+        radial-gradient(
+            2px 2px at 20% 30%,
+            white 50%,
+            transparent 100%
+        ),
+        radial-gradient(
+            1px 1px at 70% 20%,
+            #9edaff 50%,
+            transparent 100%
+        ),
+        radial-gradient(
+            2px 2px at 40% 80%,
+            white 50%,
+            transparent 100%
+        ),
+        radial-gradient(
+            1px 1px at 85% 55%,
+            #ff9bb7 50%,
+            transparent 100%
+        ),
+        radial-gradient(
+            2px 2px at 10% 70%,
+            #c9b5ff 50%,
+            transparent 100%
+        );
+
     background-size: 250px 250px;
+
     animation: starTwinkle 5s ease-in-out infinite alternate;
+}
+
+body.halloween-theme::before {
+    background-image:
+        radial-gradient(
+            2px 2px at 20% 30%,
+            #ffb16f 50%,
+            transparent 100%
+        ),
+        radial-gradient(
+            1px 1px at 70% 20%,
+            #d18aff 50%,
+            transparent 100%
+        ),
+        radial-gradient(
+            2px 2px at 40% 80%,
+            #ff784c 50%,
+            transparent 100%
+        ),
+        radial-gradient(
+            1px 1px at 85% 55%,
+            #ffb2b2 50%,
+            transparent 100%
+        ),
+        radial-gradient(
+            2px 2px at 10% 70%,
+            #bd83ff 50%,
+            transparent 100%
+        );
 }
 
 @keyframes starTwinkle {
     from {
-        opacity: 0.4;
+        opacity: .4;
     }
+
     to {
         opacity: 1;
     }
 }
 
+/* Основные слои */
+
+header,
+main,
+#space-quiz,
+#space-boss {
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================================================
+   4. 🎪 ШАПКА АТЛАСА
+========================================================= */
+
 header {
+    position: relative;
+    isolation: isolate;
+
     text-align: center;
-    padding: 35px 20px 25px;
+    padding: 55px 20px 50px;
+
+    background:
+        radial-gradient(
+            ellipse at 20% 0%,
+            rgba(25, 105, 205, .24),
+            transparent 55%
+        ),
+        radial-gradient(
+            ellipse at 80% 0%,
+            rgba(205, 35, 78, .23),
+            transparent 55%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(20, 16, 43, .92),
+            rgba(10, 10, 25, .3),
+            transparent
+        );
+
+    border-bottom: 1px solid var(--border-color);
+}
+
+body.halloween-theme header {
+    background:
+        radial-gradient(
+            ellipse at 20% 0%,
+            rgba(190, 65, 30, .3),
+            transparent 55%
+        ),
+        radial-gradient(
+            ellipse at 80% 0%,
+            rgba(120, 40, 130, .35),
+            transparent 55%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(35, 10, 21, .97),
+            rgba(12, 5, 15, .5),
+            transparent
+        );
+}
+
+header::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+
+    width: 80%;
+    height: 2px;
+
     background: linear-gradient(
-        180deg,
-        rgba(30, 25, 76, 0.8),
+        90deg,
+        transparent,
+        #328bff,
+        #a46cff,
+        #ff426d,
         transparent
     );
+
+    box-shadow: 0 0 15px rgba(130, 85, 255, .6);
+}
+
+body.halloween-theme header::after {
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #ff6b32,
+        #a83c64,
+        #bb72ff,
+        transparent
+    );
+
+    box-shadow: 0 0 20px rgba(255, 95, 35, .55);
 }
 
 header h1 {
-    margin: 25px 0 10px;
+    margin: 28px 0 12px;
+
     font-size: clamp(2rem, 5vw, 3.5rem);
-    color: #d7c9ff;
-    text-shadow: 0 0 20px #806bff;
+    letter-spacing: 2px;
+
+    background: linear-gradient(
+        90deg,
+        #9fd8ff,
+        #e0c5ff,
+        #ff9eb9,
+        #ff536f,
+        #9fd8ff
+    );
+
+    background-size: 250% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent !important;
+    -webkit-text-fill-color: transparent;
+
+    filter: drop-shadow(0 0 15px rgba(129, 100, 255, .35));
+
+    animation: atlasTitle 7s linear infinite;
+}
+
+body.halloween-theme header h1 {
+    background: linear-gradient(
+        90deg,
+        #ffcf8a,
+        #ff713d,
+        #d58aff,
+        #a83d55,
+        #ffcf8a
+    );
+
+    background-size: 250% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent !important;
+    -webkit-text-fill-color: transparent;
+
+    filter: drop-shadow(0 0 17px rgba(255, 105, 45, .5));
+}
+
+@keyframes atlasTitle {
+    to {
+        background-position: 250% center;
+    }
 }
 
 header p {
-    color: #c8d5ff;
+    color: var(--text-secondary);
     font-size: 1.1rem;
+    letter-spacing: .5px;
 }
+
+/* =========================================================
+   5. ↩ КНОПКА НА ГЛАВНУЮ
+========================================================= */
 
 .back-button {
     display: inline-block;
-    color: #ffffff;
+
+    color: var(--text-main);
     text-decoration: none;
-    border: 1px solid #8f82ff;
+
+    border: 1px solid var(--border-color);
     border-radius: 12px;
-    padding: 10px 16px;
-    background: rgba(66, 53, 140, 0.45);
-    transition: 0.25s;
+
+    padding: 11px 18px;
+
+    background: var(--button-background);
+
+    transition: .3s;
 }
 
 .back-button:hover {
-    background: #5746b5;
-    box-shadow: 0 0 18px #7565ff;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+
+    border-color: var(--accent-bright);
+
+    box-shadow:
+        0 0 16px rgba(69, 140, 255, .35),
+        0 0 22px rgba(255, 57, 103, .25);
 }
+
+body.halloween-theme .back-button:hover {
+    box-shadow:
+        0 0 18px rgba(255, 100, 40, .4),
+        0 0 28px rgba(170, 55, 115, .35);
+}
+
+/* =========================================================
+   6. 🌐 ОСНОВНОЕ СОДЕРЖИМОЕ
+========================================================= */
 
 main {
     width: min(1100px, 92%);
     margin: 0 auto 50px;
 }
 
+/* =========================================================
+   7. 🔎 ПОИСКОВЫЙ ТЕРМИНАЛ
+========================================================= */
+
 #search {
     display: block;
+
     width: min(600px, 100%);
-    margin: 20px auto 35px;
-    padding: 15px 18px;
-    color: white;
+    margin: 30px auto 40px;
+
+    padding: 16px 20px;
+
+    color: var(--text-main);
     font-size: 1rem;
-    background: rgba(15, 19, 48, 0.9);
-    border: 1px solid #7166c9;
-    border-radius: 14px;
+
+    background: linear-gradient(
+        110deg,
+        rgba(15, 40, 80, .85),
+        rgba(35, 16, 55, .9),
+        rgba(70, 17, 43, .75)
+    );
+
+    border: 1px solid var(--border-color);
+    border-radius: 13px;
+
     outline: none;
+
+    box-shadow:
+        0 0 18px rgba(60, 113, 220, .12),
+        inset 0 0 18px rgba(120, 70, 180, .08);
+
+    transition: .3s;
+}
+
+body.halloween-theme #search {
+    background: linear-gradient(
+        110deg,
+        rgba(52, 17, 29, .95),
+        rgba(43, 14, 48, .95),
+        rgba(79, 27, 24, .9)
+    );
+
+    border-color: rgba(255, 112, 62, .55);
+
+    box-shadow:
+        0 0 20px rgba(255, 85, 35, .13),
+        inset 0 0 20px rgba(155, 55, 105, .12);
+}
+
+#search::placeholder {
+    color: var(--text-muted);
 }
 
 #search:focus {
-    border-color: #b5a8ff;
-    box-shadow: 0 0 18px rgba(133, 112, 255, 0.4);
+    border-color: var(--accent-bright);
+
+    box-shadow:
+        0 0 18px rgba(63, 139, 255, .35),
+        0 0 22px rgba(255, 60, 110, .2);
 }
+
+body.halloween-theme #search:focus {
+    box-shadow:
+        0 0 18px rgba(255, 110, 45, .35),
+        0 0 25px rgba(175, 60, 125, .25);
+}
+
+/* =========================================================
+   8. 🪐 КАРТОЧКИ КОСМИЧЕСКИХ ОБЪЕКТОВ
+========================================================= */
 
 .objects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 24px;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+    );
+
+    gap: 25px;
 }
 
 .object-card {
-    padding: 24px 20px;
+    position: relative;
+    isolation: isolate;
+
+    padding: 20px 19px 24px;
+
     text-align: center;
-    border: 1px solid rgba(151, 139, 255, 0.55);
-    border-radius: 20px;
+
+    background: var(--card-background);
+
+    border: 1px solid var(--border-color);
+    border-radius: 19px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, .3),
+        inset 0 0 20px rgba(90, 90, 180, .04);
+
+    overflow: hidden;
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+body.halloween-theme .object-card {
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .5),
+        inset 0 0 25px rgba(180, 55, 55, .09),
+        0 0 12px rgba(140, 45, 95, .1);
+}
+
+.object-card::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
     background: linear-gradient(
-        145deg,
-        rgba(35, 35, 83, 0.94),
-        rgba(9, 17, 43, 0.94)
+        115deg,
+        transparent 20%,
+        rgba(55, 150, 255, .1) 40%,
+        transparent 50%,
+        rgba(255, 65, 112, .1) 70%,
+        transparent 85%
     );
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
-    transition: transform 0.25s, box-shadow 0.25s;
+
+    opacity: .5;
+    pointer-events: none;
+}
+
+body.halloween-theme .object-card::before {
+    background: linear-gradient(
+        115deg,
+        transparent 15%,
+        rgba(255, 110, 45, .14) 40%,
+        transparent 55%,
+        rgba(180, 65, 140, .15) 75%,
+        transparent 90%
+    );
+}
+
+.object-card::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 12%;
+
+    width: 76%;
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #478dff,
+        #b27bff,
+        #ff527d,
+        transparent
+    );
+
+    opacity: .7;
+}
+
+body.halloween-theme .object-card::after {
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #ff783b,
+        #bd4b72,
+        #bb78ff,
+        transparent
+    );
 }
 
 .object-card:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 0 25px rgba(126, 107, 255, 0.35);
+    transform: translateY(-8px) scale(1.015);
+
+    border-color: var(--accent-secondary);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, .4),
+        0 0 18px rgba(49, 126, 255, .23),
+        0 0 23px rgba(255, 58, 107, .18);
 }
 
-.object-icon {
-    font-size: 3.5rem;
-    filter: drop-shadow(0 0 12px rgba(145, 130, 255, 0.55));
+body.halloween-theme .object-card:hover {
+    border-color: #ff9a5c;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, .55),
+        0 0 22px rgba(255, 100, 40, .25),
+        0 0 30px rgba(160, 55, 125, .22);
 }
+
+/* =========================================================
+   9. 🖼 ИЗОБРАЖЕНИЯ ПЛАНЕТ
+========================================================= */
+
+.object-image {
+    display: block;
+
+    width: 100%;
+    height: 190px;
+
+    object-fit: cover;
+
+    border-radius: 13px;
+    margin: 0 auto 18px;
+
+    border: 1px solid var(--border-color);
+
+    box-shadow:
+        0 0 15px rgba(59, 114, 235, .18),
+        0 0 12px rgba(190, 54, 103, .12);
+
+    transition:
+        transform .35s,
+        box-shadow .35s,
+        border-color .35s;
+}
+
+body.halloween-theme .object-image {
+    border-color: rgba(255, 125, 75, .5);
+
+    box-shadow:
+        0 0 17px rgba(255, 90, 40, .18),
+        0 0 15px rgba(160, 55, 120, .15);
+}
+
+.object-card:hover .object-image {
+    transform: scale(1.035);
+
+    border-color: var(--accent-secondary);
+
+    box-shadow:
+        0 0 22px rgba(66, 142, 255, .35),
+        0 0 18px rgba(255, 63, 115, .22);
+}
+
+body.halloween-theme .object-card:hover .object-image {
+    box-shadow:
+        0 0 24px rgba(255, 110, 50, .35),
+        0 0 20px rgba(180, 65, 145, .3);
+}
+
+/* Заголовки карточек */
 
 .object-card h2 {
-    color: #d9d0ff;
+    color: var(--text-main);
+    font-size: 1.45rem;
+
+    text-shadow: 0 0 12px rgba(125, 122, 255, .3);
+}
+
+body.halloween-theme .object-card h2 {
+    color: #ffc18b;
+
+    text-shadow:
+        0 0 10px rgba(255, 105, 55, .35),
+        0 0 20px rgba(180, 65, 130, .2);
 }
 
 .object-card p {
     min-height: 60px;
-    color: #d2d9f7;
-    line-height: 1.6;
+
+    color: var(--text-secondary);
+    line-height: 1.65;
 }
+
+/* =========================================================
+   10. 🎮 ОБЩИЕ КНОПКИ
+========================================================= */
 
 button {
     padding: 11px 18px;
-    color: white;
+
+    color: #fff;
     font-size: 1rem;
     font-weight: bold;
-    background: linear-gradient(135deg, #6652d9, #3b65b9);
-    border: 1px solid #9b8cff;
+
+    background: var(--button-background);
+    background-size: 200% auto;
+
+    border: 1px solid var(--border-color);
     border-radius: 11px;
+
     cursor: pointer;
-    transition: 0.25s;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .2);
+
+    transition:
+        background-position .3s,
+        transform .25s,
+        box-shadow .25s,
+        border-color .25s;
 }
 
 button:hover {
-    background: linear-gradient(135deg, #806dff, #4e86e9);
-    box-shadow: 0 0 16px rgba(137, 120, 255, 0.6);
+    background-position: right center;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 15px rgba(62, 142, 255, .35),
+        0 0 18px rgba(255, 65, 111, .25);
 }
 
-.info-panel,
-.mission {
+body.halloween-theme button:hover {
+    border-color: #ffad72;
+
+    box-shadow:
+        0 0 18px rgba(255, 105, 45, .35),
+        0 0 25px rgba(175, 60, 125, .25);
+}
+
+button:active {
+    transform: scale(.97);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 2px solid var(--accent-secondary);
+    outline-offset: 4px;
+}
+
+/* =========================================================
+   11. 📜 ИНФОРМАЦИОННАЯ ПАНЕЛЬ
+========================================================= */
+
+.info-panel {
+    position: relative;
+
     margin-top: 35px;
-    padding: 25px;
-    border: 1px solid #7166c9;
+    padding: 30px;
+
+    background:
+        radial-gradient(
+            ellipse at 0% 0%,
+            rgba(35, 115, 200, .2),
+            transparent 60%
+        ),
+        radial-gradient(
+            ellipse at 100% 100%,
+            rgba(190, 40, 85, .16),
+            transparent 60%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(25, 23, 57, .97),
+            rgba(12, 13, 31, .98)
+        );
+
+    border: 1px solid rgba(150, 112, 229, .65);
     border-radius: 18px;
-    background: rgba(17, 22, 53, 0.95);
-    box-shadow: 0 0 25px rgba(91, 77, 204, 0.2);
+
+    box-shadow:
+        0 0 25px rgba(65, 94, 195, .16),
+        inset 0 0 25px rgba(130, 80, 180, .06);
+
+    animation: panelAppear .35s ease;
 }
 
-.info-panel h2,
+body.halloween-theme .info-panel {
+    background:
+        radial-gradient(
+            ellipse at 0% 0%,
+            rgba(155, 50, 43, .24),
+            transparent 60%
+        ),
+        radial-gradient(
+            ellipse at 100% 100%,
+            rgba(120, 40, 120, .2),
+            transparent 60%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(48, 17, 34, .98),
+            rgba(15, 8, 22, .99)
+        );
+
+    border-color: rgba(255, 115, 65, .55);
+
+    box-shadow:
+        0 0 28px rgba(190, 55, 55, .15),
+        inset 0 0 28px rgba(170, 55, 105, .1);
+}
+
+.info-panel::before {
+    content: "DIGITAL ARCHIVE • OBJECT DATA";
+
+    display: block;
+    margin-bottom: 18px;
+
+    color: #9f9fdb;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+body.halloween-theme .info-panel::before {
+    content: "HAUNTED ARCHIVE • CLASSIFIED DATA";
+    color: #ff9566;
+}
+
+.info-panel h2 {
+    color: #e2caff;
+
+    text-shadow: 0 0 15px rgba(150, 95, 255, .35);
+}
+
+body.halloween-theme .info-panel h2 {
+    color: #ffb67c;
+
+    text-shadow: 0 0 15px rgba(255, 100, 45, .4);
+}
+
+.info-panel p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+@keyframes panelAppear {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================================
+   12. 🏆 МИССИЯ И ДОСТИЖЕНИЯ
+========================================================= */
+
+.mission {
+    position: relative;
+
+    margin-top: 35px;
+    padding: 30px;
+
+    background:
+        radial-gradient(
+            ellipse at 0% 0%,
+            rgba(35, 100, 190, .17),
+            transparent 60%
+        ),
+        radial-gradient(
+            ellipse at 100% 100%,
+            rgba(180, 43, 89, .16),
+            transparent 60%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(23, 22, 52, .97),
+            rgba(11, 12, 29, .98)
+        );
+
+    border: 1px solid rgba(128, 111, 218, .5);
+    border-radius: 18px;
+
+    box-shadow:
+        0 0 25px rgba(78, 70, 175, .12),
+        inset 0 0 25px rgba(115, 76, 190, .05);
+}
+
+body.halloween-theme .mission {
+    background:
+        radial-gradient(
+            ellipse at 0% 0%,
+            rgba(155, 48, 40, .24),
+            transparent 60%
+        ),
+        radial-gradient(
+            ellipse at 100% 100%,
+            rgba(115, 35, 120, .2),
+            transparent 60%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(43, 16, 32, .98),
+            rgba(14, 8, 22, .99)
+        );
+
+    border-color: rgba(195, 83, 88, .65);
+
+    box-shadow:
+        0 0 28px rgba(170, 45, 65, .15),
+        inset 0 0 25px rgba(160, 45, 95, .09);
+}
+
 .mission h2 {
-    color: #d9d0ff;
+    color: #e0caff;
+
+    text-shadow: 0 0 13px rgba(154, 100, 255, .3);
 }
 
-.info-panel p,
+body.halloween-theme .mission h2 {
+    color: #ffb579;
+
+    text-shadow: 0 0 15px rgba(255, 100, 45, .35);
+}
+
 .mission p {
+    color: var(--text-secondary);
     line-height: 1.7;
 }
 
+/* Прогресс исследования */
+
 #progress {
-    color: #b9e8ff;
+    padding: 13px 16px;
+
+    color: #a9dfff;
+    font-weight: bold;
+
+    background: rgba(34, 96, 154, .18);
+
+    border-left: 3px solid #4cafff;
+    border-radius: 8px;
+}
+
+body.halloween-theme #progress {
+    color: #ffc18b;
+
+    background: rgba(130, 48, 35, .2);
+
+    border-left-color: #ff793e;
+}
+
+/* Достижение */
+
+#achievement {
+    padding: 15px;
+
+    color: #ffe0a6;
+
+    background: linear-gradient(
+        100deg,
+        rgba(139, 90, 30, .25),
+        rgba(95, 48, 111, .2)
+    );
+
+    border: 1px solid rgba(255, 190, 94, .4);
+    border-radius: 11px;
+
+    box-shadow: 0 0 15px rgba(255, 183, 65, .12);
+}
+
+body.halloween-theme #achievement {
+    color: #ffd19c;
+
+    background: linear-gradient(
+        100deg,
+        rgba(135, 55, 25, .35),
+        rgba(90, 30, 80, .35)
+    );
+
+    border-color: rgba(255, 140, 65, .55);
+
+    box-shadow:
+        0 0 17px rgba(255, 115, 40, .17),
+        inset 0 0 15px rgba(165, 55, 100, .1);
+}
+
+/* =========================================================
+   13. 🎮 КОСМИЧЕСКАЯ ВИКТОРИНА
+========================================================= */
+
+#space-quiz {
+    border-color: rgba(73, 148, 255, .6);
+
+    background:
+        radial-gradient(
+            ellipse at 0% 0%,
+            rgba(36, 112, 221, .22),
+            transparent 60%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(18, 31, 66, .98),
+            rgba(13, 12, 35, .98)
+        );
+}
+
+body.halloween-theme #space-quiz {
+    border-color: rgba(255, 119, 65, .55);
+
+    background:
+        radial-gradient(
+            ellipse at 0% 0%,
+            rgba(160, 48, 40, .26),
+            transparent 60%
+        ),
+        radial-gradient(
+            ellipse at 100% 100%,
+            rgba(115, 40, 130, .2),
+            transparent 60%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(43, 16, 32, .98),
+            rgba(14, 8, 23, .99)
+        );
+}
+
+#space-quiz h2 {
+    color: #a9d7ff;
+
+    text-shadow: 0 0 15px rgba(57, 141, 255, .4);
+}
+
+body.halloween-theme #space-quiz h2 {
+    color: #ffb477;
+
+    text-shadow: 0 0 15px rgba(255, 105, 45, .4);
+}
+
+#quiz-content {
+    margin-top: 20px;
+    padding: 22px;
+
+    background: rgba(6, 11, 29, .55);
+
+    border: 1px solid rgba(99, 149, 233, .3);
+    border-radius: 14px;
+}
+
+body.halloween-theme #quiz-content {
+    background: rgba(18, 7, 19, .75);
+
+    border-color: rgba(205, 91, 83, .4);
+
+    box-shadow: inset 0 0 22px rgba(150, 45, 80, .1);
+}
+
+#quiz-question {
+    color: #d8eaff;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
-#achievement {
-    padding: 12px;
-    color: #ffe69a;
-    background: rgba(105, 77, 20, 0.25);
-    border-radius: 10px;
+body.halloween-theme #quiz-question {
+    color: #ffe0c2;
 }
+
+#quiz-answers,
+#boss-answers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+
+    margin: 20px 0;
+}
+
+#quiz-answers button,
+#boss-answers button {
+    min-width: 130px;
+
+    background: linear-gradient(
+        120deg,
+        #235b9e,
+        #5143a0,
+        #85365f
+    );
+
+    border-color: rgba(135, 170, 255, .6);
+}
+
+body.halloween-theme #quiz-answers button,
+body.halloween-theme #boss-answers button {
+    background: linear-gradient(
+        120deg,
+        #9c3c27,
+        #71305c,
+        #472052
+    );
+
+    border-color: rgba(255, 145, 100, .55);
+}
+
+#quiz-feedback {
+    color: #c9baff;
+    font-weight: bold;
+}
+
+body.halloween-theme #quiz-feedback {
+    color: #ffb1a0;
+}
+
+#quiz-score {
+    color: #9bd7ff;
+    font-weight: bold;
+}
+
+body.halloween-theme #quiz-score {
+    color: #ffc17e;
+}
+
+/* =========================================================
+   14. 👾 АРЕНА КОСМИЧЕСКОГО БОССА
+========================================================= */
+
+#space-boss {
+    overflow: hidden;
+
+    border-color: rgba(219, 64, 107, .65);
+
+    background:
+        radial-gradient(
+            ellipse at 0% 0%,
+            rgba(28, 106, 207, .22),
+            transparent 55%
+        ),
+        radial-gradient(
+            ellipse at 100% 0%,
+            rgba(203, 39, 83, .22),
+            transparent 55%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(35, 18, 48, .98),
+            rgba(12, 11, 27, .99)
+        );
+
+    box-shadow:
+        0 0 25px rgba(210, 40, 88, .1),
+        inset 0 0 35px rgba(70, 45, 150, .07);
+}
+
+body.halloween-theme #space-boss {
+    border-color: rgba(255, 94, 58, .65);
+
+    background:
+        radial-gradient(
+            ellipse at 0% 0%,
+            rgba(165, 48, 30, .3),
+            transparent 55%
+        ),
+        radial-gradient(
+            ellipse at 100% 0%,
+            rgba(120, 35, 125, .3),
+            transparent 55%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(42, 12, 27, .99),
+            rgba(12, 5, 17, .99)
+        );
+
+    box-shadow:
+        0 0 30px rgba(195, 50, 45, .18),
+        inset 0 0 35px rgba(155, 40, 95, .12);
+}
+
+#space-boss::before {
+    content: "WARNING • BOSS ARENA";
+
+    display: block;
+    margin-bottom: 18px;
+
+    color: #ff849e;
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+
+body.halloween-theme #space-boss::before {
+    content: "☠ HAUNTED ARENA • DANGER ☠";
+    color: #ff8756;
+}
+
+#space-boss h2 {
+    color: #ffb0c8;
+
+    text-shadow: 0 0 15px rgba(255, 56, 108, .35);
+}
+
+body.halloween-theme #space-boss h2 {
+    color: #ffb17d;
+
+    text-shadow: 0 0 17px rgba(255, 75, 40, .45);
+}
+
+#boss-arena {
+    position: relative;
+
+    margin-top: 22px;
+    padding: 25px 20px;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(100, 53, 153, .25),
+            transparent 65%
+        ),
+        rgba(6, 9, 25, .7);
+
+    border: 1px solid rgba(147, 111, 215, .4);
+    border-radius: 15px;
+
+    box-shadow: inset 0 0 30px rgba(65, 55, 140, .08);
+}
+
+body.halloween-theme #boss-arena {
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(145, 48, 75, .25),
+            transparent 65%
+        ),
+        rgba(13, 5, 17, .85);
+
+    border-color: rgba(210, 88, 75, .5);
+
+    box-shadow:
+        inset 0 0 30px rgba(145, 40, 85, .15),
+        0 0 18px rgba(170, 45, 65, .1);
+}
+
+/* Аватар босса */
+
+#boss-avatar {
+    display: block;
+
+    width: fit-content;
+    min-width: 100px;
+
+    margin: 0 auto 20px;
+    padding: 15px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(109, 64, 177, .35),
+        rgba(18, 14, 37, .3)
+    );
+
+    filter:
+        drop-shadow(0 0 12px rgba(75, 153, 255, .45))
+        drop-shadow(0 0 18px rgba(255, 65, 105, .3));
+
+    animation: bossPulse 3s ease-in-out infinite;
+}
+
+body.halloween-theme #boss-avatar {
+    background: radial-gradient(
+        circle,
+        rgba(185, 65, 40, .4),
+        rgba(55, 13, 38, .5)
+    );
+
+    filter:
+        drop-shadow(0 0 14px rgba(255, 105, 45, .5))
+        drop-shadow(0 0 20px rgba(165, 55, 130, .4));
+}
+
+@keyframes bossPulse {
+    0%, 100% {
+        transform: scale(1);
+
+        filter:
+            drop-shadow(0 0 12px rgba(75, 153, 255, .45));
+    }
+
+    50% {
+        transform: scale(1.07);
+
+        filter:
+            drop-shadow(0 0 20px rgba(255, 65, 105, .5))
+            drop-shadow(0 0 20px rgba(75, 153, 255, .4));
+    }
+}
+
+#boss-status {
+    color: #c7b0ff;
+    font-weight: bold;
+    text-align: center;
+}
+
+body.halloween-theme #boss-status {
+    color: #ffc18a;
+}
+
+#boss-lives {
+    color: #ff8ba9;
+    font-size: 1.35rem;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+body.halloween-theme #boss-lives {
+    color: #ff784c;
+
+    text-shadow: 0 0 12px rgba(255, 75, 40, .5);
+}
+
+#boss-question {
+    color: #e7d8ff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+body.halloween-theme #boss-question {
+    color: #ffe0c5;
+}
+
+#boss-feedback {
+    color: #ffb9d1;
+    text-align: center;
+    font-weight: bold;
+}
+
+body.halloween-theme #boss-feedback {
+    color: #ffad82;
+}
+
+/* =========================================================
+   15. 🕯 ДОПОЛНИТЕЛЬНЫЕ ЭФФЕКТЫ ХЭЛЛОУИНА
+========================================================= */
+
+/* Атмосферное свечение всей страницы */
+
+body.halloween-theme {
+    box-shadow: inset 0 0 180px rgba(106, 25, 100, .2);
+}
+
+/* Зловещие заголовки */
+
+body.halloween-theme header h1,
+body.halloween-theme main h2,
+body.halloween-theme #space-quiz h2,
+body.halloween-theme #space-boss h2 {
+    text-shadow:
+        0 0 9px rgba(255, 100, 50, .24),
+        0 0 20px rgba(155, 55, 150, .24);
+}
+
+/* Дополнительное свечение интерактивных блоков */
+
+body.halloween-theme .info-panel,
+body.halloween-theme .mission,
+body.halloween-theme #quiz-content,
+body.halloween-theme #boss-arena {
+    backdrop-filter: blur(5px);
+}
+
+/* Контрастные рамки при наведении */
+
+body.halloween-theme .info-panel:hover,
+body.halloween-theme .mission:hover {
+    border-color: rgba(255, 145, 90, .75);
+
+    box-shadow:
+        0 0 25px rgba(185, 55, 75, .2),
+        inset 0 0 25px rgba(150, 45, 100, .1);
+}
+
+/* =========================================================
+   16. 🚫 ОТКЛЮЧЕНИЕ ВСЕХ СТИКЕРОВ НА АТЛАСЕ
+========================================================= */
+
+/* Скрипт декораций может добавлять эти элементы.
+   Полностью скрываем их только на странице атласа. */
+
+body.space-atlas-page .halloween-page-decor-layer,
+body.space-atlas-page .halloween-page-decor,
+body.space-atlas-page .halloween-card-corner {
+    display: none !important;
+}
+
+/* =========================================================
+   17. 🔒 СКРЫТЫЕ ЭЛЕМЕНТЫ
+========================================================= */
 
 [hidden] {
     display: none !important;
 }
 
-@media (max-width: 600px) {
+/* =========================================================
+   18. 📱 АДАПТАЦИЯ ПОД ТЕЛЕФОНЫ И ПЛАНШЕТЫ
+========================================================= */
+
+@media (max-width: 700px) {
+
     header {
-        padding-top: 25px;
+        padding: 35px 16px 35px;
+    }
+
+    header h1 {
+        margin-top: 25px;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    .objects-grid {
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(220px, 1fr)
+        );
+
+        gap: 17px;
+    }
+
+    .object-image {
+        height: 180px;
+    }
+
+    .mission,
+    .info-panel {
+        padding: 22px 18px;
+    }
+
+    #quiz-content,
+    #boss-arena {
+        padding: 18px 13px;
+    }
+
+    #quiz-answers button,
+    #boss-answers button {
+        min-width: 115px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 2rem;
     }
 
     .objects-grid {
         grid-template-columns: 1fr;
     }
 
-    .object-card p {
-        min-height: auto;
+    .object-image {
+        height: 200px;
+    }
+
+    #search {
+        padding: 14px;
+    }
+
+    .mission h2 {
+        font-size: 1.35rem;
+    }
+
+    .info-panel {
+        padding: 20px 16px;
+    }
+
+    #quiz-answers,
+    #boss-answers {
+        flex-direction: column;
+    }
+
+    #quiz-answers button,
+    #boss-answers button {
+        width: 100%;
     }
 }
 
+/* =========================================================
+   19. ♿ ДОСТУПНОСТЬ
+========================================================= */
+
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
-        animation: none !important;
-        transition: none !important;
         scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
     }
 }
-
-
-.object-image {
-    display: block;
-    width: 100%;
-    height: 190px;
-    object-fit: cover;
-    border-radius: 14px;
-    margin: 0 auto 18px;
-    border: 1px solid rgba(160, 150, 255, 0.55);
-    box-shadow: 0 0 18px rgba(104, 100, 255, 0.25);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.object-card:hover .object-image {
-    transform: scale(1.03);
-    box-shadow: 0 0 25px rgba(130, 115, 255, 0.55);
-}
-

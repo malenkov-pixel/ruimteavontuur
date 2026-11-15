@@ -1,8 +1,327 @@
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{min-height:100vh;color:#fff;font-family:Arial,sans-serif;overflow-x:hidden;background:radial-gradient(circle at 20% 20%,rgba(70,80,180,.28),transparent 30%),radial-gradient(circle at 80% 70%,rgba(120,40,180,.24),transparent 30%),linear-gradient(135deg,#030313,#08082a 45%,#02020d)}.kain-stars{position:fixed;inset:0;pointer-events:none;z-index:0;background-image:radial-gradient(circle,rgba(255,255,255,.8) 1px,transparent 1.5px);background-size:95px 95px;opacity:.35}.kain-header,.encyclopedia-grid,footer{position:relative;z-index:2}.kain-header{text-align:center;padding:55px 20px 35px}.back-link{display:inline-block;margin-bottom:25px;color:#d8ddff;text-decoration:none;padding:10px 18px;border:1px solid rgba(150,160,255,.25);border-radius:20px;background:rgba(20,22,55,.65)}.back-link:hover{box-shadow:0 0 25px rgba(100,120,255,.45);transform:translateY(-2px)}h1{font-size:clamp(34px,6vw,62px);text-shadow:0 0 12px #8da2ff,0 0 35px #586dff;margin-bottom:15px}.kain-header>p{color:#c8d0ff;font-size:19px}.kain-languages{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:25px auto 0;max-width:850px}.kain-languages button{border:1px solid rgba(130,150,255,.3);border-radius:14px;padding:9px 13px;background:rgba(20,22,55,.75);color:#fff;cursor:pointer;transition:.2s}.kain-languages button:hover{transform:translateY(-2px);box-shadow:0 0 18px rgba(100,120,255,.35)}.encyclopedia-grid{max-width:1150px;margin:auto;padding:30px 20px 80px;display:grid;grid-template-columns:repeat(2,1fr);gap:25px}.history-card{padding:30px;border:1px solid rgba(150,160,255,.2);border-radius:26px;background:rgba(20,22,55,.72);backdrop-filter:blur(10px);box-shadow:0 12px 35px rgba(0,0,0,.4),inset 0 0 20px rgba(100,110,255,.04);transition:.3s}.history-card:hover{transform:translateY(-7px);border-color:rgba(170,180,255,.65);box-shadow:0 20px 45px rgba(0,0,0,.5),0 0 30px rgba(100,110,255,.25)}.history-card span{font-size:44px;display:block;margin-bottom:15px}.history-card h2{font-size:27px;margin-bottom:13px}.history-card p{color:#c7c9e8;line-height:1.7;font-size:17px}footer{text-align:center;padding:30px;color:#8589b5;border-top:1px solid rgba(150,160,255,.1)}@media(max-width:700px){.encyclopedia-grid{grid-template-columns:1fr}.kain-header{padding-top:35px}.history-card{padding:24px}}
+
+/* ==================================================
+   🎪 ЭНЦИКЛОПЕДИЯ КЕЙНА
+   DIGITAL COSMIC ARCHIVE
+   🌌 ОБЫЧНАЯ ТЕМА + 🎃 ХЭЛЛОУИНСКАЯ ТЕМА
+================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ==================================================
+   🌌 ЦВЕТОВАЯ СИСТЕМА — ОБЫЧНАЯ ТЕМА
+================================================== */
+
+body {
+    --text-main: #eef0ff;
+    --text-secondary: #c4c9e8;
+    --text-muted: #929ac5;
+
+    --accent: #8d9fff;
+    --accent-bright: #72c8ff;
+    --accent-secondary: #bd8aff;
+
+    --border-color: rgba(105, 145, 255, .4);
+
+    --card-background:
+        radial-gradient(ellipse at 50% 0%, rgba(75, 100, 195, .2), transparent 70%),
+        linear-gradient(145deg, rgba(25, 32, 72, .97), rgba(9, 12, 31, .98));
+
+    --button-background: linear-gradient(
+        110deg,
+        rgba(28, 65, 130, .9),
+        rgba(55, 37, 105, .9)
+    );
+
+    --page-background:
+        radial-gradient(ellipse at 15% 15%, rgba(40, 105, 220, .23), transparent 35%),
+        radial-gradient(ellipse at 85% 65%, rgba(115, 55, 190, .22), transparent 35%),
+        radial-gradient(ellipse at 50% 100%, rgba(30, 110, 180, .12), transparent 45%),
+        linear-gradient(145deg, #070914, #10132c 48%, #080b19);
+
+    position: relative;
+    isolation: isolate;
+    min-height: 100vh;
+    color: var(--text-main);
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+
+    background: var(--page-background);
+}
+
+/* ==================================================
+   🎃 ХЭЛЛОУИНСКАЯ ЦВЕТОВАЯ СИСТЕМА
+================================================== */
+
+body.halloween-theme {
+    --text-main: #fff0e8;
+    --text-secondary: #dfc5d0;
+    --text-muted: #b88d9f;
+
+    --accent: #ffad70;
+    --accent-bright: #ff773f;
+    --accent-secondary: #d88aff;
+
+    --border-color: rgba(190, 80, 80, .4);
+
+    --card-background:
+        radial-gradient(ellipse at 50% 0%, rgba(125, 45, 75, .22), transparent 70%),
+        linear-gradient(145deg, rgba(43, 17, 35, .97), rgba(17, 9, 24, .98));
+
+    --button-background: linear-gradient(
+        110deg,
+        rgba(90, 25, 35, .9),
+        rgba(65, 20, 65, .9)
+    );
+
+    --page-background:
+        radial-gradient(ellipse at 15% 15%, rgba(125, 35, 55, .28), transparent 35%),
+        radial-gradient(ellipse at 85% 65%, rgba(105, 35, 115, .25), transparent 35%),
+        radial-gradient(ellipse at 50% 100%, rgba(190, 75, 20, .12), transparent 45%),
+        linear-gradient(145deg, #08050b, #1b0915 48%, #08050c);
+}
+
+/* ==================================================
+   ✨ ЗВЁЗДЫ И МЕРЦАНИЕ
+================================================== */
+
+.kain-stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+
+    background-image:
+        radial-gradient(circle, rgba(170, 210, 255, .8) 1px, transparent 1.5px),
+        radial-gradient(circle, rgba(175, 145, 255, .7) 1px, transparent 1.5px);
+
+    background-size: 95px 95px, 145px 145px;
+    background-position: 0 0, 40px 60px;
+
+    opacity: .4;
+    animation: hauntedStars 6s ease-in-out infinite alternate;
+}
+
+body.halloween-theme .kain-stars {
+    background-image:
+        radial-gradient(circle, rgba(255, 190, 120, .8) 1px, transparent 1.5px),
+        radial-gradient(circle, rgba(190, 120, 255, .65) 1px, transparent 1.5px);
+}
+
+@keyframes hauntedStars {
+    from { opacity: .2; }
+    to { opacity: .55; }
+}
+
+.kain-header,
+.encyclopedia-grid,
+footer {
+    position: relative;
+    z-index: 2;
+}
+
+/* ==================================================
+   🎪 ШАПКА ЭНЦИКЛОПЕДИИ
+================================================== */
+
+.kain-header {
+    position: relative;
+    isolation: isolate;
+    text-align: center;
+    padding: 60px 20px 45px;
+
+    background:
+        radial-gradient(ellipse at 20% 0%, rgba(40, 105, 205, .24), transparent 55%),
+        radial-gradient(ellipse at 80% 0%, rgba(115, 65, 195, .25), transparent 55%),
+        linear-gradient(180deg, rgba(16, 20, 48, .95), transparent);
+
+    border-bottom: 1px solid var(--border-color);
+}
+
+body.halloween-theme .kain-header {
+    background:
+        radial-gradient(ellipse at 20% 0%, rgba(160, 45, 55, .3), transparent 55%),
+        radial-gradient(ellipse at 80% 0%, rgba(115, 45, 140, .3), transparent 55%),
+        linear-gradient(180deg, rgba(28, 9, 20, .95), transparent);
+}
+
+.kain-header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 12%;
+    width: 76%;
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #4e9cff,
+        #947aff,
+        #c18aff,
+        transparent
+    );
+
+    box-shadow: 0 0 18px rgba(90, 130, 255, .4);
+}
+
+body.halloween-theme .kain-header::after {
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #ff702e,
+        #a63c65,
+        #a76aff,
+        transparent
+    );
+
+    box-shadow: 0 0 18px rgba(255, 90, 35, .4);
+}
+
+/* ==================================================
+   ↩ КНОПКА НАЗАД
+================================================== */
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 28px;
+
+    color: var(--text-main);
+    text-decoration: none;
+
+    padding: 11px 20px;
+
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+
+    background: var(--button-background);
+
+    transition: .3s;
+}
+
+.back-link:hover {
+    transform: translateY(-3px);
+
+    border-color: var(--accent-bright);
+
+    box-shadow:
+        0 0 15px rgba(75, 140, 255, .3),
+        0 0 25px rgba(145, 90, 255, .2);
+}
+
+body.halloween-theme .back-link:hover {
+    box-shadow:
+        0 0 15px rgba(255, 100, 40, .3),
+        0 0 25px rgba(160, 55, 100, .2);
+}
+
+/* ==================================================
+   🌠 ГЛАВНЫЙ ЗАГОЛОВОК
+================================================== */
+
+h1 {
+    font-size: clamp(34px, 6vw, 62px);
+    margin-bottom: 18px;
+
+    background: linear-gradient(
+        90deg,
+        #8ccaff,
+        #a99aff,
+        #d0a5ff,
+        #8ccaff
+    );
+
+    background-size: 250% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    filter: drop-shadow(0 0 12px rgba(90, 140, 255, .3));
+
+    animation: hauntedTitle 7s linear infinite;
+}
+
+body.halloween-theme h1 {
+    background: linear-gradient(
+        90deg,
+        #ffad70,
+        #ff674d,
+        #d88aff,
+        #ffad70
+    );
+
+    background-size: 250% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    filter: drop-shadow(0 0 12px rgba(255, 100, 50, .3));
+}
+
+@keyframes hauntedTitle {
+    to { background-position: 250% center; }
+}
+
+.kain-header > p {
+    color: var(--text-secondary);
+    font-size: 19px;
+    text-shadow: 0 0 12px rgba(100, 130, 255, .25);
+}
+
+body.halloween-theme .kain-header > p {
+    text-shadow: 0 0 12px rgba(190, 65, 80, .3);
+}
+
+/* ==================================================
+   🌍 ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКОВ
+================================================== */
+
+.kain-languages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+
+    margin: 28px auto 0;
+    max-width: 850px;
+}
+
 .kain-languages button {
     display: inline-flex;
     align-items: center;
     gap: 7px;
+
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+
+    padding: 10px 14px;
+
+    background: var(--button-background);
+
+    color: var(--text-main);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.kain-languages button:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-bright);
+
+    box-shadow:
+        0 0 14px rgba(75, 140, 255, .25),
+        0 0 20px rgba(145, 90, 255, .2);
+}
+
+body.halloween-theme .kain-languages button:hover {
+    box-shadow:
+        0 0 14px rgba(255, 100, 50, .25),
+        0 0 20px rgba(170, 70, 140, .2);
 }
 
 .kain-languages button img {
@@ -10,4 +329,232 @@
     height: 15px;
     object-fit: cover;
     border-radius: 3px;
+}
+
+/* ==================================================
+   📚 СЕТКА ИСТОРИЧЕСКИХ КАРТОЧЕК
+================================================== */
+
+.encyclopedia-grid {
+    max-width: 1150px;
+    margin: auto;
+    padding: 40px 20px 85px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+/* ==================================================
+   📖 КАРТОЧКИ ИСТОРИИ
+================================================== */
+
+.history-card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    padding: 32px;
+
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+
+    background: var(--card-background);
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, .45),
+        inset 0 0 25px rgba(80, 110, 210, .06);
+
+    transition:
+        transform .35s,
+        border-color .35s,
+        box-shadow .35s;
+}
+
+body.halloween-theme .history-card {
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, .45),
+        inset 0 0 25px rgba(180, 55, 70, .06);
+}
+
+/* Верхняя светящаяся линия */
+
+.history-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    z-index: -1;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #55aaff,
+        #a28aff,
+        #d0a0ff,
+        transparent
+    );
+
+    opacity: .8;
+}
+
+body.halloween-theme .history-card::before {
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #ff773f,
+        #b65b9d,
+        transparent
+    );
+}
+
+/* Мягкое свечение */
+
+.history-card::after {
+    content: "";
+    position: absolute;
+    right: -50px;
+    bottom: -70px;
+    width: 150px;
+    height: 150px;
+    z-index: -1;
+
+    border-radius: 50%;
+    background: rgba(75, 105, 210, .12);
+    filter: blur(35px);
+    pointer-events: none;
+}
+
+body.halloween-theme .history-card::after {
+    background: rgba(180, 55, 65, .08);
+}
+
+.history-card:hover {
+    transform: translateY(-8px);
+
+    border-color: var(--accent-bright);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, .55),
+        0 0 25px rgba(75, 125, 255, .2),
+        0 0 30px rgba(145, 75, 220, .15);
+}
+
+body.halloween-theme .history-card:hover {
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, .55),
+        0 0 25px rgba(190, 55, 65, .2),
+        0 0 30px rgba(150, 65, 140, .15);
+}
+
+/* ==================================================
+   👻 ИКОНКИ КАРТОЧЕК
+================================================== */
+
+.history-card span {
+    font-size: 44px;
+    display: block;
+    margin-bottom: 18px;
+
+    filter: drop-shadow(0 0 10px rgba(100, 160, 255, .35));
+}
+
+body.halloween-theme .history-card span {
+    filter: drop-shadow(0 0 10px rgba(255, 120, 55, .35));
+}
+
+/* ==================================================
+   📜 ЗАГОЛОВКИ И ТЕКСТ
+================================================== */
+
+.history-card h2 {
+    font-size: 27px;
+    margin-bottom: 15px;
+
+    color: var(--accent);
+
+    text-shadow: 0 0 12px rgba(100, 145, 255, .2);
+}
+
+body.halloween-theme .history-card h2 {
+    text-shadow: 0 0 12px rgba(255, 100, 65, .2);
+}
+
+.history-card p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+/* ==================================================
+   🕯 ПОДВАЛ
+================================================== */
+
+footer {
+    text-align: center;
+    padding: 32px 20px;
+
+    color: var(--text-muted);
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(45, 65, 130, .25),
+        transparent
+    );
+
+    border-top: 1px solid var(--border-color);
+}
+
+body.halloween-theme footer {
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(65, 20, 40, .3),
+        transparent
+    );
+}
+
+/* ==================================================
+   📱 АДАПТАЦИЯ
+================================================== */
+
+@media (max-width: 700px) {
+
+    .encyclopedia-grid {
+        grid-template-columns: 1fr;
+        padding: 30px 16px 60px;
+        gap: 20px;
+    }
+
+    .kain-header {
+        padding-top: 38px;
+    }
+
+    .history-card {
+        padding: 25px;
+    }
+
+    .history-card h2 {
+        font-size: 24px;
+    }
+}
+
+/* ==================================================
+   ♿ УМЕНЬШЕНИЕ АНИМАЦИИ
+================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+    }
 }

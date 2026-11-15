@@ -986,3 +986,319 @@ footer a:hover {
     0%, 100% { transform: translateY(0) rotate(-4deg); }
     50% { transform: translateY(-12px) rotate(4deg); }
 }
+
+/* ==================================================
+   🎃 HALLOWEEN LABORATORY — DAVE'S NIGHTMARE
+   Работает только при включённом режиме
+================================================== */
+
+body.halloween-theme {
+    --grass: #8bc34a;
+    --dark-grass: #263b22;
+    --purple: #813b9e;
+    --dark-purple: #170b25;
+    --gold: #ff873d;
+    --cream: #f4dfc1;
+
+    color: #f5e8d9;
+
+    background:
+        radial-gradient(ellipse at 15% 10%, rgba(113, 40, 135, .27), transparent 40%),
+        radial-gradient(ellipse at 85% 75%, rgba(110, 24, 43, .23), transparent 40%),
+        radial-gradient(ellipse at 50% 100%, rgba(83, 117, 35, .15), transparent 45%),
+        linear-gradient(145deg, #09070e, #1b0c20 50%, #080b0c);
+
+    background-attachment: fixed;
+}
+
+body.halloween-theme .lab-header {
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(126, 48, 153, .3), transparent 65%),
+        linear-gradient(135deg, #21102c, #390f27 55%, #151021);
+    border-bottom: 4px solid #a84d32;
+    box-shadow: 0 8px 35px #0009, 0 5px 25px rgba(150, 45, 75, .2);
+}
+
+body.halloween-theme .lab-header::before,
+body.halloween-theme .lab-header::after {
+    color: rgba(255, 130, 57, .85);
+    text-shadow: 0 0 15px #ff692d;
+}
+
+body.halloween-theme .dave-icon {
+    background: radial-gradient(circle, #51405d, #21132b);
+    border-color: #ff914d;
+    box-shadow: 0 0 20px rgba(255, 112, 45, .45), 0 0 35px rgba(146, 52, 160, .3);
+}
+
+body.halloween-theme .lab-label {
+    color: #ffad72;
+}
+
+body.halloween-theme h1 {
+    color: #ffbd85;
+    text-shadow: 0 0 12px rgba(255, 111, 54, .65), 0 0 30px rgba(170, 57, 130, .4);
+}
+
+body.halloween-theme .subtitle {
+    color: #e4c6d7;
+}
+
+body.halloween-theme .dave-message {
+    color: #f9dfcb;
+    background: linear-gradient(135deg, #38203d, #241528);
+    border: 2px solid #b66a43;
+    box-shadow: 0 7px 0 rgba(0, 0, 0, .35), 0 0 20px rgba(179, 71, 91, .17);
+}
+
+body.halloween-theme .intro h2 {
+    color: #ffb46f;
+    text-shadow: 0 0 12px rgba(255, 100, 45, .35);
+}
+
+body.halloween-theme .intro p {
+    color: #d8c4d9;
+}
+
+body.halloween-theme .space-card {
+    color: #f5e3d8;
+    background:
+        radial-gradient(ellipse at 100% 0%, rgba(135, 51, 105, .2), transparent 65%),
+        linear-gradient(145deg, #302037, #19121f);
+    border: 2px solid #81405a;
+    box-shadow: 0 8px 0 #351525, 0 12px 25px rgba(0, 0, 0, .4), inset 0 0 25px rgba(170, 64, 100, .06);
+}
+
+body.halloween-theme .space-card::after {
+    background: rgba(255, 107, 43, .12);
+}
+
+body.halloween-theme .space-card:hover {
+    border-color: #ff914d;
+    box-shadow: 0 12px 0 #351525, 0 18px 35px rgba(0, 0, 0, .45), 0 0 25px rgba(255, 102, 49, .2);
+}
+
+body.halloween-theme .object-icon {
+    color: #ffe1bf;
+    background: linear-gradient(145deg, #59324f, #281c38);
+    border-color: #a85b60;
+    box-shadow: inset 0 0 15px rgba(255, 105, 50, .12), 0 0 15px rgba(155, 60, 130, .15);
+}
+
+body.halloween-theme .space-card h3 {
+    color: #ffbd91;
+    text-shadow: 0 0 12px rgba(255, 108, 59, .2);
+}
+
+body.halloween-theme .category {
+    color: #ffe7d2;
+    background: linear-gradient(110deg, #803b65, #51265b);
+    border: 1px solid #b86b64;
+}
+
+body.halloween-theme .space-card > p:not(.category) {
+    color: #e1d0d7;
+}
+
+body.halloween-theme .space-image {
+    border: 3px solid #a34e58;
+    box-shadow: 0 5px 0 #421c31, 0 0 18px rgba(176, 66, 105, .2);
+}
+
+body.halloween-theme .space-card:hover .space-image {
+    border-color: #ff985b;
+    box-shadow: 0 5px 0 #421c31, 0 0 25px rgba(255, 116, 57, .35);
+}
+
+body.halloween-theme .space-card button {
+    color: #fff0df;
+    background: linear-gradient(120deg, #8d3b54, #632c69, #a64b32);
+    border: 2px solid #d17a55;
+    box-shadow: 0 4px 0 #4b2032;
+}
+
+body.halloween-theme .space-card button:active {
+    box-shadow: 0 1px 0 #4b2032;
+}
+
+body.halloween-theme .experiment-panel {
+    color: #f5e4e9;
+    background:
+        radial-gradient(ellipse at 100% 0%, rgba(139, 50, 113, .25), transparent 60%),
+        linear-gradient(145deg, #351d3e, #1b1028);
+    border: 2px solid #bd704f;
+    box-shadow: 0 0 25px rgba(168, 60, 105, .2), inset 0 0 25px rgba(130, 55, 140, .1);
+}
+
+body.halloween-theme .experiment-panel h2 {
+    color: #ffb47e;
+}
+
+body.halloween-theme .experiment-panel p {
+    color: #e5cbd9;
+}
+
+body.halloween-theme .close-button {
+    background: #872d49;
+    border-color: #ff9b77;
+}
+
+body.halloween-theme .dave-note {
+    color: #f8dfc9;
+    background: linear-gradient(120deg, #63354c, #38213e);
+    border: 1px solid #b66a64;
+}
+
+body.halloween-theme .zombie-zone {
+    background:
+        radial-gradient(ellipse at 50% 100%, rgba(100, 160, 46, .25), transparent 65%),
+        repeating-linear-gradient(0deg, #283a27 0px, #283a27 24px, #35472b 24px, #35472b 48px);
+    border-color: #a34b48;
+    box-shadow: inset 0 0 35px #090c0b;
+}
+
+body.halloween-theme .zombie-caption {
+    color: #ffbd89;
+    background: rgba(31, 12, 28, .9);
+}
+
+body.halloween-theme .zombie-speech {
+    color: #ffe1cf;
+    background: #39243c;
+    border-color: #c36c54;
+}
+
+body.halloween-theme .game-section {
+    color: #f8e6d6;
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(124, 46, 120, .25), transparent 65%),
+        linear-gradient(145deg, #26142f, #171c20);
+    border: 3px solid #a75c48;
+    box-shadow: 0 9px 0 #100d16, 0 15px 35px #0008, inset 0 0 25px rgba(190, 65, 95, .08);
+}
+
+body.halloween-theme .game-section h2 {
+    color: #ffb57d;
+    text-shadow: 0 0 12px rgba(255, 105, 55, .4);
+}
+
+body.halloween-theme .game-description {
+    color: #dfc7d9;
+}
+
+body.halloween-theme .sun-counter,
+body.halloween-theme .wave-counter {
+    color: #ffe5ce;
+    background: linear-gradient(135deg, #66354d, #382344);
+    border-color: #c77c4c;
+}
+
+body.halloween-theme .plant-choice {
+    color: #e9e5c9;
+    background: linear-gradient(145deg, #35442d, #202c27);
+    border-color: #758b46;
+}
+
+body.halloween-theme .plant-choice span {
+    color: #d9b68a;
+}
+
+body.halloween-theme .plant-choice:hover {
+    background: #55402f;
+}
+
+body.halloween-theme .plant-choice.selected {
+    color: #fff0c6;
+    background: linear-gradient(145deg, #64412e, #49304b);
+    border-color: #ffad51;
+    box-shadow: 0 0 18px rgba(255, 151, 64, .35);
+}
+
+body.halloween-theme .garden-board {
+    background: #211d29;
+    border-color: #a56b4c;
+}
+
+body.halloween-theme .garden-cell {
+    background: #394a35;
+    border-color: #52633d;
+}
+
+body.halloween-theme .garden-cell:nth-child(even) {
+    background: #303e30;
+}
+
+body.halloween-theme .garden-cell:hover {
+    background: #586943;
+}
+
+body.halloween-theme .garden-pea {
+    filter: drop-shadow(0 0 5px #a8ff4f) drop-shadow(0 0 8px #80d94d);
+}
+
+body.halloween-theme .garden-sun {
+    color: #fff2b4;
+    background: radial-gradient(circle, #ffcf68, #b85a32);
+    border-color: #ff9b4b;
+    box-shadow: 0 0 12px #ff9b4b, 0 0 25px rgba(255, 113, 42, .4);
+}
+
+body.halloween-theme .garden-health-bar {
+    background: #381b27;
+}
+
+body.halloween-theme .garden-health-fill {
+    background: #91c54d;
+}
+
+body.halloween-theme .campaign-victory-screen {
+    color: #ffead8;
+    background: radial-gradient(ellipse at center, #49304d 0%, #26152f 55%, #100c18 100%);
+    border-color: #ff9b50;
+    box-shadow: 0 0 20px rgba(255, 132, 60, .4), 0 0 50px rgba(153, 55, 126, .25), inset 0 0 35px rgba(255, 140, 60, .1);
+}
+
+body.halloween-theme .campaign-victory-screen h2 {
+    color: #ffb85f;
+    text-shadow: 0 0 12px #ff8b35, 0 0 25px #d64a50;
+}
+
+body.halloween-theme .victory-subtitle {
+    color: #c4e68b;
+}
+
+body.halloween-theme .victory-message {
+    color: #ffbd7b;
+}
+
+body.halloween-theme .victory-dave {
+    color: #f4d9e5;
+    border-color: #bc735d;
+    background: #170e27aa;
+}
+
+body.halloween-theme .campaign-victory-screen button {
+    color: #fff0dd;
+    background: linear-gradient(120deg, #8c3d55, #71366f, #ad5938);
+    border-color: #e78b58;
+}
+
+body.halloween-theme footer {
+    color: #c6a5b7;
+    background: rgba(15, 8, 22, .85);
+    border-top: 2px solid #8b4054;
+}
+
+body.halloween-theme footer a {
+    color: #ffb477;
+}
+
+@media (max-width: 650px) {
+    body.halloween-theme .lab-header {
+        padding: 40px 18px;
+    }
+
+    body.halloween-theme .game-section {
+        padding: 15px 10px;
+    }
+}

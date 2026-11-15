@@ -3357,9 +3357,11 @@ function changeLanguage(language) {
        СОХРАНЯЕМ ВЫБРАННЫЙ ЯЗЫК
        ========================================= */
 
-    currentLanguage = language;
+currentLanguage = language;
 
-    console.log("Текущий язык:", currentLanguage);
+updateHalloweenThemeButton();
+
+console.log("Текущий язык:", currentLanguage);
     
     localStorage.setItem(
         "siteLanguage",
@@ -4324,25 +4326,23 @@ const sansUpdatesTranslations = {
 };
 // 💀 Санс объявляет о полноценном обновлении
 const fullUpdateMessages = {
-    ru: "🚀 хорошие новости! это уже полноценное обновление, а не демоверсия! новые разделы готовы, польский и нидерландский языки добавлены. Маленков всё-таки справился… хотя блины, наверное, ему помогли. 🥞",
+    ru: "🎃 о, чуть не забыл! на сайте появилась хэллоуинская тематика. теперь здесь немного… жутковато. хе-хе. 👻 страницы обзавелись мрачным оформлением, хэллоуинскими украшениями и зловещей атмосферой. надеюсь, ты не боишься темноты. 🕸️ так что включай хэллоуинскую тему и отправляйся исследовать сайт. только не удивляйся, если что-нибудь покажется подозрительным. heh.",
 
-    kk: "🚀 жақсы жаңалық! енді бұл демо-нұсқа емес, толыққанды жаңарту! жаңа бөлімдер дайын, поляк және нидерланд тілдері қосылды. Маленков ақыры бәрін аяқтады… құймақтардың көмегі тиген шығар. 🥞",
+    kk: "🎃 ой, ұмытып кетемін! сайтқа Хэллоуин тақырыбы қосылды. енді мұнда сәл… қорқынышты. хе-хе. 👻 беттер қараңғы дизайнмен, Хэллоуин безендірулерімен және зловещей атмосферамен безендірілген. сен қараңғыдан қорықпайсың деп үміттенемін. 🕸️ сондықтан Хэллоуин тақырыбын қосып, сайтты зерттеуге кіріс. тек бірдеңе күдікті болып көрінсе, таңғалма. heh.",
 
-    cs: "🚀 skvělé zprávy! už jde o plnohodnotnou aktualizaci, ne o demo verzi! nové sekce jsou připravené a přibyla polština i nizozemština. Malenkov to nakonec zvládl… možná mu pomohly palačinky. 🥞",
+    cs: "🎃 o, málem bych zapomněl! na webu je teď téma Halloween. teď je tu trochu… strašidelně. hehe. 👻 stránky mají temný vzhled, halloweenské dekorace a zlověstnou atmosféru. doufám, že se nebojíš tmy. 🕸️ tak si zapni halloweenské téma a pusť se do objevování webu. jen se nediv, pokud ti něco připadá podezřelé. heh.",
 
-    en: "🚀 good news! this is now a full update, not a demo version! The new sections are ready, and Polish and Dutch have been added. Malenkov finally pulled it off… maybe the pancakes helped. 🥞",
+    en: "🎃 oh, almost forgot! the website now has a Halloween theme. it's a bit… spooky here. heh-heh. 👻 the pages have a dark design, Halloween decorations, and an eerie atmosphere. I hope you're not afraid of the dark. 🕸️ so turn on the Halloween theme and start exploring the site. just don't be surprised if something seems suspicious. heh.",
 
-    de: "🚀 gute Nachrichten! Das ist jetzt ein vollständiges Update und keine Demoversion mehr! Die neuen Bereiche sind fertig, und Polnisch sowie Niederländisch sind hinzugekommen. Malenkov hat es tatsächlich geschafft… vielleicht haben die Pfannkuchen geholfen. 🥞",
+    de: "🎃 oh, fast hätte ich es vergessen! die Website hat jetzt ein Halloween-Thema. es ist hier ein bisschen… gruselig. hehe. 👻 die Seiten haben ein dunkles Design, Halloween-Dekorationen und eine unheimliche Atmosphäre. ich hoffe, du hast keine Angst vor der Dunkelheit. 🕸️ also schalte das Halloween-Thema ein und erkunde die Website. sei nur nicht überrascht, wenn dir etwas verdächtig vorkommt. heh.",
 
-    fr: "🚀 bonne nouvelle ! il s'agit maintenant d'une mise à jour complète, et non plus d'une version démo ! Les nouvelles sections sont prêtes, et le polonais ainsi que le néerlandais ont été ajoutés. Malenkov a finalement réussi… les crêpes l'ont peut-être aidé. 🥞",
+    fr: "🎃 oh, j'ai failli oublier ! le site a maintenant un thème Halloween. c'est un peu… effrayant ici. héhé. 👻 les pages ont un design sombre, des décorations d'Halloween et une atmosphère inquiétante. j'espère que tu n'as pas peur du noir. 🕸️ alors active le thème Halloween et commence à explorer le site. ne sois pas surpris si quelque chose te semble suspect. hé.",
 
-    es: "🚀 ¡buenas noticias! ¡ahora es una actualización completa, no una versión de demostración! Las nuevas secciones están listas y se han añadido el polaco y el neerlandés. Malenkov por fin lo consiguió… quizá las tortitas le ayudaron. 🥞",
+    es: "🎃 ¡oh, casi lo olvido! el sitio web ahora tiene un tema de Halloween. es un poco… espeluznante aquí. je, je. 👻 las páginas tienen un diseño oscuro, decoraciones de Halloween y una atmósfera inquietante. espero que no tengas miedo de la oscuridad. 🕸️ así que activa el tema de Halloween y empieza a explorar el sitio. solo no te sorprendas si algo parece sospechoso. je.",
+    it: "🎃 oh, quasi dimenticavo! il sito ora ha un tema di Halloween. è un po'… inquietante qui. eheh. 👻 le pagine hanno un design scuro, decorazioni di Halloween e un'atmosfera inquietante. spero che tu non abbia paura del buio. 🕸️ quindi attiva il tema di Halloween e inizia a esplorare il sito. non sorprenderti se qualcosa ti sembra sospetto. ehe.",
 
-    it: "🚀 buone notizie! ora è un aggiornamento completo, non più una versione demo! Le nuove sezioni sono pronte e sono state aggiunte le lingue polacca e neerlandese. Malenkov ce l'ha finalmente fatta… forse i pancake lo hanno aiutato. 🥞",
-
-    pl: "🚀 świetna wiadomość! to już pełna aktualizacja, a nie wersja demonstracyjna! Nowe sekcje są gotowe, a na stronie pojawiły się języki polski i niderlandzki. Malenkovowi w końcu się udało… może pomogły mu naleśniki. 🥞",
-
-    nl: "🚀 goed nieuws! dit is nu een volledige update en geen demoversie meer! De nieuwe onderdelen zijn klaar en Pools en Nederlands zijn toegevoegd. Malenkov heeft het eindelijk voor elkaar gekregen… misschien hebben de pannenkoeken geholpen. 🥞"
+    pl: "🎃 o, prawie zapomniałem! na stronie pojawił się motyw Halloween. jest tu trochę… strasznie. hehe. 👻 strony mają ciemny wygląd, dekoracje halloweenowe i złowieszczą atmosferę. mam nadzieję, że nie boisz się ciemności. 🕸️ więc włącz motyw Halloween i zacznij eksplorować stronę. tylko nie zdziw się, jeśli coś wyda ci się podejrzane. heh.",
+    nl: "🎃 oh, bijna vergeten! de website heeft nu een Halloween-thema. het is hier een beetje… spookhaftig. hehe. 👻 de pagina's hebben een donker ontwerp, Halloween decoraties en een gevaarlijke atmosfeer. ik hoop dat je niet bang bent voor het donker. 🕸️ zet dus het Halloween-thema aan en begin met het verkennen van de site. wees alleen niet verbaasd als iets verdacht lijkt. heh."
 };
 
 // Заменяем старое сообщение о демоверсии новым
@@ -4504,16 +4504,76 @@ if (document.readyState === "loading") {
    🎃 ПЕРЕКЛЮЧЕНИЕ ХЭЛЛОУИНСКОЙ ТЕМЫ
    ========================================= */
 
+/* =========================================
+   🎃 ПЕРЕВОД КНОПКИ ХЭЛЛОУИНА
+========================================= */
+
+function updateHalloweenThemeButton() {
+    const button = document.getElementById("halloweenThemeButton");
+
+    if (!button) return;
+
+    const translations = {
+        ru: {
+            halloween: "🎃 Хэллоуин",
+            normal: "🌌 Обычная тема"
+        },
+        kk: {
+            halloween: "🎃 Хэллоуин",
+            normal: "🌌 Қалыпты тақырып"
+        },
+        cs: {
+            halloween: "🎃 Halloween",
+            normal: "🌌 Normální motiv"
+        },
+        en: {
+            halloween: "🎃 Halloween",
+            normal: "🌌 Normal Theme"
+        },
+        de: {
+            halloween: "🎃 Halloween",
+            normal: "🌌 Normales Design"
+        },
+        fr: {
+            halloween: "🎃 Halloween",
+            normal: "🌌 Thème normal"
+        },
+        es: {
+            halloween: "🎃 Halloween",
+            normal: "🌌 Tema normal"
+        },
+        it: {
+            halloween: "🎃 Halloween",
+            normal: "🌌 Tema normale"
+        },
+        pl: {
+            halloween: "🎃 Halloween",
+            normal: "🌌 Zwykły motyw"
+        },
+        nl: {
+            halloween: "🎃 Halloween",
+            normal: "🌌 Normaal thema"
+        }
+    };
+
+    const language = translations[currentLanguage] || translations.ru;
+
+    const isHalloween = document.body.classList.contains("halloween-theme");
+
+    button.textContent = isHalloween
+        ? language.normal
+        : language.halloween;
+}
+
+
 function applyHalloweenTheme(enabled) {
     document.body.classList.toggle("halloween-theme", enabled);
+
+    updateHalloweenThemeButton();
 
     const button = document.getElementById("halloweenThemeButton");
 
     if (button) {
-        button.textContent = enabled
-            ? "🌌 Обычная тема"
-            : "🎃 Хэллоуин";
-
         button.setAttribute(
             "aria-pressed",
             String(enabled)
@@ -4529,6 +4589,7 @@ function applyHalloweenTheme(enabled) {
         console.warn("Не удалось сохранить оформление:", error);
     }
 }
+
 
 function toggleHalloweenTheme() {
     const enabled =
@@ -4549,3 +4610,237 @@ document.addEventListener("DOMContentLoaded", () => {
 
     applyHalloweenTheme(savedTheme === "on");
 });
+// =====================================
+// =====================================
+// РАСШИРЕННЫЕ ХЭЛЛОУИНСКИЕ ДЕКОРАЦИИ
+// =====================================
+
+function createHalloweenSvg(symbol, className) {
+    const viewBoxes = {
+        pumpkin: "0 0 100 100",
+        skull: "0 0 100 100",
+        bat: "0 0 120 70",
+        ghost: "0 0 100 110",
+        candle: "0 0 60 110",
+        cauldron: "0 0 220 180",
+        broom: "0 0 150 100",
+        potion: "0 0 100 110",
+        spider: "0 0 100 100",
+        web: "0 0 100 100",
+        crystal: "0 0 100 110",
+        book: "0 0 120 100",
+        comet: "0 0 120 80",
+        moon: "0 0 100 100"
+    };
+
+    const svgNS = "http://www.w3.org/2000/svg";
+    const svg = document.createElementNS(svgNS, "svg");
+
+    svg.setAttribute("viewBox", viewBoxes[symbol] || "0 0 100 100");
+    svg.setAttribute("aria-hidden", "true");
+    svg.classList.add(...className.split(" "));
+
+    const use = document.createElementNS(svgNS, "use");
+    use.setAttribute("href", "#hvec-" + symbol);
+
+    svg.appendChild(use);
+    return svg;
+}
+
+function addHalloweenVectorDecorations() {
+
+    // Разные украшения для каждого раздела
+    const symbols = [
+        "potion",
+        "spider",
+        "crystal",
+        "book",
+        "comet",
+        "web",
+        "moon",
+        "ghost",
+        "bat"
+    ];
+
+    const sections = document.querySelectorAll("section");
+
+    sections.forEach((section, index) => {
+
+        if (section.closest(".modal, [role='dialog']")) {
+            return;
+        }
+
+        if (section.dataset.halloweenVectorReady === "true") {
+            return;
+        }
+
+        section.dataset.halloweenVectorReady = "true";
+        section.classList.add("halloween-decor-host");
+
+        if (getComputedStyle(section).position === "static") {
+            section.style.position = "relative";
+        }
+
+        const existing = section.querySelectorAll(".halloween-float").length;
+
+        // Уже украшенным разделам добавляем одну новую фигуру.
+        // Остальным — две.
+        const count = existing > 0 ? 1 : 2;
+
+        for (let i = 0; i < count; i++) {
+            const symbol = symbols[(index * 2 + i) % symbols.length];
+
+            let positionClass;
+
+            if (existing > 0) {
+                const old = section.querySelector(".halloween-float");
+
+                positionClass =
+                    old && old.classList.contains("halloween-float--skull")
+                        ? "halloween-scattered-decor--first"
+                        : "halloween-scattered-decor--second";
+            } else {
+                positionClass = i === 0
+                    ? "halloween-scattered-decor--first"
+                    : "halloween-scattered-decor--second";
+            }
+
+            section.appendChild(
+                createHalloweenSvg(
+                    symbol,
+                    "halloween-float halloween-scattered-decor " + positionClass
+                )
+            );
+        }
+    });
+
+    // Украшения карточек: планеты, спутники, созвездия и другие объекты
+    const cardSelector = [
+        ".planet-card",
+        ".moon-card",
+        ".constellation-card",
+        ".satellite-card",
+        ".dwarf-planet-card",
+        ".atlas-card"
+    ].join(",");
+
+    const cardSymbols = [
+        "pumpkin",
+        "skull",
+        "bat",
+        "potion",
+        "crystal",
+        "moon",
+        "star"
+    ];
+
+    document.querySelectorAll(cardSelector).forEach((card, index) => {
+
+        if (card.querySelector(".halloween-card-decoration")) {
+            return;
+        }
+
+        if (getComputedStyle(card).position === "static") {
+            card.style.position = "relative";
+        }
+
+        const symbol = cardSymbols[index % cardSymbols.length];
+
+        card.appendChild(
+            createHalloweenSvg(
+                symbol,
+                "halloween-card-decoration"
+            )
+        );
+    });
+}
+
+// Запуск после загрузки страницы
+if (document.readyState === "loading") {
+    document.addEventListener(
+        "DOMContentLoaded",
+        addHalloweenVectorDecorations,
+        { once: true }
+    );
+} else {
+    addHalloweenVectorDecorations();
+}
+
+function addHalloweenVectorDecorations() {
+    // Украшения в крупных разделах сайта
+    const sectionDecorations = [
+        {
+            selector: ".intro, .hero, .welcome-section",
+            symbol: "ghost",
+            className: "halloween-float halloween-float--ghost"
+        },
+        {
+            selector: ".planets",
+            symbol: "bat",
+            className: "halloween-float halloween-float--bat"
+        },
+        {
+            selector: ".moons",
+            symbol: "skull",
+            className: "halloween-float halloween-float--skull"
+        }
+    ];
+
+    sectionDecorations.forEach(decoration => {
+        const section = document.querySelector(decoration.selector);
+
+        if (!section) {
+            return;
+        }
+
+        if (section.querySelector(".halloween-float")) {
+            return;
+        }
+
+        if (getComputedStyle(section).position === "static") {
+            section.style.position = "relative";
+        }
+
+        section.classList.add("halloween-decor-host");
+
+        section.appendChild(
+            createHalloweenSvg(
+                decoration.symbol,
+                decoration.className
+            )
+        );
+    });
+
+    // Маленькие тыквы и черепа на карточках
+    document.querySelectorAll(".planet-card, .moon-card")
+        .forEach(card => {
+            if (card.querySelector(".halloween-card-decoration")) {
+                return;
+            }
+
+            if (getComputedStyle(card).position === "static") {
+                card.style.position = "relative";
+            }
+
+            const symbol = card.classList.contains("moon-card")
+                ? "skull"
+                : "pumpkin";
+
+            card.appendChild(
+                createHalloweenSvg(
+                    symbol,
+                    "halloween-card-decoration"
+                )
+            );
+        });
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener(
+        "DOMContentLoaded",
+        addHalloweenVectorDecorations,
+        { once: true }
+    );
+} else {
+    addHalloweenVectorDecorations();
+}

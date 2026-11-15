@@ -1,3 +1,9 @@
+
+/* =========================================
+   🌌 КОСМИЧЕСКИЕ ОБЪЕКТЫ — HALLOWEEN EDITION
+   Проклятая Вселенная
+========================================= */
+
 * {
     box-sizing: border-box;
 }
@@ -9,82 +15,37 @@ html {
 body {
     margin: 0;
     min-height: 100vh;
+    overflow-x: hidden;
 
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f1eaff;
 
     background:
-        radial-gradient(
-            circle at 20% 20%,
-            rgba(70, 80, 180, 0.25),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 80% 70%,
-            rgba(120, 50, 180, 0.2),
-            transparent 30%
-        ),
-        linear-gradient(
-            135deg,
-            #030616,
-            #080b24,
-            #12052b
-        );
+        radial-gradient(ellipse at 50% 0%, rgba(112, 20, 83, .25), transparent 45%),
+        radial-gradient(circle at 10% 65%, rgba(60, 24, 112, .2), transparent 35%),
+        radial-gradient(circle at 90% 80%, rgba(115, 15, 35, .18), transparent 35%),
+        linear-gradient(145deg, #080610, #100817 48%, #080612);
 
-    overflow-x: hidden;
 }
 
-
-/* Звёзды */
+/* =========================================
+   ⭐ ЗВЁЗДНОЕ НЕБО
+========================================= */
 
 .stars {
     position: fixed;
     inset: 0;
-
+    z-index: 0;
     pointer-events: none;
 
-    z-index: -1;
-
     background-image:
-        radial-gradient(
-            1px 1px at 10% 20%,
-            white,
-            transparent
-        ),
-        radial-gradient(
-            1px 1px at 30% 70%,
-            white,
-            transparent
-        ),
-        radial-gradient(
-            1px 1px at 50% 30%,
-            white,
-            transparent
-        ),
-        radial-gradient(
-            1px 1px at 70% 80%,
-            white,
-            transparent
-        ),
-        radial-gradient(
-            1px 1px at 90% 15%,
-            white,
-            transparent
-        ),
-        radial-gradient(
-            2px 2px at 15% 85%,
-            rgba(255,255,255,.8),
-            transparent
-        ),
-        radial-gradient(
-            2px 2px at 85% 45%,
-            rgba(255,255,255,.7),
-            transparent
-        );
+        radial-gradient(1px 1px at 10% 20%, #fff, transparent),
+        radial-gradient(1px 1px at 30% 70%, #e5caff, transparent),
+        radial-gradient(1px 1px at 50% 30%, #fff, transparent),
+        radial-gradient(1px 1px at 70% 80%, #ffb9d6, transparent),
+        radial-gradient(1px 1px at 90% 15%, #fff, transparent),
+        radial-gradient(2px 2px at 15% 85%, #d8b5ff, transparent),
+        radial-gradient(2px 2px at 85% 45%, #ffb9d6, transparent);
 
     background-size:
         220px 220px,
@@ -95,401 +56,478 @@ body {
         400px 400px,
         500px 500px;
 
-    animation: starMove 20s linear infinite;
+    animation: starMove 25s linear infinite;
 }
 
 @keyframes starMove {
-
-    from {
-        transform: translateY(0);
-    }
-
-    to {
-        transform: translateY(-40px);
-    }
+    from { transform: translateY(0); }
+    to { transform: translateY(-45px); }
 }
 
+/* Содержимое располагается над звёздами */
 
-/* Шапка */
+.space-header,
+main,
+footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================================
+   👁 ШАПКА
+========================================= */
 
 .space-header {
     position: relative;
-
-    padding:
-        90px
-        20px
-        55px;
-
+    padding: 110px 20px 75px;
     text-align: center;
+
+    background:
+        radial-gradient(ellipse at center top,
+        rgba(125, 25, 82, .28),
+        transparent 70%);
+
+    border-bottom: 1px solid rgba(200, 85, 145, .2);
+}
+
+.space-header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #8f285f,
+        #b36be0,
+        #8f285f,
+        transparent
+    );
+
+    box-shadow: 0 0 15px #a32e78;
 }
 
 .header-content {
     max-width: 900px;
-
     margin: 0 auto;
 }
 
 .space-icon {
-    font-size: 70px;
-
-    margin-bottom: 10px;
+    font-size: 78px;
+    margin-bottom: 15px;
 
     filter:
-        drop-shadow(
-            0 0 25px
-            rgba(120,180,255,.8)
-        );
+        drop-shadow(0 0 12px #a33c9b)
+        drop-shadow(0 0 30px #641e80);
+
+    animation: iconFloat 4s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+    0%, 100% { transform: translateY(0) rotate(-3deg); }
+    50% { transform: translateY(-9px) rotate(3deg); }
 }
 
 .space-header h1 {
     margin: 0;
 
-    font-size: clamp(
-        38px,
-        6vw,
-        72px
+    font-size: clamp(38px, 6vw, 72px);
+    letter-spacing: 2px;
+
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #e5a6d7,
+        #b88bff,
+        #ffb0bd,
+        #ffffff
     );
 
-    background:
-        linear-gradient(
-            90deg,
-            #ffffff,
-            #9fc9ff,
-            #d7a8ff,
-            #ffffff
-        );
-
-    background-size: 250% auto;
-
-    -webkit-background-clip: text;
+    background-size: 300% auto;
     background-clip: text;
-
+    -webkit-background-clip: text;
     color: transparent;
 
-    animation:
-        titleGlow 7s linear infinite;
+    filter: drop-shadow(0 0 15px rgba(174, 58, 137, .35));
+
+    animation: titleGlow 8s linear infinite;
 }
 
 @keyframes titleGlow {
-
-    0% {
-        background-position: 0% center;
-    }
-
-    100% {
-        background-position: 250% center;
-    }
+    to { background-position: 300% center; }
 }
 
 .space-header p {
-    margin-top: 18px;
-
-    color: #c5d7ff;
-
+    margin-top: 20px;
+    color: #d5b6e4;
     font-size: 20px;
+    letter-spacing: .5px;
 }
 
-
-/* Кнопка назад */
+/* =========================================
+   ↩ КНОПКА НАЗАД
+========================================= */
 
 .back-button {
     position: absolute;
-
     top: 22px;
     left: 22px;
 
-    padding: 10px 16px;
+    padding: 11px 17px;
 
-    color: white;
-
+    color: #f5d9ff;
     text-decoration: none;
 
-    background:
-        rgba(15, 22, 50, .8);
-
-    border:
-        1px solid
-        rgba(140,190,255,.4);
-
+    background: rgba(30, 12, 35, .9);
+    border: 1px solid rgba(183, 92, 160, .5);
     border-radius: 10px;
 
-    transition: .25s;
+    transition: .3s;
 }
 
 .back-button:hover {
-    transform: translateY(-2px);
-
-    background:
-        rgba(50,70,130,.8);
+    transform: translateY(-3px);
+    background: rgba(91, 25, 72, .9);
 
     box-shadow:
-        0 0 20px
-        rgba(100,170,255,.35);
+        0 0 15px rgba(196, 55, 137, .3),
+        0 0 30px rgba(116, 44, 160, .2);
 }
 
-
-/* Языки */
+/* =========================================
+   🌐 ЯЗЫКОВОЕ МЕНЮ
+========================================= */
 
 .language-menu {
     position: fixed;
-
     top: 20px;
     right: 20px;
-
     z-index: 2000;
 }
 
 .language-button,
 .language-dropdown button {
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     gap: 8px;
 
-    padding: 8px 12px;
-
+    padding: 9px 12px;
     min-width: 125px;
 
-    color: white;
+    color: #f5e5ff;
+    background: rgba(24, 11, 32, .97);
 
-    background:
-        rgba(15,22,45,.95);
-
-    border:
-        1px solid
-        rgba(140,190,255,.4);
-
-    border-radius: 8px;
+    border: 1px solid rgba(185, 105, 175, .55);
+    border-radius: 9px;
 
     font-size: 14px;
-
     cursor: pointer;
 
-    transition: .2s;
+    transition: .25s;
 }
 
 .language-button:hover,
 .language-dropdown button:hover {
-    background:
-        rgba(45,65,120,.95);
+    background: #542044;
 
     box-shadow:
-        0 0 15px
-        rgba(100,170,255,.35);
+        0 0 12px rgba(208, 70, 150, .4);
 }
 
 .language-button img,
 .language-dropdown button img {
     width: 20px;
     height: 14px;
-
     object-fit: cover;
-
     border-radius: 2px;
 }
 
 .language-dropdown {
     display: none;
-
     flex-direction: column;
-
     gap: 4px;
+    margin-top: 7px;
 
-    margin-top: 6px;
+    max-height: 75vh;
+    overflow-y: auto;
+
+    padding: 5px;
+    background: rgba(13, 7, 20, .97);
+    border: 1px solid rgba(180, 80, 150, .35);
+    border-radius: 10px;
+
+    box-shadow: 0 0 25px rgba(110, 30, 100, .25);
 }
 
 .language-dropdown.open {
     display: flex;
 }
 
-
-/* Введение */
+/* =========================================
+   🔭 ВСТУПЛЕНИЕ — ПАНЕЛЬ ПРЕДУПРЕЖДЕНИЯ
+========================================= */
 
 .intro {
-    max-width: 850px;
+    position: relative;
 
-    margin:
-        0 auto
-        45px;
-
-    padding:
-        30px;
+    max-width: 900px;
+    margin: 45px auto 55px;
+    padding: 35px;
 
     text-align: center;
 
     background:
-        rgba(15,22,55,.55);
+        linear-gradient(135deg,
+        rgba(45, 17, 49, .88),
+        rgba(19, 12, 34, .94));
 
-    border:
-        1px solid
-        rgba(130,180,255,.2);
-
-    border-radius: 20px;
+    border: 1px solid rgba(168, 72, 143, .4);
+    border-radius: 18px;
 
     box-shadow:
-        0 0 30px
-        rgba(80,120,255,.08);
+        0 0 25px rgba(115, 36, 104, .12),
+        inset 0 0 30px rgba(115, 36, 104, .06);
+}
+
+.intro::before {
+    content: "CLASSIFIED • COSMIC ARCHIVE";
+    display: block;
+    margin-bottom: 18px;
+
+    color: #c47cae;
+    font-size: 11px;
+    letter-spacing: 4px;
 }
 
 .intro h2 {
     margin-top: 0;
-
+    color: #f4c5ec;
     font-size: 30px;
+
+    text-shadow: 0 0 15px rgba(202, 75, 157, .3);
 }
 
 .intro p {
-    color: #c8d7f5;
-
-    line-height: 1.7;
-
+    color: #d0c1dd;
+    line-height: 1.8;
     font-size: 17px;
 }
 
-
-/* Карточки */
+/* =========================================
+   🌌 СЕТКА КОСМИЧЕСКИХ ОБЪЕКТОВ
+========================================= */
 
 .objects-section {
-    width: min(
-        1200px,
-        92%
-    );
-
-    margin: 0 auto 70px;
+    width: min(1200px, 92%);
+    margin: 0 auto 80px;
 }
 
 .objects-grid {
     display: grid;
 
     grid-template-columns:
-        repeat(
-            auto-fit,
-            minmax(
-                240px,
-                1fr
-            )
-        );
+        repeat(auto-fit, minmax(240px, 1fr));
 
     gap: 24px;
 }
 
+/* Карточка */
+
 .object-card {
+    --glow: rgba(157, 65, 157, .35);
+    --accent: #c17bc9;
+
     position: relative;
+    isolation: isolate;
 
-    min-height: 250px;
-
-    padding: 30px 24px;
+    min-height: 260px;
+    padding: 32px 24px;
 
     text-align: center;
 
     background:
-        linear-gradient(
-            145deg,
-            rgba(25,35,80,.85),
-            rgba(12,15,45,.9)
-        );
+        radial-gradient(circle at 50% 0%, var(--glow), transparent 65%),
+        linear-gradient(145deg, rgba(37, 19, 48, .96), rgba(12, 10, 25, .97));
 
-    border:
-        1px solid
-        rgba(120,180,255,.25);
-
-    border-radius: 20px;
+    border: 1px solid color-mix(in srgb, var(--accent), transparent 55%);
+    border-radius: 18px;
 
     cursor: pointer;
-
     overflow: hidden;
 
     transition:
-        transform .3s,
-        box-shadow .3s,
-        border-color .3s;
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
 }
 
 .object-card::before {
     content: "";
-
     position: absolute;
-
-    inset: -2px;
+    inset: 0;
+    z-index: -1;
 
     background:
-        radial-gradient(
-            circle at 50% 0%,
-            rgba(130,170,255,.18),
-            transparent 55%
-        );
+        linear-gradient(120deg,
+        transparent 20%,
+        rgba(255, 255, 255, .045) 50%,
+        transparent 80%);
 
-    pointer-events: none;
+    transform: translateX(-100%);
+    transition: transform .7s ease;
+}
+
+.object-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 15%;
+    width: 70%;
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--accent),
+        transparent
+    );
+
+    opacity: .65;
+}
+
+.object-card:hover::before {
+    transform: translateX(100%);
 }
 
 .object-card:hover {
-    transform:
-        translateY(-8px)
-        scale(1.02);
+    transform: translateY(-9px) scale(1.015);
 
-    border-color:
-        rgba(150,210,255,.65);
+    border-color: var(--accent);
 
     box-shadow:
-        0 0 35px
-        rgba(90,150,255,.25);
+        0 12px 35px rgba(0, 0, 0, .4),
+        0 0 25px var(--glow),
+        inset 0 0 25px rgba(255, 255, 255, .025);
 }
 
 .object-icon {
     position: relative;
-
-    font-size: 65px;
-
+    font-size: 67px;
     margin-bottom: 18px;
 
-    filter:
-        drop-shadow(
-            0 0 15px
-            rgba(150,190,255,.55)
-        );
+    filter: drop-shadow(0 0 13px var(--glow));
+
+    transition: transform .35s ease, filter .35s ease;
+}
+
+.object-card:hover .object-icon {
+    transform: scale(1.14) rotate(-5deg);
+    filter: drop-shadow(0 0 20px var(--accent));
 }
 
 .object-card h3 {
     position: relative;
+    margin: 0 0 13px;
 
-    margin: 0 0 12px;
-
+    color: #f5dafa;
     font-size: 23px;
+
+    text-shadow: 0 0 12px var(--glow);
 }
 
 .object-card p {
     position: relative;
-
     margin: 0;
 
-    color: #b8c9eb;
-
-    line-height: 1.5;
+    color: #c5b7d4;
+    line-height: 1.65;
+    font-size: 15px;
 }
 
+/* Индивидуальные оттенки карточек */
 
-/* Модальное окно */
+.object-card:nth-child(1) {
+    --accent: #b58cff;
+    --glow: rgba(129, 74, 208, .32);
+}
+
+.object-card:nth-child(2) {
+    --accent: #d18b78;
+    --glow: rgba(177, 82, 66, .3);
+}
+
+.object-card:nth-child(3) {
+    --accent: #ff9dbe;
+    --glow: rgba(220, 68, 125, .3);
+}
+
+.object-card:nth-child(4) {
+    --accent: #b27cff;
+    --glow: rgba(111, 56, 189, .35);
+}
+
+.object-card:nth-child(5) {
+    --accent: #e8b5ff;
+    --glow: rgba(169, 105, 220, .3);
+}
+
+.object-card:nth-child(6) {
+    --accent: #a68bff;
+    --glow: rgba(76, 43, 150, .4);
+}
+
+.object-card:nth-child(7) {
+    --accent: #d18bff;
+    --glow: rgba(132, 60, 180, .35);
+}
+
+.object-card:nth-child(8) {
+    --accent: #ff83c5;
+    --glow: rgba(194, 50, 137, .3);
+}
+
+.object-card:nth-child(9) {
+    --accent: #83baff;
+    --glow: rgba(48, 100, 190, .35);
+}
+
+.object-card:nth-child(10) {
+    --accent: #ff777e;
+    --glow: rgba(180, 43, 55, .32);
+}
+
+.object-card:nth-child(11) {
+    --accent: #d8d5ff;
+    --glow: rgba(144, 145, 205, .3);
+}
+
+.object-card:nth-child(12) {
+    --accent: #ff6c9b;
+    --glow: rgba(200, 42, 88, .35);
+}
+
+/* =========================================
+   📜 МОДАЛЬНОЕ ОКНО
+========================================= */
 
 .object-modal {
     display: none;
 
     position: fixed;
-
     inset: 0;
+    z-index: 3000;
 
     align-items: center;
     justify-content: center;
 
     padding: 20px;
 
-    background:
-        rgba(0,0,15,.78);
-
-    backdrop-filter:
-        blur(8px);
-
-    z-index: 3000;
+    background: rgba(5, 2, 12, .88);
+    backdrop-filter: blur(12px);
 }
 
 .object-modal.show {
@@ -499,163 +537,177 @@ body {
 .modal-content {
     position: relative;
 
-    width: min(
-        650px,
-        95%
-    );
-
+    width: min(650px, 95%);
     max-height: 90vh;
-
     overflow-y: auto;
 
-    padding: 45px;
+    padding: 48px 40px;
 
     text-align: center;
 
     background:
-        linear-gradient(
-            145deg,
-            #111a42,
-            #090c28
-        );
+        radial-gradient(ellipse at 50% 0%, rgba(139, 43, 116, .3), transparent 65%),
+        linear-gradient(145deg, #27122e, #100b1c 75%);
 
-    border:
-        1px solid
-        rgba(150,200,255,.4);
-
-    border-radius: 25px;
+    border: 1px solid rgba(202, 104, 177, .65);
+    border-radius: 22px;
 
     box-shadow:
-        0 0 60px
-        rgba(80,140,255,.3);
+        0 0 30px rgba(160, 42, 128, .2),
+        0 0 80px rgba(76, 29, 113, .25),
+        inset 0 0 35px rgba(146, 51, 130, .08);
 
-    animation:
-        modalAppear .25s ease;
+    animation: modalAppear .3s ease;
+}
+
+.modal-content::before {
+    content: "COSMIC RESEARCH FILE";
+    display: block;
+    margin-bottom: 25px;
+
+    color: #c17ab8;
+    font-size: 10px;
+    letter-spacing: 5px;
 }
 
 @keyframes modalAppear {
-
     from {
         opacity: 0;
-        transform: scale(.9);
+        transform: scale(.88) translateY(20px);
     }
 
     to {
         opacity: 1;
-        transform: scale(1);
+        transform: scale(1) translateY(0);
     }
 }
 
 .close-button {
     position: absolute;
-
-    top: 12px;
+    top: 13px;
     right: 16px;
 
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
 
-    border: none;
-
+    border: 1px solid rgba(207, 112, 172, .35);
     border-radius: 50%;
 
-    color: white;
-
-    background:
-        rgba(255,255,255,.1);
+    color: #f8d6ed;
+    background: rgba(92, 29, 70, .45);
 
     font-size: 28px;
-
     cursor: pointer;
+
+    transition: .25s;
 }
 
 .close-button:hover {
-    background:
-        rgba(255,80,100,.25);
+    transform: rotate(90deg);
+    background: rgba(160, 37, 86, .7);
+    box-shadow: 0 0 18px rgba(255, 72, 123, .4);
 }
 
 .modal-icon {
-    font-size: 80px;
+    font-size: 82px;
+    margin-bottom: 15px;
 
-    margin-bottom: 10px;
+    filter: drop-shadow(0 0 20px rgba(199, 91, 191, .5));
 }
 
 .modal-content h2 {
     margin-top: 0;
-
+    color: #f4c7ed;
     font-size: 35px;
+
+    text-shadow: 0 0 15px rgba(193, 75, 156, .3);
 }
 
 .modal-content > p {
-    color: #c8d7f5;
-
-    line-height: 1.7;
-
+    color: #d7c5e3;
+    line-height: 1.8;
     font-size: 17px;
 }
 
-.fact-box {
-    margin-top: 25px;
+/* =========================================
+   🔮 ИНТЕРЕСНЫЙ ФАКТ
+========================================= */
 
-    padding: 20px;
+.fact-box {
+    margin-top: 30px;
+    padding: 23px;
 
     text-align: left;
 
     background:
-        rgba(80,110,190,.12);
+        linear-gradient(135deg,
+        rgba(106, 39, 99, .3),
+        rgba(44, 24, 67, .45));
 
-    border-left:
-        3px solid
-        rgba(130,190,255,.7);
-
+    border: 1px solid rgba(177, 90, 159, .3);
+    border-left: 4px solid #c36ab1;
     border-radius: 12px;
+
+    box-shadow: inset 0 0 20px rgba(150, 57, 138, .06);
 }
 
 .fact-box strong {
     display: block;
+    margin-bottom: 12px;
 
-    margin-bottom: 8px;
+    color: #f0b4e2;
+    font-size: 17px;
 }
 
 .fact-box p {
     margin: 0;
 
-    color: #c4d3ed;
-
-    line-height: 1.6;
+    color: #d1c0dc;
+    line-height: 1.7;
 }
 
-
-/* Подвал */
+/* =========================================
+   🌑 ПОДВАЛ
+========================================= */
 
 footer {
+    position: relative;
+    z-index: 1;
+
     padding: 30px 20px;
 
     text-align: center;
 
-    color: #899ac0;
+    color: #a995b9;
 
-    border-top:
-        1px solid
-        rgba(130,180,255,.12);
+    background: rgba(10, 6, 17, .65);
+    border-top: 1px solid rgba(165, 75, 139, .25);
 }
 
+footer p {
+    margin: 0;
+    letter-spacing: .5px;
+}
 
-/* Телефон */
+/* =========================================
+   📱 АДАПТАЦИЯ
+========================================= */
 
 @media (max-width: 700px) {
 
     .space-header {
-        padding-top: 125px;
+        padding: 145px 18px 55px;
     }
 
     .back-button {
-        top: 70px;
+        top: 72px;
         left: 50%;
-
         transform: translateX(-50%);
-
         white-space: nowrap;
+    }
+
+    .back-button:hover {
+        transform: translateX(-50%) translateY(-3px);
     }
 
     .language-menu {
@@ -664,7 +716,7 @@ footer {
     }
 
     .space-header h1 {
-        font-size: 40px;
+        font-size: 39px;
     }
 
     .space-header p {
@@ -672,10 +724,335 @@ footer {
     }
 
     .intro {
-        padding: 22px;
+        width: 92%;
+        margin: 30px auto 40px;
+        padding: 25px 20px;
+    }
+
+    .intro h2 {
+        font-size: 25px;
+    }
+
+    .objects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 17px;
+    }
+
+    .object-card {
+        min-height: 235px;
+        padding: 27px 19px;
     }
 
     .modal-content {
-        padding: 35px 22px;
+        padding: 42px 23px 28px;
     }
+
+    .modal-content h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .objects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .space-header h1 {
+        font-size: 34px;
+    }
+
+    .space-icon {
+        font-size: 65px;
+    }
+}
+
+/* =========================================
+   ♿ УМЕНЬШЕНИЕ АНИМАЦИИ ПО НАСТРОЙКЕ
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+}
+
+/* =====================================================
+   🌌 ОБЫЧНАЯ КОСМИЧЕСКАЯ ТЕМА
+   Работает, когда Хэллоуин выключен
+===================================================== */
+
+body:not(.halloween-theme) {
+    color: #eaf3ff;
+
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(50, 100, 210, .22), transparent 48%),
+        radial-gradient(circle at 10% 65%, rgba(40, 80, 180, .18), transparent 35%),
+        radial-gradient(circle at 90% 80%, rgba(40, 150, 220, .13), transparent 35%),
+        linear-gradient(145deg, #050b1c, #09152d 48%, #060b1c);
+}
+
+/* Звёздное небо */
+
+body:not(.halloween-theme) .stars {
+    background-image:
+        radial-gradient(1px 1px at 10% 20%, #fff, transparent),
+        radial-gradient(1px 1px at 30% 70%, #b8d9ff, transparent),
+        radial-gradient(1px 1px at 50% 30%, #fff, transparent),
+        radial-gradient(1px 1px at 70% 80%, #9edcff, transparent),
+        radial-gradient(1px 1px at 90% 15%, #fff, transparent),
+        radial-gradient(2px 2px at 15% 85%, #b6c8ff, transparent),
+        radial-gradient(2px 2px at 85% 45%, #9be8ff, transparent);
+}
+
+/* Шапка */
+
+body:not(.halloween-theme) .space-header {
+    background:
+        radial-gradient(ellipse at center top, rgba(50, 110, 220, .22), transparent 70%);
+    border-bottom-color: rgba(85, 150, 255, .25);
+}
+
+body:not(.halloween-theme) .space-header::after {
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #3275db,
+        #8adfff,
+        #3275db,
+        transparent
+    );
+    box-shadow: 0 0 15px #397de8;
+}
+
+body:not(.halloween-theme) .space-icon {
+    filter:
+        drop-shadow(0 0 12px #398cff)
+        drop-shadow(0 0 30px #2359b9);
+}
+
+body:not(.halloween-theme) .space-header p {
+    color: #b8d8ff;
+}
+
+/* Кнопка назад */
+
+body:not(.halloween-theme) .back-button {
+    color: #dceaff;
+    background: rgba(10, 25, 55, .9);
+    border-color: rgba(90, 155, 255, .5);
+}
+
+body:not(.halloween-theme) .back-button:hover {
+    background: rgba(30, 75, 145, .9);
+    box-shadow: 0 0 18px rgba(55, 135, 255, .4);
+}
+
+/* Языковое меню */
+
+body:not(.halloween-theme) .language-button,
+body:not(.halloween-theme) .language-dropdown button {
+    color: #e5f1ff;
+    background: rgba(9, 20, 43, .97);
+    border-color: rgba(90, 150, 235, .5);
+}
+
+body:not(.halloween-theme) .language-button:hover,
+body:not(.halloween-theme) .language-dropdown button:hover {
+    background: #183d70;
+    box-shadow: 0 0 14px rgba(65, 140, 255, .4);
+}
+
+body:not(.halloween-theme) .language-dropdown {
+    background: rgba(7, 16, 36, .97);
+    border-color: rgba(80, 140, 230, .4);
+}
+
+/* Вступление */
+
+body:not(.halloween-theme) .intro {
+    background: linear-gradient(
+        135deg,
+        rgba(17, 39, 78, .9),
+        rgba(9, 20, 44, .96)
+    );
+    border-color: rgba(75, 135, 230, .4);
+    box-shadow:
+        0 0 25px rgba(40, 100, 220, .12),
+        inset 0 0 30px rgba(40, 100, 220, .06);
+}
+
+body:not(.halloween-theme) .intro::before {
+    color: #80baff;
+}
+
+body:not(.halloween-theme) .intro h2 {
+    color: #b8d9ff;
+    text-shadow: 0 0 15px rgba(70, 145, 255, .35);
+}
+
+body:not(.halloween-theme) .intro p {
+    color: #c1d4ee;
+}
+
+/* Карточки */
+
+body:not(.halloween-theme) .object-card {
+    --accent: #69baff;
+    --glow: rgba(60, 135, 255, .3);
+
+    background:
+        radial-gradient(circle at 50% 0%, var(--glow), transparent 65%),
+        linear-gradient(145deg, rgba(15, 34, 69, .97), rgba(7, 14, 32, .98));
+}
+
+body:not(.halloween-theme) .object-card:nth-child(1) {
+    --accent: #7baaff;
+    --glow: rgba(70, 115, 220, .3);
+}
+
+body:not(.halloween-theme) .object-card:nth-child(2) {
+    --accent: #b8c6d9;
+    --glow: rgba(120, 150, 190, .25);
+}
+
+body:not(.halloween-theme) .object-card:nth-child(3) {
+    --accent: #67dcff;
+    --glow: rgba(60, 180, 255, .3);
+}
+
+body:not(.halloween-theme) .object-card:nth-child(4) {
+    --accent: #9d91ff;
+    --glow: rgba(110, 85, 220, .3);
+}
+
+body:not(.halloween-theme) .object-card:nth-child(5) {
+    --accent: #ffe18a;
+    --glow: rgba(255, 195, 75, .25);
+}
+
+body:not(.halloween-theme) .object-card:nth-child(6) {
+    --accent: #8295c9;
+    --glow: rgba(60, 75, 160, .35);
+}
+
+body:not(.halloween-theme) .object-card:nth-child(7) {
+    --accent: #65caff;
+    --glow: rgba(50, 130, 220, .3);
+}
+
+body:not(.halloween-theme) .object-card:nth-child(8) {
+    --accent: #b69bff;
+    --glow: rgba(125, 85, 220, .3);
+}
+
+body:not(.halloween-theme) .object-card:nth-child(9) {
+    --accent: #79e5ff;
+    --glow: rgba(65, 175, 220, .3);
+}
+
+body:not(.halloween-theme) .object-card:nth-child(10) {
+    --accent: #ffb477;
+    --glow: rgba(220, 120, 55, .25);
+}
+
+body:not(.halloween-theme) .object-card:nth-child(11) {
+    --accent: #dceaff;
+    --glow: rgba(170, 195, 240, .3);
+}
+
+body:not(.halloween-theme) .object-card:nth-child(12) {
+    --accent: #ff9b9b;
+    --glow: rgba(220, 80, 100, .25);
+}
+
+body:not(.halloween-theme) .object-card h3 {
+    color: #dceaff;
+}
+
+body:not(.halloween-theme) .object-card p {
+    color: #b7c9e2;
+}
+
+/* Модальное окно */
+
+body:not(.halloween-theme) .object-modal {
+    background: rgba(2, 6, 20, .88);
+}
+
+body:not(.halloween-theme) .modal-content {
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(55, 110, 220, .3), transparent 65%),
+        linear-gradient(145deg, #142b52, #080f24 75%);
+
+    border-color: rgba(100, 165, 255, .6);
+
+    box-shadow:
+        0 0 30px rgba(50, 110, 220, .2),
+        0 0 80px rgba(25, 70, 150, .25),
+        inset 0 0 35px rgba(60, 120, 220, .08);
+}
+
+body:not(.halloween-theme) .modal-content::before {
+    color: #8bbaff;
+}
+
+body:not(.halloween-theme) .modal-content h2 {
+    color: #c5ddff;
+    text-shadow: 0 0 15px rgba(90, 150, 255, .3);
+}
+
+body:not(.halloween-theme) .modal-content > p {
+    color: #c7d8ed;
+}
+
+body:not(.halloween-theme) .modal-icon {
+    filter: drop-shadow(0 0 20px rgba(90, 160, 255, .5));
+}
+
+body:not(.halloween-theme) .close-button {
+    color: #e5f1ff;
+    background: rgba(30, 70, 135, .45);
+    border-color: rgba(100, 165, 255, .4);
+}
+
+body:not(.halloween-theme) .close-button:hover {
+    background: rgba(45, 105, 190, .7);
+    box-shadow: 0 0 18px rgba(70, 150, 255, .4);
+}
+
+/* Интересный факт */
+
+body:not(.halloween-theme) .fact-box {
+    background: linear-gradient(
+        135deg,
+        rgba(35, 85, 155, .3),
+        rgba(17, 37, 78, .45)
+    );
+
+    border-color: rgba(85, 150, 230, .35);
+    border-left-color: #68baff;
+
+    box-shadow: inset 0 0 20px rgba(50, 120, 220, .06);
+}
+
+body:not(.halloween-theme) .fact-box strong {
+    color: #a9d5ff;
+}
+
+body:not(.halloween-theme) .fact-box p {
+    color: #c2d4eb;
+}
+
+/* Подвал */
+
+body:not(.halloween-theme) footer {
+    color: #9bb6da;
+    background: rgba(5, 12, 28, .75);
+    border-top-color: rgba(75, 135, 230, .3);
 }

@@ -535,3 +535,293 @@ body {
         background-position: 90px 90px, -55px 100px;
     }
 }
+
+
+/* =========================================
+   🎃 ХЭЛЛОУИНСКАЯ ТЕМА
+   Включается только через halloween-theme
+   ========================================= */
+
+body.halloween-theme {
+    color: #f5eaff;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(111, 35, 125, 0.28),
+            transparent 38%
+        ),
+        radial-gradient(
+            circle at 10% 80%,
+            rgba(125, 35, 55, 0.18),
+            transparent 35%
+        ),
+        linear-gradient(
+            145deg,
+            #090711,
+            #160d20 48%,
+            #080711
+        );
+
+    background-attachment: fixed;
+}
+
+/* Заголовок */
+
+body.halloween-theme .constellation-header {
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(112, 42, 125, 0.25),
+            transparent 70%
+        );
+}
+
+body.halloween-theme .constellation-header h1 {
+    color: #ffd28a;
+
+    text-shadow:
+        0 0 10px rgba(255, 143, 66, 0.7),
+        0 0 25px rgba(190, 65, 120, 0.5);
+}
+
+body.halloween-theme .constellation-header p {
+    color: #d5b9e8;
+}
+
+/* Фон */
+
+body.halloween-theme .space-background {
+    background:
+        radial-gradient(
+            ellipse at 20% 30%,
+            rgba(90, 35, 115, 0.16),
+            transparent 45%
+        ),
+        radial-gradient(
+            ellipse at 80% 70%,
+            rgba(130, 35, 55, 0.13),
+            transparent 45%
+        ),
+        #090711;
+}
+
+/* Звёзды */
+
+body.halloween-theme .stars {
+    background-image:
+        radial-gradient(2px 2px at 20px 30px, #fff1d0, transparent),
+        radial-gradient(1px 1px at 90px 80px, #d9b8ff, transparent),
+        radial-gradient(2px 2px at 150px 160px, #ffbd86, transparent),
+        radial-gradient(1px 1px at 230px 40px, #ffffff, transparent),
+        radial-gradient(2px 2px at 300px 190px, #d8aaff, transparent),
+        radial-gradient(1px 1px at 380px 100px, #ffe0b5, transparent);
+
+    background-size: 420px 240px;
+    opacity: 0.65;
+}
+
+/* Метеоры */
+
+body.halloween-theme .meteor {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 160, 80, 0),
+        rgba(255, 185, 110, 0.9),
+        rgba(255, 235, 190, 0)
+    );
+
+    box-shadow:
+        0 0 8px rgba(255, 130, 70, 0.8),
+        0 0 18px rgba(180, 70, 120, 0.5);
+}
+
+/* Кнопка возврата */
+
+body.halloween-theme .back-button {
+    color: #ffe2bd;
+
+    background: linear-gradient(
+        135deg,
+        #54244f,
+        #321a3e
+    );
+
+    border-color: #bd784e;
+
+    box-shadow:
+        0 0 12px rgba(220, 105, 65, 0.22),
+        inset 0 0 10px rgba(255, 170, 100, 0.08);
+}
+
+body.halloween-theme .back-button:hover {
+    background: linear-gradient(
+        135deg,
+        #77345f,
+        #48214f
+    );
+
+    box-shadow:
+        0 0 18px rgba(255, 130, 75, 0.45),
+        0 0 30px rgba(160, 70, 130, 0.25);
+}
+
+/* Карточки */
+
+body.halloween-theme .constellation-card {
+    color: #f5eaff;
+
+    background: linear-gradient(
+        145deg,
+        rgba(48, 27, 60, 0.96),
+        rgba(20, 15, 31, 0.97)
+    );
+
+    border-color: rgba(190, 112, 145, 0.48);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.45),
+        inset 0 0 20px rgba(130, 65, 130, 0.08);
+}
+
+body.halloween-theme .constellation-card:hover {
+    background: linear-gradient(
+        145deg,
+        rgba(72, 35, 75, 0.98),
+        rgba(30, 17, 42, 0.98)
+    );
+
+    border-color: #f1a16d;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.55),
+        0 0 20px rgba(232, 116, 76, 0.2),
+        0 0 35px rgba(151, 75, 160, 0.18);
+}
+
+body.halloween-theme .constellation-card h2 {
+    color: #ffd49b;
+
+    text-shadow:
+        0 0 10px rgba(255, 147, 90, 0.3);
+}
+
+body.halloween-theme .constellation-card p {
+    color: #d3c1df;
+}
+
+body.halloween-theme .constellation-icon {
+    color: #ffbd83;
+
+    filter: drop-shadow(
+        0 0 8px rgba(255, 140, 75, 0.7)
+    );
+}
+
+body.halloween-theme .constellation-card img {
+    border: 1px solid rgba(226, 150, 120, 0.45);
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.4),
+        0 0 12px rgba(150, 80, 160, 0.16);
+}
+
+/* Модальное окно */
+
+body.halloween-theme .modal {
+    background: rgba(5, 3, 12, 0.86);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+body.halloween-theme .modal-content {
+    color: #f5eaff;
+
+    background:
+        radial-gradient(
+            circle at 100% 0%,
+            rgba(143, 62, 100, 0.2),
+            transparent 45%
+        ),
+        linear-gradient(
+            145deg,
+            #28182f,
+            #120e1c
+        );
+
+    border-color: #bd805f;
+
+    box-shadow:
+        0 0 25px rgba(255, 125, 75, 0.2),
+        0 0 65px rgba(135, 60, 155, 0.22);
+}
+
+body.halloween-theme .modal-content h2,
+body.halloween-theme #modal-title {
+    color: #ffd49b;
+
+    text-shadow:
+        0 0 12px rgba(255, 140, 75, 0.4);
+}
+
+body.halloween-theme .modal-content p,
+body.halloween-theme #modal-description {
+    color: #e0d0e9;
+}
+
+body.halloween-theme .modal-content img {
+    box-shadow:
+        0 0 18px rgba(190, 100, 145, 0.25);
+}
+
+body.halloween-theme .modal-close {
+    color: #ffd3b0;
+
+    background: rgba(110, 45, 65, 0.55);
+
+    border: 1px solid rgba(255, 170, 120, 0.5);
+}
+
+body.halloween-theme .modal-close:hover {
+    background: #873d55;
+}
+
+/* Языковое меню */
+
+body.halloween-theme .language-button {
+    color: #ffe1c0;
+
+    background: rgba(43, 25, 54, 0.95);
+
+    border-color: #bd805f;
+
+    box-shadow:
+        0 0 12px rgba(220, 120, 75, 0.2);
+}
+
+body.halloween-theme .language-button:hover {
+    background: #60304f;
+
+    box-shadow:
+        0 0 17px rgba(255, 140, 80, 0.35);
+}
+
+body.halloween-theme .language-dropdown {
+    background: rgba(25, 15, 34, 0.98);
+
+    border-color: rgba(205, 130, 120, 0.65);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.5),
+        0 0 15px rgba(150, 65, 130, 0.2);
+}
+
+body.halloween-theme .language-dropdown button {
+    color: #eadcf2;
+}
+
+body.halloween-theme .language-dropdown button:hover {
+    color: #ffd49b;
+    background: rgba(160, 75, 100, 0.3);
+}
