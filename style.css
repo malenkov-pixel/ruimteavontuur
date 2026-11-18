@@ -3998,3 +3998,227 @@ body.halloween-theme .halloween-card-decoration {
         height: 30px;
     }
 }
+
+
+/* =========================================
+   ♛ KINGER'S ROYAL GARDEN
+   ПУРПУРНЫЙ КОРОЛЕВСКИЙ ПЛАЩ
+========================================= */
+
+.kinger-garden-slot {
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
+}
+
+.kinger-garden-button {
+    position: relative;
+    display: block;
+
+    width: 300px;
+    padding: 13px;
+
+    background: #fff;
+padding: 13px;
+
+    background-size: 13px 13px, 17px 17px, 11px 11px;
+
+    border: 2px solid #e9e2ed;
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 0 0 2px #27162f,
+        0 0 18px rgba(190, 100, 255, 0.4);
+
+    transition: transform 0.3s ease;
+}
+
+/* ПУРПУРНАЯ ТКАНЬ */
+
+.kinger-garden-face {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 95px;
+    padding: 15px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #a43bd0,
+            #7926a8 55%,
+            #531576
+        );
+
+    border-radius: 13px;
+
+    box-shadow:
+        inset 0 0 15px rgba(30, 0, 50, 0.3);
+}
+
+/* НАЗВАНИЕ */
+
+.kinger-garden-title {
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+
+    text-shadow: 0 2px 5px #321044;
+}
+
+
+/* =========================================
+   ЧЁРНЫЕ ПЯТНА НА КОРОЛЕВСКОМ МЕХУ
+========================================= */
+
+/* =========================================
+   👑 ЧЁРНЫЕ ПЯТНА КОРОЛЕВСКОГО МЕХА
+========================================= */
+
+.kinger-fur-spots {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.kinger-fur-spots span {
+    position: absolute;
+    width: 9px;
+    height: 6px;
+    background: #17121b;
+    border-radius: 1px;
+}
+
+/* ВЕРХНЯЯ ОПУШКА */
+
+.kinger-fur-spots span:nth-child(1)  { top: 5px; left: 7%; }
+.kinger-fur-spots span:nth-child(2)  { top: 5px; left: 19%; }
+.kinger-fur-spots span:nth-child(3)  { top: 5px; left: 31%; }
+.kinger-fur-spots span:nth-child(4)  { top: 5px; left: 43%; }
+.kinger-fur-spots span:nth-child(5)  { top: 5px; left: 55%; }
+.kinger-fur-spots span:nth-child(6)  { top: 5px; left: 67%; }
+.kinger-fur-spots span:nth-child(7)  { top: 5px; left: 79%; }
+.kinger-fur-spots span:nth-child(8)  { top: 5px; left: 91%; }
+
+/* НИЖНЯЯ ОПУШКА */
+
+.kinger-fur-spots span:nth-child(9)  { bottom: 5px; left: 7%; }
+.kinger-fur-spots span:nth-child(10) { bottom: 5px; left: 19%; }
+.kinger-fur-spots span:nth-child(11) { bottom: 5px; left: 31%; }
+.kinger-fur-spots span:nth-child(12) { bottom: 5px; left: 43%; }
+.kinger-fur-spots span:nth-child(13) { bottom: 5px; left: 55%; }
+.kinger-fur-spots span:nth-child(14) { bottom: 5px; left: 67%; }
+.kinger-fur-spots span:nth-child(15) { bottom: 5px; left: 79%; }
+.kinger-fur-spots span:nth-child(16) { bottom: 5px; left: 91%; }
+
+/* ЛЕВАЯ ОПУШКА */
+
+.kinger-fur-spots span:nth-child(17) { left: 5px; top: 16%; }
+.kinger-fur-spots span:nth-child(18) { left: 5px; top: 29%; }
+.kinger-fur-spots span:nth-child(19) { left: 5px; top: 42%; }
+.kinger-fur-spots span:nth-child(20) { left: 5px; top: 55%; }
+.kinger-fur-spots span:nth-child(21) { left: 5px; top: 68%; }
+.kinger-fur-spots span:nth-child(22) { left: 5px; top: 81%; }
+
+/* ПРАВАЯ ОПУШКА */
+
+.kinger-fur-spots span:nth-child(23) { right: 5px; top: 16%; }
+.kinger-fur-spots span:nth-child(24) { right: 5px; top: 29%; }
+.kinger-fur-spots span:nth-child(25) { right: 5px; top: 42%; }
+.kinger-fur-spots span:nth-child(26) { right: 5px; top: 55%; }
+.kinger-fur-spots span:nth-child(27) { right: 5px; top: 68%; }
+.kinger-fur-spots span:nth-child(28) { right: 5px; top: 81%; }
+
+/* СИММЕТРИЧНЫЕ БОКОВЫЕ ПЯТНА */
+
+.kinger-fur-spots span:nth-child(29) {
+    left: 5px;
+    top: 91%;
+}
+
+.kinger-fur-spots span:nth-child(30) {
+    right: 5px;
+    top: 91%;
+}
+
+.kinger-fur-spots span:nth-child(31) {
+    left: 5px;
+    top: 5%;
+}
+
+.kinger-fur-spots span:nth-child(32) {
+    right: 5px;
+    top: 5%;
+}
+
+/* НАВЕДЕНИЕ */
+
+.kinger-garden-button:hover {
+    transform: translateY(-5px) scale(1.04);
+
+    box-shadow:
+        0 0 0 2px #27162f,
+        0 0 28px rgba(205, 120, 255, 0.8);
+}
+
+.kinger-garden-button:active {
+    transform: scale(0.97);
+}
+
+/* Сплошная чёрная окантовка */
+
+.kinger-garden-button {
+    border: 5px solid #17121b;
+    outline: 4px solid #fff;
+    outline-offset: -9px;
+}
+body.halloween-theme .kinger-garden-slot .kinger-garden-button {
+    border-color: rgba(255, 159, 67, 0.75);
+    box-shadow: 0 0 22px rgba(255, 140, 66, 0.35);
+}
+
+body.halloween-theme .kinger-garden-slot .kinger-garden-button:hover {
+    border-color: #ff9f43;
+    box-shadow: 0 0 30px rgba(255, 159, 67, 0.55);
+}
+
+body.halloween-theme .kinger-garden-slot .kinger-garden-title {
+    color: #ffd180;
+    text-shadow: 0 0 14px rgba(255, 140, 66, 0.5);
+}
+.main-menu-secondary .kinger-garden-slot {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.main-menu-extra .atlas-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+body.halloween-theme .kinger-garden-slot .kinger-garden-button {
+    border-color: rgba(255, 159, 67, 0.75);
+    box-shadow: 0 0 22px rgba(255, 140, 66, 0.35);
+}
+
+body.halloween-theme .kinger-garden-slot .kinger-garden-button:hover {
+    border-color: #ff9f43;
+    box-shadow: 0 0 30px rgba(255, 159, 67, 0.55);
+}
+
+body.halloween-theme .kinger-garden-slot .kinger-garden-title {
+    color: #ffd180;
+    text-shadow: 0 0 14px rgba(255, 140, 66, 0.5);
+}

@@ -1,3 +1,248 @@
+(() => {
+    const style = document.createElement("style");
+    style.id = "customSnowdriftPhysicsStyle";
+    style.textContent = `
+        #customSnowLayer {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9998;
+            overflow: hidden;
+        }
+        .custom-snowflake {
+            position: fixed;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            background: #ffffff;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+            pointer-events: none;
+            will-change: transform, opacity;
+        }
+        #customSnowdriftPile {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 26px;
+            pointer-events: none;
+            z-index: 9997;
+            background:
+                radial-gradient(ellipse at 10% 100%, rgba(235, 248, 255, 0.96) 0%, rgba(210, 236, 255, 0.72) 55%, transparent 75%),
+                radial-gradient(ellipse at 32% 100%, rgba(245, 252, 255, 0.98) 0%, rgba(215, 238, 255, 0.75) 58%, transparent 78%),
+                radial-gradient(ellipse at 57% 100%, rgba(235, 248, 255, 0.96) 0%, rgba(210, 236, 255, 0.72) 55%, transparent 75%),
+                radial-gradient(ellipse at 82% 100%, rgba(245, 252, 255, 0.98) 0%, rgba(215, 238, 255, 0.75) 58%, transparent 78%);
+            filter: drop-shadow(0 -2px 8px rgba(190, 228, 255, 0.55));
+        }
+    `;
+    document.head.appendChild(style);
+
+    const layer = document.createElement("div");
+    layer.id = "customSnowLayer";
+    document.body.appendChild(layer);
+
+    const pile = document.createElement("div");
+    pile.id = "customSnowdriftPile";
+    document.body.appendChild(pile);
+
+    const flakes = [];
+    const targetCount = 110;
+    let pileHeight = 26;
+
+    function isWinterActive() {
+        const btn = document.getElementById("winterThemeButton");
+        return (
+            document.body.classList.contains("winter-theme") ||
+            document.documentElement.classList.contains("winter-theme") ||
+            btn?.getAttribute("aria-pressed") === "true" ||
+            btn?.classList.contains("active")
+        );
+    }
+
+    function spawnFlake(randomY = false) {
+        const el = document.createElement("div");
+        el.className = "custom-snowflake";
+        const size = 3 + Math.random() * 5;
+        el.style.width = `${size}px`;
+        el.style.height = `${size}px`;
+        layer.appendChild(el);
+
+        return {
+            el,
+            x: Math.random() * window.innerWidth,
+            y: randomY ? Math.random() * (window.innerHeight - pileHeight - 10) : -12 - Math.random() * 60,
+            vx: (Math.random() - 0.5) * 0.9,
+            vy: 1.1 + Math.random() * 1.9,
+            swayPhase: Math.random() * Math.PI * 2,
+            swaySpeed: 0.015 + Math.random() * 0.025,
+            swayAmp: 0.4 + Math.random() * 1.1
+        };
+    }
+
+    function syncFlakes() {
+        const active = isWinterActive();
+        layer.style.display = active ? "" : "none";
+        pile.style.display = active ? "" : "none";
+        if (!active) return;
+
+        while (flakes.length < targetCount) {
+            flakes.push(spawnFlake(true));
+        }
+    }
+
+    let lastTime = performance.now();
+    function tick(now) {
+        const dt = Math.min(2, (now - lastTime) / 16.6667);
+        lastTime = now;
+
+        if (isWinterActive()) {
+            layer.style.display = "";
+            pile.style.display = "";
+            pile.style.height = `${pileHeight}px`;
+
+            const floorY = window.innerHeight - pileHeight;
+
+            for (let i = 0; i < flakes.length; i++) {
+                const f = flakes[i];
+                f.swayPhase += f.swaySpeed * dt;
+                f.x += (f.vx + Math.sin(f.swayPhase) * f.swayAmp) * dt;
+                f.y += f.vy * dt;
+
+                if (f.x < -10) f.x = window.innerWidth + 10;
+                if (f.x > window.innerWidth + 10) f.x = -10;
+
+                if (f.y >= floorY) {
+                    pileHeight = Math.min(72, pileHeight + 0.035);
+                    f.x = Math.random() * window.innerWidth;
+                    f.y = -10 - Math.random() * 30;
+                    f.vy = 1.1 + Math.random() * 1.9;
+                }
+
+                f.el.style.transform = `translate3d(${f.x}px, ${f.y}px, 0)`;
+            }
+        } else {
+            layer.style.display = "none";
+            pile.style.display = "none";
+        }
+
+        requestAnimationFrame(tick);
+    }
+
+    setInterval(syncFlakes, 300);
+    syncFlakes();
+    requestAnimationFrame(tick);
+})();
+(function earlySansFix() {
+    const data = {
+        ru: {
+            title: "❄️ Свежие обновления",
+            lines: [
+                "эй, привет. заценил? тут кое-что свеженькое завезли.",
+                "подкрутили зимнее настроение — сугробы, холода, всё как положено. если захочется уюта или праздничного вайба — включай и смотри, как преобразился космос.",
+                "ещё причесали переводы, чтобы ничего не отваливалось при смене языка — даже польский и нидерландский теперь в строю.",
+                "заходи, осматривайся, жми кнопки. только в сугробах надолго не застревай — в космосе мороз не шутит."
+            ]
+        },
+        kk: {
+            title: "❄️ Соңғы жаңартулар",
+            lines: [
+                "әй, сәлем. байқадың ба? мұнда біраз жаңалық әкелінді.",
+                "қысқы көңіл-күйді күшейттік — күртік қар, аяз, бәрі орнында. жылылық немесе мерекелік атмосфера қаласаң — қосып, ғарыштың қалай өзгергенін көр.",
+                "тіл ауыстырғанда ештеңе түсіп қалмас үшін аудармаларды да реттедік — тіпті поляк пен нидерланд тілдері де сапта.",
+                "кір, қара, батырмаларды бас. бірақ қар құрсауында ұзақ қалып қойма — ғарышта аяз әзілдемейді."
+            ]
+        },
+        cs: {
+            title: "❄️ Čerstvé novinky",
+            lines: [
+                "hej, čau. všiml sis? přivezli jsme sem pár čerstvých novinek.",
+                "vyladili jsme zimní náladu — závěje, mráz, všechno jak má být. až budeš chtít útulno nebo sváteční atmosféru, zapni to a koukni, jak se vesmír proměnil.",
+                "upravili jsme i překlady, aby při změně jazyka nic nepadalo — v provozu už je i polština a nizozemština.",
+                "pojď dál, rozhlédni se, klikej. jen nezapadni moc hluboko do závějí — ve vesmíru mráz nežertuje."
+            ]
+        },
+        en: {
+            title: "❄️ Fresh Updates",
+            lines: [
+                "hey there. noticed? we rolled out some fresh updates.",
+                "tuned up the winter mood — snowdrifts, cold, the whole deal. whenever you want cozy vibes or holiday spirit, flip it on and see how space transformed.",
+                "tidied up the translations too so nothing breaks when switching languages — even Polish and Dutch are back in action.",
+                "come on in, look around, press buttons. just don't get stuck in the snowdrifts too long — space frost doesn't mess around."
+            ]
+        },
+        de: {
+            title: "❄️ Neue Updates",
+            lines: [
+                "hey, na. gemerkt? wir haben ein paar frische Sachen mitgebracht.",
+                "die Winterstimmung aufgedreht — Schneeverwehungen, Kälte, alles wie es sein soll. wenn dir nach Gemütlichkeit oder Festtagsstimmung ist, mach es an und schau, wie sich das Weltall verwandelt hat.",
+                "auch die Übersetzungen wurden aufgeräumt, damit beim Sprachenwechsel nichts verloren geht — selbst Polnisch und Niederländisch sind wieder am Start.",
+                "komm rein, schau dich um, drück die Knöpfe. bleib nur nicht zu lange in den Schneeverwehungen stecken — im Weltall ist mit dem Frost nicht zu spaßen."
+            ]
+        },
+        fr: {
+            title: "❄️ Nouveautés fraîches",
+            lines: [
+                "hé, salut. tu as remarqué ? on a ramené du nouveau.",
+                "on a peaufiné l'ambiance d'hiver — congères, froid, tout comme il faut. si tu veux de la chaleur ou l'esprit des fêtes, active-la et regarde comment l'espace a changé.",
+                "on a aussi remis les traductions d'équerre pour que rien ne saute en changeant de langue — même le polonais et le néerlandais sont de la partie.",
+                "entre, fais le tour, appuie sur les boutons. évite juste de rester coincé trop longtemps dans la neige — dans l'espace, le gel ne rigole pas."
+            ]
+        },
+        es: {
+            title: "❄️ Novedades recientes",
+            lines: [
+                "oye, hola. ¿lo notaste? trajimos cositas nuevas.",
+                "ajustamos el ambiente invernal — ventisqueros, frío, todo como toca. si buscas calidez o espíritu festivo, actívalo y mira cómo cambió el espacio.",
+                "también peinamos las traducciones para que nada falle al cambiar de idioma — hasta el polaco y el neerlandés ya están listos.",
+                "pasa, echa un vistazo, pulsa los botones. solo no te quedes atascado mucho tiempo en la nieve — en el espacio el frío no perdona."
+            ]
+        },
+        it: {
+            title: "❄️ Novità recenti",
+            lines: [
+                "ehi, ciao. hai notato? abbiamo portato un po' di novità fresche.",
+                "abbiamo sistemato l'atmosfera invernale — cumuli di neve, freddo, tutto al posto giusto. se hai voglia di calore o spirito delle feste, attivala e guarda come è cambiato lo spazio.",
+                "abbiamo anche sistemato le traduzioni così non salta nulla cambiando lingua — anche polacco e olandese sono di nuovo operativi.",
+                "entra, guardati intorno, premi i pulsanti. solo non restare troppo a lungo nella neve — nello spazio il gelo non scherza."
+            ]
+        },
+        pl: {
+            title: "❄️ Świeże nowości",
+            lines: [
+                "hej, cześć. zauważyłeś? przywieźliśmy trochę świeżych rzeczy.",
+                "podkręciliśmy zimowy klimat — zaspy, chłód, wszystko jak należy. jak zachce ci się przytulności albo świątecznego nastroju, włącz to i zobacz, jak zmienił się kosmos.",
+                "ogarnęliśmy też tłumaczenia, żeby nic się nie sypało przy zmianie języka — nawet polski i niderlandzki są już w komplecie.",
+                "wchodź, rozglądaj się, klikaj. tylko nie utknij na długo w zaspach — w kosmosie mróz nie żartuje."
+            ]
+        },
+        nl: {
+            title: "❄️ Nieuwe updates",
+            lines: [
+                "hé, hallo. valt het op? we hebben wat nieuws meegebracht.",
+                "de wintersfeer bijgesteld — sneeuwduinen, kou, alles zoals het hoort. als je zin hebt in warmte of feeststemming, zet het aan en kijk hoe de ruimte is veranderd.",
+                "ook de vertalingen zijn netjes gemaakt zodat er niets wegvalt bij het wisselen van taal — zelfs Pools en Nederlands doen weer mee.",
+                "kom binnen, kijk rond, druk op knoppen. blijf alleen niet te lang vastzitten in de sneeuw — in de ruimte is vorst geen grapje."
+            ]
+        }
+    };
+
+    function apply() {
+        const lang = window.currentLanguage || localStorage.getItem("siteLanguage") || "ru";
+        const item = data[lang] || data.ru;
+        const h2 = document.getElementById("updatesTitle");
+        if (h2) h2.textContent = item.title;
+        const list = document.querySelector("#updatesModal .updates-list");
+        if (list) {
+            const html = item.lines.map((line, i) => `<p id="sansUpdate${i + 1}">${line}</p>`).join("");
+            if (list.innerHTML !== html) list.innerHTML = html;
+        }
+    }
+
+    setInterval(apply, 300);
+    window.addEventListener("load", apply);
+    document.addEventListener("DOMContentLoaded", apply);
+    apply();
+})();
 /* =========================================================
    🌌 КОСМИЧЕСКОЕ ПРИКЛЮЧЕНИЕ — ОСНОВНОЙ SCRIPT
    ========================================================= */
@@ -9,9 +254,14 @@ let currentLanguage = localStorage.getItem("siteLanguage") || "ru";
    🌍 ОСНОВНЫЕ ПЕРЕВОДЫ
    ========================================================= */
 
+/* =========================================================
+   🌍 ОСНОВНЫЕ ПЕРЕВОДЫ
+   ========================================================= */
+
 const languages = {
 
     ru: {
+        kingerGardenTitle: "♛ Сад Королёра ♛",
         siteTitle: "🌌 Космическое приключение имени Папайруса",
         siteSubtitle: "Исследуй Солнечную систему 🚀",
         welcomeTitle: "Добро пожаловать в космос!",
@@ -20,6 +270,11 @@ const languages = {
         startButton: "Начать путешествие 🚀",
         moonsButton: "🌙 Исследовать спутники",
         constellationButton: "✨ Мечты Чарли Морнингстар",
+        spaceObjectsButton: "🌌 Космические объекты",
+        kainButton: "🎪 Энциклопедия Кейна",
+        atlasButton: "АТЛАС<br>ПОМНИ",
+        daveLabButton: "Лаборатория<br>безумного<br>Дэйва",
+        dwarfButton: "🪐 Карликовые планеты",
         planetsTitle: "🪐 Планеты",
         temperature: "Температура:",
         diameter: "Диаметр:",
@@ -36,6 +291,7 @@ const languages = {
     },
 
     kk: {
+        kingerGardenTitle: "♛ Королёр бағы ♛",
         siteTitle: "🌌 Папайрустың ғарыштық шытырман оқиғасы",
         siteSubtitle: "Күн жүйесін зертте 🚀",
         welcomeTitle: "Ғарышқа қош келдің!",
@@ -44,6 +300,11 @@ const languages = {
         startButton: "Саяхатты бастау 🚀",
         moonsButton: "🌙 Серіктерді зерттеу",
         constellationButton: "✨ Чарли Морнингстардың армандары",
+        spaceObjectsButton: "🌌 Ғарыш объектілері",
+        kainButton: "🎪 Кейн энциклопедиясы",
+        atlasButton: "ПОМНИ<br>АТЛАСЫ",
+        daveLabButton: "Есуас Дэйв<br>зертханасы",
+        dwarfButton: "🪐 Ергежейлі ғаламшарлар",
         planetsTitle: "🪐 Ғаламшарлар",
         temperature: "Температурасы:",
         diameter: "Диаметрі:",
@@ -60,6 +321,7 @@ const languages = {
     },
 
     cs: {
+        kingerGardenTitle: "♛ Kingerova zahrada ♛",
         siteTitle: "🌌 Papyrusovo vesmírné dobrodružství",
         siteSubtitle: "Prozkoumej Sluneční soustavu 🚀",
         welcomeTitle: "Vítej ve vesmíru!",
@@ -68,6 +330,11 @@ const languages = {
         startButton: "Začít cestu 🚀",
         moonsButton: "🌙 Prozkoumat měsíce",
         constellationButton: "✨ Sny Charlieho Morningstara",
+        spaceObjectsButton: "🌌 Vesmírné objekty",
+        kainButton: "🎪 Caineova encyklopedie",
+        atlasButton: "ATLAS<br>POMNI",
+        daveLabButton: "Laboratoř<br>šíleného<br>Davea",
+        dwarfButton: "🪐 Trpasličí planety",
         planetsTitle: "🪐 Planety",
         temperature: "Teplota:",
         diameter: "Průměr:",
@@ -84,6 +351,7 @@ const languages = {
     },
 
     en: {
+        kingerGardenTitle: "♛ Kinger's Garden ♛",
         siteTitle: "🌌 Papyrus Space Adventure",
         siteSubtitle: "Explore the Solar System 🚀",
         welcomeTitle: "Welcome to space!",
@@ -92,6 +360,11 @@ const languages = {
         startButton: "Start the journey 🚀",
         moonsButton: "🌙 Explore moons",
         constellationButton: "✨ Charlie Morningstar's Dreams",
+        spaceObjectsButton: "🌌 Space Objects",
+        kainButton: "🎪 Caine's Encyclopedia",
+        atlasButton: "POMNI<br>ATLAS",
+        daveLabButton: "Mad Dave's<br>Laboratory",
+        dwarfButton: "🪐 Dwarf Planets",
         planetsTitle: "🪐 Planets",
         temperature: "Temperature:",
         diameter: "Diameter:",
@@ -108,14 +381,19 @@ const languages = {
     },
 
     de: {
+        kingerGardenTitle: "♛ Kingers Garten ♛",
         siteTitle: "🌌 Weltraumabenteuer von Papyrus",
         siteSubtitle: "Erkunde das Sonnensystem 🚀",
         welcomeTitle: "Willkommen im Weltraum!",
-        welcomeText:
-            "Begib dich auf eine Reise durch das Sonnensystem, erkunde die Planeten und entdecke interessante Fakten.",
+        welcomeText: "Begib dich auf eine Reise durch das Sonnensystem, erkunde die Planeten und entdecke interessante Fakten.",
         startButton: "Reise beginnen 🚀",
         moonsButton: "🌙 Monde erkunden",
         constellationButton: "✨ Charlie Morningstars Träume",
+        spaceObjectsButton: "🌌 Weltraumobjekte",
+        kainButton: "🎪 Caines Enzyklopädie",
+        atlasButton: "POMNI<br>ATLAS",
+        daveLabButton: "Labor des<br>verrückten<br>Dave",
+        dwarfButton: "🪐 Zwergplaneten",
         planetsTitle: "🪐 Planeten",
         temperature: "Temperatur:",
         diameter: "Durchmesser:",
@@ -132,6 +410,7 @@ const languages = {
     },
 
     fr: {
+        kingerGardenTitle: "♛ Le jardin de Kinger ♛",
         siteTitle: "🌌 Aventure spatiale de Papyrus",
         siteSubtitle: "Explore le Système solaire 🚀",
         welcomeTitle: "Bienvenue dans l'espace !",
@@ -140,6 +419,11 @@ const languages = {
         startButton: "Commencer le voyage 🚀",
         moonsButton: "🌙 Explorer les lunes",
         constellationButton: "✨ Les rêves de Charlie Morningstar",
+        spaceObjectsButton: "🌌 Objets spatiaux",
+        kainButton: "🎪 Encyclopédie de Caine",
+        atlasButton: "ATLAS<br>POMNI",
+        daveLabButton: "Labo du<br>fou<br>Dave",
+        dwarfButton: "🪐 Planètes naines",
         planetsTitle: "🪐 Planètes",
         temperature: "Température :",
         diameter: "Diamètre :",
@@ -156,6 +440,7 @@ const languages = {
     },
 
     es: {
+        kingerGardenTitle: "♛ El jardín de Kinger ♛",
         siteTitle: "🌌 Aventura espacial de Papyrus",
         siteSubtitle: "Explora el Sistema Solar 🚀",
         welcomeTitle: "¡Bienvenido al espacio!",
@@ -163,6 +448,11 @@ const languages = {
         startButton: "Iniciar el viaje 🚀",
         moonsButton: "🌙 Explorar las lunas",
         constellationButton: "✨ Los sueños de Charlie Morningstar",
+        spaceObjectsButton: "🌌 Objetos espaciales",
+        kainButton: "🎪 Enciclopedia de Caine",
+        atlasButton: "ATLAS<br>POMNI",
+        daveLabButton: "Laboratorio<br>del loco<br>Dave",
+        dwarfButton: "🪐 Planetas enanos",
         planetsTitle: "🪐 Planetas",
         temperature: "Temperatura:", diameter: "Diámetro:", mass: "Masa:",
         distance: "Distancia al Sol:", day: "Duración del día:", year: "Duración del año:",
@@ -171,6 +461,7 @@ const languages = {
     },
 
     it: {
+        kingerGardenTitle: "♛ Il giardino di Kinger ♛",
         siteTitle: "🌌 Avventura spaziale di Papyrus",
         siteSubtitle: "Esplora il Sistema Solare 🚀",
         welcomeTitle: "Benvenuto nello spazio!",
@@ -178,6 +469,11 @@ const languages = {
         startButton: "Inizia il viaggio 🚀",
         moonsButton: "🌙 Esplora le lune",
         constellationButton: "✨ I sogni di Charlie Morningstar",
+        spaceObjectsButton: "🌌 Oggetti spaziali",
+        kainButton: "🎪 Enciclopedia di Caine",
+        atlasButton: "ATLAS<br>POMNI",
+        daveLabButton: "Laboratorio<br>del pazzo<br>Dave",
+        dwarfButton: "🪐 Pianeti nani",
         planetsTitle: "🪐 Pianeti",
         temperature: "Temperatura:", diameter: "Diametro:", mass: "Massa:",
         distance: "Distanza dal Sole:", day: "Durata del giorno:", year: "Durata dell'anno:",
@@ -186,6 +482,7 @@ const languages = {
     },
 
     pl: {
+        kingerGardenTitle: "♛ Ogród Kingera ♛",
         siteTitle: "🌌 Kosmiczna przygoda Papyrusa",
         siteSubtitle: "Odkrywaj Układ Słoneczny 🚀",
         welcomeTitle: "Witaj w kosmosie!",
@@ -193,6 +490,11 @@ const languages = {
         startButton: "Rozpocznij podróż 🚀",
         moonsButton: "🌙 Odkrywaj księżyce",
         constellationButton: "✨ Marzenia Charlie Morningstar",
+        spaceObjectsButton: "🌌 Obiekty kosmiczne",
+        kainButton: "🎪 Encyklopedia Caine'a",
+        atlasButton: "ATLAS<br>POMNI",
+        daveLabButton: "Laboratorium<br>szalonego<br>Dave'a",
+        dwarfButton: "🪐 Planety karłowate",
         planetsTitle: "🪐 Planety",
         temperature: "Temperatura:", diameter: "Średnica:", mass: "Masa:",
         distance: "Odległość od Słońca:", day: "Długość doby:", year: "Długość roku:",
@@ -201,6 +503,7 @@ const languages = {
     },
 
     nl: {
+        kingerGardenTitle: "♛ Kingers tuin ♛",
         siteTitle: "🌌 Papyrus' ruimteavontuur",
         siteSubtitle: "Verken het zonnestelsel 🚀",
         welcomeTitle: "Welkom in de ruimte!",
@@ -208,14 +511,69 @@ const languages = {
         startButton: "Begin de reis 🚀",
         moonsButton: "🌙 Verken de manen",
         constellationButton: "✨ Charlie Morningstars dromen",
+        spaceObjectsButton: "🌌 Ruimteobjecten",
+        kainButton: "🎪 Caines encyclopedie",
+        atlasButton: "POMNI<br>ATLAS",
+        daveLabButton: "Lab van<br>gekke<br>Dave",
+        dwarfButton: "🪐 Dwergplaneten",
         planetsTitle: "🪐 Planeten",
         temperature: "Temperatuur:", diameter: "Diameter:", mass: "Massa:",
         distance: "Afstand tot de zon:", day: "Lengte van de dag:", year: "Lengte van het jaar:",
         moons: "Manen:", rings: "Ringen:", atmosphere: "Atmosfeer:",
         fact: "🔭 Interessant weetje", footer: "🌌 Papyrus' ruimteavontuur © 2026", close: "Sluiten"
-    },
+    }
+    
 };
+(function ensurePlAndNlLanguages() {
+    if (typeof languages !== "object" || !languages) return;
 
+    const fallbackPl = {
+        kingerGardenTitle: "♛ Ogród Kingera ♛",
+        siteTitle: "🌌 Kosmiczna przygoda Papyrusa",
+        siteSubtitle: "Odkrywaj Układ Słoneczny 🚀",
+        welcomeTitle: "Witaj w kosmosie!",
+        welcomeText: "Wyrusz w podróż po Układzie Słonecznym, odkrywaj planety i poznawaj ciekawe fakty.",
+        startButton: "Rozpocznij podróż 🚀",
+        moonsButton: "🌙 Odkrywaj księżyce",
+        constellationButton: "✨ Marzenia Charlie Morningstar",
+        spaceObjectsButton: "🌌 Obiekty kosmiczne",
+        kainButton: "🎪 Encyklopedia Caine'a",
+        atlasButton: "ATLAS<br>POMNI",
+        daveLabButton: "Laboratorium<br>szalonego<br>Dave'a",
+        dwarfButton: "🪐 Planety karłowate",
+        planetsTitle: "🪐 Planety",
+        temperature: "Temperatura:", diameter: "Średnica:", mass: "Masa:",
+        distance: "Odległość od Słońca:", day: "Długość doby:", year: "Długość roku:",
+        moons: "Księżyce:", rings: "Pierścienie:", atmosphere: "Atmosfera:",
+        fact: "🔭 Ciekawostka", footer: "🌌 Kosmiczna przygoda Papyrusa © 2026", close: "Zamknij"
+    };
+
+    const fallbackNl = {
+        kingerGardenTitle: "♛ Kingers tuin ♛",
+        siteTitle: "🌌 Papyrus' ruimteavontuur",
+        siteSubtitle: "Verken het zonnestelsel 🚀",
+        welcomeTitle: "Welkom in de ruimte!",
+        welcomeText: "Ga op reis door het zonnestelsel, verken de planeten en ontdek interessante feiten.",
+        startButton: "Begin de reis 🚀",
+        moonsButton: "🌙 Verken de manen",
+        constellationButton: "✨ Charlie Morningstars dromen",
+        spaceObjectsButton: "🌌 Ruimteobjecten",
+        kainButton: "🎪 Caines encyclopedie",
+        atlasButton: "POMNI<br>ATLAS",
+        daveLabButton: "Lab van<br>gekke<br>Dave",
+        dwarfButton: "🪐 Dwergplaneten",
+        planetsTitle: "🪐 Planeten",
+        temperature: "Temperatuur:", diameter: "Diameter:", mass: "Massa:",
+        distance: "Afstand tot de zon:", day: "Lengte van de dag:", year: "Lengte van het jaar:",
+        moons: "Manen:", rings: "Ringen:", atmosphere: "Atmosfeer:",
+        fact: "🔭 Interessant weetje", footer: "🌌 Papyrus' ruimteavontuur © 2026", close: "Sluiten"
+    };
+
+    window.addEventListener("DOMContentLoaded", () => {
+        languages.pl = Object.assign({}, fallbackPl, languages.pl || {});
+        languages.nl = Object.assign({}, fallbackNl, languages.nl || {});
+    });
+})();
 
 /* =========================================================
    🪐 ПЛАНЕТЫ
@@ -3210,17 +3568,67 @@ const newSectionsTranslations = {
 Object.keys(newSectionsTranslations).forEach(lang=>{ if(languages[lang]) languages[lang].encyclopediaButton=newSectionsTranslations[lang].encyclopedia; });
 
 function updateNewSectionsLanguage() {
-    const t =
-        newSectionsTranslations[currentLanguage] ||
-        newSectionsTranslations.ru;
+    const activeLang =
+        window.currentLanguage ||
+        (typeof currentLanguage !== "undefined" ? currentLanguage : null) ||
+        localStorage.getItem("siteLanguage") ||
+        "ru";
 
-    const setText = (id, value) => {
-        const element = document.getElementById(id);
+    const t = languages[activeLang] || languages.ru;
+    if (!t) return;
 
-        if (element && value !== undefined) {
-            element.textContent = value;
+    const setText = (ids, value) => {
+        if (value === undefined || value === null) return;
+        const list = Array.isArray(ids) ? ids : [ids];
+        list.forEach((id) => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.textContent = value;
+            }
+        });
+    };
+
+    const setButtonOrLabel = (buttonSelector, labelSelector, rawValue) => {
+        if (rawValue === undefined || rawValue === null) return;
+        const cleanText = String(rawValue).replace(/<br\s*\/?>/gi, " ").trim();
+        const button = buttonSelector ? document.querySelector(buttonSelector) : null;
+        const label = labelSelector ? document.querySelector(labelSelector) : null;
+
+        if (label) {
+            label.innerHTML = rawValue;
+        } else if (button) {
+            // Обновляем только текстовые узлы, чтобы не снести иконки/SVG/картинки
+            const textNodes = Array.from(button.childNodes).filter(
+                (node) => node.nodeType === Node.TEXT_NODE && node.textContent.trim() !== ""
+            );
+            if (textNodes.length > 0) {
+                textNodes[textNodes.length - 1].textContent = ` ${cleanText}`;
+            } else {
+                const span = document.createElement("span");
+                span.className = "w-translated-label";
+                span.textContent = cleanText;
+                button.appendChild(span);
+            }
+        }
+
+        if (button) {
+            button.setAttribute("aria-label", cleanText);
+            button.setAttribute("title", cleanText);
         }
     };
+
+    // ♛ Перевод сада Королёра
+    const gardenTitle = document.getElementById("kingerGardenTitle");
+    if (gardenTitle) {
+        const fallbackByLang = {
+            pl: "♛ Ogród Kingera ♛",
+            nl: "♛ Kingers tuin ♛"
+        };
+        gardenTitle.textContent =
+            t.kingerGardenTitle ||
+            fallbackByLang[activeLang] ||
+            languages.ru.kingerGardenTitle;
+    }
 
     // Карликовые планеты и спутники
     setText("dwarfPlanetsTitle", t.dwarfTitle);
@@ -3232,7 +3640,7 @@ function updateNewSectionsLanguage() {
     setText("updatesTitle", t.updatesTitle);
 
     // Десять абзацев объявления Санса
-    if (t.sansUpdates) {
+    if (Array.isArray(t.sansUpdates)) {
         t.sansUpdates.forEach((paragraph, index) => {
             setText(`sansUpdate${index + 1}`, paragraph);
         });
@@ -3240,67 +3648,48 @@ function updateNewSectionsLanguage() {
 
     setText("updatesCloseHint", t.closeHint);
 
-    // Кнопки новых разделов
-    setText("spaceObjectsButton", t.spaceObjectsButton);
-    setText("kainButton", t.kainButton);
-    setText("dwarfPlanetsButton", t.dwarfButton);
+    // Кнопки новых разделов (поддержка старых и новых ID/ключей)
+    setText(
+        ["spaceObjectsButton", "startButton"],
+        t.spaceObjectsButton ?? t.startButton
+    );
+    setText(
+        ["kainButton", "encyclopediaButton"],
+        t.kainButton ?? t.encyclopediaButton
+    );
+    setText(
+        ["dwarfPlanetsButton", "dwarfButton"],
+        t.dwarfButton ?? t.dwarfPlanetsButton
+    );
 
     // Лаборатория Дэйва
-    const daveButton =
-        document.querySelector(".dave-lab-triangle");
-
-    const daveLabel =
-        daveButton?.querySelector("span");
-
-    if (daveLabel && t.daveLabButton !== undefined) {
-        daveLabel.innerHTML = t.daveLabButton;
-    }
-
-    if (daveButton && t.daveLabButton !== undefined) {
-        const label = t.daveLabButton.replace(/<br\s*\/?>/gi, " ");
-        daveButton.setAttribute("aria-label", label);
-        daveButton.setAttribute("title", label);
-    }
+    setButtonOrLabel(
+        ".dave-lab-triangle",
+        ".dave-lab-triangle span",
+        t.daveLabButton
+    );
 
     // Атлас Помни
-    const atlasLabel =
-        document.querySelector(".pomni-atlas-title");
-
-    if (atlasLabel && t.atlasButton !== undefined) {
-        atlasLabel.innerHTML = t.atlasButton;
-    }
-
-    const atlasButton =
-        document.querySelector(".pomni-atlas-button");
-
-    if (atlasButton && t.atlasButton !== undefined) {
-        const label = t.atlasButton.replace(/<br\s*\/?>/gi, " ");
-        atlasButton.setAttribute("aria-label", label);
-        atlasButton.setAttribute("title", label);
-    }
+    setButtonOrLabel(
+        ".pomni-atlas-button",
+        ".pomni-atlas-title",
+        t.atlasButton
+    );
 
     // Кнопка Санса
-    const sansButton =
-        document.getElementById("sansUpdateButton");
-
+    const sansButton = document.getElementById("sansUpdateButton");
     if (sansButton && t.updatesTitle !== undefined) {
         sansButton.setAttribute("aria-label", t.updatesTitle);
     }
 
     // Кнопка закрытия окна
-    const closeButton =
-        document.querySelector(
-            "#updatesModal .updates-close-button"
-        );
-
+    const closeButton = document.querySelector(
+        "#updatesModal .updates-close-button"
+    );
     if (closeButton) {
-        const hint =
-            t.closeHint || "Close window";
-
+        const hint = t.closeHint || "Close window";
         closeButton.setAttribute("aria-label", hint);
-
         const image = closeButton.querySelector("img");
-
         if (image) {
             image.alt = hint;
         }
@@ -3358,6 +3747,7 @@ function changeLanguage(language) {
        ========================================= */
 
 currentLanguage = language;
+window.currentLanguage = language;
 
 updateHalloweenThemeButton();
 
@@ -3497,6 +3887,28 @@ console.log("Текущий язык:", currentLanguage);
     );
 
 
+const gardenTitle =
+    document.getElementById("kingerGardenTitle");
+
+console.log("Выбранный язык:", language);
+
+console.log(
+    "Перевод сада:",
+    languages[language]?.kingerGardenTitle
+    
+);
+console.log("Все языки:", Object.keys(languages));
+console.log("Польский объект:", languages.pl);
+console.log("Нидерландский объект:", languages.nl);
+console.log("Перевод сада:", languages[language]?.kingerGardenTitle);
+console.log(
+    "Элемент сада найден:",
+    gardenTitle
+);
+
+
+
+
     /* =========================================
        КНОПКА ВЫБРАННОГО ЯЗЫКА
        ========================================= */
@@ -3576,7 +3988,8 @@ nl: {
        ПЛАНЕТЫ
        ========================================= */
 
-    updatePlanetCards();
+
+updatePlanetCards();
 
 
     /* =========================================
@@ -3590,6 +4003,26 @@ nl: {
     updateDwarfPlanetCards();
     updateNewSectionsLanguage();
     updateDwarfModalLabels();
+    /* =========================================
+       ПЛАНЕТЫ, СПУТНИКИ И ДОП. РАЗДЕЛЫ
+       ========================================= */
+
+    [
+        updatePlanetCards,
+        updateMoonCards,
+        updateMoonSectionLanguage,
+        updateDwarfPlanetCards,
+        updateNewSectionsLanguage,
+        updateDwarfModalLabels
+    ].forEach((fn) => {
+        if (typeof fn === "function") {
+            try {
+                fn();
+            } catch (err) {
+                console.warn("Ошибка при обновлении блока перевода:", fn.name, err);
+            }
+        }
+    });
 
 
 /* =========================================
@@ -3826,6 +4259,15 @@ document.addEventListener(
         changeLanguage(currentLanguage);
     }
 );
+/* Синхронизируем тему при возврате со страницы сада или других вкладок */
+window.addEventListener("pageshow", () => {
+    try {
+        const latestTheme = localStorage.getItem("siteHalloweenTheme") || "off";
+        applyHalloweenTheme(latestTheme === "on");
+    } catch (error) {
+        console.warn("Не удалось синхронизировать тему:", error);
+    }
+});
 
 
 /* =========================================================
@@ -4183,167 +4625,10 @@ changeLanguage(savedLanguage);
 // Переводы десяти отдельных абзацев Санса
 
 
-const sansUpdatesTranslations = {
-    ru: [
-        "💀 хей. это снова я, санс. у нас тут кое-что новенькое.",
-        "🚧 кстати, это пока демоверсия. Маленков ещё не доделал всё, что хотел, но обязательно доделает… когда перестанет есть блины. 🥞",
-        "🔮 встречай Атлас Помни! теперь исследовать космос стало ещё интереснее.",
-        "🧭 в атласе тебя ждут поиск, викторина, достижения и сохранение прогресса.",
-        "👾 а ещё там есть звуки и босс. надеюсь, ты не испугаешься. хе-хе.",
-        "🧪 следующее дополнение — Лаборатория безумного Дэйва!",
-        "🌻 готовь растения и защищайся от зомби. Дэйв явно опять что-то задумал.",
-        "⚔️ впереди целых 20 волн! посмотрим, как далеко ты сможешь пройти.",
-        "🇵🇱 кстати, теперь на сайте есть польский язык. dzień dobry!",
-        "🇳🇱 а ещё добавлен нидерландский язык. hallo, космические путешественники!",
-        "ну вот и все новости. загляни в новые разделы, а потом нажми на меня, чтобы закрыть окно. heh."
-    ],
+/* =========================================================
+   💀 ОБЪЯВЛЕНИЕ САНСА (sansUpdates) ПО ЯЗЫКАМ
+   ========================================================= */
 
-    kk: [
-        "💀 сәлем. бұл тағы да мен, Санс. бізде бірнеше жаңалық бар.",
-        "🚧 айтпақшы, бұл әзірге демо-нұсқа. Маленков әлі өзі қалағанның бәрін аяқтаған жоқ, бірақ міндетті түрде аяқтайды… тек құймақ жеуді тоқтатқан кезде. 🥞",
-        "🔮 Помни атласымен таныс! Енді ғарышты зерттеу одан да қызықты.",
-        "🧭 атласта іздеу, викторина, жетістіктер және прогресті сақтау мүмкіндігі бар.",
-        "👾 сонымен қатар дыбыстар мен бастық бар. қорқып қалма, хе-хе.",
-        "🧪 келесі жаңалық — Ессіз Дэйвтің зертханасы!",
-        "🌻 өсімдіктерді дайындап, зомбилерден қорған. Дэйв тағы бірдеңе ойлап тапқан сияқты.",
-        "⚔️ сені 20 толқын күтіп тұр! қаншалықты алысқа жете алатыныңды көрейік.",
-        "🇵🇱 айтпақшы, енді сайтта поляк тілі бар. dzień dobry!",
-        "🇳🇱 сонымен қатар нидерланд тілі де қосылды. hallo, ғарыш саяхатшылары!",
-        "жаңалықтар әзірге осы. жаңа бөлімдерді қарап шық та, терезені жабу үшін мені бас. heh."
-    ],
-
-    cs: [
-        "💀 čau. to jsem zase já, Sans. máme tu pár novinek.",
-        "🚧 mimochodem, tohle je zatím jen demo. Malenkov ještě nedokončil všechno, co chtěl, ale určitě to dodělá… až přestane jíst palačinky. 🥞",
-        "🔮 seznam se s Atlasem Pomni! Objevování vesmíru je teď ještě zajímavější.",
-        "🧭 atlas nabízí vyhledávání, kvíz, úspěchy a ukládání postupu.",
-        "👾 najdeš v něm také zvuky a bosse. snad se nebudeš bát. hehe.",
-        "🧪 další novinkou je Laboratoř šíleného Davea!",
-        "🌻 připrav rostliny a braň se zombíkům. Dave zase určitě něco vymyslel.",
-        "⚔️ čeká tě celých 20 vln! Uvidíme, jak daleko se dostaneš.",
-        "🇵🇱 mimochodem, web teď podporuje polštinu. dzień dobry!",
-        "🇳🇱 přibyla také nizozemština. hallo, vesmírní cestovatelé!",
-        "to je pro dnešek všechno. prozkoumej nové sekce a kliknutím na mě zavři okno. heh."
-    ],
-
-    en: [
-        "💀 hey. it's me again, Sans. we've got some new stuff.",
-        "🚧 by the way, this is still a demo version. Malenkov hasn't finished everything he wanted yet, but he will… once he stops eating pancakes. 🥞",
-        "🔮 meet Pomni's Atlas! Exploring space just got more interesting.",
-        "🧭 the atlas includes search, a quiz, achievements, and saved progress.",
-        "👾 there are also sounds and a boss. hope you don't get scared. heh-heh.",
-        "🧪 the next addition is Crazy Dave's Lab!",
-        "🌻 prepare your plants and defend yourself against zombies. Dave's up to something again.",
-        "⚔️ there are 20 waves to survive! Let's see how far you can get.",
-        "🇵🇱 by the way, Polish is now available on the website. dzień dobry!",
-        "🇳🇱 Dutch has been added too. hallo, space travelers!",
-        "that's all the news for now. check out the new sections, then click me to close this window. heh."
-    ],
-
-    de: [
-        "💀 hey. ich bin's wieder, Sans. wir haben ein paar Neuigkeiten.",
-        "🚧 übrigens ist das hier erst eine Demoversion. Malenkov hat noch nicht alles fertiggestellt, was er vorhatte, aber er wird es noch schaffen… sobald er aufhört, Pfannkuchen zu essen. 🥞",
-        "🔮 lerne Pomnis Atlas kennen! Die Erkundung des Weltraums macht jetzt noch mehr Spaß.",
-        "🧭 der Atlas bietet eine Suche, ein Quiz, Erfolge und gespeicherten Fortschritt.",
-        "👾 außerdem gibt es Geräusche und einen Boss. Hoffentlich erschrickst du nicht. Hehe.",
-        "🧪 die nächste Neuerung ist Crazy Daves Labor!",
-        "🌻 mach deine Pflanzen bereit und verteidige dich gegen Zombies. Dave hat bestimmt wieder etwas ausgeheckt.",
-        "⚔️ ganze 20 Wellen warten auf dich! Mal sehen, wie weit du kommst.",
-        "🇵🇱 übrigens ist die Website jetzt auch auf Polnisch verfügbar. dzień dobry!",
-        "🇳🇱 außerdem wurde Niederländisch hinzugefügt. hallo, Weltraumreisende!",
-        "das waren alle Neuigkeiten. Schau dir die neuen Bereiche an und klicke dann auf mich, um das Fenster zu schließen. Heh."
-    ],
-
-    fr: [
-        "💀 salut. c'est encore moi, Sans. nous avons quelques nouveautés.",
-        "🚧 au fait, ce n’est encore qu’une version démo. Malenkov n’a pas terminé tout ce qu’il voulait ajouter, mais il le fera… dès qu’il arrêtera de manger des crêpes. 🥞",
-        "🔮 découvre l'Atlas de Pomni ! Explorer l'espace devient encore plus intéressant.",
-        "🧭 l'atlas propose une recherche, un quiz, des succès et la sauvegarde de la progression.",
-        "👾 il contient aussi des sons et un boss. j'espère que tu n'auras pas peur. hé hé.",
-        "🧪 la prochaine nouveauté, c'est le Laboratoire du fou Dave !",
-        "🌻 prépare tes plantes et défends-toi contre les zombies. Dave prépare sûrement encore quelque chose.",
-        "⚔️ vingt vagues t'attendent ! Voyons jusqu'où tu pourras aller.",
-        "🇵🇱 au fait, le polonais est maintenant disponible sur le site. dzień dobry !",
-        "🇳🇱 le néerlandais a également été ajouté. hallo, voyageurs de l'espace !",
-        "c'est tout pour les nouvelles. découvre les nouvelles sections, puis clique sur moi pour fermer cette fenêtre. hé."
-    ],
-
-    es: [
-        "💀 hey. soy yo otra vez, Sans. tenemos algunas novedades.",
-        "🚧 por cierto, esta todavía es una versión de demostración. Malenkov aún no ha terminado todo lo que quería añadir, pero lo hará… cuando deje de comer tortitas. 🥞",
-        "🔮 ¡conoce el Atlas de Pomni! Explorar el espacio ahora es aún más interesante.",
-        "🧭 el atlas incluye búsqueda, un cuestionario, logros y guardado del progreso.",
-        "👾 también hay sonidos y un jefe. espero que no te asustes. je, je.",
-        "🧪 ¡la siguiente novedad es el Laboratorio del loco Dave!",
-        "🌻 prepara tus plantas y defiéndete de los zombis. Dave seguro que trama algo otra vez.",
-        "⚔️ ¡te esperan 20 oleadas! Veamos hasta dónde puedes llegar.",
-        "🇵🇱 por cierto, ahora la página también está disponible en polaco. dzień dobry.",
-        "🇳🇱 también hemos añadido el neerlandés. ¡hallo, viajeros espaciales!",
-        "eso es todo por ahora. explora las nuevas secciones y luego pulsa sobre mí para cerrar esta ventana. je."
-    ],
-
-    it: [
-        "💀 ehi. sono di nuovo io, Sans. ci sono alcune novità.",
-        "🚧 a proposito, questa è ancora una versione demo. Malenkov non ha ancora finito tutto quello che voleva aggiungere, ma lo farà… appena smetterà di mangiare pancake. 🥞",
-        "🔮 scopri l'Atlante di Pomni! Esplorare lo spazio è diventato ancora più interessante.",
-        "🧭 l'atlante include una ricerca, un quiz, obiettivi e il salvataggio dei progressi.",
-        "👾 ci sono anche suoni e un boss. spero che tu non ti spaventi. eheh.",
-        "🧪 la prossima novità è il Laboratorio del folle Dave!",
-        "🌻 prepara le tue piante e difenditi dagli zombi. Dave sta sicuramente escogitando qualcosa.",
-        "⚔️ ti aspettano ben 20 ondate! Vediamo fin dove riuscirai ad arrivare.",
-        "🇵🇱 a proposito, ora il sito è disponibile anche in polacco. dzień dobry!",
-        "🇳🇱 abbiamo aggiunto anche l'olandese. hallo, viaggiatori dello spazio!",
-        "per ora è tutto. esplora le nuove sezioni e poi clicca su di me per chiudere questa finestra. heh."
-    ],
-
-    pl: [
-        "💀 hej. to znowu ja, Sans. mamy kilka nowości.",
-        "🚧 tak przy okazji, to na razie wersja demonstracyjna. Malenkov nie dokończył jeszcze wszystkiego, co chciał dodać, ale na pewno to zrobi… kiedy przestanie jeść naleśniki. 🥞",
-        "🔮 poznaj Atlas Pomni! Odkrywanie kosmosu stało się jeszcze ciekawsze.",
-        "🧭 atlas oferuje wyszukiwanie, quiz, osiągnięcia i zapisywanie postępów.",
-        "👾 są tam również dźwięki i boss. mam nadzieję, że się nie przestraszysz. he he.",
-        "🧪 kolejną nowością jest Laboratorium Szalonego Dave'a!",
-        "🌻 przygotuj rośliny i broń się przed zombie. Dave znowu coś kombinuje.",
-        "⚔️ czeka na ciebie aż 20 fal! Zobaczymy, jak daleko zajdziesz.",
-        "🇵🇱 przy okazji, na stronie jest już dostępny język polski. dzień dobry!",
-        "🇳🇱 dodaliśmy również język niderlandzki. hallo, kosmiczni podróżnicy!",
-        "to już wszystkie nowości. odwiedź nowe sekcje, a potem kliknij mnie, aby zamknąć to okno. heh."
-    ],
-
-    nl: [
-        "💀 hé. ik ben er weer, Sans. we hebben wat nieuws.",
-        "🚧 trouwens, dit is voorlopig nog een demoversie. Malenkov heeft nog niet alles afgemaakt wat hij wilde toevoegen, maar dat komt zeker goed… zodra hij stopt met pannenkoeken eten. 🥞",
-        "🔮 maak kennis met Pomni's Atlas! De ruimte verkennen is nu nog interessanter.",
-        "🧭 de atlas bevat een zoekfunctie, een quiz, prestaties en opgeslagen voortgang.",
-        "👾 er zijn ook geluiden en een eindbaas. hopelijk schrik je niet. hehe.",
-        "🧪 de volgende toevoeging is Crazy Dave's Laboratorium!",
-        "🌻 maak je planten klaar en verdedig jezelf tegen zombies. Dave heeft vast weer iets bedacht.",
-        "⚔️ er wachten maar liefst 20 golven op je! Eens kijken hoe ver je komt.",
-        "🇵🇱 trouwens, de website is nu ook beschikbaar in het Pools. dzień dobry!",
-        "🇳🇱 ook het Nederlands is toegevoegd. hallo, ruimtereizigers!",
-        "dat was het nieuws voor nu. ontdek de nieuwe onderdelen en klik daarna op mij om dit venster te sluiten. heh."
-    ]
-};
-// 💀 Санс объявляет о полноценном обновлении
-const fullUpdateMessages = {
-    ru: "🎃 о, чуть не забыл! на сайте появилась хэллоуинская тематика. теперь здесь немного… жутковато. хе-хе. 👻 страницы обзавелись мрачным оформлением, хэллоуинскими украшениями и зловещей атмосферой. надеюсь, ты не боишься темноты. 🕸️ так что включай хэллоуинскую тему и отправляйся исследовать сайт. только не удивляйся, если что-нибудь покажется подозрительным. heh.",
-
-    kk: "🎃 ой, ұмытып кетемін! сайтқа Хэллоуин тақырыбы қосылды. енді мұнда сәл… қорқынышты. хе-хе. 👻 беттер қараңғы дизайнмен, Хэллоуин безендірулерімен және зловещей атмосферамен безендірілген. сен қараңғыдан қорықпайсың деп үміттенемін. 🕸️ сондықтан Хэллоуин тақырыбын қосып, сайтты зерттеуге кіріс. тек бірдеңе күдікті болып көрінсе, таңғалма. heh.",
-
-    cs: "🎃 o, málem bych zapomněl! na webu je teď téma Halloween. teď je tu trochu… strašidelně. hehe. 👻 stránky mají temný vzhled, halloweenské dekorace a zlověstnou atmosféru. doufám, že se nebojíš tmy. 🕸️ tak si zapni halloweenské téma a pusť se do objevování webu. jen se nediv, pokud ti něco připadá podezřelé. heh.",
-
-    en: "🎃 oh, almost forgot! the website now has a Halloween theme. it's a bit… spooky here. heh-heh. 👻 the pages have a dark design, Halloween decorations, and an eerie atmosphere. I hope you're not afraid of the dark. 🕸️ so turn on the Halloween theme and start exploring the site. just don't be surprised if something seems suspicious. heh.",
-
-    de: "🎃 oh, fast hätte ich es vergessen! die Website hat jetzt ein Halloween-Thema. es ist hier ein bisschen… gruselig. hehe. 👻 die Seiten haben ein dunkles Design, Halloween-Dekorationen und eine unheimliche Atmosphäre. ich hoffe, du hast keine Angst vor der Dunkelheit. 🕸️ also schalte das Halloween-Thema ein und erkunde die Website. sei nur nicht überrascht, wenn dir etwas verdächtig vorkommt. heh.",
-
-    fr: "🎃 oh, j'ai failli oublier ! le site a maintenant un thème Halloween. c'est un peu… effrayant ici. héhé. 👻 les pages ont un design sombre, des décorations d'Halloween et une atmosphère inquiétante. j'espère que tu n'as pas peur du noir. 🕸️ alors active le thème Halloween et commence à explorer le site. ne sois pas surpris si quelque chose te semble suspect. hé.",
-
-    es: "🎃 ¡oh, casi lo olvido! el sitio web ahora tiene un tema de Halloween. es un poco… espeluznante aquí. je, je. 👻 las páginas tienen un diseño oscuro, decoraciones de Halloween y una atmósfera inquietante. espero que no tengas miedo de la oscuridad. 🕸️ así que activa el tema de Halloween y empieza a explorar el sitio. solo no te sorprendas si algo parece sospechoso. je.",
-    it: "🎃 oh, quasi dimenticavo! il sito ora ha un tema di Halloween. è un po'… inquietante qui. eheh. 👻 le pagine hanno un design scuro, decorazioni di Halloween e un'atmosfera inquietante. spero che tu non abbia paura del buio. 🕸️ quindi attiva il tema di Halloween e inizia a esplorare il sito. non sorprenderti se qualcosa ti sembra sospetto. ehe.",
-
-    pl: "🎃 o, prawie zapomniałem! na stronie pojawił się motyw Halloween. jest tu trochę… strasznie. hehe. 👻 strony mają ciemny wygląd, dekoracje halloweenowe i złowieszczą atmosferę. mam nadzieję, że nie boisz się ciemności. 🕸️ więc włącz motyw Halloween i zacznij eksplorować stronę. tylko nie zdziw się, jeśli coś wyda ci się podejrzane. heh.",
-    nl: "🎃 oh, bijna vergeten! de website heeft nu een Halloween-thema. het is hier een beetje… spookhaftig. hehe. 👻 de pagina's hebben een donker ontwerp, Halloween decoraties en een gevaarlijke atmosfeer. ik hoop dat je niet bang bent voor het donker. 🕸️ zet dus het Halloween-thema aan en begin met het verkennen van de site. wees alleen niet verbaasd als iets verdacht lijkt. heh."
-};
 
 // Заменяем старое сообщение о демоверсии новым
 Object.entries(fullUpdateMessages).forEach(([lang, message]) => {
@@ -4844,3 +5129,625 @@ if (document.readyState === "loading") {
 } else {
     addHalloweenVectorDecorations();
 }
+(() => {
+    const lines = {
+        ru: [
+            "эй, привет. заценил? тут кое-что свеженькое завезли.",
+            "подкрутили зимнее настроение — сугробы, холода, всё как положено. если захочется уюта или праздничного вайба — включай и смотри, как преобразился космос.",
+            "ещё причесали переводы, чтобы ничего не отваливалось при смене языка — даже польский и нидерландский теперь в строю.",
+            "заходи, осматривайся, жми кнопки. только в сугробах надолго не застревай — в космосе мороз не шутит."
+        ],
+        kk: [
+            "әй, сәлем. байқадың ба? мұнда біраз жаңалық әкелінді.",
+            "қысқы көңіл-күйді күшейттік — күртік қар, аяз, бәрі орнында. жылылық немесе мерекелік атмосфера қаласаң — қосып, ғарыштың қалай өзгергенін көр.",
+            "тіл ауыстырғанда ештеңе түсіп қалмас үшін аудармаларды да реттедік — тіпті поляк пен нидерланд тілдері де сапта.",
+            "кір, қара, батырмаларды бас. бірақ қар құрсауында ұзақ қалып қойма — ғарышта аяз әзілдемейді."
+        ],
+        cs: [
+            "hej, čau. všiml sis? přivezli jsme sem pár čerstvých novinek.",
+            "vyladili jsme zimní náladu — závěje, mráz, všechno jak má být. až budeš chtít útulno nebo sváteční atmosféru, zapni to a koukni, jak se vesmír proměnil.",
+            "upravili jsme i překlady, aby při změně jazyka nic nepadalo — v provozu už je i polština a nizozemština.",
+            "pojď dál, rozhlédni se, klikej. jen nezapadni moc hluboko do závějí — ve vesmíru mráz nežertuje."
+        ],
+        en: [
+            "hey there. noticed? we rolled out some fresh updates.",
+            "tuned up the winter mood — snowdrifts, cold, the whole deal. whenever you want cozy vibes or holiday spirit, flip it on and see how space transformed.",
+            "tidied up the translations too so nothing breaks when switching languages — even Polish and Dutch are back in action.",
+            "come on in, look around, press buttons. just don't get stuck in the snowdrifts too long — space frost doesn't mess around."
+        ],
+        de: [
+            "hey, na. gemerkt? wir haben ein paar frische Sachen mitgebracht.",
+            "die Winterstimmung aufgedreht — Schneeverwehungen, Kälte, alles wie es sein soll. wenn dir nach Gemütlichkeit oder Festtagsstimmung ist, mach es an und schau, wie sich das Weltall verwandelt hat.",
+            "auch die Übersetzungen wurden aufgeräumt, damit beim Sprachenwechsel nichts verloren geht — selbst Polnisch und Niederländisch sind wieder am Start.",
+            "komm rein, schau dich um, drück die Knöpfe. bleib nur nicht zu lange in den Schneeverwehungen stecken — im Weltall ist mit dem Frost nicht zu spaßen."
+        ],
+        fr: [
+            "hé, salut. tu as remarqué ? on a ramené du nouveau.",
+            "on a peaufiné l'ambiance d'hiver — congères, froid, tout comme il faut. si tu veux de la chaleur ou l'esprit des fêtes, active-la et regarde comment l'espace a changé.",
+            "on a aussi remis les traductions d'équerre pour que rien ne saute en changeant de langue — même le polonais et le néerlandais sont de la partie.",
+            "entre, fais le tour, appuie sur les boutons. évite juste de rester coincé trop longtemps dans la neige — dans l'espace, le gel ne rigole pas."
+        ],
+        es: [
+            "oye, hola. ¿lo notaste? trajimos cositas nuevas.",
+            "ajustamos el ambiente invernal — ventisqueros, frío, todo como toca. si buscas calidez o espíritu festivo, actívalo y mira cómo cambió el espacio.",
+            "también peinamos las traducciones para que nada falle al cambiar de idioma — hasta el polaco y el neerlandés ya están listos.",
+            "pasa, echa un vistazo, pulsa los botones. solo no te quedes atascado mucho tiempo en la nieve — en el espacio el frío no perdona."
+        ],
+        it: [
+            "ehi, ciao. hai notato? abbiamo portato un po' di novità fresche.",
+            "abbiamo sistemato l'atmosfera invernale — cumuli di neve, freddo, tutto al posto giusto. se hai voglia di calore o spirito delle feste, attivala e guarda come è cambiato lo spazio.",
+            "abbiamo anche sistemato le traduzioni così non salta nulla cambiando lingua — anche polacco e olandese sono di nuovo operativi.",
+            "entra, guardati intorno, premi i pulsanti. solo non restare troppo a lungo nella neve — nello spazio il gelo non scherza."
+        ],
+        pl: [
+            "hej, cześć. zauważyłeś? przywieźliśmy trochę świeżych rzeczy.",
+            "podkręciliśmy zimowy klimat — zaspy, chłód, wszystko jak należy. jak zachce ci się przytulności albo świątecznego nastroju, włącz to i zobacz, jak zmienił się kosmos.",
+            "ogarnęliśmy też tłumaczenia, żeby nic się nie sypało przy zmianie języka — nawet polski i niderlandzki są już w komplecie.",
+            "wchodź, rozglądaj się, klikaj. tylko nie utknij na długo w zaspach — w kosmosie mróz nie żartuje."
+        ],
+        nl: [
+            "hé, hallo. valt het op? we hebben wat nieuws meegebracht.",
+            "de wintersfeer bijgesteld — sneeuwduinen, kou, alles zoals het hoort. als je zin hebt in warmte of feeststemming, zet het aan en kijk hoe de ruimte is veranderd.",
+            "ook de vertalingen zijn netjes gemaakt zodat er niets wegvalt bij het wisselen van taal — zelfs Pools en Nederlands doen weer mee.",
+            "kom binnen, kijk rond, druk op knoppen. blijf alleen niet te lang vastzitten in de sneeuw — in de ruimte is vorst geen grapje."
+        ]
+    };
+
+    const titles = {
+        ru: "❄️ Свежие обновления",
+        kk: "❄️ Соңғы жаңартулар",
+        cs: "❄️ Čerstvé novinky",
+        en: "❄️ Fresh Updates",
+        de: "❄️ Neue Updates",
+        fr: "❄️ Nouveautés fraîches",
+        es: "❄️ Novedades recientes",
+        it: "❄️ Novità recenti",
+        pl: "❄️ Świeże nowości",
+        nl: "❄️ Nieuwe updates"
+    };
+
+    const btns = {
+        ru: {
+            spaceObjectsButton: "🌌 Космические объекты",
+            kainButton: "🎪 Энциклопедия Кейна",
+            atlasButton: "АТЛАС<br>ПОМНИ",
+            daveLabButton: "Лаборатория<br>безумного<br>Дэйва",
+            dwarfButton: "🪐 Карликовые планеты"
+        },
+        kk: {
+            spaceObjectsButton: "🌌 Ғарыш объектілері",
+            kainButton: "🎪 Кейн энциклопедиясы",
+            atlasButton: "ПОМНИ<br>АТЛАСЫ",
+            daveLabButton: "Есуас Дэйв<br>зертханасы",
+            dwarfButton: "🪐 Ергежейлі ғаламшарлар"
+        },
+        cs: {
+            spaceObjectsButton: "🌌 Vesmírné objekty",
+            kainButton: "🎪 Caineova encyklopedie",
+            atlasButton: "ATLAS<br>POMNI",
+            daveLabButton: "Laboratoř<br>šíleného<br>Davea",
+            dwarfButton: "🪐 Trpasličí planety"
+        },
+        en: {
+            spaceObjectsButton: "🌌 Space Objects",
+            kainButton: "🎪 Caine's Encyclopedia",
+            atlasButton: "POMNI<br>ATLAS",
+            daveLabButton: "Mad Dave's<br>Laboratory",
+            dwarfButton: "🪐 Dwarf Planets"
+        },
+        de: {
+            spaceObjectsButton: "🌌 Weltraumobjekte",
+            kainButton: "🎪 Caines Enzyklopädie",
+            atlasButton: "POMNI<br>ATLAS",
+            daveLabButton: "Labor des<br>verrückten<br>Dave",
+            dwarfButton: "🪐 Zwergplaneten"
+        },
+        fr: {
+            spaceObjectsButton: "🌌 Objets spatiaux",
+            kainButton: "🎪 Encyclopédie de Caine",
+            atlasButton: "ATLAS<br>POMNI",
+            daveLabButton: "Labo du<br>fou<br>Dave",
+            dwarfButton: "🪐 Planètes naines"
+        },
+        es: {
+            spaceObjectsButton: "🌌 Objetos espaciales",
+            kainButton: "🎪 Enciclopedia de Caine",
+            atlasButton: "ATLAS<br>POMNI",
+            daveLabButton: "Laboratorio<br>del loco<br>Dave",
+            dwarfButton: "🪐 Planetas enanos"
+        },
+        it: {
+            spaceObjectsButton: "🌌 Oggetti spaziali",
+            kainButton: "🎪 Enciclopedia di Caine",
+            atlasButton: "ATLAS<br>POMNI",
+            daveLabButton: "Laboratorio<br>del pazzo<br>Dave",
+            dwarfButton: "🪐 Pianeti nani"
+        },
+        pl: {
+            spaceObjectsButton: "🌌 Obiekty kosmiczne",
+            kainButton: "🎪 Encyklopedia Caine'a",
+            atlasButton: "ATLAS<br>POMNI",
+            daveLabButton: "Laboratorium<br>szalonego<br>Dave'a",
+            dwarfButton: "🪐 Planety karłowate"
+        },
+        nl: {
+            spaceObjectsButton: "🌌 Ruimteobjecten",
+            kainButton: "🎪 Caines encyclopedie",
+            atlasButton: "POMNI<br>ATLAS",
+            daveLabButton: "Lab van<br>gekke<br>Dave",
+            dwarfButton: "🪐 Dwergplaneten"
+        }
+    };
+
+    function applyNow() {
+        const lang =
+            window.currentLanguage ||
+            localStorage.getItem("siteLanguage") ||
+            "ru";
+        const arr = lines[lang] || lines.ru;
+        const b = btns[lang] || btns.ru;
+        const title = titles[lang] || titles.ru;
+
+        if (typeof window.newSectionsTranslations === "object" && window.newSectionsTranslations) {
+            Object.keys(lines).forEach((k) => {
+                if (window.newSectionsTranslations[k]) {
+                    window.newSectionsTranslations[k].sansUpdates = arr.slice();
+                    window.newSectionsTranslations[k].updatesTitle = title;
+                    window.newSectionsTranslations[k].updatesText = arr.join("<br><br>");
+                }
+            });
+        }
+
+        if (typeof window.languages === "object" && window.languages) {
+            Object.keys(lines).forEach((k) => {
+                window.languages[k] = Object.assign(
+                    {},
+                    window.languages[k] || {},
+                    btns[k] || {},
+                    { sansUpdates: arr.slice(), updatesTitle: title }
+                );
+            });
+        }
+
+        const titleEl = document.getElementById("updatesTitle");
+        if (titleEl && titleEl.textContent !== title) {
+            titleEl.textContent = title;
+        }
+
+        for (let i = 1; i <= 10; i++) {
+            const p = document.getElementById("sansUpdate" + i);
+            if (!p) continue;
+            if (i <= arr.length) {
+                if (p.textContent !== arr[i - 1]) p.textContent = arr[i - 1];
+                if (p.style.display === "none") p.style.display = "";
+            } else {
+                if (p.textContent !== "") p.textContent = "";
+                if (p.style.display !== "none") p.style.display = "none";
+            }
+        }
+
+        const sBtn = document.getElementById("spaceObjectsButton");
+        if (sBtn && sBtn.textContent !== b.spaceObjectsButton) sBtn.textContent = b.spaceObjectsButton;
+
+        const kBtn = document.getElementById("kainButton");
+        if (kBtn && kBtn.textContent !== b.kainButton) kBtn.textContent = b.kainButton;
+
+        const dBtn = document.getElementById("dwarfPlanetsButton");
+        if (dBtn && dBtn.textContent !== b.dwarfButton) dBtn.textContent = b.dwarfButton;
+
+        const aTitle = document.querySelector(".pomni-atlas-title");
+        if (aTitle && aTitle.innerHTML !== b.atlasButton) aTitle.innerHTML = b.atlasButton;
+
+        const dLab = document.querySelector(".dave-lab-triangle span");
+        if (dLab && dLab.innerHTML !== b.daveLabButton) dLab.innerHTML = b.daveLabButton;
+    }
+
+    const modal = document.getElementById("updatesModal");
+    if (modal) {
+        new MutationObserver(() => applyNow()).observe(modal, {
+            childList: true,
+            subtree: true,
+            characterData: true
+        });
+    }
+
+    setInterval(applyNow, 250);
+    window.addEventListener("load", applyNow);
+    document.addEventListener("DOMContentLoaded", applyNow);
+    applyNow();
+})();
+(() => {
+    const t = {
+        ru: {
+            title: "❄️ Свежие обновления",
+            lines: [
+                "эй, привет. заценил? тут кое-что свеженькое завезли.",
+                "подкрутили зимнее настроение — сугробы, холода, всё как положено. если захочется уюта или праздничного вайба — включай и смотри, как преобразился космос.",
+                "ещё причесали переводы, чтобы ничего не отваливалось при смене языка — даже польский и нидерландский теперь в строю.",
+                "заходи, осматривайся, жми кнопки. только в сугробах надолго не застревай — в космосе мороз не шутит."
+            ]
+        },
+        kk: {
+            title: "❄️ Соңғы жаңартулар",
+            lines: [
+                "әй, сәлем. байқадың ба? мұнда біраз жаңалық әкелінді.",
+                "қысқы көңіл-күйді күшейттік — күртік қар, аяз, бәрі орнында. жылылық немесе мерекелік атмосфера қаласаң — қосып, ғарыштың қалай өзгергенін көр.",
+                "тіл ауыстырғанда ештеңе түсіп қалмас үшін аудармаларды да реттедік — тіпті поляк пен нидерланд тілдері де сапта.",
+                "кір, қара, батырмаларды бас. бірақ қар құрсауында ұзақ қалып қойма — ғарышта аяз әзілдемейді."
+            ]
+        },
+        cs: {
+            title: "❄️ Čerstvé novinky",
+            lines: [
+                "hej, čau. všiml sis? přivezli jsme sem pár čerstvých novinek.",
+                "vyladili jsme zimní náladu — závěje, mráz, všechno jak má být. až budeš chtít útulno nebo sváteční atmosféru, zapni to a koukni, jak se vesmír proměnil.",
+                "upravili jsme i překlady, aby při změně jazyka nic nepadalo — v provozu už je i polština a nizozemština.",
+                "pojď dál, rozhlédni se, klikej. jen nezapadni moc hluboko do závějí — ve vesmíru mráz nežertuje."
+            ]
+        },
+        en: {
+            title: "❄️ Fresh Updates",
+            lines: [
+                "hey there. noticed? we rolled out some fresh updates.",
+                "tuned up the winter mood — snowdrifts, cold, the whole deal. whenever you want cozy vibes or holiday spirit, flip it on and see how space transformed.",
+                "tidied up the translations too so nothing breaks when switching languages — even Polish and Dutch are back in action.",
+                "come on in, look around, press buttons. just don't get stuck in the snowdrifts too long — space frost doesn't mess around."
+            ]
+        },
+        de: {
+            title: "❄️ Neue Updates",
+            lines: [
+                "hey, na. gemerkt? wir haben ein paar frische Sachen mitgebracht.",
+                "die Winterstimmung aufgedreht — Schneeverwehungen, Kälte, alles wie es sein soll. wenn dir nach Gemütlichkeit oder Festtagsstimmung ist, mach es an und schau, wie sich das Weltall verwandelt hat.",
+                "auch die Übersetzungen wurden aufgeräumt, damit beim Sprachenwechsel nichts verloren geht — selbst Polnisch und Niederländisch sind wieder am Start.",
+                "komm rein, schau dich um, drück die Knöpfe. bleib nur nicht zu lange in den Schneeverwehungen stecken — im Weltall ist mit dem Frost nicht zu spaßen."
+            ]
+        },
+        fr: {
+            title: "❄️ Nouveautés fraîches",
+            lines: [
+                "hé, salut. tu as remarqué ? on a ramené du nouveau.",
+                "on a peaufiné l'ambiance d'hiver — congères, froid, tout comme il faut. si tu veux de la chaleur ou l'esprit des fêtes, active-la et regarde comment l'espace a changé.",
+                "on a aussi remis les traductions d'équerre pour que rien ne saute en changeant de langue — même le polonais et le néerlandais sont de la partie.",
+                "entre, fais le tour, appuie sur les boutons. évite juste de rester coincé trop longtemps dans la neige — dans l'espace, le gel ne rigole pas."
+            ]
+        },
+        es: {
+            title: "❄️ Novedades recientes",
+            lines: [
+                "oye, hola. ¿lo notaste? trajimos cositas nuevas.",
+                "ajustamos el ambiente invernal — ventisqueros, frío, todo como toca. si buscas calidez o espíritu festivo, actívalo y mira cómo cambió el espacio.",
+                "también peinamos las traducciones para que nada falle al cambiar de idioma — hasta el polaco y el neerlandés ya están listos.",
+                "pasa, echa un vistazo, pulsa los botones. solo no te quedes atascado mucho tiempo en la nieve — en el espacio el frío no perdona."
+            ]
+        },
+        it: {
+            title: "❄️ Novità recenti",
+            lines: [
+                "ehi, ciao. hai notato? abbiamo portato un po' di novità fresche.",
+                "abbiamo sistemato l'atmosfera invernale — cumuli di neve, freddo, tutto al posto giusto. se hai voglia di calore o spirito delle feste, attivala e guarda come è cambiato lo spazio.",
+                "abbiamo anche sistemato le traduzioni così non salta nulla cambiando lingua — anche polacco e olandese sono di nuovo operativi.",
+                "entra, guardati intorno, premi i pulsanti. solo non restare troppo a lungo nella neve — nello spazio il gelo non scherza."
+            ]
+        },
+        pl: {
+            title: "❄️ Świeże nowości",
+            lines: [
+                "hej, cześć. zauważyłeś? przywieźliśmy trochę świeżych rzeczy.",
+                "podkręciliśmy zimowy klimat — zaspy, chłód, wszystko jak należy. jak zachce ci się przytulności albo świątecznego nastroju, włącz to i zobacz, jak zmienił się kosmos.",
+                "ogarnęliśmy też tłumaczenia, żeby nic się nie sypało przy zmianie języka — nawet polski i niderlandzki są już w komplecie.",
+                "wchodź, rozglądaj się, klikaj. tylko nie utknij na długo w zaspach — w kosmosie mróz nie żartuje."
+            ]
+        },
+        nl: {
+            title: "❄️ Nieuwe updates",
+            lines: [
+                "hé, hallo. valt het op? we hebben wat nieuws meegebracht.",
+                "de wintersfeer bijgesteld — sneeuwduinen, kou, alles zoals het hoort. als je zin hebt in warmte of feeststemming, zet het aan en kijk hoe de ruimte is veranderd.",
+                "ook de vertalingen zijn netjes gemaakt zodat er niets wegvalt bij het wisselen van taal — zelfs Pools en Nederlands doen weer mee.",
+                "kom binnen, kijk rond, druk op knoppen. blijf alleen niet te lang vastzitten in de sneeuw — in de ruimte is vorst geen grapje."
+            ]
+        }
+    };
+
+    function fix() {
+        const lang = window.currentLanguage || localStorage.getItem("siteLanguage") || "ru";
+        const item = t[lang] || t.ru;
+
+        const h2 = document.getElementById("updatesTitle");
+        if (h2) h2.innerHTML = item.title;
+
+        const list = document.querySelector("#updatesModal .updates-list");
+        if (list) {
+            list.innerHTML = item.lines
+                .map((line, i) => `<p id="sansUpdate${i + 1}">${line}</p>`)
+                .join("");
+        }
+    }
+
+    fix();
+    setInterval(fix, 300);
+    document.addEventListener("DOMContentLoaded", fix);
+    window.addEventListener("load", fix);
+})();
+(function fixSansModalOnceAndForAll() {
+    const sansData = {
+        ru: {
+            title: "❄️ Свежие обновления",
+            lines: [
+                "эй, привет. заценил? тут кое-что свеженькое завезли.",
+                "подкрутили зимнее настроение — сугробы, холода, всё как положено. если захочется уюта или праздничного вайба — включай и смотри, как преобразился космос.",
+                "ещё причесали переводы, чтобы ничего не отваливалось при смене языка — даже польский и нидерландский теперь в строю.",
+                "заходи, осматривайся, жми кнопки. только в сугробах надолго не застревай — в космосе мороз не шутит."
+            ]
+        },
+        kk: {
+            title: "❄️ Соңғы жаңартулар",
+            lines: [
+                "әй, сәлем. байқадың ба? мұнда біраз жаңалық әкелінді.",
+                "қысқы көңіл-күйді күшейттік — күртік қар, аяз, бәрі орнында. жылылық немесе мерекелік атмосфера қаласаң — қосып, ғарыштың қалай өзгергенін көр.",
+                "тіл ауыстырғанда ештеңе түсіп қалмас үшін аудармаларды да реттедік — тіпті поляк пен нидерланд тілдері де сапта.",
+                "кір, қара, батырмаларды бас. бірақ қар құрсауында ұзақ қалып қойма — ғарышта аяз әзілдемейді."
+            ]
+        },
+        cs: {
+            title: "❄️ Čerstvé novinky",
+            lines: [
+                "hej, čau. všiml sis? přivezli jsme sem pár čerstvých novinek.",
+                "vyladili jsme zimní náladu — závěje, mráz, všechno jak má být. až budeš chtít útulno nebo sváteční atmosféru, zapni to a koukni, jak se vesmír proměnil.",
+                "upravili jsme i překlady, aby při změně jazyka nic nepadalo — v provozu už je i polština a nizozemština.",
+                "pojď dál, rozhlédni se, klikej. jen nezapadni moc hluboko do závějí — ve vesmíru mráz nežertuje."
+            ]
+        },
+        en: {
+            title: "❄️ Fresh Updates",
+            lines: [
+                "hey there. noticed? we rolled out some fresh updates.",
+                "tuned up the winter mood — snowdrifts, cold, the whole deal. whenever you want cozy vibes or holiday spirit, flip it on and see how space transformed.",
+                "tidied up the translations too so nothing breaks when switching languages — even Polish and Dutch are back in action.",
+                "come on in, look around, press buttons. just don't get stuck in the snowdrifts too long — space frost doesn't mess around."
+            ]
+        },
+        de: {
+            title: "❄️ Neue Updates",
+            lines: [
+                "hey, na. gemerkt? wir haben ein paar frische Sachen mitgebracht.",
+                "die Winterstimmung aufgedreht — Schneeverwehungen, Kälte, alles wie es sein soll. wenn dir nach Gemütlichkeit oder Festtagsstimmung ist, mach es an und schau, wie sich das Weltall verwandelt hat.",
+                "auch die Übersetzungen wurden aufgeräumt, damit beim Sprachenwechsel nichts verloren geht — selbst Polnisch und Niederländisch sind wieder am Start.",
+                "komm rein, schau dich um, drück die Knöpfe. bleib nur nicht zu lange in den Schneeverwehungen stecken — im Weltall ist mit dem Frost nicht zu spaßen."
+            ]
+        },
+        fr: {
+            title: "❄️ Nouveautés fraîches",
+            lines: [
+                "hé, salut. tu as remarqué ? on a ramené du nouveau.",
+                "on a peaufiné l'ambiance d'hiver — congères, froid, tout comme il faut. si tu veux de la chaleur ou l'esprit des fêtes, active-la et regarde comment l'espace a changé.",
+                "on a aussi remis les traductions d'équerre pour que rien ne saute en changeant de langue — même le polonais et le néerlandais sont de la partie.",
+                "entre, fais le tour, appuie sur les boutons. évite juste de rester coincé trop longtemps dans la neige — dans l'espace, le gel ne rigole pas."
+            ]
+        },
+        es: {
+            title: "❄️ Novedades recientes",
+            lines: [
+                "oye, hola. ¿lo notaste? trajimos cositas nuevas.",
+                "ajustamos el ambiente invernal — ventisqueros, frío, todo como toca. si buscas calidez o espíritu festivo, actívalo y mira cómo cambió el espacio.",
+                "también peinamos las traducciones para que nada falle al cambiar de idioma — hasta el polaco y el neerlandés ya están listos.",
+                "pasa, echa un vistazo, pulsa los botones. solo no te quedes atascado mucho tiempo en la nieve — en el espacio el frío no perdona."
+            ]
+        },
+        it: {
+            title: "❄️ Novità recenti",
+            lines: [
+                "ehi, ciao. hai notato? abbiamo portato un po' di novità fresche.",
+                "abbiamo sistemato l'atmosfera invernale — cumuli di neve, freddo, tutto al posto giusto. se hai voglia di calore o spirito delle feste, attivala e guarda come è cambiato lo spazio.",
+                "abbiamo anche sistemato le traduzioni così non salta nulla cambiando lingua — anche polacco e olandese sono di nuovo operativi.",
+                "entra, guardati intorno, premi i pulsanti. solo non restare troppo a lungo nella neve — nello spazio il gelo non scherza."
+            ]
+        },
+        pl: {
+            title: "❄️ Świeże nowości",
+            lines: [
+                "hej, cześć. zauważyłeś? przywieźliśmy trochę świeżych rzeczy.",
+                "podkręciliśmy zimowy klimat — zaspy, chłód, wszystko jak należy. jak zachce ci się przytulności albo świątecznego nastroju, włącz to i zobacz, jak zmienił się kosmos.",
+                "ogarnęliśmy też tłumaczenia, żeby nic się nie sypało przy zmianie języka — nawet polski i niderlandzki są już w komplecie.",
+                "wchodź, rozglądaj się, klikaj. tylko nie utknij na długo w zaspach — w kosmosie mróz nie żartuje."
+            ]
+        },
+        nl: {
+            title: "❄️ Nieuwe updates",
+            lines: [
+                "hé, hallo. valt het op? we hebben wat nieuws meegebracht.",
+                "de wintersfeer bijgesteld — sneeuwduinen, kou, alles zoals het hoort. als je zin hebt in warmte of feeststemming, zet het aan en kijk hoe de ruimte is veranderd.",
+                "ook de vertalingen zijn netjes gemaakt zodat er niets wegvalt bij het wisselen van taal — zelfs Pools en Nederlands doen weer mee.",
+                "kom binnen, kijk rond, druk op knoppen. blijf alleen niet te lang vastzitten in de sneeuw — in de ruimte is vorst geen grapje."
+            ]
+        }
+    };
+
+    function getLang() {
+        return (
+            window.currentLanguage ||
+            localStorage.getItem("siteLanguage") ||
+            document.documentElement.lang ||
+            "ru"
+        );
+    }
+
+    function applySansModal() {
+        const entry = sansData[getLang()] || sansData.ru;
+        const modal = document.getElementById("updatesModal");
+        if (!modal) return;
+
+        const titleEl = modal.querySelector("#updatesTitle") || modal.querySelector("h2");
+        if (titleEl && titleEl.textContent.trim() !== entry.title) {
+            titleEl.textContent = entry.title;
+        }
+
+        const listEl = modal.querySelector(".updates-list");
+        if (listEl) {
+            const desiredHtml = entry.lines
+                .map((line, idx) => `<p id="sansUpdate${idx + 1}">${line}</p>`)
+                .join("");
+            if (listEl.innerHTML !== desiredHtml) {
+                listEl.innerHTML = desiredHtml;
+            }
+        }
+    }
+
+    const origOpen = window.openUpdatesModal;
+    window.openUpdatesModal = function (...args) {
+        if (typeof origOpen === "function") {
+            origOpen.apply(this, args);
+        }
+        const modal = document.getElementById("updatesModal");
+        if (modal) {
+            modal.classList.add("active");
+            modal.style.display = "flex";
+            modal.setAttribute("aria-hidden", "false");
+            document.body.style.overflow = "hidden";
+        }
+        applySansModal();
+    };
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", applySansModal);
+    } else {
+        applySansModal();
+    }
+    window.addEventListener("load", applySansModal);
+    setInterval(applySansModal, 400);
+})();
+(() => {
+    const style = document.createElement("style");
+    style.id = "customSnowdriftPhysicsStyle";
+    style.textContent = `
+        #customSnowLayer {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9998;
+            overflow: hidden;
+        }
+        .custom-snowflake {
+            position: fixed;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            background: #ffffff;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+            pointer-events: none;
+            will-change: transform, opacity;
+        }
+        #customSnowdriftPile {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 26px;
+            pointer-events: none;
+            z-index: 9997;
+            background:
+                radial-gradient(ellipse at 10% 100%, rgba(235, 248, 255, 0.96) 0%, rgba(210, 236, 255, 0.72) 55%, transparent 75%),
+                radial-gradient(ellipse at 32% 100%, rgba(245, 252, 255, 0.98) 0%, rgba(215, 238, 255, 0.75) 58%, transparent 78%),
+                radial-gradient(ellipse at 57% 100%, rgba(235, 248, 255, 0.96) 0%, rgba(210, 236, 255, 0.72) 55%, transparent 75%),
+                radial-gradient(ellipse at 82% 100%, rgba(245, 252, 255, 0.98) 0%, rgba(215, 238, 255, 0.75) 58%, transparent 78%);
+            filter: drop-shadow(0 -2px 8px rgba(190, 228, 255, 0.55));
+        }
+    `;
+    document.head.appendChild(style);
+
+    const layer = document.createElement("div");
+    layer.id = "customSnowLayer";
+    document.body.appendChild(layer);
+
+    const pile = document.createElement("div");
+    pile.id = "customSnowdriftPile";
+    document.body.appendChild(pile);
+
+    const flakes = [];
+    const targetCount = 110;
+    let pileHeight = 26;
+
+    function isWinterActive() {
+        const btn = document.getElementById("winterThemeButton");
+        return (
+            document.body.classList.contains("winter-theme") ||
+            document.documentElement.classList.contains("winter-theme") ||
+            btn?.getAttribute("aria-pressed") === "true" ||
+            btn?.classList.contains("active")
+        );
+    }
+
+    function spawnFlake(randomY = false) {
+        const el = document.createElement("div");
+        el.className = "custom-snowflake";
+        const size = 3 + Math.random() * 5;
+        el.style.width = `${size}px`;
+        el.style.height = `${size}px`;
+        layer.appendChild(el);
+
+        return {
+            el,
+            x: Math.random() * window.innerWidth,
+            y: randomY ? Math.random() * (window.innerHeight - pileHeight - 10) : -12 - Math.random() * 60,
+            vx: (Math.random() - 0.5) * 0.9,
+            vy: 1.1 + Math.random() * 1.9,
+            swayPhase: Math.random() * Math.PI * 2,
+            swaySpeed: 0.015 + Math.random() * 0.025,
+            swayAmp: 0.4 + Math.random() * 1.1
+        };
+    }
+
+    function syncFlakes() {
+        const active = isWinterActive();
+        layer.style.display = active ? "" : "none";
+        pile.style.display = active ? "" : "none";
+        if (!active) return;
+
+        while (flakes.length < targetCount) {
+            flakes.push(spawnFlake(true));
+        }
+    }
+
+    let lastTime = performance.now();
+    function tick(now) {
+        const dt = Math.min(2, (now - lastTime) / 16.6667);
+        lastTime = now;
+
+        if (isWinterActive()) {
+            layer.style.display = "";
+            pile.style.display = "";
+            pile.style.height = `${pileHeight}px`;
+
+            const floorY = window.innerHeight - pileHeight;
+
+            for (let i = 0; i < flakes.length; i++) {
+                const f = flakes[i];
+                f.swayPhase += f.swaySpeed * dt;
+                f.x += (f.vx + Math.sin(f.swayPhase) * f.swayAmp) * dt;
+                f.y += f.vy * dt;
+
+                if (f.x < -10) f.x = window.innerWidth + 10;
+                if (f.x > window.innerWidth + 10) f.x = -10;
+
+                if (f.y >= floorY) {
+                    pileHeight = Math.min(72, pileHeight + 0.035);
+                    f.x = Math.random() * window.innerWidth;
+                    f.y = -10 - Math.random() * 30;
+                    f.vy = 1.1 + Math.random() * 1.9;
+                }
+
+                f.el.style.transform = `translate3d(${f.x}px, ${f.y}px, 0)`;
+            }
+        } else {
+            layer.style.display = "none";
+            pile.style.display = "none";
+        }
+
+        requestAnimationFrame(tick);
+    }
+
+    setInterval(syncFlakes, 300);
+    syncFlakes();
+    requestAnimationFrame(tick);
+})();

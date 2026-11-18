@@ -1,0 +1,814 @@
+/* =========================================
+   ❄️ ЗИМНЯЯ ТЕМА — РАБОЧИЙ ВАРИАНТ
+   ========================================= */
+
+#winterThemeButton {
+    display: none;
+    position: fixed;
+    top: 162px;
+    left: 16px;
+    z-index: 2500;
+    padding: 10px 14px;
+    max-width: 260px;
+    border-radius: 14px;
+    border: 1px solid #7dd3fc;
+    background: #0f2442;
+    color: #e0f2fe;
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: left;
+    cursor: pointer;
+}
+
+body.winter-home #winterThemeButton {
+    display: inline-block;
+}
+
+body.winter-mode #winterThemeButton {
+    background: linear-gradient(135deg, #1d4ed8, #991b1b);
+    border-color: #fde68a;
+    color: #ffffff;
+}
+
+/* Гирлянда сверху */
+#winterGarland {
+    display: none;
+    position: fixed;
+    top: 4px;
+    left: 0;
+    right: 0;
+    height: 26px;
+    pointer-events: none;
+    z-index: 900;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0 12px;
+}
+
+body.winter-mode #winterGarland {
+    display: flex;
+}
+
+#winterGarland span {
+    width: 11px;
+    height: 15px;
+    border-radius: 50% 50% 45% 45%;
+    margin-top: 3px;
+}
+
+#winterGarland span:nth-child(4n+1) { background: #fb7185; }
+#winterGarland span:nth-child(4n+2) { background: #facc15; }
+#winterGarland span:nth-child(4n+3) { background: #38bdf8; }
+#winterGarland span:nth-child(4n)   { background: #e2e8f0; }
+
+/* Падающий снег */
+#winterSnow {
+    display: none;
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 850;
+    overflow: hidden;
+}
+
+body.winter-mode #winterSnow {
+    display: block;
+}
+
+.w-flake {
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #f8fafc;
+    text-shadow: 0 0 10px rgba(186, 230, 253, 0.85);
+    pointer-events: none;
+    user-select: none;
+    will-change: transform, opacity;
+    animation-name: wFallFull;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes wFallFull {
+    0% {
+        transform: translate3d(0, -32px, 0) rotate(0deg);
+        opacity: 0.95;
+    }
+    80% {
+        opacity: 0.9;
+    }
+    95% {
+        opacity: 0.45;
+    }
+    100% {
+        transform: translate3d(var(--w-drift, 28px), calc(100vh + 72px), 0) rotate(180deg);
+        opacity: 0;
+    }
+}
+
+/* Сугроб снизу */
+#winterDrift {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 28px;
+    pointer-events: none;
+    z-index: 840;
+    background:
+        radial-gradient(ellipse 22% 90% at 15% 100%, rgba(224, 242, 254, 0.85), transparent 75%),
+        radial-gradient(ellipse 28% 95% at 45% 100%, rgba(240, 249, 255, 0.9), transparent 75%),
+        radial-gradient(ellipse 26% 95% at 75% 100%, rgba(224, 242, 254, 0.85), transparent 75%);
+}
+
+body.winter-mode #winterDrift {
+    display: block;
+}
+
+/* Дед Мороз на главной */
+#winterSanta {
+    display: none;
+    position: fixed;
+    top: 14%;
+    left: -240px;
+    width: 220px;
+    height: 76px;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.75;
+    animation: wSantaFly 26s linear infinite;
+}
+
+body.winter-mode.winter-home #winterSanta {
+    display: block;
+}
+
+@keyframes wSantaFly {
+    0% { transform: translateX(-10vw) translateY(10px) scale(0.75); opacity: 0; }
+    10% { opacity: 0.75; }
+    50% { transform: translateX(55vw) translateY(-12px) scale(0.8); opacity: 0.75; }
+    90% { opacity: 0.65; }
+    100% { transform: translateX(120vw) translateY(8px) scale(0.75); opacity: 0; }
+}
+
+/* Шапки на планетах и спутниках */
+.w-hat-box {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.w-hat-box img {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.w-hat-svg {
+    display: none;
+    position: absolute;
+    top: -38px;
+    left: 50%;
+    width: 112px;
+    height: 82px;
+    transform: translateX(-45%) rotate(-12deg);
+    pointer-events: none;
+    z-index: 6;
+}
+
+body.winter-mode .w-hat-svg {
+    display: block;
+}
+
+body.winter-mode .w-hat-box--big .w-hat-svg {
+    top: -54px;
+    width: 156px;
+    height: 114px;
+    transform: translateX(-44%) rotate(-12deg);
+}
+
+/* Страница Чарли — зимний стиль */
+body.winter-mode.winter-charlie .constellation-header h1 {
+    color: #e0f2fe;
+    text-shadow:
+        0 0 12px rgba(125, 211, 252, 0.85),
+        0 0 28px rgba(56, 189, 248, 0.55);
+}
+
+body.winter-mode.winter-charlie .constellation-header p {
+    color: #bae6fd;
+}
+
+body.winter-mode.winter-charlie .constellation-card {
+    background: linear-gradient(155deg, rgba(14, 38, 74, 0.92), rgba(7, 19, 42, 0.96));
+    border-color: rgba(125, 211, 252, 0.75);
+    box-shadow: 0 0 18px rgba(56, 189, 248, 0.22);
+}
+
+body.winter-mode.winter-charlie .constellation-card:hover {
+    border-color: #fde68a;
+    box-shadow: 0 0 26px rgba(125, 211, 252, 0.45);
+}
+
+body.winter-mode.winter-charlie .constellation-card h2 {
+    color: #e0f2fe;
+}
+
+body.winter-mode.winter-charlie .back-button {
+    color: #e0f2fe;
+    background: rgba(14, 54, 108, 0.7);
+    border-color: rgba(125, 211, 252, 0.7);
+}
+
+/* Лаба Дэйва — зимние и новогодние цвета */
+body.winter-mode.winter-dave {
+    background:
+        radial-gradient(circle at 18% 15%, rgba(56, 189, 248, 0.22), transparent 35%),
+        radial-gradient(circle at 82% 25%, rgba(244, 63, 94, 0.16), transparent 35%),
+        linear-gradient(135deg, #071326, #0d2240, #091830);
+}
+
+body.winter-mode.winter-dave .lab-header {
+    background: linear-gradient(180deg, rgba(15, 41, 78, 0.95), rgba(9, 25, 52, 0.9));
+    border-bottom: 2px solid #7dd3fc;
+}
+
+body.winter-mode.winter-dave .lab-header h1,
+body.winter-mode.winter-dave .game-section h2,
+body.winter-mode.winter-dave .space-card h3 {
+    color: #fde68a;
+}
+
+body.winter-mode.winter-dave .garden-board {
+    background: #0b2447;
+    border-color: #fde68a;
+}
+
+body.winter-mode.winter-dave .garden-cell {
+    background: #1d4ed8;
+    border-color: #93c5fd;
+    color: #ffffff;
+}
+
+body.winter-mode.winter-dave .garden-cell:nth-child(even) {
+    background: #1e3a8a;
+}
+
+body.winter-mode.winter-dave .plant-choice.active,
+body.winter-mode.winter-dave .plant-choice:hover,
+body.winter-mode.winter-dave .space-card button,
+body.winter-mode.winter-dave .game-controls button {
+    background: linear-gradient(135deg, #be123c, #1d4ed8);
+    border-color: #fde68a;
+    color: #ffffff;
+}/* =========================================
+   ❄️ ЗИМНЯЯ ТЕМА — РАБОЧИЙ ВАРИАНТ
+   ========================================= */
+
+#winterThemeButton {
+    display: none;
+    position: fixed;
+    top: 162px;
+    left: 16px;
+    z-index: 2500;
+    padding: 10px 14px;
+    max-width: 260px;
+    border-radius: 14px;
+    border: 1px solid #7dd3fc;
+    background: #0f2442;
+    color: #e0f2fe;
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: left;
+    cursor: pointer;
+}
+
+body.winter-home #winterThemeButton {
+    display: inline-block;
+}
+
+body.winter-mode #winterThemeButton {
+    background: linear-gradient(135deg, #1d4ed8, #991b1b);
+    border-color: #fde68a;
+    color: #ffffff;
+}
+
+/* Гирлянда сверху */
+#winterGarland {
+    display: none;
+    position: fixed;
+    top: 4px;
+    left: 0;
+    right: 0;
+    height: 26px;
+    pointer-events: none;
+    z-index: 900;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0 12px;
+}
+
+body.winter-mode #winterGarland {
+    display: flex;
+}
+
+#winterGarland span {
+    width: 11px;
+    height: 15px;
+    border-radius: 50% 50% 45% 45%;
+    margin-top: 3px;
+}
+
+#winterGarland span:nth-child(4n+1) { background: #fb7185; }
+#winterGarland span:nth-child(4n+2) { background: #facc15; }
+#winterGarland span:nth-child(4n+3) { background: #38bdf8; }
+#winterGarland span:nth-child(4n)   { background: #e2e8f0; }
+
+/* Падающий снег */
+#winterSnow {
+    display: none;
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 850;
+    overflow: hidden;
+}
+
+body.winter-mode #winterSnow {
+    display: block;
+}
+
+.w-flake {
+    position: fixed;
+    top: -28px;
+    color: #f0f9ff;
+    pointer-events: none;
+    user-select: none;
+    animation: wFall linear forwards;
+}
+
+@keyframes wFall {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.9;
+    }
+    90% {
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(102vh) translateX(var(--w-drift, 24px));
+        opacity: 0;
+    }
+}
+
+/* Сугроб снизу */
+#winterDrift {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 28px;
+    pointer-events: none;
+    z-index: 840;
+    background:
+        radial-gradient(ellipse 22% 90% at 15% 100%, rgba(224, 242, 254, 0.85), transparent 75%),
+        radial-gradient(ellipse 28% 95% at 45% 100%, rgba(240, 249, 255, 0.9), transparent 75%),
+        radial-gradient(ellipse 26% 95% at 75% 100%, rgba(224, 242, 254, 0.85), transparent 75%);
+}
+
+body.winter-mode #winterDrift {
+    display: block;
+}
+
+/* Дед Мороз на главной */
+#winterSanta {
+    display: none;
+    position: fixed;
+    top: 14%;
+    left: -240px;
+    width: 220px;
+    height: 76px;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.75;
+    animation: wSantaFly 26s linear infinite;
+}
+
+body.winter-mode.winter-home #winterSanta {
+    display: block;
+}
+
+@keyframes wSantaFly {
+    0% { transform: translateX(-10vw) translateY(10px) scale(0.75); opacity: 0; }
+    10% { opacity: 0.75; }
+    50% { transform: translateX(55vw) translateY(-12px) scale(0.8); opacity: 0.75; }
+    90% { opacity: 0.65; }
+    100% { transform: translateX(120vw) translateY(8px) scale(0.75); opacity: 0; }
+}
+
+/* Шапки на планетах и спутниках */
+.w-hat-box {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.w-hat-box img {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.w-hat-svg {
+    display: none;
+    position: absolute;
+    top: -38px;
+    left: 50%;
+    width: 112px;
+    height: 82px;
+    transform: translateX(-45%) rotate(-12deg);
+    pointer-events: none;
+    z-index: 6;
+}
+
+body.winter-mode .w-hat-svg {
+    display: block;
+}
+
+body.winter-mode .w-hat-box--big .w-hat-svg {
+    top: -54px;
+    width: 156px;
+    height: 114px;
+    transform: translateX(-44%) rotate(-12deg);
+}
+
+/* Страница Чарли — зимний стиль */
+body.winter-mode.winter-charlie .constellation-header h1 {
+    color: #e0f2fe;
+    text-shadow:
+        0 0 12px rgba(125, 211, 252, 0.85),
+        0 0 28px rgba(56, 189, 248, 0.55);
+}
+
+body.winter-mode.winter-charlie .constellation-header p {
+    color: #bae6fd;
+}
+
+body.winter-mode.winter-charlie .constellation-card {
+    background: linear-gradient(155deg, rgba(14, 38, 74, 0.92), rgba(7, 19, 42, 0.96));
+    border-color: rgba(125, 211, 252, 0.75);
+    box-shadow: 0 0 18px rgba(56, 189, 248, 0.22);
+}
+
+body.winter-mode.winter-charlie .constellation-card:hover {
+    border-color: #fde68a;
+    box-shadow: 0 0 26px rgba(125, 211, 252, 0.45);
+}
+
+body.winter-mode.winter-charlie .constellation-card h2 {
+    color: #e0f2fe;
+}
+
+body.winter-mode.winter-charlie .back-button {
+    color: #e0f2fe;
+    background: rgba(14, 54, 108, 0.7);
+    border-color: rgba(125, 211, 252, 0.7);
+}
+
+/* Лаба Дэйва — зимние и новогодние цвета */
+body.winter-mode.winter-dave {
+    background:
+        radial-gradient(circle at 18% 15%, rgba(56, 189, 248, 0.22), transparent 35%),
+        radial-gradient(circle at 82% 25%, rgba(244, 63, 94, 0.16), transparent 35%),
+        linear-gradient(135deg, #071326, #0d2240, #091830);
+}
+
+body.winter-mode.winter-dave .lab-header {
+    background: linear-gradient(180deg, rgba(15, 41, 78, 0.95), rgba(9, 25, 52, 0.9));
+    border-bottom: 2px solid #7dd3fc;
+}
+
+body.winter-mode.winter-dave .lab-header h1,
+body.winter-mode.winter-dave .game-section h2,
+body.winter-mode.winter-dave .space-card h3 {
+    color: #fde68a;
+}
+
+body.winter-mode.winter-dave .garden-board {
+    background: #0b2447;
+    border-color: #fde68a;
+}
+
+body.winter-mode.winter-dave .garden-cell {
+    background: #1d4ed8;
+    border-color: #93c5fd;
+    color: #ffffff;
+}
+
+body.winter-mode.winter-dave .garden-cell:nth-child(even) {
+    background: #1e3a8a;
+}
+
+body.winter-mode.winter-dave .plant-choice.active,
+body.winter-mode.winter-dave .plant-choice:hover,
+body.winter-mode.winter-dave .space-card button,
+body.winter-mode.winter-dave .game-controls button {
+    background: linear-gradient(135deg, #be123c, #1d4ed8);
+    border-color: #fde68a;
+    color: #ffffff;
+}
+/* Падающий снег до самого низа экрана */
+.w-flake {
+    position: fixed;
+    top: -32px;
+    color: #f0f9ff;
+    text-shadow: 0 0 8px rgba(186, 230, 253, 0.75);
+    pointer-events: none;
+    user-select: none;
+    will-change: transform, opacity;
+    animation: wFallFull linear forwards;
+}
+
+@keyframes wFallFull {
+    0% {
+        transform: translate3d(0, -32px, 0) rotate(0deg);
+        opacity: 0.92;
+    }
+    85% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate3d(var(--w-drift, 28px), calc(100vh + 60px), 0) rotate(160deg);
+        opacity: 0;
+    }
+}
+
+/* Усиленное зимнее украшение страницы Чарли */
+body.winter-mode.winter-charlie .constellation-header {
+    background: linear-gradient(180deg, rgba(12, 35, 70, 0.88), rgba(7, 20, 44, 0.45));
+    border-bottom: 1px solid rgba(186, 230, 253, 0.35);
+    box-shadow: 0 10px 30px rgba(14, 165, 233, 0.16);
+}
+
+body.winter-mode.winter-charlie .constellation-header h1 {
+    color: #f0f9ff;
+    text-shadow:
+        0 0 14px rgba(125, 211, 252, 0.9),
+        0 0 32px rgba(56, 189, 248, 0.55);
+}
+
+body.winter-mode.winter-charlie .constellation-header p {
+    color: #bae6fd;
+}
+
+body.winter-mode.winter-charlie .constellation-card {
+    position: relative;
+    background: linear-gradient(160deg, rgba(16, 44, 86, 0.94), rgba(7, 19, 41, 0.97));
+    border: 1px solid rgba(125, 211, 252, 0.75);
+    box-shadow:
+        0 8px 24px rgba(2, 132, 199, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.22);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+body.winter-mode.winter-charlie .constellation-card::before {
+    content: "❄️";
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    font-size: 1rem;
+    opacity: 0.9;
+    pointer-events: none;
+    filter: drop-shadow(0 0 6px rgba(186, 230, 253, 0.8));
+}
+
+body.winter-mode.winter-charlie .constellation-card:hover {
+    transform: translateY(-4px);
+    border-color: #fde68a;
+    box-shadow:
+        0 12px 28px rgba(56, 189, 248, 0.38),
+        0 0 18px rgba(253, 230, 138, 0.22);
+}
+
+body.winter-mode.winter-charlie .constellation-card h2 {
+    color: #e0f2fe;
+}
+
+body.winter-mode.winter-charlie .constellation-description {
+    color: #cbd5e1;
+}
+
+body.winter-mode.winter-charlie .back-button {
+    color: #f0f9ff;
+    background: linear-gradient(135deg, rgba(14, 54, 108, 0.85), rgba(30, 64, 175, 0.85));
+    border: 1px solid rgba(125, 211, 252, 0.8);
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.25);
+}
+/* =========================================
+   🎄 СИЛЬНАЯ НОВОГОДНЯЯ АТМОСФЕРА — СТРАНИЦА ЧАРЛИ
+   ========================================= */
+
+body.winter-mode.winter-charlie #winterGarland {
+    height: 32px;
+    top: 2px;
+}
+
+body.winter-mode.winter-charlie #winterGarland span {
+    width: 13px;
+    height: 17px;
+    box-shadow: 0 2px 10px currentColor;
+    animation: wGarlandTwinkle 2.2s ease-in-out infinite alternate;
+}
+
+body.winter-mode.winter-charlie #winterGarland span:nth-child(4n+1) {
+    color: #fb7185;
+    animation-delay: 0s;
+}
+
+body.winter-mode.winter-charlie #winterGarland span:nth-child(4n+2) {
+    color: #facc15;
+    animation-delay: 0.45s;
+}
+
+body.winter-mode.winter-charlie #winterGarland span:nth-child(4n+3) {
+    color: #38bdf8;
+    animation-delay: 0.9s;
+}
+
+body.winter-mode.winter-charlie #winterGarland span:nth-child(4n) {
+    color: #4ade80;
+    animation-delay: 1.35s;
+}
+
+@keyframes wGarlandTwinkle {
+    0% {
+        filter: brightness(0.75);
+        transform: translateY(0) scale(0.95);
+    }
+    100% {
+        filter: brightness(1.35);
+        transform: translateY(2px) scale(1.06);
+    }
+}
+
+body.winter-mode.winter-charlie .constellation-header {
+    position: relative;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(250, 204, 21, 0.14), transparent 45%),
+        radial-gradient(circle at 80% 30%, rgba(251, 113, 133, 0.14), transparent 45%),
+        linear-gradient(180deg, rgba(13, 38, 78, 0.94), rgba(7, 20, 44, 0.72));
+    border-bottom: 1px solid rgba(253, 230, 138, 0.45);
+    box-shadow:
+        0 12px 34px rgba(14, 165, 233, 0.22),
+        0 0 24px rgba(250, 204, 21, 0.12);
+}
+
+body.winter-mode.winter-charlie .constellation-header h1::before,
+body.winter-mode.winter-charlie .constellation-header h1::after {
+    content: " 🎄 ";
+    font-size: 0.88em;
+    filter: drop-shadow(0 0 8px rgba(250, 204, 21, 0.55));
+}
+
+body.winter-mode.winter-charlie .constellation-card {
+    position: relative;
+    background:
+        radial-gradient(circle at top right, rgba(253, 230, 138, 0.14), transparent 48%),
+        linear-gradient(160deg, rgba(17, 47, 92, 0.96), rgba(7, 19, 41, 0.98));
+    border: 1px solid rgba(186, 230, 253, 0.82);
+    box-shadow:
+        0 10px 26px rgba(2, 132, 199, 0.24),
+        0 0 0 1px rgba(253, 230, 138, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.26);
+    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+body.winter-mode.winter-charlie .constellation-card::before {
+    content: "🎄";
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    font-size: 1.05rem;
+    opacity: 0.95;
+    pointer-events: none;
+    z-index: 3;
+    filter: drop-shadow(0 0 8px rgba(250, 204, 21, 0.7));
+}
+
+body.winter-mode.winter-charlie .constellation-card::after {
+    content: "✨";
+    position: absolute;
+    bottom: 10px;
+    right: 12px;
+    font-size: 0.92rem;
+    opacity: 0.75;
+    pointer-events: none;
+    z-index: 3;
+}
+
+body.winter-mode.winter-charlie .constellation-card:hover {
+    transform: translateY(-5px) scale(1.01);
+    border-color: #fde68a;
+    box-shadow:
+        0 14px 32px rgba(56, 189, 248, 0.42),
+        0 0 22px rgba(250, 204, 21, 0.28);
+}
+
+body.winter-mode.winter-charlie .constellation-card h2 {
+    color: #fef9c3;
+    text-shadow: 0 0 10px rgba(253, 224, 71, 0.22);
+}
+
+body.winter-mode.winter-charlie #constellation-modal .modal-content {
+    background: linear-gradient(160deg, rgba(15, 41, 82, 0.98), rgba(7, 17, 36, 0.99));
+    border: 1px solid rgba(253, 230, 138, 0.65);
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.65),
+        0 0 28px rgba(125, 211, 252, 0.25);
+}
+
+body.winter-mode.winter-charlie .back-button {
+    color: #fefce8;
+    background: linear-gradient(135deg, #b91c1c, #1d4ed8);
+    border: 1px solid #fde68a;
+    box-shadow:
+        0 8px 24px rgba(185, 28, 28, 0.35),
+        0 0 18px rgba(253, 230, 138, 0.22);
+}
+
+body.winter-mode.winter-charlie #winterDrift {
+    height: 36px;
+    background:
+        radial-gradient(ellipse 24% 95% at 14% 100%, rgba(240, 249, 255, 0.92), transparent 76%),
+        radial-gradient(ellipse 30% 100% at 42% 100%, rgba(224, 242, 254, 0.96), transparent 76%),
+        radial-gradient(ellipse 26% 95% at 72% 100%, rgba(240, 249, 255, 0.9), transparent 76%),
+        radial-gradient(ellipse 22% 90% at 92% 100%, rgba(186, 230, 253, 0.85), transparent 76%);
+}
+/* Густой и плавный снегопад до конца экрана */
+.w-flake {
+    position: fixed;
+    top: -36px;
+    color: #f8fafc;
+    text-shadow: 0 0 10px rgba(186, 230, 253, 0.85);
+    pointer-events: none;
+    user-select: none;
+    will-change: transform, opacity;
+    animation: wFallFull linear forwards;
+}
+
+@keyframes wFallFull {
+    0% {
+        transform: translate3d(0, -36px, 0) rotate(0deg);
+        opacity: 0.95;
+    }
+    75% {
+        opacity: 0.92;
+    }
+    92% {
+        opacity: 0.55;
+    }
+    100% {
+        transform: translate3d(var(--w-drift, 32px), calc(100vh + 80px), 0) rotate(180deg);
+        opacity: 0;
+    }
+}
+
+/* Объёмные сугробы внизу */
+#winterDrift {
+    display: none;
+    position: fixed;
+    left: -4%;
+    right: -4%;
+    bottom: -4px;
+    height: 64px;
+    pointer-events: none;
+    z-index: 845;
+    background:
+        radial-gradient(ellipse 20% 85% at 8% 100%, rgba(248, 250, 252, 0.96), transparent 74%),
+        radial-gradient(ellipse 26% 100% at 24% 100%, rgba(224, 242, 254, 0.98), transparent 76%),
+        radial-gradient(ellipse 22% 80% at 41% 100%, rgba(240, 249, 255, 0.95), transparent 74%),
+        radial-gradient(ellipse 30% 105% at 59% 100%, rgba(248, 250, 252, 0.99), transparent 78%),
+        radial-gradient(ellipse 24% 88% at 78% 100%, rgba(224, 242, 254, 0.96), transparent 75%),
+        radial-gradient(ellipse 21% 92% at 94% 100%, rgba(240, 249, 255, 0.94), transparent 75%);
+    filter: drop-shadow(0 -6px 14px rgba(186, 230, 253, 0.35));
+}
+
+body.winter-mode #winterDrift {
+    display: block;
+}
+
+body.winter-mode.winter-charlie #winterDrift {
+    height: 76px;
+}

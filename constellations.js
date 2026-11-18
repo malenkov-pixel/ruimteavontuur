@@ -1,4 +1,6 @@
-let currentLanguage =
+if (typeof window.currentLanguage === "undefined") {
+    window.currentLanguage = localStorage.getItem("siteLanguage") || "ru";
+}
     localStorage.getItem("siteLanguage") || "ru";
 
 

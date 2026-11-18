@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="winter-theme.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>♛ Сад Королёра ♛</title>
+    <link rel="stylesheet" href="kinger_garden.css">
+</head>
+<body>
+    <div class="garden-space-bg" aria-hidden="true"></div>
+    <div id="gardenStars" class="garden-stars" aria-hidden="true"></div>
+    <div id="gardenComets" class="garden-comets" aria-hidden="true"></div>
+
+    <header class="garden-header">
+        <div class="garden-top-bar">
+            <a href="index.html" class="garden-nav-btn" id="backHomeBtn">
+                ← На главную
+            </a>
+
+            <div class="garden-controls">
+                <button type="button" class="garden-nav-btn" id="gardenThemeBtn">
+                    🎃 Тема Хэллоуина
+                </button>
+
+                <div class="garden-lang-box">
+                    <label for="gardenLangSelect" class="sr-only">Language</label>
+                    <select id="gardenLangSelect" class="garden-lang-select" aria-label="Language">
+                        <option value="ru">🇷🇺 Русский</option>
+                        <option value="kk">🇰🇿 Қазақша</option>
+                        <option value="cs">🇨🇿 Čeština</option>
+                        <option value="en">🇬🇧 English</option>
+                        <option value="de">🇩🇪 Deutsch</option>
+                        <option value="fr">🇫🇷 Français</option>
+                        <option value="es">🇪🇸 Español</option>
+                        <option value="it">🇮🇹 Italiano</option>
+                        <option value="pl">🇵🇱 Polski</option>
+                        <option value="nl">🇳🇱 Nederlands</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="garden-crown-badge" aria-hidden="true">♛</div>
+        <h1 id="gardenPageTitle">♛ Сад Королёра ♛</h1>
+        <p class="garden-subtitle" id="gardenPageSubtitle">
+            Тихая орбитальная оранжерея теней, звёздной пыли и мягкого света
+        </p>
+
+        <div class="garden-status-pill">
+            <span id="lanternCounterLabel">Зажжено огоньков в саду:</span>
+            <strong id="lanternCounterValue">1 / 3</strong>
+        </div>
+    </header>
+
+    <main class="garden-main">
+        <section class="garden-intro-card">
+            <h2 id="gardenIntroTitle">Добро пожаловать под купол тишины</h2>
+            <p id="gardenIntroText">
+                Здесь растёт то, что не любит суеты. Нажимай на космические растения, чтобы зажигать или приглушать их тихое сияние.
+            </p>
+        </section>
+
+        <section class="garden-beds-grid" aria-label="Космические растения Королёра">
+            <article class="plant-card is-lit" data-plant="moonbell">
+                <div class="plant-icon" aria-hidden="true">🔔✨</div>
+                <div class="plant-badge" data-role="state">Тихо светится</div>
+                <h3 data-role="name">Лунный колокольчик</h3>
+                <p data-role="desc">
+                    Хрупкий цветок из ледяной пыли. В полумраке звенит почти неслышно и освещает дорожку.
+                </p>
+                <div class="plant-orbit" data-role="orbit">Орбита: Тень Луны</div>
+                <button type="button" class="plant-toggle-btn" data-role="action">
+                    Приглушить свет
+                </button>
+            </article>
+
+            <article class="plant-card" data-plant="crownfern">
+                <div class="plant-icon" aria-hidden="true">👑🌿</div>
+                <div class="plant-badge" data-role="state">Дремлет в тени</div>
+                <h3 data-role="name">Корона-папоротник</h3>
+                <p data-role="desc">
+                    Складывает резные листья в форму шахматной короны, когда вокруг спокойно и никто не шумит.
+                </p>
+                <div class="plant-orbit" data-role="orbit">Орбита: Кольца Сатурна</div>
+                <button type="button" class="plant-toggle-btn" data-role="action">
+                    Зажечь огонёк
+                </button>
+            </article>
+
+            <article class="plant-card" data-plant="mistpumpkin">
+                <div class="plant-icon" aria-hidden="true">🎃🕯️</div>
+                <div class="plant-badge" data-role="state">Дремлет в тени</div>
+                <h3 data-role="name">Туманная тыква-фонарь</h3>
+                <p data-role="desc">
+                    Хранит тёплый янтарный уголёк внутри. В хэллоуинскую ночь светит особенно загадочно.
+                </p>
+                <div class="plant-orbit" data-role="orbit">Орбита: Пояс Койпера</div>
+                <button type="button" class="plant-toggle-btn" data-role="action">
+                    Зажечь огонёк
+                </button>
+            </article>
+        </section>
+
+        <section class="kinger-quote-box">
+            <div class="kinger-quote-header">
+                <span class="kinger-quote-icon" aria-hidden="true">♟️</span>
+                <h2 id="kingerNotesTitle">Записки Королёра</h2>
+            </div>
+
+            <blockquote class="kinger-quote-text" id="kingerQuoteText">
+                «Если в космосе слишком темно — это ещё не повод терять корону. Иногда достаточно одного маленького огонька.»
+            </blockquote>
+
+            <button type="button" class="kinger-next-btn" id="nextQuoteBtn">
+                Следующая мысль Королёра ✦
+            </button>
+        </section>
+
+        <section class="kinger-tips-box" aria-label="Советы для космонавтов, программистов и гостей сада">
+            <div class="kinger-tips-header">
+                <span class="kinger-quote-icon" aria-hidden="true">🧭</span>
+                <h2 id="kingerTipsTitle">Советы от Королёра</h2>
+            </div>
+
+            <div class="kinger-tip-filters" id="tipFilterButtons">
+                <button type="button" class="tip-filter-btn is-active" data-tip-cat="all" id="tipCatAll">
+                    Все
+                </button>
+                <button type="button" class="tip-filter-btn" data-tip-cat="astronauts" id="tipCatAstronauts">
+                    🚀 Космонавтам
+                </button>
+                <button type="button" class="tip-filter-btn" data-tip-cat="programmers" id="tipCatProgrammers">
+                    💻 Программистам
+                </button>
+                <button type="button" class="tip-filter-btn" data-tip-cat="gardeners" id="tipCatGardeners">
+                    🌱 Искателям
+                </button>
+            </div>
+
+            <div class="kinger-tip-card">
+                <span class="tip-category-tag" id="tipCategoryBadge">🚀 Космонавтам</span>
+                <p class="kinger-tip-text" id="kingerTipText">
+                    Перед выходом в открытый космос проверь скафандр, кислород и то, не оставил ли корону на соседнем стуле.
+                </p>
+            </div>
+
+            <button type="button" class="kinger-next-btn" id="nextTipBtn">
+                Следующий совет ✦
+            </button>
+        </section>
+    </main>
+
+    <footer class="garden-footer">
+        <p id="gardenFooterText">♛ Сад Королёра • Космическое приключение имени Папайруса © 2026</p>
+    </footer>
+
+    <script src="kinger_garden.js"></script>
+</body>
+<script src="winter-theme.js"></script>
+</html>
