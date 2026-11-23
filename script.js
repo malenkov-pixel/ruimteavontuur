@@ -138,90 +138,110 @@
             title: "❄️ Свежие обновления",
             lines: [
                 "эй, привет. заценил? тут кое-что свеженькое завезли.",
+                "добавился сад Королёра где ты можешь послушать его советы.",
                 "подкрутили зимнее настроение — сугробы, холода, всё как положено. если захочется уюта или праздничного вайба — включай и смотри, как преобразился космос.",
                 "ещё причесали переводы, чтобы ничего не отваливалось при смене языка — даже польский и нидерландский теперь в строю.",
-                "заходи, осматривайся, жми кнопки. только в сугробах надолго не застревай — в космосе мороз не шутит."
+                "заходи, осматривайся, жми кнопки. только в сугробах надолго не застревай — в космосе мороз не шутит.",
+                "и под конец мне обновили фон теперь чтобы выйти ты можешь на меня нажать.",
             ]
         },
         kk: {
             title: "❄️ Соңғы жаңартулар",
             lines: [
                 "әй, сәлем. байқадың ба? мұнда біраз жаңалық әкелінді.",
+                "патшашының бағы қосылды оның кеңестерін қайдан тыңдауға болады.",
                 "қысқы көңіл-күйді күшейттік — күртік қар, аяз, бәрі орнында. жылылық немесе мерекелік атмосфера қаласаң — қосып, ғарыштың қалай өзгергенін көр.",
                 "тіл ауыстырғанда ештеңе түсіп қалмас үшін аудармаларды да реттедік — тіпті поляк пен нидерланд тілдері де сапта.",
-                "кір, қара, батырмаларды бас. бірақ қар құрсауында ұзақ қалып қойма — ғарышта аяз әзілдемейді."
+                "кір, қара, батырмаларды бас. бірақ қар құрсауында ұзақ қалып қойма — ғарышта аяз әзілдемейді.",
+                "соңында менің фоным жаңартылды, енді шығу үшін маған басуға болады.",
             ]
         },
         cs: {
             title: "❄️ Čerstvé novinky",
             lines: [
                 "hej, čau. všiml sis? přivezli jsme sem pár čerstvých novinek.",
+                    "přibyla Kingerova zahrada, kde si můžeš poslechnout jeho rady.",
                 "vyladili jsme zimní náladu — závěje, mráz, všechno jak má být. až budeš chtít útulno nebo sváteční atmosféru, zapni to a koukni, jak se vesmír proměnil.",
                 "upravili jsme i překlady, aby při změně jazyka nic nepadalo — v provozu už je i polština a nizozemština.",
-                "pojď dál, rozhlédni se, klikej. jen nezapadni moc hluboko do závějí — ve vesmíru mráz nežertuje."
+                "pojď dál, rozhlédni se, klikej. jen nezapadni moc hluboko do závějí — ve vesmíru mráz nežertuje.",
+                "a nakonec mi obnovili pozadí, teď už můžeš odejít, když na mě stiskneš."
             ]
         },
         en: {
             title: "❄️ Fresh Updates",
             lines: [
                 "hey there. noticed? we rolled out some fresh updates.",
+                "the Kinger Garden has arrived, where you can listen to his advice.",
                 "tuned up the winter mood — snowdrifts, cold, the whole deal. whenever you want cozy vibes or holiday spirit, flip it on and see how space transformed.",
                 "tidied up the translations too so nothing breaks when switching languages — even Polish and Dutch are back in action.",
-                "come on in, look around, press buttons. just don't get stuck in the snowdrifts too long — space frost doesn't mess around."
+                "come on in, look around, press buttons. just don't get stuck in the snowdrifts too long — space frost doesn't mess around.",
+                "and finally, my background got updated, now you can exit by clicking on me."
             ]
         },
         de: {
             title: "❄️ Neue Updates",
             lines: [
                 "hey, na. gemerkt? wir haben ein paar frische Sachen mitgebracht.",
+                "die Kinger Gärten sind angekommen, wo du seine Ratschläge hören kannst.",
                 "die Winterstimmung aufgedreht — Schneeverwehungen, Kälte, alles wie es sein soll. wenn dir nach Gemütlichkeit oder Festtagsstimmung ist, mach es an und schau, wie sich das Weltall verwandelt hat.",
                 "auch die Übersetzungen wurden aufgeräumt, damit beim Sprachenwechsel nichts verloren geht — selbst Polnisch und Niederländisch sind wieder am Start.",
-                "komm rein, schau dich um, drück die Knöpfe. bleib nur nicht zu lange in den Schneeverwehungen stecken — im Weltall ist mit dem Frost nicht zu spaßen."
+                "komm rein, schau dich um, drück die Knöpfe. bleib nur nicht zu lange in den Schneeverwehungen stecken — im Weltall ist mit dem Frost nicht zu spaßen.",
+                "und schließlich wurde mein Hintergrund aktualisiert, jetzt kannst du durch Klicken auf mich beenden."
             ]
         },
         fr: {
             title: "❄️ Nouveautés fraîches",
             lines: [
                 "hé, salut. tu as remarqué ? on a ramené du nouveau.",
+                "la Kinger Garden est arrivée, où tu peux écouter ses conseils.",
                 "on a peaufiné l'ambiance d'hiver — congères, froid, tout comme il faut. si tu veux de la chaleur ou l'esprit des fêtes, active-la et regarde comment l'espace a changé.",
                 "on a aussi remis les traductions d'équerre pour que rien ne saute en changeant de langue — même le polonais et le néerlandais sont de la partie.",
-                "entre, fais le tour, appuie sur les boutons. évite juste de rester coincé trop longtemps dans la neige — dans l'espace, le gel ne rigole pas."
+                "entre, fais le tour, appuie sur les boutons. évite juste de rester coincé trop longtemps dans la neige — dans l'espace, le gel ne rigole pas.",
+                "et enfin, mon arrière-plan a été mis à jour, maintenant tu peux sortir en cliquant sur moi."
             ]
         },
         es: {
             title: "❄️ Novedades recientes",
             lines: [
                 "oye, hola. ¿lo notaste? trajimos cositas nuevas.",
+                "la Kinger Garden ha llegado, donde puedes escuchar sus consejos.",
                 "ajustamos el ambiente invernal — ventisqueros, frío, todo como toca. si buscas calidez o espíritu festivo, actívalo y mira cómo cambió el espacio.",
                 "también peinamos las traducciones para que nada falle al cambiar de idioma — hasta el polaco y el neerlandés ya están listos.",
-                "pasa, echa un vistazo, pulsa los botones. solo no te quedes atascado mucho tiempo en la nieve — en el espacio el frío no perdona."
+                "pasa, echa un vistazo, pulsa los botones. solo no te quedes atascado mucho tiempo en la nieve — en el espacio el frío no perdona.",
+                "y por último, mi fondo se actualizó, ahora puedes salir haciendo clic en mí."
             ]
         },
         it: {
             title: "❄️ Novità recenti",
             lines: [
                 "ehi, ciao. hai notato? abbiamo portato un po' di novità fresche.",
+                "la Kinger Garden è arrivata, dove puoi ascoltare i suoi consigli.",
                 "abbiamo sistemato l'atmosfera invernale — cumuli di neve, freddo, tutto al posto giusto. se hai voglia di calore o spirito delle feste, attivala e guarda come è cambiato lo spazio.",
                 "abbiamo anche sistemato le traduzioni così non salta nulla cambiando lingua — anche polacco e olandese sono di nuovo operativi.",
-                "entra, guardati intorno, premi i pulsanti. solo non restare troppo a lungo nella neve — nello spazio il gelo non scherza."
+                "entra, guardati intorno, premi i pulsanti. solo non restare troppo a lungo nella neve — nello spazio il gelo non scherza.",
+                "e infine, il mio sfondo è stato aggiornato, ora puoi uscire cliccando su di me."
             ]
         },
         pl: {
             title: "❄️ Świeże nowości",
             lines: [
                 "hej, cześć. zauważyłeś? przywieźliśmy trochę świeżych rzeczy.",
+                "Kinger Garden jest już dostępna, gdzie możesz słuchać jej porad.",
                 "podkręciliśmy zimowy klimat — zaspy, chłód, wszystko jak należy. jak zachce ci się przytulności albo świątecznego nastroju, włącz to i zobacz, jak zmienił się kosmos.",
                 "ogarnęliśmy też tłumaczenia, żeby nic się nie sypało przy zmianie języka — nawet polski i niderlandzki są już w komplecie.",
-                "wchodź, rozglądaj się, klikaj. tylko nie utknij na długo w zaspach — w kosmosie mróz nie żartuje."
+                "wchodź, rozglądaj się, klikaj. tylko nie utknij na długo w zaspach — w kosmosie mróz nie żartuje.",
+                "i na końcu, mój tło został zaktualizowany, teraz możesz wyjść klikając na mnie."
             ]
         },
         nl: {
             title: "❄️ Nieuwe updates",
             lines: [
                 "hé, hallo. valt het op? we hebben wat nieuws meegebracht.",
+                "de Kinger Garden is beschikbaar, waar je haar adviezen kunt beluisteren.",
                 "de wintersfeer bijgesteld — sneeuwduinen, kou, alles zoals het hoort. als je zin hebt in warmte of feeststemming, zet het aan en kijk hoe de ruimte is veranderd.",
                 "ook de vertalingen zijn netjes gemaakt zodat er niets wegvalt bij het wisselen van taal — zelfs Pools en Nederlands doen weer mee.",
-                "kom binnen, kijk rond, druk op knoppen. blijf alleen niet te lang vastzitten in de sneeuw — in de ruimte is vorst geen grapje."
+                "kom binnen, kijk rond, druk op knoppen. blijf alleen niet te lang vastzitten in de sneeuw — in de ruimte is vorst geen grapje.",
+                "en tenslotte is mijn achtergrond geüpdatet, nu kun je uitgaan door op mij te klikken."
             ]
         }
     };
@@ -291,7 +311,7 @@ const languages = {
     },
 
     kk: {
-        kingerGardenTitle: "♛ Королёр бағы ♛",
+        kingerGardenTitle: "♛ Патшашының бағы ♛",
         siteTitle: "🌌 Папайрустың ғарыштық шытырман оқиғасы",
         siteSubtitle: "Күн жүйесін зертте 🚀",
         welcomeTitle: "Ғарышқа қош келдің!",
